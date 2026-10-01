@@ -2,6 +2,10 @@ name: Woods Run single publisher
 
 on:
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/daily-publisher.yml'
   schedule:
     # 6:00 / 6:10 / 6:30 Eastern across DST; the local-time guard skips the other UTC set.
     - cron: '0,10,30 10 * * *'
