@@ -100,6 +100,15 @@ def fit_wrapped_text(
 
 
 def add_artwork(base: Image.Image, weekday: str) -> None:
+    # The replacement publisher is intentionally self-contained. If the legacy
+    # illustrated masthead is absent, generate a restrained footer treatment
+    # instead of failing the entire daily publication.
+    if not ART_FILE.exists():
+        draw = ImageDraw.Draw(base)
+        footer_top = HEIGHT - 118
+        draw.rectangle((0, footer_top, WIDTH, HEIGHT), fill=DAY_COLORS[weekday])
+        draw.rectangle((0, HEIGHT - 12, WIDTH, HEIGHT), fill=FOREST)
+        return
     artwork = Image.open(ART_FILE).convert("RGBA")
     scale = WIDTH / artwork.width
     artwork = artwork.resize((WIDTH, round(artwork.height * scale)), Image.Resampling.LANCZOS)
