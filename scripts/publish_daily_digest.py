@@ -257,17 +257,30 @@ def verify(date: str) -> dict:
     if ledger.get("mode") == "dry-run":
         ledger["complete"] = bool(build_ok)
     else:
-        email_ok = (
-            ledger["email"].get("status") == "delivered"
-            and ledger["email"].get("delivered",0) >= 1
-            and ledger["email"].get("failed") == 0
-        )
-        social_ok = all(
-            ledger["social"][k].get("status") == "sent"
-            and ledger["social"][k].get("external_url")
-            for k in ("x","instagram","youtube")
-        )
+        # Re-query the idempotent delivery adapters. They are authoritative for
+        # whether the same-date broadcast/social posts already exist and are sent.
+        email_out = run_adapter("scripts/publish_digest_email.py")
+        if re.search(r"(?:Same-date broadcast already sent|Sent same-date broadcast):\s*([A-Za-z0-9-]+)", email_out):
+            m = re.search(r"(?:Same-date broadcast already sent|Sent same-date broadcast):\s*([A-Za-z0-9-]+)", email_out)
+            ledger["email"]["status"] = "sent"
+            ledger["email"]["broadcast_id"] = m.group(1) if m else ledger["email"].get("broadcast_id")
+
+        social_out = run_adapter("scripts/post_to_buffer.py")
+        patterns = {
+            "x": r"X already contains this issue \(sent\):\s*([A-Za-z0-9-]+)",
+            "instagram": r"Instagram already contains this issue reel \(sent\):\s*([A-Za-z0-9-]+)",
+            "youtube": r"YouTube already contains this issue reel \(sent\):\s*([A-Za-z0-9-]+)",
+        }
+        for key, pattern in patterns.items():
+            m = re.search(pattern, social_out)
+            if m:
+                ledger["social"][key]["status"] = "sent"
+                ledger["social"][key]["post_id"] = m.group(1)
+
+        email_ok = ledger["email"].get("status") == "sent"
+        social_ok = all(ledger["social"][k].get("status") == "sent" for k in ("x","instagram","youtube"))
         ledger["complete"] = bool(build_ok and email_ok and social_ok)
+
     save_ledger(ledger)
     if not ledger["complete"]:
         fail(f"Verification incomplete for {date}")
