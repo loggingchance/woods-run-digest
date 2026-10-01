@@ -26,6 +26,7 @@ jobs:
       WRD_DELIVERY_MODE: live
       RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
       BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
+      WOODS_RUN_SEGMENT_ID: ec27b7e4-84e2-47af-83ce-7d77732ed557
     steps:
       - uses: actions/checkout@v4
         with:
