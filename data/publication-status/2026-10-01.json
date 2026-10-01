@@ -1,6 +1,6 @@
 {
   "date": "2026-10-01",
-  "mode": "dry-run",
+  "mode": "live",
   "canonical": {
     "validated": true
   },
