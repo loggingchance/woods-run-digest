@@ -22,7 +22,7 @@ jobs:
   publish:
     runs-on: ubuntu-latest
     env:
-      # Live cutover: production delivery enabled and credentials provisioned.
+      # Live cutover: production delivery enabled; verifier repaired.
       WRD_DELIVERY_MODE: live
       RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
       BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
