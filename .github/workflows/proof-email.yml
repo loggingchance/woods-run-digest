@@ -1,0 +1,56 @@
+name: Woods Run immediate proof email
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/proof-email.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  send-proof:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send fake Woods Run edition
+        env:
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json, os, urllib.request
+
+          api_key = os.environ["RESEND_API_KEY"]
+          payload = {
+              "from": "Steve Bick | Woods Run Digest <no_reply@forestenterprise.org>",
+              "to": ["steve@northeastforests.com"],
+              "reply_to": ["steve@northeastforests.com"],
+              "subject": "Woods Run Digest — AUTOMATION PROOF TEST",
+              "text": """WOODS RUN DIGEST — AUTOMATION PROOF TEST
+
+This is a fake edition sent only to Steve Bick to prove the new loggingchance/woods-run-digest production path is capable of sending email through its GitHub Actions + Resend configuration.
+
+FAKE LEAD STORY
+Northern Woods Unicorn Mill Announces 9 Billion Board Feet of Annual Capacity
+
+This item is intentionally fictional. No publication, archive, social post, or subscriber broadcast was created.
+
+If you received this email, the new repository's GitHub Actions Resend credential is working.""",
+              "html": """<!DOCTYPE html><html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"></head><body style="margin:0;background:#f2eee5;"><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td align="center" style="padding:24px;"><table width="600" cellpadding="0" cellspacing="0" border="0" style="max-width:600px;background:#fffdf8;"><tr><td style="padding:30px;font-family:Arial,Helvetica,sans-serif;color:#333;font-size:15px;line-height:23px;"><p style="font-family:Georgia,'Times New Roman',serif;font-size:28px;line-height:34px;color:#1f3b2b;font-weight:bold;margin-top:0;">WOODS RUN DIGEST</p><p style="font-family:Georgia,'Times New Roman',serif;font-size:22px;line-height:28px;color:#7a2f23;font-weight:bold;">AUTOMATION PROOF TEST — FAKE EDITION</p><p>This is a fake edition sent only to Steve Bick to prove the new <code>loggingchance/woods-run-digest</code> production path can send email through GitHub Actions + Resend.</p><hr><p style="font-family:Georgia,'Times New Roman',serif;font-size:22px;line-height:28px;color:#222;"><strong>FAKE LEAD STORY</strong></p><p style="font-family:Georgia,'Times New Roman',serif;font-size:20px;line-height:26px;color:#222;">Northern Woods Unicorn Mill Announces 9 Billion Board Feet of Annual Capacity</p><p>This item is intentionally fictional. No archive entry, social post, or subscriber broadcast was created.</p><p style="margin-bottom:0;"><strong>If you received this email, the new repository's GitHub Actions Resend credential is working.</strong></p></td></tr></table></td></tr></table></body></html>"""
+          }
+          req = urllib.request.Request(
+              "https://api.resend.com/emails",
+              data=json.dumps(payload).encode(),
+              method="POST",
+              headers={
+                  "Authorization": f"Bearer {api_key}",
+                  "Content-Type": "application/json",
+                  "Idempotency-Key": "woods-run-proof-2026-10-01-1557"
+              }
+          )
+          with urllib.request.urlopen(req, timeout=30) as r:
+              body = r.read().decode()
+              print("RESEND_RESPONSE", body)
+          PY
