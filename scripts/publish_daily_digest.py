@@ -164,14 +164,16 @@ def build_surfaces(issue: dict, issues: list[dict], page: str, ledger: dict) -> 
     ledger["build"]["sitemap"] = True
 
 def run_asset_generators(date: str, ledger: dict) -> None:
-    subprocess.run([sys.executable, "scripts/generate_social_cards.py"], cwd=ROOT, check=True)
-    card = ROOT / "assets/cards" / f"{date}.png"
+    card = ROOT / "assets/cards" / (date + ".png")
+    if not card.exists() or card.stat().st_size == 0:
+        subprocess.run([sys.executable, "scripts/generate_social_cards.py"], cwd=ROOT, check=True)
     if not card.exists() or card.stat().st_size == 0:
         fail("Social card generator did not produce the dated card")
     ledger["build"]["card"] = True
 
-    subprocess.run([sys.executable, "scripts/render_daily_reel.py"], cwd=ROOT, check=True)
-    reel = ROOT / "assets/videos" / f"{date}.mp4"
+    reel = ROOT / "assets/videos" / (date + ".mp4")
+    if not reel.exists() or reel.stat().st_size == 0:
+        subprocess.run([sys.executable, "scripts/render_daily_reel.py"], cwd=ROOT, check=True)
     if not reel.exists() or reel.stat().st_size == 0:
         fail("Reel generator did not produce the dated reel")
     ledger["build"]["reel"] = True
