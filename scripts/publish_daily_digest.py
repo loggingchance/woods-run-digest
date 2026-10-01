@@ -191,24 +191,65 @@ def build(date: str) -> dict:
     print(f"BUILD_OK {date}")
     return ledger
 
+def require_live_credentials() -> None:
+    missing = [name for name in ("RESEND_API_KEY", "BUFFER_API_KEY") if not os.getenv(name, "").strip()]
+    if missing:
+        fail("Live delivery credentials missing: " + ", ".join(missing))
+
+def run_adapter(script: str) -> str:
+    proc = subprocess.run(
+        [sys.executable, script],
+        cwd=ROOT,
+        text=True,
+        capture_output=True,
+    )
+    output = (proc.stdout or "") + (proc.stderr or "")
+    print(output, end="")
+    if proc.returncode != 0:
+        fail(f"Delivery adapter failed: {script}")
+    return output
+
 def deliver(date: str) -> dict:
     ledger = load_ledger(date)
     mode = os.getenv("WRD_DELIVERY_MODE", "dry-run")
     ledger["mode"] = mode
     if mode != "live":
-        for key in ("email",):
-            if ledger[key]["status"] == "pending":
-                ledger[key]["status"] = "dry-run"
+        if ledger["email"]["status"] == "pending":
+            ledger["email"]["status"] = "dry-run"
         for key in ("x","instagram","youtube"):
             if ledger["social"][key]["status"] == "pending":
                 ledger["social"][key]["status"] = "dry-run"
         save_ledger(ledger)
         print(f"DELIVERY_SKIPPED_DRY_RUN {date}")
         return ledger
-    # Live adapters are intentionally gated until staging validation is complete.
-    # They will use the ledger's external IDs as duplicate protection and must
-    # verify sent/delivered/external URLs before marking complete.
-    fail("Live delivery is not enabled in the staging repository yet")
+
+    require_live_credentials()
+    issues = load_issues()
+    issue = find_issue(date, issues)
+    if issue["date"] != date:
+        fail("Live delivery date does not match canonical issue")
+
+    # Email adapter is idempotent by exact same-date broadcast name/date.
+    if ledger["email"].get("status") not in ("submitted", "sent", "delivered"):
+        out = run_adapter("scripts/publish_digest_email.py")
+        m = re.search(r"(?:Sent same-date broadcast|Same-date broadcast already sent):\s*([A-Za-z0-9-]+)", out)
+        if m:
+            ledger["email"]["broadcast_id"] = m.group(1)
+        ledger["email"]["status"] = "submitted"
+        save_ledger(ledger)
+
+    # Social adapter performs same-date duplicate detection before publishing.
+    if not all(ledger["social"][k].get("status") in ("submitted","sent") for k in ("x","instagram","youtube")):
+        run_adapter("scripts/post_to_buffer.py")
+        for key in ("x","instagram","youtube"):
+            if ledger["social"][key].get("status") == "pending":
+                ledger["social"][key]["status"] = "submitted"
+        save_ledger(ledger)
+
+    # Submission is deliberately not equivalent to verified completion.
+    # External status/metrics must be written into the ledger by verification.
+    print(f"DELIVERY_SUBMITTED {date}")
+    return ledger
 
 def verify(date: str) -> dict:
     ledger = load_ledger(date)
@@ -216,8 +257,16 @@ def verify(date: str) -> dict:
     if ledger.get("mode") == "dry-run":
         ledger["complete"] = bool(build_ok)
     else:
-        email_ok = ledger["email"].get("status") == "delivered" and ledger["email"].get("delivered",0) >= 1 and ledger["email"].get("failed") == 0
-        social_ok = all(ledger["social"][k].get("status") == "sent" and ledger["social"][k].get("external_url") for k in ("x","instagram","youtube"))
+        email_ok = (
+            ledger["email"].get("status") == "delivered"
+            and ledger["email"].get("delivered",0) >= 1
+            and ledger["email"].get("failed") == 0
+        )
+        social_ok = all(
+            ledger["social"][k].get("status") == "sent"
+            and ledger["social"][k].get("external_url")
+            for k in ("x","instagram","youtube")
+        )
         ledger["complete"] = bool(build_ok and email_ok and social_ok)
     save_ledger(ledger)
     if not ledger["complete"]:
