@@ -1,0 +1,10 @@
+{
+  "issue_timezone": "America/Denver",
+  "schedule_timezone": "America/New_York",
+  "normal_target": "06:00",
+  "recovery_targets": ["06:10", "06:30"],
+  "production_site": "https://woodsrun.forestenterprise.org",
+  "delivery_mode": "dry-run",
+  "required_live_components": ["web", "email", "x", "instagram", "youtube"],
+  "observation_cycles_required": 2
+}
