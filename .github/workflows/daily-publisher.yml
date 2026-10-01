@@ -1,0 +1,80 @@
+name: Woods Run single publisher
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'data/issues.json'
+      - 'scripts/**'
+      - '.github/workflows/daily-publisher.yml'
+  schedule:
+    # 6:00 / 6:10 / 6:30 Eastern across DST; the local-time guard skips the other UTC set.
+    - cron: '0,10,30 10 * * *'
+    - cron: '0,10,30 11 * * *'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: woods-run-single-publisher
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    env:
+      WRD_DELIVERY_MODE: dry-run
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg
+          python -m pip install -r requirements.txt
+
+      - name: Scheduled local-time guard
+        if: github.event_name == 'schedule'
+        run: |
+          python - <<'PY'
+          from datetime import datetime
+          from zoneinfo import ZoneInfo
+          now=datetime.now(ZoneInfo("America/New_York"))
+          if now.hour != 6 or now.minute not in (0,10,30):
+              raise SystemExit("Skip: not a Woods Run recovery slot in Eastern time")
+          PY
+
+      - name: Build and validate today's publication
+        run: python scripts/publish_daily_digest.py build
+
+      - name: Commit generated canonical surfaces and assets
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html archive/index.html sitemap.xml data/publication-status assets/cards assets/videos 20??/??/??/index.html
+          if ! git diff --cached --quiet; then
+            git commit -m "Build Woods Run publication state"
+            git push origin HEAD:main
+          fi
+
+      - name: Delivery state machine
+        run: python scripts/publish_daily_digest.py deliver
+
+      - name: Verify publication state
+        run: python scripts/publish_daily_digest.py verify
+
+      - name: Commit final ledger
+        run: |
+          git add data/publication-status
+          if ! git diff --cached --quiet; then
+            git commit -m "Record Woods Run publication ledger"
+            git push origin HEAD:main
+          fi
