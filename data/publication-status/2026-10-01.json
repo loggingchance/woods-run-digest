@@ -13,27 +13,27 @@
     "reel": true
   },
   "email": {
-    "status": "pending",
+    "status": "dry-run",
     "broadcast_id": null,
     "delivered": 0,
     "failed": null
   },
   "social": {
     "x": {
-      "status": "pending",
+      "status": "dry-run",
       "external_url": null,
       "post_id": null
     },
     "instagram": {
-      "status": "pending",
+      "status": "dry-run",
       "external_url": null,
       "post_id": null
     },
     "youtube": {
-      "status": "pending",
+      "status": "dry-run",
       "external_url": null,
       "post_id": null
     }
   },
-  "complete": false
+  "complete": true
 }
