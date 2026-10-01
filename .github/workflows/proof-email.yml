@@ -10,15 +10,15 @@ jobs:
   proof:
     runs-on: ubuntu-latest
     steps:
-      - name: Send proof email
+      - name: Diagnose and send proof email
         env:
           RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
         run: >
-          python -c 'import json,os,urllib.request;
+          python -c 'import json,os,urllib.request,urllib.error;
           p={"from":"Steve Bick | Woods Run Digest <no_reply@forestenterprise.org>",
           "to":["steve@northeastforests.com"],
           "reply_to":["steve@northeastforests.com"],
           "subject":"Woods Run Digest — AUTOMATION PROOF TEST",
           "text":"WOODS RUN DIGEST — AUTOMATION PROOF TEST\n\nThis is a fake edition sent only to Steve Bick from the new loggingchance/woods-run-digest repository.\n\nFAKE LEAD STORY\nNorthern Woods Unicorn Mill Announces 9 Billion Board Feet of Annual Capacity\n\nThis item is intentionally fictional. No archive entry, social post, or subscriber broadcast was created.\n\nIf you received this email, the new repository GitHub Actions + Resend path is working."};
-          r=urllib.request.Request("https://api.resend.com/emails",data=json.dumps(p).encode(),method="POST",headers={"Authorization":"Bearer "+os.environ["RESEND_API_KEY"],"Content-Type":"application/json","Idempotency-Key":"woods-run-proof-2026-10-01-v2"});
-          print(urllib.request.urlopen(r,timeout=30).read().decode())'
+          r=urllib.request.Request("https://api.resend.com/emails",data=json.dumps(p).encode(),method="POST",headers={"Authorization":"Bearer "+os.environ["RESEND_API_KEY"],"Content-Type":"application/json","Idempotency-Key":"woods-run-proof-2026-10-01-v3"});
+          exec("try:\n print(urllib.request.urlopen(r,timeout=30).read().decode())\nexcept urllib.error.HTTPError as e:\n print(e.read().decode()); raise")'
