@@ -1,4 +1,4 @@
-name: Woods Run proof email
+name: Woods Run proof broadcast
 
 on:
   push:
@@ -10,15 +10,58 @@ jobs:
   proof:
     runs-on: ubuntu-latest
     steps:
-      - name: Diagnose and send proof email
+      - name: Send one-person proof broadcast
         env:
           RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
-        run: >
-          python -c 'import json,os,urllib.request,urllib.error;
-          p={"from":"Steve Bick | Woods Run Digest <no_reply@forestenterprise.org>",
-          "to":["steve@northeastforests.com"],
-          "reply_to":["steve@northeastforests.com"],
-          "subject":"Woods Run Digest — AUTOMATION PROOF TEST",
-          "text":"WOODS RUN DIGEST — AUTOMATION PROOF TEST\n\nThis is a fake edition sent only to Steve Bick from the new loggingchance/woods-run-digest repository.\n\nFAKE LEAD STORY\nNorthern Woods Unicorn Mill Announces 9 Billion Board Feet of Annual Capacity\n\nThis item is intentionally fictional. No archive entry, social post, or subscriber broadcast was created.\n\nIf you received this email, the new repository GitHub Actions + Resend path is working."};
-          r=urllib.request.Request("https://api.resend.com/emails",data=json.dumps(p).encode(),method="POST",headers={"Authorization":"Bearer "+os.environ["RESEND_API_KEY"],"Content-Type":"application/json","Idempotency-Key":"woods-run-proof-2026-10-01-v3"});
-          exec("try:\n print(urllib.request.urlopen(r,timeout=30).read().decode())\nexcept urllib.error.HTTPError as e:\n print(e.read().decode()); raise")'
+        run: |
+          python - <<'PY'
+          import json, os, urllib.request
+
+          api="https://api.resend.com"
+          key=os.environ["RESEND_API_KEY"]
+          headers={"Authorization":f"Bearer {key}","Content-Type":"application/json","User-Agent":"WoodsRunDigest-Proof/1.0"}
+
+          def req(method,path,body=None):
+              data=None if body is None else json.dumps(body).encode()
+              r=urllib.request.Request(api+path,data=data,method=method,headers=headers)
+              with urllib.request.urlopen(r,timeout=30) as resp:
+                  raw=resp.read().decode()
+                  return json.loads(raw) if raw else {}
+
+          name="Woods Run Digest — AUTOMATION PROOF TEST 2026-10-01"
+          html="""<!DOCTYPE html><html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta http-equiv="X-UA-Compatible" content="IE=edge"></head><body style="margin:0;background-color:#f2eee5;"><table width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#f2eee5"><tr><td align="center" style="padding-top:24px;padding-right:12px;padding-bottom:24px;padding-left:12px;"><table width="600" cellpadding="0" cellspacing="0" border="0" bgcolor="#fffdf8" style="width:100%;max-width:600px;background-color:#fffdf8;"><tr><td style="padding-top:28px;padding-right:30px;padding-bottom:28px;padding-left:30px;font-family:Arial,Helvetica,sans-serif;font-size:15px;line-height:23px;color:#333333;"><p style="font-family:Georgia,'Times New Roman',serif;font-size:28px;line-height:34px;color:#1f3b2b;font-weight:bold;margin-top:0;">WOODS RUN DIGEST</p><p style="font-family:Georgia,'Times New Roman',serif;font-size:22px;line-height:28px;color:#8b3a2a;font-weight:bold;">AUTOMATION PROOF TEST — FAKE EDITION</p><p style="font-family:Arial,Helvetica,sans-serif;font-size:15px;line-height:23px;color:#333333;">This fake edition is being sent only to Steve to prove the new <code>loggingchance/woods-run-digest</code> GitHub Actions + Resend broadcast path is working.</p><p style="font-family:Georgia,'Times New Roman',serif;font-size:21px;line-height:27px;color:#222222;font-weight:bold;">FAKE LEAD STORY</p><p style="font-family:Georgia,'Times New Roman',serif;font-size:20px;line-height:26px;color:#222222;">Northern Woods Unicorn Mill Announces 9 Billion Board Feet of Annual Capacity</p><p style="font-family:Arial,Helvetica,sans-serif;font-size:15px;line-height:23px;color:#333333;">This item is intentionally fictional. No archive entry or social post was created.</p><p style="font-family:Arial,Helvetica,sans-serif;font-size:15px;line-height:23px;color:#333333;font-weight:bold;">If this arrived, the new repository can deliver a Woods Run broadcast through Resend.</p></td></tr></table></td></tr></table></body></html>"""
+          text="""WOODS RUN DIGEST — AUTOMATION PROOF TEST — FAKE EDITION
+
+This fake edition is being sent only to Steve to prove the new loggingchance/woods-run-digest GitHub Actions + Resend broadcast path is working.
+
+FAKE LEAD STORY
+Northern Woods Unicorn Mill Announces 9 Billion Board Feet of Annual Capacity
+
+This item is intentionally fictional. No archive entry or social post was created.
+
+If this arrived, the new repository can deliver a Woods Run broadcast through Resend."""
+
+          existing=req("GET","/broadcasts")
+          items=existing.get("data",[])
+          exact=[b for b in items if b.get("name")==name]
+          if exact:
+              bid=exact[0]["id"]
+              if exact[0].get("status")=="sent":
+                  print("PROOF_ALREADY_SENT",bid)
+                  raise SystemExit(0)
+          else:
+              created=req("POST","/broadcasts",{
+                  "name":name,
+                  "segment_id":"7d3be020-105a-448d-bcda-935841706a1a",
+                  "from":"Steve Bick | Woods Run Digest <no_reply@forestenterprise.org>",
+                  "reply_to":["steve@northeastforests.com"],
+                  "subject":"Woods Run Digest — AUTOMATION PROOF TEST",
+                  "preview_text":"Fake edition sent only to Steve to prove the new Woods Run automation path.",
+                  "html":html,
+                  "text":text
+              })
+              bid=created["id"]
+
+          req("POST",f"/broadcasts/{bid}/send",{})
+          print("PROOF_SENT",bid)
+          PY
