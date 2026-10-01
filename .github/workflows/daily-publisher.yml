@@ -18,7 +18,10 @@ jobs:
   publish:
     runs-on: ubuntu-latest
     env:
+      # Cutover is one explicit change: dry-run -> live.
       WRD_DELIVERY_MODE: dry-run
+      RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+      BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
     steps:
       - uses: actions/checkout@v4
         with:
