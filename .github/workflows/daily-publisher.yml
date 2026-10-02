@@ -1,4 +1,3 @@
-# Manual recovery trigger: 2026-10-02
 name: Woods Run single publisher
 
 on:
@@ -7,6 +6,7 @@ on:
     branches: [main]
     paths:
       - '.github/workflows/daily-publisher.yml'
+      - 'data/issues.json'
   schedule:
     # 6:00 / 6:10 / 6:30 Eastern across DST; the local-time guard skips the other UTC set.
     - cron: '0,10,30 10 * * *'
