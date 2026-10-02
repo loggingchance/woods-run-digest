@@ -3,7 +3,6 @@ name: Woods Run single publisher
 on:
   workflow_dispatch:
   schedule:
-    # 5:52 AM Eastern across EDT/EST. The local-time guard skips the other UTC slot.
     - cron: '52 9 * * *'
     - cron: '52 10 * * *'
 
@@ -21,7 +20,8 @@ jobs:
       WRD_DELIVERY_MODE: live
       RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
       BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
-      WOODS_RUN_SEGMENT_ID: ec27b7e4-84e2-47af-83ce-7d77732ed557\n      HEALTHCHECKS_URL: ${{ secrets.HC_WOODS_RUN }}
+      WOODS_RUN_SEGMENT_ID: ec27b7e4-84e2-47af-83ce-7d77732ed557
+      HEALTHCHECKS_URL: ${{ secrets.HC_WOODS_RUN }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -81,6 +81,7 @@ jobs:
           git add index.html archive/index.html sitemap.xml data/publication-status assets/cards assets/videos 20??/??/??/index.html
           if ! git diff --cached --quiet; then
             git commit -m "Build Woods Run publication state"
+            git pull --rebase origin main
             git push origin HEAD:main
           fi
 
