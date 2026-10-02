@@ -192,7 +192,7 @@ def build(date: str) -> dict:
     return ledger
 
 def require_live_credentials() -> None:
-    missing = [name for name in ("RESEND_API_KEY", "BUFFER_API_KEY") if not os.getenv(name, "").strip()]
+    missing = [name for name in ("BUFFER_API_KEY",) if not os.getenv(name, "").strip()]
     if missing:
         fail("Live delivery credentials missing: " + ", ".join(missing))
 
