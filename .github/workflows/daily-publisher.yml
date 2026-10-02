@@ -21,7 +21,7 @@ jobs:
       WRD_DELIVERY_MODE: live
       RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
       BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
-      WOODS_RUN_SEGMENT_ID: ec27b7e4-84e2-47af-83ce-7d77732ed557
+      WOODS_RUN_SEGMENT_ID: ec27b7e4-84e2-47af-83ce-7d77732ed557\n      HEALTHCHECKS_URL: ${{ secrets.HC_WOODS_RUN }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -113,3 +113,11 @@ jobs:
             Woods Run GitHub publisher failed. Inspect this run's build, delivery, and verification steps.
             The system did not mark today's issue complete.
         run: python scripts/send_failure_alert.py
+
+      - name: Ping external monitor success
+        if: success() && steps.slot.outputs.run == 'true' && env.HEALTHCHECKS_URL != ''
+        run: curl -fsS --retry 3 --max-time 10 "$HEALTHCHECKS_URL"
+
+      - name: Ping external monitor failure
+        if: failure() && steps.slot.outputs.run == 'true' && env.HEALTHCHECKS_URL != ''
+        run: curl -fsS --retry 3 --max-time 10 "$HEALTHCHECKS_URL/fail"
