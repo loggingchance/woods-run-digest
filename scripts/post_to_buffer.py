@@ -270,7 +270,7 @@ def publish(
             }
         }
     else:
-        assets = [{"image": {"url": asset_url}}]
+        assets = [{"image": {"url": asset_url}}] if asset_url else []
         metadata = None
 
     post_input = {
@@ -291,9 +291,38 @@ def publish(
     post = payload.get("post")
     if not post:
         fail(f"Unexpected Buffer createPost response for {service}: {json.dumps(payload)}")
-    if not (post.get("assets") or []):
+    if asset_url and not (post.get("assets") or []):
         fail(f"Buffer accepted the {service} post but did not attach the requested media asset")
     return post
+
+
+def striking_post_exists(organization_id: str, channel_id: str, text: str) -> bool:
+    query = """
+    query RecentPosts($organizationId: OrganizationId!, $channelId: ChannelId!) {
+      posts(first: 50, input: {organizationId: $organizationId, filter: {status: [sent, scheduled], channelIds: [$channelId]}, sort: [{field: createdAt, direction: desc}]}) {
+        edges { node { id text status externalLink } }
+      }
+    }
+    """
+    data = graphql(query, {"organizationId": organization_id, "channelId": channel_id})
+    for edge in data.get("posts", {}).get("edges", []):
+        post = edge.get("node", {})
+        if (post.get("text") or "").strip() == text.strip():
+            print(f"X already contains today's striking post ({post.get('status')}): {post.get('id')}")
+            return True
+    return False
+
+
+def publish_striking(issue: dict, organization_id: str, channel: dict) -> None:
+    text = (issue.get("strikingText") or "").strip()
+    if not text:
+        fail("Latest issue has no strikingText")
+    if len(text) > MAX_X_TEXT:
+        fail(f"Striking post is too long ({len(text)} characters)")
+    if striking_post_exists(organization_id, channel["id"], text):
+        return
+    post = publish(channel["id"], text, "", "twitter")
+    print(f"Striking X post accepted: {post.get('id')} status={post.get('status')} external={post.get('externalLink') or '(pending)'}")
 
 def main() -> None:
     issue = load_latest_issue()
@@ -335,6 +364,13 @@ def main() -> None:
         "youtube": compose_youtube_post(issue, page_url),
     }
     youtube_title = compose_youtube_title(issue)
+
+    mode = os.environ.get("WRD_SOCIAL_MODE", "daily").strip().lower()
+    if mode == "striking":
+        if "twitter" not in selected:
+            fail("X channel is unavailable")
+        publish_striking(issue, organization_id, selected["twitter"])
+        return
 
     for target in TARGETS:
         service = target["service"]
