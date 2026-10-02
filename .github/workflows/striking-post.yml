@@ -1,0 +1,26 @@
+name: Woods Run striking X post
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'data/striking-trigger.json'
+
+permissions:
+  contents: read
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    env:
+      BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
+      WRD_SOCIAL_MODE: striking
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Publish striking X post
+        run: python scripts/post_to_buffer.py
