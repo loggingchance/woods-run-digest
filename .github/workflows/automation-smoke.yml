@@ -1,4 +1,5 @@
 name: Automation smoke test
+# Validates code and credentials without sending mail.
 
 on:
   workflow_dispatch:
