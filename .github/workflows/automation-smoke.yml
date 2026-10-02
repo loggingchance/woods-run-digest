@@ -1,0 +1,50 @@
+name: Automation smoke test
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/automation-smoke.yml'
+      - '.github/workflows/daily-publisher.yml'
+      - '.github/workflows/scheduled-email-publisher.yml'
+      - 'scripts/publish_daily_digest.py'
+      - 'scripts/publish_digest_email.py'
+      - 'scripts/send_failure_alert.py'
+      - 'scripts/send_single_handoff.py'
+      - 'scripts/send_peer_digest.py'
+
+permissions:
+  contents: read
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    env:
+      RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Compile delivery scripts
+        run: |
+          python -m py_compile             scripts/publish_daily_digest.py             scripts/publish_digest_email.py             scripts/send_failure_alert.py             scripts/send_single_handoff.py             scripts/send_peer_digest.py
+
+      - name: Verify Resend credential without sending
+        run: |
+          test -n "$RESEND_API_KEY"
+          python - <<'PY'
+          import json, os, urllib.request
+          req=urllib.request.Request(
+              "https://api.resend.com/domains",
+              headers={"Authorization": f"Bearer {os.environ['RESEND_API_KEY']}",
+                       "User-Agent":"AutomationSmoke/1.0"})
+          with urllib.request.urlopen(req, timeout=30) as r:
+              data=json.load(r)
+          rows=data.get("data", [])
+          if not any(x.get("name")=="forestenterprise.org" and x.get("status")=="verified" for x in rows):
+              raise SystemExit("forestenterprise.org is not verified in Resend")
+          print("RESEND_AUTH_OK")
+          PY
