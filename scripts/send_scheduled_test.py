@@ -21,7 +21,10 @@ def req(method,path,body=None,headers=None):
             raw=x.read().decode()
             return json.loads(raw) if raw else {}
     except urllib.error.HTTPError as e:
-        raise RuntimeError(f"Resend HTTP {e.code}: {e.read().decode(errors='replace')}")
+        detail=e.read().decode(errors='replace')
+        if e.code == 404 and method == "GET" and path.startswith("/emails/"):
+            return {"_transient_not_found": True}
+        raise RuntimeError(f"Resend HTTP {e.code}: {detail}")
 
 def main():
     y,m,d=DATE.split("-")
@@ -40,6 +43,9 @@ def main():
     last="unknown"
     while time.time()<deadline:
         detail=req("GET",f"/emails/{eid}")
+        if detail.get("_transient_not_found"):
+            time.sleep(5)
+            continue
         last=detail.get("last_event") or "unknown"
         if last=="delivered":
             print("TEST_DELIVERED",eid)
