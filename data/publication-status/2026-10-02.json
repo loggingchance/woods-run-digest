@@ -15,8 +15,8 @@
   "email": {
     "status": "sent",
     "broadcast_id": "0f6c6467-dad1-4bdc-88ee-dfe61eebfbae",
-    "delivered": 0,
-    "failed": null
+    "delivered": 1,
+    "failed": 0
   },
   "social": {
     "x": {
