@@ -1,0 +1,178 @@
+name: Scheduled email publisher
+
+on:
+  workflow_dispatch:
+  schedule:
+    # FBS Friday 5:23 AM Eastern (EDT/EST)
+    - cron: '23 9 * * 5'
+    - cron: '23 10 * * 5'
+    # Funding Tuesday 5:07 AM Mountain (MDT/MST)
+    - cron: '7 11 * * 2'
+    - cron: '7 12 * * 2'
+    # Peer Group Friday 7:53 AM Mountain (MDT/MST)
+    - cron: '53 13 * * 5'
+    - cron: '53 14 * * 5'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: scheduled-email-publisher
+  cancel-in-progress: false
+
+jobs:
+  fbs-weekly:
+    runs-on: ubuntu-latest
+    env:
+      RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+      HEALTHCHECKS_URL: ${{ secrets.HC_FBS_WEEKLY }}
+      DELIVERY_WORKFLOW: FBS Weekly Notes
+      HANDOFF_PATH: data/handoffs/fbs_weekly.json
+      DELIVERY_TIMEZONE: America/New_York
+      EXPECTED_FROM: FBS Weekly Notes <no-reply@forestenterprise.org>
+      EXPECTED_TO: steve@northeastforests.com
+      ALERT_FROM: FBS Automation Monitor <no-reply@forestenterprise.org>
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Resolve FBS slot
+        id: slot
+        run: |
+          python - <<'PY' >> "$GITHUB_OUTPUT"
+          import os
+          from datetime import datetime
+          from zoneinfo import ZoneInfo
+          now=datetime.now(ZoneInfo("America/New_York"))
+          manual=os.environ.get("GITHUB_EVENT_NAME")=="workflow_dispatch"
+          print("run=" + ("true" if manual or (now.weekday()==4 and now.hour==5 and 20 <= now.minute < 30) else "false"))
+          PY
+      - name: Validate Resend secret
+        if: steps.slot.outputs.run == 'true'
+        run: test -n "$RESEND_API_KEY"
+      - name: Send or alert
+        if: steps.slot.outputs.run == 'true'
+        run: python scripts/send_single_handoff.py
+      - name: Commit ledger
+        if: always() && steps.slot.outputs.run == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/delivery-ledger
+          if ! git diff --cached --quiet; then
+            git commit -m "Record FBS Weekly Notes delivery"
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
+      - name: Ping external monitor success
+        if: success() && steps.slot.outputs.run == 'true' && env.HEALTHCHECKS_URL != ''
+        run: curl -fsS --retry 3 --max-time 10 "$HEALTHCHECKS_URL"
+      - name: Ping external monitor failure
+        if: failure() && steps.slot.outputs.run == 'true' && env.HEALTHCHECKS_URL != ''
+        run: curl -fsS --retry 3 --max-time 10 "$HEALTHCHECKS_URL/fail"
+
+  funding:
+    runs-on: ubuntu-latest
+    env:
+      RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+      HEALTHCHECKS_URL: ${{ secrets.HC_FUNDING }}
+      DELIVERY_WORKFLOW: NF LLC Weekly Funding Opportunities
+      HANDOFF_PATH: data/handoffs/funding.json
+      DELIVERY_TIMEZONE: America/Denver
+      EXPECTED_FROM: NF LLC Opportunities <no-reply@forestenterprise.org>
+      EXPECTED_TO: steve@northeastforests.com
+      ALERT_FROM: NF LLC Automation Monitor <no-reply@forestenterprise.org>
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Resolve funding slot
+        id: slot
+        run: |
+          python - <<'PY' >> "$GITHUB_OUTPUT"
+          import os
+          from datetime import datetime
+          from zoneinfo import ZoneInfo
+          now=datetime.now(ZoneInfo("America/Denver"))
+          manual=os.environ.get("GITHUB_EVENT_NAME")=="workflow_dispatch"
+          print("run=" + ("true" if manual or (now.weekday()==1 and now.hour==5 and 5 <= now.minute < 15) else "false"))
+          PY
+      - name: Validate Resend secret
+        if: steps.slot.outputs.run == 'true'
+        run: test -n "$RESEND_API_KEY"
+      - name: Send or alert
+        if: steps.slot.outputs.run == 'true'
+        run: python scripts/send_single_handoff.py
+      - name: Commit ledger
+        if: always() && steps.slot.outputs.run == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/delivery-ledger
+          if ! git diff --cached --quiet; then
+            git commit -m "Record funding delivery"
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
+      - name: Ping external monitor success
+        if: success() && steps.slot.outputs.run == 'true' && env.HEALTHCHECKS_URL != ''
+        run: curl -fsS --retry 3 --max-time 10 "$HEALTHCHECKS_URL"
+      - name: Ping external monitor failure
+        if: failure() && steps.slot.outputs.run == 'true' && env.HEALTHCHECKS_URL != ''
+        run: curl -fsS --retry 3 --max-time 10 "$HEALTHCHECKS_URL/fail"
+
+  peer-group:
+    runs-on: ubuntu-latest
+    env:
+      RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+      HEALTHCHECKS_URL: ${{ secrets.HC_PEER_GROUP }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Resolve Peer Group slot
+        id: slot
+        run: |
+          python - <<'PY' >> "$GITHUB_OUTPUT"
+          import os
+          from datetime import datetime
+          from zoneinfo import ZoneInfo
+          now=datetime.now(ZoneInfo("America/Denver"))
+          manual=os.environ.get("GITHUB_EVENT_NAME")=="workflow_dispatch"
+          print("run=" + ("true" if manual or (now.weekday()==4 and now.hour==7 and 50 <= now.minute < 59) else "false"))
+          PY
+      - name: Validate Resend secret
+        if: steps.slot.outputs.run == 'true'
+        run: test -n "$RESEND_API_KEY"
+      - name: Send current issue or alert
+        if: steps.slot.outputs.run == 'true'
+        run: python scripts/send_peer_digest.py
+      - name: Commit ledger
+        if: always() && steps.slot.outputs.run == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/delivery-ledger
+          if ! git diff --cached --quiet; then
+            git commit -m "Record Peer Group delivery"
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
+      - name: Ping external monitor success
+        if: success() && steps.slot.outputs.run == 'true' && env.HEALTHCHECKS_URL != ''
+        run: curl -fsS --retry 3 --max-time 10 "$HEALTHCHECKS_URL"
+      - name: Ping external monitor failure
+        if: failure() && steps.slot.outputs.run == 'true' && env.HEALTHCHECKS_URL != ''
+        run: curl -fsS --retry 3 --max-time 10 "$HEALTHCHECKS_URL/fail"
