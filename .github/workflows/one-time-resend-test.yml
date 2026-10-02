@@ -3,7 +3,7 @@ name: One-time Woods Run formatted scheduled test
 on:
   workflow_dispatch:
   schedule:
-    - cron: '59 18 2 10 *'
+    - cron: '5,10,15 19 2 10 *'
 
 permissions:
   contents: read
