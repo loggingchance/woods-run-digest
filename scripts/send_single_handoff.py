@@ -139,6 +139,9 @@ def poll_delivery(email_id: str, timeout: int = 180) -> str:
     last = "unknown"
     while time.time() < deadline:
         detail = request("GET", f"/emails/{email_id}")
+        if detail.get("_transient_not_found"):
+            time.sleep(5)
+            continue
         last = detail.get("last_event") or "unknown"
         if last == "delivered":
             return last
