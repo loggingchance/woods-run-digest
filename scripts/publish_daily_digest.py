@@ -229,14 +229,10 @@ def deliver(date: str) -> dict:
     if issue["date"] != date:
         fail("Live delivery date does not match canonical issue")
 
-    # Email adapter is idempotent by exact same-date broadcast name/date.
-    if ledger["email"].get("status") not in ("submitted", "sent", "delivered"):
-        out = run_adapter("scripts/publish_digest_email.py")
-        m = re.search(r"(?:Sent same-date broadcast|Same-date broadcast already sent):\s*([A-Za-z0-9-]+)", out)
-        if m:
-            ledger["email"]["broadcast_id"] = m.group(1)
-        ledger["email"]["status"] = "submitted"
-        save_ledger(ledger)
+    # Email delivery is external to GitHub. ChatGPT scheduled tasks send and verify
+    # directly through the Resend integration. GitHub owns only web/social here.
+    ledger["email"]["status"] = "external"
+    save_ledger(ledger)
 
     # Social adapter performs same-date duplicate detection before publishing.
     if not all(ledger["social"][k].get("status") in ("submitted","sent") for k in ("x","instagram","youtube")):
@@ -259,11 +255,9 @@ def verify(date: str) -> dict:
     else:
         # Re-query the idempotent delivery adapters. They are authoritative for
         # whether the same-date broadcast/social posts already exist and are sent.
-        email_out = run_adapter("scripts/publish_digest_email.py")
-        if re.search(r"(?:Same-date broadcast already sent|Sent same-date broadcast):\s*([A-Za-z0-9-]+)", email_out):
-            m = re.search(r"(?:Same-date broadcast already sent|Sent same-date broadcast):\s*([A-Za-z0-9-]+)", email_out)
-            ledger["email"]["status"] = "sent"
-            ledger["email"]["broadcast_id"] = m.group(1) if m else ledger["email"].get("broadcast_id")
+        # Email is intentionally not verified from GitHub; direct Resend delivery is
+        # verified by the ChatGPT scheduled task that owns email delivery.
+        ledger["email"]["status"] = "external"
 
         social_out = run_adapter("scripts/post_to_buffer.py")
         patterns = {
@@ -277,9 +271,8 @@ def verify(date: str) -> dict:
                 ledger["social"][key]["status"] = "sent"
                 ledger["social"][key]["post_id"] = m.group(1)
 
-        email_ok = ledger["email"].get("status") == "sent"
         social_ok = all(ledger["social"][k].get("status") == "sent" for k in ("x","instagram","youtube"))
-        ledger["complete"] = bool(build_ok and email_ok and social_ok)
+        ledger["complete"] = bool(build_ok and social_ok)
 
     save_ledger(ledger)
     if not ledger["complete"]:
