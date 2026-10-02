@@ -1,16 +1,16 @@
-name: Woods Run single publisher
+name: Woods Run social publisher
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: '52 9 * * *'
-    - cron: '52 10 * * *'
+  push:
+    paths:
+      - 'data/social-trigger.json'
 
 permissions:
   contents: write
 
 concurrency:
-  group: woods-run-single-publisher
+  group: woods-run-social-publisher
   cancel-in-progress: false
 
 jobs:
@@ -19,8 +19,6 @@ jobs:
     env:
       WRD_DELIVERY_MODE: live
       BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
-      WOODS_RUN_SEGMENT_ID: ec27b7e4-84e2-47af-83ce-7d77732ed557
-      HEALTHCHECKS_URL: ${{ secrets.HC_WOODS_RUN }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -37,23 +35,7 @@ jobs:
           sudo apt-get install -y ffmpeg
           python -m pip install -r requirements.txt
 
-      - name: Resolve scheduled local-time slot
-        id: slot
-        run: |
-          python - <<'PY' >> "$GITHUB_OUTPUT"
-          import os
-          from datetime import datetime
-          from zoneinfo import ZoneInfo
-          if os.environ.get("GITHUB_EVENT_NAME") != "schedule":
-              print("run=true")
-          else:
-              now=datetime.now(ZoneInfo("America/New_York"))
-              print("run=" + ("true" if now.hour == 5 and now.minute >= 50 else "false"))
-          PY
-
       - name: Validate social credential
-        if: steps.slot.outputs.run == 'true'
-        shell: bash
         run: |
           if [ -z "$BUFFER_API_KEY" ]; then
             echo "::error::BUFFER_API_KEY is missing"
@@ -61,13 +43,9 @@ jobs:
           fi
 
       - name: Build and validate today's publication
-        id: build
-        if: steps.slot.outputs.run == 'true'
         run: python scripts/publish_daily_digest.py build
 
       - name: Commit generated canonical surfaces and assets
-        id: canonical_commit
-        if: steps.slot.outputs.run == 'true' && success()
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -78,32 +56,20 @@ jobs:
             git push origin HEAD:main
           fi
 
-      - name: Delivery state machine
-        id: deliver
-        if: steps.slot.outputs.run == 'true' && success()
+      - name: Publish social package
         run: python scripts/publish_daily_digest.py deliver
 
-      - name: Verify publication state
-        id: verify
-        if: steps.slot.outputs.run == 'true' && success()
+      - name: Verify social publication state
         run: python scripts/publish_daily_digest.py verify
 
       - name: Commit final ledger
-        if: always() && steps.slot.outputs.run == 'true'
+        if: always()
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/publication-status
           if ! git diff --cached --quiet; then
-            git commit -m "Record Woods Run publication ledger"
+            git commit -m "Record Woods Run social publication ledger"
             git pull --rebase origin main
             git push origin HEAD:main
           fi
-
-      - name: Ping external monitor success
-        if: success() && steps.slot.outputs.run == 'true' && env.HEALTHCHECKS_URL != ''
-        run: curl -fsS --retry 3 --max-time 10 "$HEALTHCHECKS_URL"
-
-      - name: Ping external monitor failure
-        if: failure() && steps.slot.outputs.run == 'true' && env.HEALTHCHECKS_URL != ''
-        run: curl -fsS --retry 3 --max-time 10 "$HEALTHCHECKS_URL/fail"
