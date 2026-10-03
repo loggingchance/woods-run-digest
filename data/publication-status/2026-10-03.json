@@ -1,0 +1,39 @@
+{
+  "date": "2026-10-03",
+  "mode": "live",
+  "canonical": {
+    "validated": true
+  },
+  "build": {
+    "homepage": true,
+    "archive": true,
+    "sitemap": true,
+    "seo": true,
+    "card": true,
+    "reel": true
+  },
+  "email": {
+    "status": "pending",
+    "broadcast_id": null,
+    "delivered": 0,
+    "failed": null
+  },
+  "social": {
+    "x": {
+      "status": "pending",
+      "external_url": null,
+      "post_id": null
+    },
+    "instagram": {
+      "status": "pending",
+      "external_url": null,
+      "post_id": null
+    },
+    "youtube": {
+      "status": "pending",
+      "external_url": null,
+      "post_id": null
+    }
+  },
+  "complete": false
+}
