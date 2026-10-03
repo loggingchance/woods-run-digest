@@ -13,26 +13,26 @@
     "reel": true
   },
   "email": {
-    "status": "pending",
+    "status": "external",
     "broadcast_id": null,
     "delivered": 0,
     "failed": null
   },
   "social": {
     "x": {
-      "status": "pending",
+      "status": "sent",
       "external_url": null,
-      "post_id": null
+      "post_id": "6ac0d257814d657011be8461"
     },
     "instagram": {
-      "status": "pending",
+      "status": "submitted",
       "external_url": null,
       "post_id": null
     },
     "youtube": {
-      "status": "pending",
+      "status": "sent",
       "external_url": null,
-      "post_id": null
+      "post_id": "6ac0d263905eed02e05fc01e"
     }
   },
   "complete": false
