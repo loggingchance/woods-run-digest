@@ -261,17 +261,18 @@ def verify(date: str) -> dict:
 
         social_out = run_adapter("scripts/post_to_buffer.py")
         patterns = {
-            "x": r"X already contains this issue \(sent\):\s*([A-Za-z0-9-]+)",
-            "instagram": r"Instagram already contains this issue reel \(sent\):\s*([A-Za-z0-9-]+)",
-            "youtube": r"YouTube already contains this issue reel \(sent\):\s*([A-Za-z0-9-]+)",
+            "x": r"X already contains this issue \((sent|scheduled|sending)\):\s*([A-Za-z0-9-]+)",
+            "instagram": r"Instagram already contains this issue reel \((sent|scheduled|sending)\):\s*([A-Za-z0-9-]+)",
+            "youtube": r"YouTube already contains this issue reel \((sent|scheduled|sending)\):\s*([A-Za-z0-9-]+)",
         }
         for key, pattern in patterns.items():
             m = re.search(pattern, social_out)
             if m:
-                ledger["social"][key]["status"] = "sent"
-                ledger["social"][key]["post_id"] = m.group(1)
+                ledger["social"][key]["status"] = m.group(1)
+                ledger["social"][key]["post_id"] = m.group(2)
 
-        social_ok = all(ledger["social"][k].get("status") == "sent" for k in ("x","instagram","youtube"))
+        acceptable = {"sent", "scheduled", "sending"}
+        social_ok = all(ledger["social"][k].get("status") in acceptable for k in ("x","instagram","youtube"))
         ledger["complete"] = bool(build_ok and social_ok)
 
     save_ledger(ledger)
