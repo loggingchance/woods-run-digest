@@ -153,7 +153,7 @@ def recent_post_exists(
         first: 50
         input: {
           organizationId: $organizationId
-          filter: { status: [sent, scheduled], channelIds: [$channelId] }
+          filter: { status: [sent, scheduled, sending], channelIds: [$channelId] }
           sort: [{ field: createdAt, direction: desc }]
         }
       ) {
@@ -299,7 +299,7 @@ def publish(
 def striking_post_exists(organization_id: str, channel_id: str, text: str) -> bool:
     query = """
     query RecentPosts($organizationId: OrganizationId!, $channelId: ChannelId!) {
-      posts(first: 50, input: {organizationId: $organizationId, filter: {status: [sent, scheduled], channelIds: [$channelId]}, sort: [{field: createdAt, direction: desc}]}) {
+      posts(first: 50, input: {organizationId: $organizationId, filter: {status: [sent, scheduled, sending], channelIds: [$channelId]}, sort: [{field: createdAt, direction: desc}]}) {
         edges { node { id text status externalLink } }
       }
     }
