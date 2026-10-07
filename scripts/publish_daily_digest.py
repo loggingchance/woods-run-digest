@@ -234,13 +234,16 @@ def deliver(date: str) -> dict:
     ledger["email"]["status"] = "external"
     save_ledger(ledger)
 
-    # Social adapter performs same-date duplicate detection before publishing.
-    if not all(ledger["social"][k].get("status") in ("submitted","sent") for k in ("x","instagram","youtube")):
+    # Buffer/GitHub owns X only. Instagram and YouTube are delivered directly
+    # through Metricool by the ChatGPT scheduled social task.
+    if ledger["social"]["x"].get("status") not in ("submitted","sent","scheduled","sending"):
         run_adapter("scripts/post_to_buffer.py")
-        for key in ("x","instagram","youtube"):
-            if ledger["social"][key].get("status") == "pending":
-                ledger["social"][key]["status"] = "submitted"
-        save_ledger(ledger)
+        if ledger["social"]["x"].get("status") == "pending":
+            ledger["social"]["x"]["status"] = "submitted"
+    for key in ("instagram","youtube"):
+        if ledger["social"][key].get("status") == "pending":
+            ledger["social"][key]["status"] = "external"
+    save_ledger(ledger)
 
     # Submission is deliberately not equivalent to verified completion.
     # External status/metrics must be written into the ledger by verification.
@@ -260,19 +263,17 @@ def verify(date: str) -> dict:
         ledger["email"]["status"] = "external"
 
         social_out = run_adapter("scripts/post_to_buffer.py")
-        patterns = {
-            "x": r"X already contains this issue \((sent|scheduled|sending)\):\s*([A-Za-z0-9-]+)",
-            "instagram": r"Instagram already contains this issue reel \((sent|scheduled|sending)\):\s*([A-Za-z0-9-]+)",
-            "youtube": r"YouTube already contains this issue reel \((sent|scheduled|sending)\):\s*([A-Za-z0-9-]+)",
-        }
-        for key, pattern in patterns.items():
-            m = re.search(pattern, social_out)
-            if m:
-                ledger["social"][key]["status"] = m.group(1)
-                ledger["social"][key]["post_id"] = m.group(2)
+        m = re.search(r"X already contains this issue \((sent|scheduled|sending)\):\s*([A-Za-z0-9-]+)", social_out)
+        if m:
+            ledger["social"]["x"]["status"] = m.group(1)
+            ledger["social"]["x"]["post_id"] = m.group(2)
+
+        # Instagram and YouTube are verified outside GitHub through Metricool.
+        for key in ("instagram","youtube"):
+            ledger["social"][key]["status"] = "external"
 
         acceptable = {"sent", "scheduled", "sending"}
-        social_ok = all(ledger["social"][k].get("status") in acceptable for k in ("x","instagram","youtube"))
+        social_ok = ledger["social"]["x"].get("status") in acceptable
         ledger["complete"] = bool(build_ok and social_ok)
 
     save_ledger(ledger)
