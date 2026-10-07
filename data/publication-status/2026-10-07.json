@@ -13,27 +13,27 @@
     "reel": true
   },
   "email": {
-    "status": "pending",
+    "status": "external",
     "broadcast_id": null,
     "delivered": 0,
     "failed": null
   },
   "social": {
     "x": {
-      "status": "pending",
+      "status": "sent",
       "external_url": null,
-      "post_id": null
+      "post_id": "6ac61899e94d01075006504e"
     },
     "instagram": {
-      "status": "pending",
+      "status": "sending",
       "external_url": null,
-      "post_id": null
+      "post_id": "6ac6189b20048411f0ee67ce"
     },
     "youtube": {
-      "status": "pending",
+      "status": "sent",
       "external_url": null,
-      "post_id": null
+      "post_id": "6ac618a6e94d010750065308"
     }
   },
-  "complete": false
+  "complete": true
 }
