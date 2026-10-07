@@ -1,11 +1,9 @@
 #!/usr/bin/env python3
-"""Publish the newest Woods Run issue to X, Instagram, and YouTube through Buffer.
+"""Publish the newest Woods Run issue to X through Buffer.
 
-X receives the dated social card. Instagram and YouTube receive the same vertical
-Woods Run reel. Repository-generated assets are authoritative for publishing, so
-GitHub Pages propagation can never block or delay social delivery. YouTube is
-optional: if no YouTube channel is connected in Buffer, the daily publishing run
-continues normally for X and Instagram.
+Instagram and YouTube are published directly through Metricool by the ChatGPT
+scheduled social task. Buffer/GitHub owns X only. Repository-generated assets
+remain authoritative for the X social card during the transition away from GitHub.
 """
 
 from __future__ import annotations
@@ -23,8 +21,6 @@ MAX_X_TEXT = 280
 
 TARGETS = (
     {"service": "twitter", "name": "ForestBizSchool", "label": "X", "required": True},
-    {"service": "instagram", "name": "northeastforests", "label": "Instagram", "required": True},
-    {"service": "youtube", "name": "Steve07870", "label": "YouTube", "required": False},
 )
 
 
@@ -349,10 +345,6 @@ def main() -> None:
     local_reel = Path("assets/videos") / f"{issue['date']}.mp4"
     if not local_card.exists() or local_card.stat().st_size == 0:
         fail(f"Repository social card is missing: {local_card}")
-    if ("instagram" in selected or "youtube" in selected) and (
-        not local_reel.exists() or local_reel.stat().st_size == 0
-    ):
-        fail(f"Repository social reel is missing: {local_reel}")
 
     raw_root = "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main"
     publish_card_url = f"{raw_root}/assets/cards/{issue['date']}.png"
