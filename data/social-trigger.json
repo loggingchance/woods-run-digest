@@ -1,11 +1,11 @@
 {
   "date": "2026-10-08",
-  "triggered_at": "2026-10-08T10:40:00Z",
+  "triggered_at": "2026-10-08T14:12:48Z",
   "channels": [
     "x",
     "instagram",
     "youtube"
   ],
-  "reason": "Buffer social recovery for missing Instagram Reel and YouTube Short; X duplicate-check enabled",
+  "reason": "2026-10-08-0805-social-retest",
   "url": "https://woods-run-digest.steve760060.chatgpt.site/2026/10/08/"
 }
