@@ -21,7 +21,7 @@ MAX_X_TEXT = 280
 TARGETS = (
     {"service": "twitter", "name": "ForestBizSchool", "label": "X", "required": True},
     {"service": "instagram", "name": "northeastforests", "label": "Instagram", "required": True},
-    {"service": "youtube", "name": "The Forest Business School", "label": "YouTube", "required": True},
+    {"service": "youtube", "name": "Logging Chance", "label": "YouTube", "required": True},
 )
 
 
