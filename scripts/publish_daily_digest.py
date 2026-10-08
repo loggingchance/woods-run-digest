@@ -273,7 +273,7 @@ def verify(date: str) -> dict:
                 ledger["social"][key]["status"] = match.group(1)
                 ledger["social"][key]["post_id"] = match.group(2)
                 public_match = re.search(
-                    rf"{label} already contains this issue(?: reel)? \\(sent|scheduled|sending\\):\\s*{re.escape(match.group(2))} public_url=(\\S+)",
+                    rf"{label} already contains this issue(?: reel)? \\((?:sent|scheduled|sending)\\):\\s*{re.escape(match.group(2))} public_url=(\\S+)",
                     social_out,
                 )
                 public_url = public_match.group(1) if public_match else None
