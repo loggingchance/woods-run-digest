@@ -265,7 +265,7 @@ def verify(date: str) -> dict:
         statuses = {}
         for key, label in (("x", "X"), ("instagram", "Instagram"), ("youtube", "YouTube")):
             match = re.search(
-                rf"{label} already contains this issue(?: reel)? \\((sent|scheduled|sending)\\):\\s*([A-Za-z0-9-]+)",
+                rf"{label} already contains this issue(?: reel)? \((sent|scheduled|sending)\):\s*([A-Za-z0-9-]+)",
                 social_out,
             )
             if match:
