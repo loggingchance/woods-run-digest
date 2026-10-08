@@ -1,5 +1,7 @@
 {
   "date": "2026-10-08",
-  "reason": "Verify preparation with bundled FFmpeg available; preserve current media and perform no email or social publication",
-  "revision": 2
+  "request_id": "E2E-20261008-1500",
+  "requested_at": "2026-10-08T20:15:38.150Z",
+  "reason": "October 8 15:00 America/Denver rehearsal: prepare and verify existing same-date media only; no email or publishing",
+  "revision": 3
 }
