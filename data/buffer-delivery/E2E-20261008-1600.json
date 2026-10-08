@@ -6,10 +6,10 @@
       "attempt_started_at": "2026-10-08T21:42:09.871940Z",
       "newly_created": true,
       "post_id": "6ac80e32738092739d1314c3",
-      "status": "scheduled",
+      "status": "sent",
       "due_at": "2026-10-08T22:00:00.000Z",
       "created_at": "2026-10-08T21:42:10.032Z",
-      "external_url": null,
+      "external_url": "https://x.com/1487833905197637637/status/2108316523135635810",
       "assets": [
         {
           "source": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/cards/2026-10-08.png",
@@ -18,18 +18,25 @@
       ],
       "error": null,
       "schedule_verified": true,
-      "provider_sent": false,
+      "provider_sent": true,
       "existing_delivery": false,
-      "public_visibility": "not_independently_verified"
+      "public_visibility": "verified",
+      "public_probe": {
+        "url": "https://x.com/1487833905197637637/status/2108316523135635810",
+        "final_url": "https://x.com/ForestBizSchool/status/2108316523135635810",
+        "http_status": 200,
+        "content_type": "text/html; charset=UTF-8",
+        "content_verified": true
+      }
     },
     "instagram": {
       "attempt_started_at": "2026-10-08T21:42:10.706231Z",
       "newly_created": true,
       "post_id": "6ac80e3355cc56681daf8185",
-      "status": "scheduled",
+      "status": "sent",
       "due_at": "2026-10-08T22:00:00.000Z",
       "created_at": "2026-10-08T21:42:11.011Z",
-      "external_url": null,
+      "external_url": "https://www.instagram.com/reel/DeP9OIdE7Wp/",
       "assets": [
         {
           "source": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/videos/2026-10-08.mp4",
@@ -38,18 +45,25 @@
       ],
       "error": null,
       "schedule_verified": true,
-      "provider_sent": false,
+      "provider_sent": true,
       "existing_delivery": false,
-      "public_visibility": "not_independently_verified"
+      "public_visibility": "verified",
+      "public_probe": {
+        "url": "https://www.instagram.com/reel/DeP9OIdE7Wp/",
+        "final_url": "https://www.instagram.com/reel/DeP9OIdE7Wp/",
+        "http_status": 200,
+        "content_type": "text/html; charset=\"utf-8\"",
+        "content_verified": true
+      }
     },
     "youtube": {
       "attempt_started_at": "2026-10-08T21:42:11.497786Z",
       "newly_created": true,
       "post_id": "6ac80e3305aa5777b6155743",
-      "status": "scheduled",
+      "status": "sent",
       "due_at": "2026-10-08T22:00:00.000Z",
       "created_at": "2026-10-08T21:42:11.761Z",
-      "external_url": null,
+      "external_url": "https://www.youtube.com/watch?v=oayIA1fZ2co",
       "assets": [
         {
           "source": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/videos/2026-10-08.mp4",
@@ -58,12 +72,19 @@
       ],
       "error": null,
       "schedule_verified": true,
-      "provider_sent": false,
+      "provider_sent": true,
       "existing_delivery": false,
-      "public_visibility": "not_independently_verified"
+      "public_visibility": "verified",
+      "public_probe": {
+        "url": "https://www.youtube.com/watch?v=oayIA1fZ2co",
+        "final_url": "https://www.youtube.com/watch?v=oayIA1fZ2co",
+        "http_status": 200,
+        "content_type": "text/html; charset=utf-8",
+        "content_verified": true
+      }
     }
   },
-  "checked_at": "2026-10-08T21:42:08.280324Z",
+  "checked_at": "2026-10-08T22:01:30.000928Z",
   "requested_action": "schedule_test",
   "channel_identity": [
     {
@@ -181,8 +202,8 @@
   },
   "all_scheduled": true,
   "daily_idempotent": false,
-  "all_provider_sent": false,
-  "all_public_verified": false,
+  "all_provider_sent": true,
+  "all_public_verified": true,
   "email_verified": false,
   "complete": false
 }
