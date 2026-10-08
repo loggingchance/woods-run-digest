@@ -196,12 +196,16 @@ def require_live_credentials() -> None:
     if missing:
         fail("Live delivery credentials missing: " + ", ".join(missing))
 
-def run_adapter(script: str) -> str:
+def run_adapter(script: str, verify_only: bool = False) -> str:
+    env = os.environ.copy()
+    if verify_only:
+        env["WRD_SOCIAL_MODE"] = "verify"
     proc = subprocess.run(
         [sys.executable, script],
         cwd=ROOT,
         text=True,
         capture_output=True,
+        env=env,
     )
     output = (proc.stdout or "") + (proc.stderr or "")
     print(output, end="")
@@ -234,15 +238,13 @@ def deliver(date: str) -> dict:
     ledger["email"]["status"] = "external"
     save_ledger(ledger)
 
-    # Buffer/GitHub owns X only. Instagram and YouTube are delivered directly
-    # through Metricool by the ChatGPT scheduled social task.
-    if ledger["social"]["x"].get("status") not in ("submitted","sent","scheduled","sending"):
-        run_adapter("scripts/post_to_buffer.py")
-        if ledger["social"]["x"].get("status") == "pending":
-            ledger["social"]["x"]["status"] = "submitted"
-    for key in ("instagram","youtube"):
+    # Buffer owns all three channels. The adapter checks for existing posts before
+    # submitting any missing channel, preventing duplicate normal publications.
+    # Do not let a stale X-only ledger prevent Instagram/YouTube recovery.
+    run_adapter("scripts/post_to_buffer.py")
+    for key in ("x", "instagram", "youtube"):
         if ledger["social"][key].get("status") == "pending":
-            ledger["social"][key]["status"] = "external"
+            ledger["social"][key]["status"] = "submitted"
     save_ledger(ledger)
 
     # Submission is deliberately not equivalent to verified completion.
@@ -256,25 +258,27 @@ def verify(date: str) -> dict:
     if ledger.get("mode") == "dry-run":
         ledger["complete"] = bool(build_ok)
     else:
-        # Re-query the idempotent delivery adapters. They are authoritative for
-        # whether the same-date broadcast/social posts already exist and are sent.
-        # Email is intentionally not verified from GitHub; direct Resend delivery is
-        # verified by the ChatGPT scheduled task that owns email delivery.
+        # Read-only verification: NEVER create posts during a status check.
+        # Each channel must be marked sent, not merely queued or sending.
         ledger["email"]["status"] = "external"
+        social_out = run_adapter("scripts/post_to_buffer.py", verify_only=True)
+        statuses = {}
+        for key, label in (("x", "X"), ("instagram", "Instagram"), ("youtube", "YouTube")):
+            match = re.search(
+                rf"{label} already contains this issue(?: reel)? \\((sent|scheduled|sending)\\):\\s*([A-Za-z0-9-]+)",
+                social_out,
+            )
+            if match:
+                statuses[key] = match.group(1)
+                ledger["social"][key]["status"] = match.group(1)
+                ledger["social"][key]["post_id"] = match.group(2)
+            else:
+                statuses[key] = "missing"
+                ledger["social"][key]["status"] = "missing"
 
-        social_out = run_adapter("scripts/post_to_buffer.py")
-        m = re.search(r"X already contains this issue \((sent|scheduled|sending)\):\s*([A-Za-z0-9-]+)", social_out)
-        if m:
-            ledger["social"]["x"]["status"] = m.group(1)
-            ledger["social"]["x"]["post_id"] = m.group(2)
-
-        # Instagram and YouTube are verified outside GitHub through Metricool.
-        for key in ("instagram","youtube"):
-            ledger["social"][key]["status"] = "external"
-
-        acceptable = {"sent", "scheduled", "sending"}
-        social_ok = ledger["social"]["x"].get("status") in acceptable
-        ledger["complete"] = bool(build_ok and social_ok)
+        ledger["complete"] = bool(build_ok and all(
+            state == "sent" for state in statuses.values()
+        ))
 
     save_ledger(ledger)
     if not ledger["complete"]:
