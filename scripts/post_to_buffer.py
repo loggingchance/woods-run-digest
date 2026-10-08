@@ -90,8 +90,7 @@ def select_channel(all_channels: list[dict], service: str, name: str, label: str
     if len(exact) == 1:
         channel = exact[0]
     elif len(matching) == 1:
-        channel = matching[0]
-        print(f"{label}: expected {name!r}, using the only connected {service} channel {channel.get('name')!r}.")
+        fail(f"{label}: connected channel {matching[0].get('name')!r} does not match required account {name!r}; refusing wrong-account publication")
     elif not matching:
         fail(f"No {label} channel is connected in Buffer")
     else:
