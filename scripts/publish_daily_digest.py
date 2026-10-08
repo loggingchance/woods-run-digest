@@ -13,7 +13,7 @@ from pathlib import Path
 from zoneinfo import ZoneInfo
 
 ROOT = Path(__file__).resolve().parents[1]
-SITE_ROOT = "https://woodsrun.forestenterprise.org"
+SITE_ROOT = "https://woods-run-digest.steve760060.chatgpt.site"
 DENVER = ZoneInfo("America/Denver")
 EASTERN = ZoneInfo("America/New_York")
 
@@ -272,11 +272,13 @@ def verify(date: str) -> dict:
                 statuses[key] = match.group(1)
                 ledger["social"][key]["status"] = match.group(1)
                 ledger["social"][key]["post_id"] = match.group(2)
-                public_match = re.search(
-                    rf"{label} already contains this issue(?: reel)? \\((?:sent|scheduled|sending)\\):\\s*{re.escape(match.group(2))} public_url=(\\S+)",
-                    social_out,
-                )
-                public_url = public_match.group(1) if public_match else None
+                public_url = None
+                for line in social_out.splitlines():
+                    if label + " already contains this issue" in line and match.group(2) in line and "public_url=" in line:
+                        candidate = line.split("public_url=", 1)[1].strip()
+                        if candidate.startswith("https://"):
+                            public_url = candidate
+                            break
                 ledger["social"][key]["external_url"] = (
                     public_url if public_url and public_url.startswith("https://") else None
                 )
