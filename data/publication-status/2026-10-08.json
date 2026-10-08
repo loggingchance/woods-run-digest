@@ -25,14 +25,14 @@
       "post_id": "6ac76e516a3120c310958590"
     },
     "instagram": {
-      "status": "external",
+      "status": "sent",
       "external_url": null,
-      "post_id": null
+      "post_id": "6ac76ffd27bb102824c36f62"
     },
     "youtube": {
-      "status": "external",
+      "status": "sent",
       "external_url": null,
-      "post_id": null
+      "post_id": "6ac770079ecf6ac87a0b3f27"
     }
   },
   "complete": true
