@@ -30,7 +30,14 @@ jobs:
       - name: Install media preparation dependencies
         run: |
           python -m pip install --disable-pip-version-check -r requirements.txt
-          command -v ffmpeg
+          if ! command -v ffmpeg >/dev/null 2>&1; then
+            python -m pip install --disable-pip-version-check --only-binary=:all: imageio-ffmpeg==0.6.0
+            mkdir -p "$RUNNER_TEMP/woodsrun-bin"
+            FFMPEG=$(python -c 'import imageio_ffmpeg; print(imageio_ffmpeg.get_ffmpeg_exe())')
+            ln -sf "$FFMPEG" "$RUNNER_TEMP/woodsrun-bin/ffmpeg"
+            echo "$RUNNER_TEMP/woodsrun-bin" >> "$GITHUB_PATH"
+            "$RUNNER_TEMP/woodsrun-bin/ffmpeg" -version
+          fi
           test -f /usr/share/fonts/truetype/dejavu/DejaVuSans.ttf
       - name: Generate missing current-date assets and check dimensions
         run: |
