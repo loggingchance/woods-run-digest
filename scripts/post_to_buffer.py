@@ -170,16 +170,16 @@ def recent_post_exists(
         assets = post.get("assets") or []
         sources = {(asset.get("source") or "").strip() for asset in assets}
         if service == "twitter" and page_url in text:
-            print(f"X already contains this issue ({post.get('status')}): {post.get('id')}")
+            print(f"X already contains this issue ({post.get('status')}): {post.get('id')} public_url={post.get('externalLink') or '(unverified)'}")
             return True
         if service in ("instagram", "youtube") and any(
             src == reel_url or src.endswith("/" + reel_name) for src in sources
         ):
             label = "Instagram" if service == "instagram" else "YouTube"
-            print(f"{label} already contains this issue reel ({post.get('status')}): {post.get('id')}")
+            print(f"{label} already contains this issue reel ({post.get('status')}): {post.get('id')} public_url={post.get('externalLink') or '(unverified)'}")
             return True
         if service == "youtube" and page_url in text:
-            print(f"YouTube already contains this issue ({post.get('status')}): {post.get('id')}")
+            print(f"YouTube already contains this issue ({post.get('status')}): {post.get('id')} public_url={post.get('externalLink') or '(unverified)'}")
             return True
     return False
 
