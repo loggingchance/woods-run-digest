@@ -1,4 +1,5 @@
 {
   "date": "2026-10-08",
-  "reason": "Confirm early media preparation before enabling tomorrow native handoff; no email or social publication"
+  "reason": "Verify preparation with bundled FFmpeg available; preserve current media and perform no email or social publication",
+  "revision": 2
 }
