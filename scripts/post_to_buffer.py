@@ -16,7 +16,7 @@ import urllib.request
 from pathlib import Path
 
 BUFFER_API = "https://api.buffer.com"
-SITE_ROOT = "https://woodsrun.forestenterprise.org"
+SITE_ROOT = "https://woods-run-digest.steve760060.chatgpt.site"
 MAX_X_TEXT = 280
 
 TARGETS = (
