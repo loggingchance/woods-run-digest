@@ -272,12 +272,23 @@ def verify(date: str) -> dict:
                 statuses[key] = match.group(1)
                 ledger["social"][key]["status"] = match.group(1)
                 ledger["social"][key]["post_id"] = match.group(2)
+                public_match = re.search(
+                    rf"{label} already contains this issue(?: reel)? \\(sent|scheduled|sending\\):\\s*{re.escape(match.group(2))} public_url=(\\S+)",
+                    social_out,
+                )
+                public_url = public_match.group(1) if public_match else None
+                ledger["social"][key]["external_url"] = (
+                    public_url if public_url and public_url.startswith("https://") else None
+                )
             else:
                 statuses[key] = "missing"
                 ledger["social"][key]["status"] = "missing"
+                ledger["social"][key]["external_url"] = None
 
+        # Internal Buffer 'sent' must not be mistaken for public visibility.
         ledger["complete"] = bool(build_ok and all(
-            state == "sent" for state in statuses.values()
+            state == "sent" and ledger["social"][key].get("external_url")
+            for key, state in statuses.items()
         ))
 
     save_ledger(ledger)
