@@ -1,4 +1,4 @@
-name: Woods Run social publisher
+name: Woods Run native Buffer handoff
 
 on:
   workflow_dispatch:
@@ -14,62 +14,47 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  publish:
+  handoff:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     env:
-      WRD_DELIVERY_MODE: live
       BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: main
+          ref: ${{ github.sha }}
           fetch-depth: 0
-
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-
-      - name: Validate publisher and prepared assets
+      - name: Check native scheduler syntax and credential
         run: |
-          python -m py_compile scripts/post_to_buffer.py scripts/publish_daily_digest.py
-          test -s "assets/cards/$(TZ=America/Denver date +%F).png"
-          test -s "assets/videos/$(TZ=America/Denver date +%F).mp4"
-
-      - name: Validate social credential
-        run: |
+          python -m py_compile scripts/buffer_queue.py scripts/post_to_buffer.py
           if [ -z "$BUFFER_API_KEY" ]; then
             echo "::error::BUFFER_API_KEY is missing"
             exit 1
           fi
-
-      - name: Build and validate today's publication
-        run: python scripts/publish_daily_digest.py build
-
-      - name: Commit generated canonical surfaces and assets
+      - name: Audit or hand off the exact requested run to Buffer
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add index.html archive/index.html sitemap.xml data/publication-status assets/cards assets/videos 20??/??/??/index.html
-          if ! git diff --cached --quiet; then
-            git commit -m "Build Woods Run publication state"
-            git pull --rebase origin main
-            git push origin HEAD:main
-          fi
-
-      - name: Publish social package
-        run: python scripts/publish_daily_digest.py deliver
-
-      - name: Verify social publication state
-        run: python scripts/publish_daily_digest.py verify
-
-      - name: Commit final ledger
+          python - <<'PY'
+          import json, subprocess, sys
+          request = json.load(open('data/social-trigger.json'))
+          command = [sys.executable, 'scripts/buffer_queue.py']
+          if request.get('verify_only'):
+              command.append('--verify')
+          raise SystemExit(subprocess.call(command))
+          PY
+      - name: Preserve exact delivery receipts even when a channel fails
         if: always()
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/publication-status
-          if ! git diff --cached --quiet; then
-            git commit -m "Record Woods Run social publication ledger"
-            git pull --rebase origin main
-            git push origin HEAD:main
+          if [ -d data/buffer-delivery ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add data/buffer-delivery
+            if ! git diff --cached --quiet; then
+              git commit -m "Record native Buffer handoff and verification receipts"
+              git fetch origin main
+              git rebase origin/main
+              git push origin HEAD:main
+            fi
           fi
