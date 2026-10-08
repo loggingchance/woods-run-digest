@@ -2,7 +2,12 @@ name: Woods Run native Buffer handoff
 
 on:
   workflow_dispatch:
+  workflow_run:
+    workflows: ['Woods Run early media preparation']
+    types: [completed]
+    branches: [main]
   push:
+    branches: [main]
     paths:
       - 'data/social-trigger.json'
 
@@ -15,36 +20,43 @@ concurrency:
 
 jobs:
   handoff:
+    if: >-
+      github.event_name != 'workflow_run' ||
+      (github.event.workflow_run.conclusion == 'success' &&
+       github.event.workflow_run.head_repository.full_name == github.repository &&
+       github.event.workflow_run.head_branch == 'main')
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 105
     env:
       BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: ${{ github.sha }}
+          ref: main
           fetch-depth: 0
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Check native scheduler syntax and credential
+      - name: Validate native scheduler without publishing
         run: |
-          python -m py_compile scripts/buffer_queue.py scripts/post_to_buffer.py
+          python -m py_compile scripts/buffer_queue.py scripts/delivery_policy.py scripts/delivery_after_prepare.py
+          python -m unittest discover -s tests -p test_delivery_policy.py -v
           if [ -z "$BUFFER_API_KEY" ]; then
             echo "::error::BUFFER_API_KEY is missing"
             exit 1
           fi
-      - name: Audit or hand off the exact requested run to Buffer
+      - name: Queue authorized delivery inside Buffer
+        id: queue
+        continue-on-error: true
+        env:
+          EVENT_NAME: ${{ github.event_name }}
         run: |
-          python - <<'PY'
-          import json, subprocess, sys
-          request = json.load(open('data/social-trigger.json'))
-          command = [sys.executable, 'scripts/buffer_queue.py']
-          if request.get('verify_only'):
-              command.append('--verify')
-          raise SystemExit(subprocess.call(command))
-          PY
-      - name: Preserve exact delivery receipts even when a channel fails
+          if [ "$EVENT_NAME" = push ]; then
+            python scripts/delivery_after_prepare.py --legacy-request
+          else
+            python scripts/delivery_after_prepare.py
+          fi
+      - name: Record initial provider queue receipts before delivery
         if: always()
         run: |
           if [ -d data/buffer-delivery ]; then
@@ -52,9 +64,38 @@ jobs:
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
             git add data/buffer-delivery
             if ! git diff --cached --quiet; then
-              git commit -m "Record native Buffer handoff and verification receipts"
+              git commit -m "Record native Buffer queue receipts"
               git fetch origin main
               git rebase origin/main
               git push origin HEAD:main
             fi
+          fi
+      - name: Read provider outcomes after Buffer's scheduled delivery
+        id: verify
+        if: always() && steps.queue.outputs.should_verify == 'true'
+        continue-on-error: true
+        run: python scripts/delivery_after_prepare.py --verify-after-due
+      - name: Preserve final per-channel outcomes
+        if: always()
+        run: |
+          if [ -d data/buffer-delivery ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add data/buffer-delivery
+            if ! git diff --cached --quiet; then
+              git commit -m "Record verified Buffer delivery outcomes"
+              git fetch origin main
+              git rebase origin/main
+              git push origin HEAD:main
+            fi
+          fi
+      - name: Fail visibly on an unsuccessful handoff or outcome
+        if: always()
+        env:
+          QUEUE_OUTCOME: ${{ steps.queue.outcome }}
+          VERIFY_OUTCOME: ${{ steps.verify.outcome }}
+        run: |
+          if [ "$QUEUE_OUTCOME" != success ] || [ "$VERIFY_OUTCOME" = failure ]; then
+            echo "::error::Native Buffer handoff or delivery verification failed; inspect exact channel receipts"
+            exit 1
           fi
