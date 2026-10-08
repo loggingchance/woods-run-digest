@@ -1,9 +1,8 @@
 #!/usr/bin/env python3
-"""Publish the newest Woods Run issue to X through Buffer.
+"""Publish Woods Run to X, Instagram and YouTube through Buffer.
 
-Instagram and YouTube are published directly through Metricool by the ChatGPT
-scheduled social task. Buffer/GitHub owns X only. Repository-generated assets
-remain authoritative for the X social card during the transition away from GitHub.
+Buffer is the single social publishing recovery route. The generated dated
+card and vertical MP4 remain authoritative media assets.
 """
 
 from __future__ import annotations
@@ -21,6 +20,8 @@ MAX_X_TEXT = 280
 
 TARGETS = (
     {"service": "twitter", "name": "ForestBizSchool", "label": "X", "required": True},
+    {"service": "instagram", "name": "northeastforests", "label": "Instagram", "required": True},
+    {"service": "youtube", "name": "The Forest Business School", "label": "YouTube", "required": True},
 )
 
 
@@ -205,8 +206,7 @@ def compose_instagram_post(issue: dict) -> str:
     return (
         f"Woods Run Digest — {issue['displayDate']}\n\n"
         "Daily North American forestry & forest-products intelligence from The Forest Business School.\n\n"
-        "Read today’s edition: link in bio.\n"
-        "woodsrun.forestenterprise.org"
+        f"Read today’s edition: {SITE_ROOT}{issue['url']}"
     )
 
 
