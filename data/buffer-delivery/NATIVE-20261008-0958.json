@@ -1,0 +1,98 @@
+{
+  "run_id": "NATIVE-20261008-0958",
+  "date": "2026-10-08",
+  "channels": {
+    "instagram": {
+      "attempt_started_at": "2026-10-08T15:54:50.584749Z",
+      "newly_created": true,
+      "post_id": "6ac7bccad1ababbf88b8644e",
+      "status": "scheduled",
+      "due_at": "2026-10-08T15:58:00.000Z",
+      "created_at": "2026-10-08T15:54:50.920Z",
+      "external_url": null,
+      "assets": [
+        {
+          "source": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/videos/2026-10-08.mp4",
+          "mimeType": "video/mp4"
+        }
+      ],
+      "error": null,
+      "schedule_verified": true,
+      "provider_sent": false,
+      "existing_delivery": false,
+      "public_visibility": "not_independently_verified"
+    }
+  },
+  "checked_at": "2026-10-08T15:54:47.388877Z",
+  "requested_action": "schedule_test",
+  "channel_identity": [
+    {
+      "id": "6ab14319ea19ca0bdea627e2",
+      "name": "Logging Chance",
+      "service": "youtube",
+      "serviceId": "UCq-PscVBAKjmVE39qb2NyCg",
+      "externalLink": "https://www.youtube.com/channel/UCq-PscVBAKjmVE39qb2NyCg",
+      "isDisconnected": false,
+      "isLocked": false,
+      "isQueuePaused": false,
+      "timezone": "America/Denver"
+    },
+    {
+      "id": "6844cc71d6d25b49a1de682e",
+      "name": "northeastforests",
+      "service": "instagram",
+      "serviceId": "17841412643805979",
+      "externalLink": "https://instagram.com/northeastforests",
+      "isDisconnected": false,
+      "isLocked": false,
+      "isQueuePaused": false,
+      "timezone": "America/Denver"
+    },
+    {
+      "id": "6843193ed6d25b49a145ff6e",
+      "name": "ForestBizSchool",
+      "service": "twitter",
+      "serviceId": "1487833905197637637",
+      "externalLink": "https://twitter.com/ForestBizSchool",
+      "isDisconnected": false,
+      "isLocked": false,
+      "isQueuePaused": false,
+      "timezone": "America/Denver"
+    }
+  ],
+  "due_at": "2026-10-08T15:58:00Z",
+  "preflight_by_channel": {
+    "instagram": {
+      "page": {
+        "url": "https://woods-run-digest.steve760060.chatgpt.site/2026/10/08/",
+        "final_url": "https://woods-run-digest.steve760060.chatgpt.site/2026/10/08/",
+        "http_status": 200,
+        "content_type": "text/html",
+        "content_verified": true
+      },
+      "video": {
+        "url": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/videos/2026-10-08.mp4",
+        "dimensions": [
+          [
+            1080,
+            1920
+          ]
+        ],
+        "bytes": 834533,
+        "public": {
+          "url": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/videos/2026-10-08.mp4",
+          "final_url": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/videos/2026-10-08.mp4",
+          "http_status": 200,
+          "content_type": "application/octet-stream",
+          "content_verified": true
+        }
+      }
+    }
+  },
+  "all_scheduled": true,
+  "daily_idempotent": false,
+  "all_provider_sent": false,
+  "all_public_verified": false,
+  "email_verified": false,
+  "complete": false
+}
