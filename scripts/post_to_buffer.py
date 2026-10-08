@@ -363,6 +363,8 @@ def main() -> None:
         publish_striking(issue, organization_id, selected["twitter"])
         return
 
+    verify_only = mode == "verify"
+    missing = []
     for target in TARGETS:
         service = target["service"]
         label = target["label"]
@@ -372,6 +374,11 @@ def main() -> None:
 
         if recent_post_exists(organization_id, channel["id"], service, page_url, card_url, reel_url):
             print(f"No {label} action needed; this dated issue is already present.")
+            continue
+
+        if verify_only:
+            missing.append(label)
+            print(f"VERIFY_MISSING {label}: no matching sent/scheduled/sending Buffer post")
             continue
 
         print(f"Publishing Woods Run to {label} through Buffer with the dated social asset attached:")
@@ -389,6 +396,10 @@ def main() -> None:
             f"{len(post.get('assets') or [])} attached asset(s). "
             f"External link: {post.get('externalLink') or '(pending)'}"
         )
+
+    if verify_only and missing:
+        fail("Buffer social verification incomplete: " + ", ".join(missing))
+
 
 
 if __name__ == "__main__":
