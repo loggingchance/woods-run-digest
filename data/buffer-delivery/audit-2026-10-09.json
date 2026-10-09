@@ -1,0 +1,136 @@
+{
+  "run_id": "audit-2026-10-09",
+  "date": "2026-10-09",
+  "channels": {
+    "x": {
+      "post_id": "6ac8cc335e9e68eeb1db875b",
+      "status": "sent",
+      "due_at": "2026-10-09T11:20:00.000Z",
+      "created_at": "2026-10-09T11:12:51.000Z",
+      "external_url": "https://x.com/1487833905197637637/status/2108517838453404098",
+      "assets": [
+        {
+          "source": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/cards/2026-10-09.png",
+          "mimeType": "image/png"
+        }
+      ],
+      "provider_text": "Marks Lumber to stop sawing Nov. 6; amended Arnold AFB timber bids due Oct. 16; Ontario biomass funding closes Oct. 15.\n\nhttps://woods-run-digest.steve760060.chatgpt.site/2026/10/09/",
+      "error": null,
+      "schedule_verified": false,
+      "provider_sent": true,
+      "existing_delivery": true,
+      "public_visibility": "not_independently_verified",
+      "public_probe": {
+        "url": "https://x.com/1487833905197637637/status/2108517838453404098",
+        "final_url": "https://x.com/ForestBizSchool/status/2108517838453404098",
+        "http_status": 200,
+        "content_type": "text/html; charset=UTF-8",
+        "content_verified": false
+      }
+    },
+    "instagram": {
+      "status": "absent",
+      "error": "No matching delivery for this run ID"
+    },
+    "youtube": {
+      "status": "absent",
+      "error": "No matching delivery for this run ID"
+    }
+  },
+  "checked_at": "2026-10-09T16:50:16.565929Z",
+  "requested_action": "audit",
+  "requested_channels": [
+    "x",
+    "instagram",
+    "youtube"
+  ],
+  "required_daily_channels": [
+    "x",
+    "instagram",
+    "youtube"
+  ],
+  "channel_identity": [
+    {
+      "id": "6ab14319ea19ca0bdea627e2",
+      "name": "Logging Chance",
+      "service": "youtube",
+      "serviceId": "UCq-PscVBAKjmVE39qb2NyCg",
+      "externalLink": "https://www.youtube.com/channel/UCq-PscVBAKjmVE39qb2NyCg",
+      "isDisconnected": false,
+      "isLocked": false,
+      "isQueuePaused": false,
+      "timezone": "America/Denver"
+    },
+    {
+      "id": "6844cc71d6d25b49a1de682e",
+      "name": "northeastforests",
+      "service": "instagram",
+      "serviceId": "17841412643805979",
+      "externalLink": "https://instagram.com/northeastforests",
+      "isDisconnected": false,
+      "isLocked": false,
+      "isQueuePaused": false,
+      "timezone": "America/Denver"
+    },
+    {
+      "id": "6843193ed6d25b49a145ff6e",
+      "name": "ForestBizSchool",
+      "service": "twitter",
+      "serviceId": "1487833905197637637",
+      "externalLink": "https://twitter.com/ForestBizSchool",
+      "isDisconnected": false,
+      "isLocked": false,
+      "isQueuePaused": false,
+      "timezone": "America/Denver"
+    }
+  ],
+  "preflight": {
+    "page": {
+      "url": "https://woods-run-digest.steve760060.chatgpt.site/2026/10/09/",
+      "final_url": "https://woods-run-digest.steve760060.chatgpt.site/2026/10/09/",
+      "http_status": 200,
+      "content_type": "text/html",
+      "content_verified": true
+    },
+    "card": {
+      "url": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/cards/2026-10-09.png",
+      "dimensions": [
+        1200,
+        630
+      ],
+      "bytes": 206901,
+      "public": {
+        "url": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/cards/2026-10-09.png",
+        "final_url": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/cards/2026-10-09.png",
+        "http_status": 200,
+        "content_type": "image/png",
+        "content_verified": true
+      }
+    },
+    "video": {
+      "url": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/videos/2026-10-09.mp4",
+      "dimensions": [
+        [
+          1080,
+          1920
+        ]
+      ],
+      "bytes": 818622,
+      "public": {
+        "url": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/videos/2026-10-09.mp4",
+        "final_url": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/videos/2026-10-09.mp4",
+        "http_status": 200,
+        "content_type": "application/octet-stream",
+        "content_verified": true
+      }
+    }
+  },
+  "all_scheduled": false,
+  "daily_idempotent": false,
+  "all_provider_sent": false,
+  "all_public_verified": false,
+  "all_daily_channels_provider_sent": false,
+  "all_daily_channels_scheduled": false,
+  "email_verified": false,
+  "complete": false
+}
