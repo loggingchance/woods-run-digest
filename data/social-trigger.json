@@ -7,6 +7,6 @@
     "youtube"
   ],
   "verify_only": true,
-  "requested_at": "2026-10-09T17:10:03.575Z",
-  "reason": "Final read-only all-channel acceptance after successful missing-channel recovery; no posts created or rescheduled"
+  "requested_at": "2026-10-09T17:12:17.351Z",
+  "reason": "Verify all public outcomes using the actual production X caption's dated canonical link; read-only, no posts created or rescheduled"
 }

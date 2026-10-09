@@ -268,7 +268,10 @@ def run(request, verify=False):
                 result['error'] = 'Buffer status is not scheduled or delivered: ' + str(post.get('status'))
             result['public_visibility'] = 'not_independently_verified'
             if post.get('externalLink'):
-                result['public_probe'] = probe(post['externalLink'], [marker] if marker else [issue['displayDate']])
+                # Production X copy identifies the edition by its dated link,
+                # rather than spelling out the display date used by reels.
+                required_public = [marker] if marker else [issue['url'] if key == 'x' else issue['displayDate']]
+                result['public_probe'] = probe(post['externalLink'], required_public)
                 if result['public_probe']['content_verified']: result['public_visibility'] = 'verified'
         except Exception as exc:
             result['error'] = str(exc)[:1200]
