@@ -121,14 +121,29 @@ def get_channels():
     return organization, gql(query, {'organizationId': organization}).get('channels', [])
 
 def recent(organization, channel):
-    query = '''query Posts($org: OrganizationId!, $channel: ChannelId!) {
-      posts(first: 50, input: {organizationId: $org, filter: {channelIds: [$channel]},
+    query = '''query Posts($org: OrganizationId!, $channel: ChannelId!, $after: String) {
+      posts(first: 100, after: $after, input: {organizationId: $org, filter: {channelIds: [$channel]},
         sort: [{field: createdAt, direction: desc}]}) {
         edges { node { ''' + POST_FIELDS + ''' } }
+        pageInfo { hasNextPage endCursor }
       }
     }'''
-    data = gql(query, {'org': organization, 'channel': channel})
-    return [e['node'] for e in data.get('posts', {}).get('edges', [])]
+    posts, seen_cursors, after = {}, set(), None
+    for _ in range(100):
+        connection = gql(query, {'org': organization, 'channel': channel, 'after': after}).get('posts', {})
+        info = connection.get('pageInfo', {})
+        if not isinstance(info.get('hasNextPage'), bool):
+            raise ValueError('Missing Buffer pagination evidence; duplicate search is incomplete')
+        for edge in connection.get('edges', []):
+            post = edge['node']
+            posts[post['id']] = post
+        if not info['hasNextPage']:
+            return list(posts.values())
+        after = info.get('endCursor')
+        if not after or after in seen_cursors:
+            raise ValueError('Buffer pagination did not advance; duplicate search is incomplete')
+        seen_cursors.add(after)
+    raise ValueError('Buffer history exceeds bounded pagination; duplicate search is incomplete')
 
 def matches(post, issue, marker, saved_id=None):
     if saved_id: return post.get('id') == saved_id
@@ -218,8 +233,6 @@ def run(request, verify=False):
                 result.update({'status': 'absent', 'error': 'No matching delivery for this run ID'})
                 continue
             else:
-                if len(posts) >= 50:
-                    raise ValueError('Recent-post search reached its limit; refusing an incomplete duplicate check')
                 if result.get('attempt_started_at'):
                     raise ValueError('Previous submission outcome unresolved; no automatic duplicate retry')
                 if any(channel.get(k) for k in ('isDisconnected', 'isLocked', 'isQueuePaused')):

@@ -32,11 +32,11 @@ Updated October 8, 2026. All issue dates and daily times use America/Denver.
 - Native scheduling rejects stale dates, mismatched media, incorrect accounts, ambiguous tests and missed deadlines. Failures must be reported accurately.
 - Do not disable a recurring task because a run failed. Do not bypass a tool permission denial.
 
-## Explicit October8 rehearsal
+## Retained October 8 rehearsal evidence
 
-`E2E-20261008-1600` is authorized for16:00 Mountain/22:00UTC. Preparation starts15:35, independent Resend owner-only queue15:40, readiness15:50 and consolidated outcome16:10. The static policy authorizes one new X/Instagram/YouTube test with `[WR TEST E2E-20261008-1600]`. One owner-only email uses subject `WR SYSTEM TEST — October 8, 2026 — E2E-1600` and an exact idempotency key. This is not a subscriber rebroadcast and does not replace tomorrow's04:00 normal identities.
+`E2E-20261008-1600` is a completed historical rehearsal, not a request to restart tests. Its retained receipt records all three Buffer channels sent, matching 22:00 UTC scheduling, and independently verified public URLs. The policy's exact October 8 date cannot authorize another day's test.
 
-The previous15:00 rehearsal failed to hand off; the09:58 foreground-queued email/Instagram test succeeded. Neither proves this new unattended test or tomorrow's full operation.
+The independent email installation's two October 9 owner-only tests were accepted under installation Gaf40a96f5731. Preserve those broadcasts and their passed gates. Prior delivery evidence supports provider readiness; tomorrow's fresh editorial and real queue/outcome checks still determine daily success.
 
 ## Regression checks
 
