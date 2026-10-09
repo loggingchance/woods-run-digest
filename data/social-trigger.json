@@ -7,6 +7,6 @@
     "youtube"
   ],
   "verify_only": true,
-  "requested_at": "2026-10-09T16:57:04.123Z",
-  "reason": "Verify complete paginated Buffer duplicate search without creating posts"
+  "requested_at": "2026-10-09T16:57:55.019Z",
+  "reason": "Read-only verification of paginated duplicate search after native test dependency correction"
 }
