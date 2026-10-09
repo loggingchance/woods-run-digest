@@ -30,6 +30,7 @@ Updated October 8, 2026. All issue dates and daily times use America/Denver.
 - A running Buffer job can be waiting only for its read-only post-due check. Do not duplicate posts to make that job finish sooner.
 - Preserve sent, scheduled, processing and ambiguous submissions. Never recreate an ambiguous mutation, force a late immediate send, or treat a late recovery as punctual.
 - Native scheduling rejects stale dates, mismatched media, incorrect accounts, ambiguous tests and missed deadlines. Failures must be reported accurately.
+- Duplicate checks traverse Buffer's complete cursor-paginated channel history before creation. Missing pagination evidence, repeated cursors, search limits and ambiguous earlier mutations block another submission. Receipts record the search count, raw provider state, normalized delivery state and separate public verification.
 - Do not disable a recurring task because a run failed. Do not bypass a tool permission denial.
 
 ## Retained October 8 rehearsal evidence
