@@ -1,15 +1,43 @@
 {
   "date": "2026-10-09",
-  "observed_at": "2026-10-09T17:05:44.072Z",
-  "method": "Cloud Browser visible public post",
+  "observed_at": "2026-10-09T17:10:03.575Z",
   "channels": {
     "x": {
       "provider_post_id": "6ac8cc335e9e68eeb1db875b",
       "external_url": "https://x.com/ForestBizSchool/status/2108517838453404098",
-      "account": "ForestBizSchool",
+      "method": "Cloud Browser visible public post",
       "public_verified": true,
       "dated_canonical_edition_link_visible": true,
-      "note": "Existing October9 post predates canonical editorial and illustrated-card repair; preserved without reposting. Corrected artwork was verified using unpublished media."
+      "note": "Existing October9 X post predates canonical handoff and artwork repair; preserved without reposting. Corrected design verified using unpublished card."
+    },
+    "instagram": {
+      "provider_post_id": "6ac91d67cb5a8140da2285ce",
+      "external_url": "https://www.instagram.com/reel/DeSAensiu_c/",
+      "method": "Independent public HTTP response with current-date content",
+      "public_verified": true,
+      "probe": {
+        "url": "https://www.instagram.com/reel/DeSAensiu_c/",
+        "final_url": "https://www.instagram.com/reel/DeSAensiu_c/",
+        "http_status": 200,
+        "content_type": "text/html; charset=\"utf-8\"",
+        "content_verified": true
+      }
+    },
+    "youtube": {
+      "provider_post_id": "6ac91d6857c4b87d9cfc8701",
+      "external_url": "https://www.youtube.com/shorts/voa_aYfuKY4",
+      "method": "Independent public HTTP response with current-date content",
+      "public_verified": true,
+      "probe": {
+        "url": "https://www.youtube.com/shorts/voa_aYfuKY4",
+        "final_url": "https://www.youtube.com/shorts/voa_aYfuKY4",
+        "http_status": 200,
+        "content_type": "text/html; charset=utf-8",
+        "content_verified": true
+      }
     }
-  }
+  },
+  "all_public_verified": true,
+  "recovery_due_at": "2026-10-09T17:05:00Z",
+  "note": "Instagram and YouTube recovered late. Tomorrow's unchanged normal target remains04:00 America/Denver."
 }

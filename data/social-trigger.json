@@ -1,12 +1,12 @@
 {
-  "action": "schedule_daily",
+  "action": "audit",
   "date": "2026-10-09",
-  "due_at": "2026-10-09T17:05:00Z",
   "channels": [
+    "x",
     "instagram",
     "youtube"
   ],
-  "verify_only": false,
-  "requested_at": "2026-10-09T16:59:03.747Z",
-  "reason": "Bounded repair of failed scheduled recovery after paginated duplicate audit; schedule missing channels at11:05 Mountain with sufficient provider lead; preserve successful X"
+  "verify_only": true,
+  "requested_at": "2026-10-09T17:10:03.575Z",
+  "reason": "Final read-only all-channel acceptance after successful missing-channel recovery; no posts created or rescheduled"
 }
