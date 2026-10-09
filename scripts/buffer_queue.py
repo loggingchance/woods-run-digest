@@ -202,6 +202,8 @@ def run(request, verify=False):
     record['requested_action'] = action
     record['requested_channels'] = selected
     record['required_daily_channels'] = list(TARGETS)
+    target_due = datetime.combine(datetime.fromisoformat(date).date(), datetime.min.time(), DENVER).replace(hour=4).astimezone(timezone.utc)
+    record['daily_target_due_at'] = iso(target_due)
     organization, channels = get_channels()
     record['channel_identity'] = channels
     # Explicit authorized recovery due time overrides a prior partial receipt.
@@ -276,7 +278,10 @@ def run(request, verify=False):
     record['all_provider_sent'] = all(record['channels'][k].get('provider_sent') and not record['channels'][k].get('error') for k in selected)
     record['all_public_verified'] = all(record['channels'][k].get('public_visibility') == 'verified' for k in selected)
     record['all_daily_channels_provider_sent'] = all(record['channels'].get(k, {}).get('provider_sent') and not record['channels'].get(k, {}).get('error') for k in TARGETS)
-    record['all_daily_channels_scheduled'] = all(record['channels'].get(k, {}).get('schedule_verified') and not record['channels'].get(k, {}).get('error') for k in TARGETS)
+    record['all_daily_channels_scheduled'] = all(
+        (entry := record['channels'].get(k, {})).get('schedule_verified')
+        and not entry.get('error') and entry.get('due_at')
+        and parse_time(entry['due_at']) == target_due for k in TARGETS)
     record['email_verified'] = False
     record['complete'] = False
     save(path, record)

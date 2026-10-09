@@ -1,0 +1,15 @@
+{
+  "date": "2026-10-09",
+  "observed_at": "2026-10-09T17:05:44.072Z",
+  "method": "Cloud Browser visible public post",
+  "channels": {
+    "x": {
+      "provider_post_id": "6ac8cc335e9e68eeb1db875b",
+      "external_url": "https://x.com/ForestBizSchool/status/2108517838453404098",
+      "account": "ForestBizSchool",
+      "public_verified": true,
+      "dated_canonical_edition_link_visible": true,
+      "note": "Existing October9 post predates canonical editorial and illustrated-card repair; preserved without reposting. Corrected artwork was verified using unpublished media."
+    }
+  }
+}
