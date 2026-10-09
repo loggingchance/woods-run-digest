@@ -187,7 +187,9 @@ def run(request, verify=False):
     record['requested_action'] = action
     organization, channels = get_channels()
     record['channel_identity'] = channels
-    due = record.get('due_at') or request.get('due_at')
+    # For an authorized channel-specific recovery, the explicit new request due time
+    # wins over a prior partial daily receipt. Existing posts stay duplicate-blocked.
+    due = request.get('due_at') or record.get('due_at')
     if not due and not verify and action != 'audit':
         due = iso(now() + timedelta(minutes=5)) if test else iso(datetime.combine(now().astimezone(DENVER).date(), datetime.min.time(), DENVER).replace(hour=4).astimezone(timezone.utc))
     if due: record['due_at'] = due
