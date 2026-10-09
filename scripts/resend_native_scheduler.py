@@ -38,7 +38,7 @@ def main():
         raise RuntimeError("Wrong edition date or subject")
     if not mail.get("links_preserved") or not mail.get("featured_book"):
         raise RuntimeError("Incomplete email payload")
-    if not mail.get("source_sha256") or mail["source_sha256"] != source.get("source_sha256"):
+    if not source.get("ready") or not mail.get("source_sha256") or mail["source_sha256"] != source.get("source_sha256"):
         raise RuntimeError("Source hashes do not match")
     html, plain = mail.get("html",""), mail.get("text","")
     if len(html) < 4000 or len(plain) < 2000 or "{{{RESEND_UNSUBSCRIBE_URL}}}" not in html:
@@ -46,7 +46,7 @@ def main():
     for url in mail.get("source_urls", []):
         if url not in html:
             raise RuntimeError("Missing source URL in HTML: " + url)
-    existing = request(API + "/broadcasts?limit=100", key=key)
+    existing = request(API + "/broadcasts", key=key)
     rows = existing.get("data", [])
     if existing.get("has_more") or existing.get("hasMore"):
         raise RuntimeError("More than 100 broadcasts: cannot safely deduplicate")
@@ -63,6 +63,7 @@ def main():
     result = request(API + "/broadcasts","POST",item,key)
     ident = result.get("id")
     if not ident: raise RuntimeError("No broadcast ID returned; inspect provider before any retry")
+    request(API + "/broadcasts/" + ident + "/send", "POST", {"scheduled_at": due.isoformat().replace("+00:00","Z")}, key)
     detail = request(API + "/broadcasts/" + ident, key=key)
     print(json.dumps({"result":"provider_record","id":ident,"subject":detail.get("subject"),"status":detail.get("status"),"scheduled_at":detail.get("scheduled_at")}))
     if detail.get("subject") != expected or detail.get("status") not in ("scheduled","queued","sending","sent","delivered"):
