@@ -53,7 +53,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           for p in assets/cards assets/videos data/preparation data/email-payloads data/editorial-handoff data/issues.json 2026 index.html archive/index.html sitemap.xml; do
-            if [ -d "$p" ]; then git add "$p"; fi
+            if [ -e "$p" ]; then git add "$p"; fi
           done
           if ! git diff --cached --quiet; then
             git commit -m "Record current Woods Run prepared media and email content"
