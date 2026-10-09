@@ -1,12 +1,11 @@
 {
-  "action": "audit",
+  "action": "schedule_daily",
   "date": "2026-10-09",
+  "due_at": "2026-10-09T17:05:00Z",
   "channels": [
-    "x",
-    "instagram",
-    "youtube"
+    "instagram"
   ],
   "verify_only": true,
-  "requested_at": "2026-10-09T17:12:17.351Z",
-  "reason": "Verify all public outcomes using the actual production X caption's dated canonical link; read-only, no posts created or rescheduled"
+  "triggered_at": "2026-10-09T19:15:00Z",
+  "reason": "Owner reports Reel missing despite provider sent; fresh read-only Buffer verification, no new post"
 }
