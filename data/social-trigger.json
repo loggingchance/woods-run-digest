@@ -1,12 +1,12 @@
 {
   "action": "schedule_daily",
   "date": "2026-10-09",
-  "due_at": "2026-10-09T16:45:00Z",
+  "due_at": "2026-10-09T17:00:00Z",
   "channels": [
     "instagram",
     "youtube"
   ],
   "verify_only": false,
-  "triggered_at": "2026-10-09T16:35:00Z",
-  "reason": "Owner-authorized duplicate-checked recovery of missing October 9 Instagram and YouTube posts; keep prior successful X posts"
+  "triggered_at": "2026-10-09T16:36:00Z",
+  "reason": "Owner-authorized recovery retry after fixing stale partial-receipt due-time; failed attempt had no Buffer submission, preserve X"
 }
