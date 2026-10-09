@@ -72,7 +72,7 @@ jobs:
           fi
       - name: Read provider outcomes after Buffer's scheduled delivery
         id: verify
-        if: always() && steps.queue.outputs.should_verify == 'true'
+        if: always() && steps.queue.outcome == 'success' && steps.queue.outputs.should_verify == 'true'
         continue-on-error: true
         run: python scripts/delivery_after_prepare.py --verify-after-due
       - name: Preserve final per-channel outcomes
