@@ -30,15 +30,15 @@
       }
     },
     "instagram": {
-      "error": "No matching delivery for this run ID",
+      "error": "Recent-post search reached its limit; refusing an incomplete duplicate check",
       "status": "absent"
     },
     "youtube": {
-      "error": "No matching delivery for this run ID",
+      "error": "Recent-post search reached its limit; refusing an incomplete duplicate check",
       "status": "absent"
     }
   },
-  "checked_at": "2026-10-09T16:49:00.000774Z",
+  "checked_at": "2026-10-09T16:54:51.334420Z",
   "requested_action": "schedule_daily",
   "channel_identity": [
     {
@@ -75,7 +75,7 @@
       "timezone": "America/Denver"
     }
   ],
-  "due_at": "2026-10-09T11:20:00Z",
+  "due_at": "2026-10-09T17:00:00Z",
   "preflight_by_channel": {
     "x": {
       "page": {
@@ -107,5 +107,16 @@
   "all_provider_sent": false,
   "all_public_verified": false,
   "email_verified": false,
-  "complete": false
+  "complete": false,
+  "requested_channels": [
+    "instagram",
+    "youtube"
+  ],
+  "required_daily_channels": [
+    "x",
+    "instagram",
+    "youtube"
+  ],
+  "all_daily_channels_provider_sent": false,
+  "all_daily_channels_scheduled": false
 }
