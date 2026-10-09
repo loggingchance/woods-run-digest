@@ -1,11 +1,12 @@
 {
   "action": "schedule_daily",
   "date": "2026-10-09",
-  "due_at": "2026-10-09T11:20:00Z",
+  "due_at": "2026-10-09T16:45:00Z",
   "channels": [
-    "x"
+    "instagram",
+    "youtube"
   ],
   "verify_only": false,
-  "triggered_at": "2026-10-09T11:12:30Z",
-  "reason": "Owner-authorized late recovery of missing October 9 X issue only; preserve existing channels; duplicate-safe native Buffer delivery"
+  "triggered_at": "2026-10-09T16:35:00Z",
+  "reason": "Owner-authorized duplicate-checked recovery of missing October 9 Instagram and YouTube posts; keep prior successful X posts"
 }
