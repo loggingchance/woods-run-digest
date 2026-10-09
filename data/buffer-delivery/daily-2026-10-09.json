@@ -30,15 +30,59 @@
       }
     },
     "instagram": {
-      "error": "Recent-post search reached its limit; refusing an incomplete duplicate check",
-      "status": "absent"
+      "error": null,
+      "status": "scheduled",
+      "duplicate_search": {
+        "complete": true,
+        "posts_checked": 266
+      },
+      "attempt_started_at": "2026-10-09T16:59:18.994722Z",
+      "newly_created": true,
+      "post_id": "6ac91d67cb5a8140da2285ce",
+      "due_at": "2026-10-09T17:05:00.000Z",
+      "created_at": "2026-10-09T16:59:19.408Z",
+      "external_url": null,
+      "assets": [
+        {
+          "source": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/videos/2026-10-09.mp4",
+          "mimeType": "video/mp4"
+        }
+      ],
+      "provider_text": "Woods Run Digest — October 9, 2026\n\nDaily North American forestry & forest-products intelligence from The Forest Business School.\n\nRead today’s edition: https://woods-run-digest.steve760060.chatgpt.site/2026/10/09/",
+      "schedule_verified": true,
+      "provider_sent": false,
+      "delivery_state": "scheduled",
+      "existing_delivery": true,
+      "public_visibility": "not_independently_verified"
     },
     "youtube": {
-      "error": "Recent-post search reached its limit; refusing an incomplete duplicate check",
-      "status": "absent"
+      "error": null,
+      "status": "scheduled",
+      "duplicate_search": {
+        "complete": true,
+        "posts_checked": 70
+      },
+      "attempt_started_at": "2026-10-09T16:59:20.234169Z",
+      "newly_created": true,
+      "post_id": "6ac91d6857c4b87d9cfc8701",
+      "due_at": "2026-10-09T17:05:00.000Z",
+      "created_at": "2026-10-09T16:59:20.507Z",
+      "external_url": null,
+      "assets": [
+        {
+          "source": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/videos/2026-10-09.mp4",
+          "mimeType": "video/mp4"
+        }
+      ],
+      "provider_text": "Woods Run Digest — October 9, 2026\n\nVermont’s business grant window opens today; western Canadian fibre markets soften; Mercer continues operations during debt talks; Florida’s pine-beetle intake closes; and upcoming Montana and Northern Border deadlines require attention.\n\nRead the full edition: https://woods-run-digest.steve760060.chatgpt.site/2026/10/09/\n\nDaily forestry & forest-products intelligence from The Forest Business School.",
+      "schedule_verified": true,
+      "provider_sent": false,
+      "delivery_state": "scheduled",
+      "existing_delivery": true,
+      "public_visibility": "not_independently_verified"
     }
   },
-  "checked_at": "2026-10-09T16:54:51.334420Z",
+  "checked_at": "2026-10-09T16:59:14.778659Z",
   "requested_action": "schedule_daily",
   "channel_identity": [
     {
@@ -75,7 +119,7 @@
       "timezone": "America/Denver"
     }
   ],
-  "due_at": "2026-10-09T17:00:00Z",
+  "due_at": "2026-10-09T17:05:00Z",
   "preflight_by_channel": {
     "x": {
       "page": {
@@ -100,10 +144,62 @@
           "content_verified": true
         }
       }
+    },
+    "instagram": {
+      "page": {
+        "url": "https://woods-run-digest.steve760060.chatgpt.site/2026/10/09/",
+        "final_url": "https://woods-run-digest.steve760060.chatgpt.site/2026/10/09/",
+        "http_status": 200,
+        "content_type": "text/html",
+        "content_verified": true
+      },
+      "video": {
+        "url": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/videos/2026-10-09.mp4",
+        "dimensions": [
+          [
+            1080,
+            1920
+          ]
+        ],
+        "bytes": 818622,
+        "public": {
+          "url": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/videos/2026-10-09.mp4",
+          "final_url": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/videos/2026-10-09.mp4",
+          "http_status": 200,
+          "content_type": "application/octet-stream",
+          "content_verified": true
+        }
+      }
+    },
+    "youtube": {
+      "page": {
+        "url": "https://woods-run-digest.steve760060.chatgpt.site/2026/10/09/",
+        "final_url": "https://woods-run-digest.steve760060.chatgpt.site/2026/10/09/",
+        "http_status": 200,
+        "content_type": "text/html",
+        "content_verified": true
+      },
+      "video": {
+        "url": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/videos/2026-10-09.mp4",
+        "dimensions": [
+          [
+            1080,
+            1920
+          ]
+        ],
+        "bytes": 818622,
+        "public": {
+          "url": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/videos/2026-10-09.mp4",
+          "final_url": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/videos/2026-10-09.mp4",
+          "http_status": 200,
+          "content_type": "application/octet-stream",
+          "content_verified": true
+        }
+      }
     }
   },
-  "all_scheduled": false,
-  "daily_idempotent": false,
+  "all_scheduled": true,
+  "daily_idempotent": true,
   "all_provider_sent": false,
   "all_public_verified": false,
   "email_verified": false,
@@ -118,5 +214,5 @@
     "youtube"
   ],
   "all_daily_channels_provider_sent": false,
-  "all_daily_channels_scheduled": false
+  "all_daily_channels_scheduled": true
 }
