@@ -40,11 +40,15 @@ def main() -> None:
     source_changed = bool(previous and previous.get('source_sha256') != source_hash)
     card = ROOT / 'assets/cards' / (date + '.png')
     video = ROOT / 'assets/videos' / (date + '.mp4')
+    renderer_hash = digest((ROOT / 'scripts/generate_social_cards.py').read_bytes() +
+                           (ROOT / 'assets/woodsrun-header.webp').read_bytes() +
+                           (ROOT / 'scripts/render_daily_reel.py').read_bytes())
+    renderer_changed = previous.get('renderer_sha256') != renderer_hash
     generated = []
-    if source_changed or not card.exists() or not card.stat().st_size:
+    if renderer_changed or source_changed or not card.exists() or not card.stat().st_size:
         render_card(issue, card)
         generated.append('card')
-    if source_changed or not video.exists() or not video.stat().st_size:
+    if renderer_changed or source_changed or not video.exists() or not video.stat().st_size:
         subprocess.run([sys.executable, 'scripts/render_daily_reel.py'], cwd=ROOT, check=True)
         generated.append('video')
     card_bytes = card.read_bytes()
@@ -57,6 +61,7 @@ def main() -> None:
         'date': date,
         'checked_at': datetime.now(timezone.utc).isoformat(),
         'source_sha256': source_hash,
+        'renderer_sha256': renderer_hash,
         'page_path': str(page_path.relative_to(ROOT)),
         'ready': True,
         'generated_this_run': generated,

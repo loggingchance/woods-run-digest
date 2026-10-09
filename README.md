@@ -15,7 +15,7 @@ Updated October 8, 2026. All issue dates and daily times use America/Denver.
 1. Site editorial begins 02:30. Editorial handoff checks/mirrors the same edition at03:00, writing the dated page first and data/issues.json last. Never invent a new date on old content.
 2. `prepare-assets.yml` responds to the metadata/preparation trigger. It runs regression tests, compiles complete public email content through `prepare_email_payload.py`, and generates/validates media through `prepare_daily_assets.py`. It has no publishing credential.
 3. On successful preparation, `daily-publisher.yml` is automatically triggered by `workflow_run`. It reads `data/delivery-policy.json`, validates exact source/media hashes, and runs `delivery_after_prepare.py` / `buffer_queue.py` to queue the three Buffer posts for04:00. No additional scheduled ChatGPT social-trigger write is necessary.
-4. The independent Resend email task at03:30 reads `data/email-payloads/YYYY-MM-DD.json` and schedules the full normal subscriber broadcast for04:00. The normal fields preserve the Resend unsubscribe placeholder. Owner-only test fields contain no private recipient tokens.
+4. The existing private Google Apps Script mailTick runs every five minutes, starts current-date production checks at03:00, reads the complete published Site edition and schedules the normal Resend subscriber broadcast for04:00. mailWatchdog runs every fifteen minutes. The03:30 ChatGPT email task is read-only monitoring. The normal fields preserve the Resend unsubscribe placeholder. Owner-only test fields contain no private recipient tokens.
 5. A03:45 readiness monitor checks provider receipts. Buffer native handoff persists its queue receipts before delivery, then reads provider outcomes at due+90seconds and, when needed,due+240seconds. This wait controls verification only; Buffer already owns delivery timing.
 6. At04:10 the outcome monitor checks Resend and Buffer separately. At08:10 it also checks the established Tuesday/Friday reports.
 
@@ -43,3 +43,10 @@ The previous15:00 rehearsal failed to hand off; the09:58 foreground-queued email
 `python -m unittest discover -s tests -v`
 
 Tests cover date/DST policy, future test isolation, missed deadlines, content/source-link preservation, book rotation, private-token rejection and source/media integrity. Unit-test success does not itself establish provider delivery.
+
+
+## October 9 final installation repair
+
+The Site published October9 at02:38 Mountain; the repository instead received a different edition at05:10. Preparation now mirrors the exact current published Site via sync_public_editorial.py before compilation. It preserves historical records, fails when the same-date Site is unavailable/incomplete, and records the canonical headlines and links. Do not research competing repository content. The current private Google installation Gaf40a96f5731 is PRODUCTION with both named owner-only tests accepted; preserve it and the private key.
+
+The original illustrated assets/woodsrun-header.webp is tracked and mandatory. A missing file is fatal. Renderer/artwork hashes invalidate obsolete prepared media; routine card generation changes only the latest date. Buffer receipts report requested channels and full daily coverage separately; an X-only recovery cannot establish all-three-channel readiness. A missed scheduling window with incomplete outcomes fails visibly and never falls back to immediate publication.

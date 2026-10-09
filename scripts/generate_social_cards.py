@@ -100,15 +100,8 @@ def fit_wrapped_text(
 
 
 def add_artwork(base: Image.Image, weekday: str) -> None:
-    # The replacement publisher is intentionally self-contained. If the legacy
-    # illustrated masthead is absent, generate a restrained footer treatment
-    # instead of failing the entire daily publication.
-    if not ART_FILE.exists():
-        draw = ImageDraw.Draw(base)
-        footer_top = HEIGHT - 118
-        draw.rectangle((0, footer_top, WIDTH, HEIGHT), fill=DAY_COLORS[weekday])
-        draw.rectangle((0, HEIGHT - 12, WIDTH, HEIGHT), fill=FOREST)
-        return
+    if not ART_FILE.is_file():
+        raise FileNotFoundError(f'Official Woods Run artwork is required: {ART_FILE}')
     artwork = Image.open(ART_FILE).convert("RGBA")
     scale = WIDTH / artwork.width
     artwork = artwork.resize((WIDTH, round(artwork.height * scale)), Image.Resampling.LANCZOS)
@@ -199,7 +192,7 @@ def render_card(issue: dict, output: Path) -> None:
 def main() -> None:
     issues = json.loads(ISSUES_FILE.read_text(encoding="utf-8"))
     OUT_DIR.mkdir(parents=True, exist_ok=True)
-    for issue in issues:
+    for issue in issues[:1]:
         date_string = issue["date"]
         render_card(issue, OUT_DIR / f"{date_string}.png")
         mode = "teaser" if str(issue.get("cardTeaser", "")).strip() else "legacy"

@@ -66,8 +66,13 @@ def main() -> int:
         request = resolve(load_policy(ROOT), datetime.now(timezone.utc))
     if request is None:
         emit_output('has_request', 'false')
-        print('NO_DELIVERY_WINDOW: no post created; regular daily delivery remains armed')
-        return 0
+        local = datetime.now(__import__('zoneinfo').ZoneInfo('America/Denver'))
+        receipt_path = ROOT / 'data/buffer-delivery' / ('daily-' + local.date().isoformat() + '.json')
+        receipt = json.loads(receipt_path.read_text()) if receipt_path.exists() else {}
+        if all(receipt.get('channels', {}).get(k, {}).get('provider_sent') and not receipt['channels'][k].get('error') for k in ('x', 'instagram', 'youtube')):
+            print('EXISTING_DELIVERY: all three channels already sent; no posts created')
+            return 0
+        raise ValueError('NO_DELIVERY_WINDOW: no posts created; all-three-channel daily delivery is not established')
     verify_only = bool(request.get('verify_only'))
     if not verify_only and request['action'] != 'audit':
         validate_source(ROOT, request)

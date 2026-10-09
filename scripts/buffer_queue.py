@@ -185,10 +185,11 @@ def run(request, verify=False):
     record = json.loads(path.read_text()) if path.exists() else {'run_id': run_id, 'date': date, 'channels': {}}
     record['checked_at'] = iso(now())
     record['requested_action'] = action
+    record['requested_channels'] = selected
+    record['required_daily_channels'] = list(TARGETS)
     organization, channels = get_channels()
     record['channel_identity'] = channels
-    # For an authorized channel-specific recovery, the explicit new request due time
-    # wins over a prior partial daily receipt. Existing posts stay duplicate-blocked.
+    # Explicit authorized recovery due time overrides a prior partial receipt.
     due = request.get('due_at') or record.get('due_at')
     if not due and not verify and action != 'audit':
         due = iso(now() + timedelta(minutes=5)) if test else iso(datetime.combine(now().astimezone(DENVER).date(), datetime.min.time(), DENVER).replace(hour=4).astimezone(timezone.utc))
@@ -217,6 +218,8 @@ def run(request, verify=False):
                 result.update({'status': 'absent', 'error': 'No matching delivery for this run ID'})
                 continue
             else:
+                if len(posts) >= 50:
+                    raise ValueError('Recent-post search reached its limit; refusing an incomplete duplicate check')
                 if result.get('attempt_started_at'):
                     raise ValueError('Previous submission outcome unresolved; no automatic duplicate retry')
                 if any(channel.get(k) for k in ('isDisconnected', 'isLocked', 'isQueuePaused')):
@@ -237,7 +240,7 @@ def run(request, verify=False):
                 result['newly_created'] = True
             result.update({'post_id': post['id'], 'status': post.get('status'), 'due_at': post.get('dueAt'),
                            'created_at': post.get('createdAt'), 'external_url': post.get('externalLink'),
-                           'assets': post.get('assets', []), 'error': None})
+                           'assets': post.get('assets', []), 'provider_text': post.get('text'), 'error': None})
             result['schedule_verified'] = bool(due and post.get('dueAt') and abs((parse_time(due) - parse_time(post['dueAt'])).total_seconds()) <= 2 and post.get('status') in BLOCKING)
             result['provider_sent'] = post.get('status') == 'sent'
             result['existing_delivery'] = not test and post.get('status') in BLOCKING
@@ -254,6 +257,8 @@ def run(request, verify=False):
     record['daily_idempotent'] = not test and all(record['channels'][k].get('existing_delivery') and not record['channels'][k].get('error') for k in selected)
     record['all_provider_sent'] = all(record['channels'][k].get('provider_sent') and not record['channels'][k].get('error') for k in selected)
     record['all_public_verified'] = all(record['channels'][k].get('public_visibility') == 'verified' for k in selected)
+    record['all_daily_channels_provider_sent'] = all(record['channels'].get(k, {}).get('provider_sent') and not record['channels'].get(k, {}).get('error') for k in TARGETS)
+    record['all_daily_channels_scheduled'] = all(record['channels'].get(k, {}).get('schedule_verified') and not record['channels'].get(k, {}).get('error') for k in TARGETS)
     record['email_verified'] = False
     record['complete'] = False
     save(path, record)
