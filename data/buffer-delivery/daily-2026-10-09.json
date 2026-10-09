@@ -28,9 +28,15 @@
         "content_type": "text/html; charset=UTF-8",
         "content_verified": false
       }
+    },
+    "instagram": {
+      "error": "Delivery time missed; will not silently share immediately"
+    },
+    "youtube": {
+      "error": "Delivery time missed; will not silently share immediately"
     }
   },
-  "checked_at": "2026-10-09T11:21:30.000795Z",
+  "checked_at": "2026-10-09T16:35:13.875154Z",
   "requested_action": "schedule_daily",
   "channel_identity": [
     {
@@ -94,9 +100,9 @@
       }
     }
   },
-  "all_scheduled": true,
-  "daily_idempotent": true,
-  "all_provider_sent": true,
+  "all_scheduled": false,
+  "daily_idempotent": false,
+  "all_provider_sent": false,
   "all_public_verified": false,
   "email_verified": false,
   "complete": false
