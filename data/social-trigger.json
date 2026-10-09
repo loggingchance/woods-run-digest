@@ -1,10 +1,11 @@
 {
-  "action": "schedule_test",
-  "date": "2026-10-08",
-  "test_run_id": "NATIVE-20261008-0958",
-  "due_at": "2026-10-08T15:58:00Z",
-  "channels": ["instagram"],
-  "reason": "Owner-authorized full scheduled email and Instagram system test after native scheduler repair",
-  "email_test_id": "01a11c39-102d-7ba4-a945-51400cb3a235",
-  "email_test_subject": "WR SYSTEM TEST — October 8, 2026 — NATIVE-0958"
+  "action": "schedule_daily",
+  "date": "2026-10-09",
+  "due_at": "2026-10-09T11:20:00Z",
+  "channels": [
+    "x"
+  ],
+  "verify_only": false,
+  "triggered_at": "2026-10-09T11:12:30Z",
+  "reason": "Owner-authorized late recovery of missing October 9 X issue only; preserve existing channels; duplicate-safe native Buffer delivery"
 }
