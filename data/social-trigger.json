@@ -1,12 +1,12 @@
 {
-  "action": "schedule_daily",
+  "action": "audit",
   "date": "2026-10-09",
-  "due_at": "2026-10-09T17:00:00Z",
   "channels": [
+    "x",
     "instagram",
     "youtube"
   ],
-  "verify_only": false,
-  "triggered_at": "2026-10-09T16:36:00Z",
-  "reason": "Owner-authorized recovery retry after fixing stale partial-receipt due-time; failed attempt had no Buffer submission, preserve X"
+  "verify_only": true,
+  "requested_at": "2026-10-09T16:49:58.255Z",
+  "reason": "Read-only final acceptance audit; no posts created or rescheduled"
 }
