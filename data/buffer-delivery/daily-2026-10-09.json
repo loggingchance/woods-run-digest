@@ -30,13 +30,15 @@
       }
     },
     "instagram": {
-      "error": "Delivery time missed; will not silently share immediately"
+      "error": "No matching delivery for this run ID",
+      "status": "absent"
     },
     "youtube": {
-      "error": "Delivery time missed; will not silently share immediately"
+      "error": "No matching delivery for this run ID",
+      "status": "absent"
     }
   },
-  "checked_at": "2026-10-09T16:35:13.875154Z",
+  "checked_at": "2026-10-09T16:49:00.000774Z",
   "requested_action": "schedule_daily",
   "channel_identity": [
     {
