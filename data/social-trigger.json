@@ -1,12 +1,12 @@
 {
-  "action": "audit",
+  "action": "schedule_daily",
   "date": "2026-10-09",
+  "due_at": "2026-10-09T17:00:00Z",
   "channels": [
-    "x",
     "instagram",
     "youtube"
   ],
-  "verify_only": true,
-  "requested_at": "2026-10-09T16:49:58.255Z",
-  "reason": "Read-only final acceptance audit; no posts created or rescheduled"
+  "verify_only": false,
+  "requested_at": "2026-10-09T16:54:39.955Z",
+  "reason": "Retry existing owner-authorized 11:00 Mountain recovery after exact read-only duplicate check and cleared native workflow lock; preserve successful X"
 }
