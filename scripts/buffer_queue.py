@@ -223,6 +223,7 @@ def run(request, verify=False):
             if not channel or channel['service'] != service or channel['name'].casefold() != name.casefold():
                 raise ValueError('Configured account identity mismatch')
             posts = recent(organization, channel_id)
+            result['duplicate_search'] = {'complete': True, 'posts_checked': len(posts)}
             found = [p for p in posts if matches(p, issue, marker, result.get('post_id'))]
             if len(found) > 1:
                 result['matching_posts'] = found
@@ -256,6 +257,10 @@ def run(request, verify=False):
                            'assets': post.get('assets', []), 'provider_text': post.get('text'), 'error': None})
             result['schedule_verified'] = bool(due and post.get('dueAt') and abs((parse_time(due) - parse_time(post['dueAt'])).total_seconds()) <= 2 and post.get('status') in BLOCKING)
             result['provider_sent'] = post.get('status') == 'sent'
+            result['delivery_state'] = {'buffer': 'queued', 'pending': 'queued',
+                                        'scheduled': 'scheduled', 'processing': 'sending',
+                                        'sending': 'sending', 'sent': 'sent',
+                                        'error': 'failed', 'failed': 'failed'}.get(post.get('status'), 'unknown')
             result['existing_delivery'] = not test and post.get('status') in BLOCKING
             if post.get('status') not in BLOCKING:
                 result['error'] = 'Buffer status is not scheduled or delivered: ' + str(post.get('status'))

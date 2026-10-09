@@ -1,12 +1,12 @@
 {
-  "action": "audit",
+  "action": "schedule_daily",
   "date": "2026-10-09",
+  "due_at": "2026-10-09T17:05:00Z",
   "channels": [
-    "x",
     "instagram",
     "youtube"
   ],
-  "verify_only": true,
-  "requested_at": "2026-10-09T16:57:55.019Z",
-  "reason": "Read-only verification of paginated duplicate search after native test dependency correction"
+  "verify_only": false,
+  "requested_at": "2026-10-09T16:59:03.747Z",
+  "reason": "Bounded repair of failed scheduled recovery after paginated duplicate audit; schedule missing channels at11:05 Mountain with sufficient provider lead; preserve successful X"
 }
