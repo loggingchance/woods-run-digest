@@ -1,0 +1,219 @@
+{
+  "run_id": "daily-2026-10-10",
+  "date": "2026-10-10",
+  "channels": {
+    "x": {
+      "duplicate_search": {
+        "complete": true,
+        "posts_checked": 306
+      },
+      "attempt_started_at": "2026-10-10T09:01:47.507370Z",
+      "newly_created": true,
+      "post_id": "6ac9fefbc4de2d2b121f4ad9",
+      "status": "scheduled",
+      "due_at": "2026-10-10T10:00:00.000Z",
+      "created_at": "2026-10-10T09:01:47.766Z",
+      "external_url": null,
+      "assets": [
+        {
+          "source": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/cards/2026-10-10.png",
+          "mimeType": "image/png"
+        }
+      ],
+      "provider_text": "A local coalition pursues Témiscaming’s mill. Also: hardwood buyer networks, the latest lumber index, upcoming forestry deadlines, Maine’s BMP report and Wisconsin tours. October 10 Woods Run Digest.\n\nhttps://woods-run-digest.steve760060.chatgpt.site/2026/10/10/",
+      "error": null,
+      "schedule_verified": true,
+      "provider_sent": false,
+      "delivery_state": "scheduled",
+      "existing_delivery": true,
+      "public_visibility": "not_independently_verified"
+    },
+    "instagram": {
+      "duplicate_search": {
+        "complete": true,
+        "posts_checked": 268
+      },
+      "attempt_started_at": "2026-10-10T09:01:50.561942Z",
+      "newly_created": true,
+      "post_id": "6ac9fefeed92ed8fa5c1c14b",
+      "status": "scheduled",
+      "due_at": "2026-10-10T10:00:00.000Z",
+      "created_at": "2026-10-10T09:01:50.875Z",
+      "external_url": null,
+      "assets": [
+        {
+          "source": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/videos/2026-10-10.mp4",
+          "mimeType": "video/mp4"
+        }
+      ],
+      "provider_text": "Woods Run Digest — October 10, 2026\n\nDaily North American forestry & forest-products intelligence from The Forest Business School.\n\nRead today’s edition: https://woods-run-digest.steve760060.chatgpt.site/2026/10/10/",
+      "error": null,
+      "schedule_verified": true,
+      "provider_sent": false,
+      "delivery_state": "scheduled",
+      "existing_delivery": true,
+      "public_visibility": "not_independently_verified"
+    },
+    "youtube": {
+      "duplicate_search": {
+        "complete": true,
+        "posts_checked": 71
+      },
+      "attempt_started_at": "2026-10-10T09:01:51.592672Z",
+      "newly_created": true,
+      "post_id": "6ac9ff00b07d37ac97680efd",
+      "status": "scheduled",
+      "due_at": "2026-10-10T10:00:00.000Z",
+      "created_at": "2026-10-10T09:01:52.027Z",
+      "external_url": null,
+      "assets": [
+        {
+          "source": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/videos/2026-10-10.mp4",
+          "mimeType": "video/mp4"
+        }
+      ],
+      "provider_text": "Woods Run Digest — October 10, 2026\n\nA local coalition pursues Témiscaming’s mill; new U.S. hardwood closure tracking and a US$500 lumber index inform market decisions; North Carolina, Ontario and Montana deadlines approach; and Maine and Wisconsin offer field lessons.\n\nRead the full edition: https://woods-run-digest.steve760060.chatgpt.site/2026/10/10/\n\nDaily forestry & forest-products intelligence from The Forest Business School.",
+      "error": null,
+      "schedule_verified": true,
+      "provider_sent": false,
+      "delivery_state": "scheduled",
+      "existing_delivery": true,
+      "public_visibility": "not_independently_verified"
+    }
+  },
+  "checked_at": "2026-10-10T09:01:43.224267Z",
+  "requested_action": "schedule_daily",
+  "requested_channels": [
+    "x",
+    "instagram",
+    "youtube"
+  ],
+  "required_daily_channels": [
+    "x",
+    "instagram",
+    "youtube"
+  ],
+  "daily_target_due_at": "2026-10-10T10:00:00Z",
+  "channel_identity": [
+    {
+      "id": "6ab14319ea19ca0bdea627e2",
+      "name": "Logging Chance",
+      "service": "youtube",
+      "serviceId": "UCq-PscVBAKjmVE39qb2NyCg",
+      "externalLink": "https://www.youtube.com/channel/UCq-PscVBAKjmVE39qb2NyCg",
+      "isDisconnected": false,
+      "isLocked": false,
+      "isQueuePaused": false,
+      "timezone": "America/Denver"
+    },
+    {
+      "id": "6844cc71d6d25b49a1de682e",
+      "name": "northeastforests",
+      "service": "instagram",
+      "serviceId": "17841412643805979",
+      "externalLink": "https://instagram.com/northeastforests",
+      "isDisconnected": false,
+      "isLocked": false,
+      "isQueuePaused": false,
+      "timezone": "America/Denver"
+    },
+    {
+      "id": "6843193ed6d25b49a145ff6e",
+      "name": "ForestBizSchool",
+      "service": "twitter",
+      "serviceId": "1487833905197637637",
+      "externalLink": "https://twitter.com/ForestBizSchool",
+      "isDisconnected": false,
+      "isLocked": false,
+      "isQueuePaused": false,
+      "timezone": "America/Denver"
+    }
+  ],
+  "due_at": "2026-10-10T10:00:00Z",
+  "preflight_by_channel": {
+    "x": {
+      "page": {
+        "url": "https://woods-run-digest.steve760060.chatgpt.site/2026/10/10/",
+        "final_url": "https://woods-run-digest.steve760060.chatgpt.site/2026/10/10/",
+        "http_status": 200,
+        "content_type": "text/html",
+        "content_verified": true
+      },
+      "card": {
+        "url": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/cards/2026-10-10.png",
+        "dimensions": [
+          1200,
+          630
+        ],
+        "bytes": 204353,
+        "public": {
+          "url": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/cards/2026-10-10.png",
+          "final_url": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/cards/2026-10-10.png",
+          "http_status": 200,
+          "content_type": "image/png",
+          "content_verified": true
+        }
+      }
+    },
+    "instagram": {
+      "page": {
+        "url": "https://woods-run-digest.steve760060.chatgpt.site/2026/10/10/",
+        "final_url": "https://woods-run-digest.steve760060.chatgpt.site/2026/10/10/",
+        "http_status": 200,
+        "content_type": "text/html",
+        "content_verified": true
+      },
+      "video": {
+        "url": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/videos/2026-10-10.mp4",
+        "dimensions": [
+          [
+            1080,
+            1920
+          ]
+        ],
+        "bytes": 869339,
+        "public": {
+          "url": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/videos/2026-10-10.mp4",
+          "final_url": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/videos/2026-10-10.mp4",
+          "http_status": 200,
+          "content_type": "application/octet-stream",
+          "content_verified": true
+        }
+      }
+    },
+    "youtube": {
+      "page": {
+        "url": "https://woods-run-digest.steve760060.chatgpt.site/2026/10/10/",
+        "final_url": "https://woods-run-digest.steve760060.chatgpt.site/2026/10/10/",
+        "http_status": 200,
+        "content_type": "text/html",
+        "content_verified": true
+      },
+      "video": {
+        "url": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/videos/2026-10-10.mp4",
+        "dimensions": [
+          [
+            1080,
+            1920
+          ]
+        ],
+        "bytes": 869339,
+        "public": {
+          "url": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/videos/2026-10-10.mp4",
+          "final_url": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/videos/2026-10-10.mp4",
+          "http_status": 200,
+          "content_type": "application/octet-stream",
+          "content_verified": true
+        }
+      }
+    }
+  },
+  "all_scheduled": true,
+  "daily_idempotent": true,
+  "all_provider_sent": false,
+  "all_public_verified": false,
+  "all_daily_channels_provider_sent": false,
+  "all_daily_channels_scheduled": true,
+  "email_verified": false,
+  "complete": false
+}
