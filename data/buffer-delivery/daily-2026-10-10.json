@@ -5,15 +5,15 @@
     "x": {
       "duplicate_search": {
         "complete": true,
-        "posts_checked": 306
+        "posts_checked": 307
       },
       "attempt_started_at": "2026-10-10T09:01:47.507370Z",
       "newly_created": true,
       "post_id": "6ac9fefbc4de2d2b121f4ad9",
-      "status": "scheduled",
+      "status": "sent",
       "due_at": "2026-10-10T10:00:00.000Z",
       "created_at": "2026-10-10T09:01:47.766Z",
-      "external_url": null,
+      "external_url": "https://x.com/1487833905197637637/status/2108860117235954144",
       "assets": [
         {
           "source": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/cards/2026-10-10.png",
@@ -23,23 +23,30 @@
       "provider_text": "A local coalition pursues Témiscaming’s mill. Also: hardwood buyer networks, the latest lumber index, upcoming forestry deadlines, Maine’s BMP report and Wisconsin tours. October 10 Woods Run Digest.\n\nhttps://woods-run-digest.steve760060.chatgpt.site/2026/10/10/",
       "error": null,
       "schedule_verified": true,
-      "provider_sent": false,
-      "delivery_state": "scheduled",
+      "provider_sent": true,
+      "delivery_state": "sent",
       "existing_delivery": true,
-      "public_visibility": "not_independently_verified"
+      "public_visibility": "verified",
+      "public_probe": {
+        "url": "https://x.com/1487833905197637637/status/2108860117235954144",
+        "final_url": "https://x.com/ForestBizSchool/status/2108860117235954144",
+        "http_status": 200,
+        "content_type": "text/html; charset=UTF-8",
+        "content_verified": true
+      }
     },
     "instagram": {
       "duplicate_search": {
         "complete": true,
-        "posts_checked": 268
+        "posts_checked": 269
       },
       "attempt_started_at": "2026-10-10T09:01:50.561942Z",
       "newly_created": true,
       "post_id": "6ac9fefeed92ed8fa5c1c14b",
-      "status": "scheduled",
+      "status": "sent",
       "due_at": "2026-10-10T10:00:00.000Z",
       "created_at": "2026-10-10T09:01:50.875Z",
-      "external_url": null,
+      "external_url": "https://www.instagram.com/reel/DeT0a9pAOtj/",
       "assets": [
         {
           "source": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/videos/2026-10-10.mp4",
@@ -49,23 +56,30 @@
       "provider_text": "Woods Run Digest — October 10, 2026\n\nDaily North American forestry & forest-products intelligence from The Forest Business School.\n\nRead today’s edition: https://woods-run-digest.steve760060.chatgpt.site/2026/10/10/",
       "error": null,
       "schedule_verified": true,
-      "provider_sent": false,
-      "delivery_state": "scheduled",
+      "provider_sent": true,
+      "delivery_state": "sent",
       "existing_delivery": true,
-      "public_visibility": "not_independently_verified"
+      "public_visibility": "verified",
+      "public_probe": {
+        "url": "https://www.instagram.com/reel/DeT0a9pAOtj/",
+        "final_url": "https://www.instagram.com/reel/DeT0a9pAOtj/",
+        "http_status": 200,
+        "content_type": "text/html; charset=\"utf-8\"",
+        "content_verified": true
+      }
     },
     "youtube": {
       "duplicate_search": {
         "complete": true,
-        "posts_checked": 71
+        "posts_checked": 72
       },
       "attempt_started_at": "2026-10-10T09:01:51.592672Z",
       "newly_created": true,
       "post_id": "6ac9ff00b07d37ac97680efd",
-      "status": "scheduled",
+      "status": "sent",
       "due_at": "2026-10-10T10:00:00.000Z",
       "created_at": "2026-10-10T09:01:52.027Z",
-      "external_url": null,
+      "external_url": "https://www.youtube.com/watch?v=8gztRjIHYzY",
       "assets": [
         {
           "source": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/videos/2026-10-10.mp4",
@@ -75,13 +89,20 @@
       "provider_text": "Woods Run Digest — October 10, 2026\n\nA local coalition pursues Témiscaming’s mill; new U.S. hardwood closure tracking and a US$500 lumber index inform market decisions; North Carolina, Ontario and Montana deadlines approach; and Maine and Wisconsin offer field lessons.\n\nRead the full edition: https://woods-run-digest.steve760060.chatgpt.site/2026/10/10/\n\nDaily forestry & forest-products intelligence from The Forest Business School.",
       "error": null,
       "schedule_verified": true,
-      "provider_sent": false,
-      "delivery_state": "scheduled",
+      "provider_sent": true,
+      "delivery_state": "sent",
       "existing_delivery": true,
-      "public_visibility": "not_independently_verified"
+      "public_visibility": "verified",
+      "public_probe": {
+        "url": "https://www.youtube.com/watch?v=8gztRjIHYzY",
+        "final_url": "https://www.youtube.com/watch?v=8gztRjIHYzY",
+        "http_status": 200,
+        "content_type": "text/html; charset=utf-8",
+        "content_verified": true
+      }
     }
   },
-  "checked_at": "2026-10-10T09:01:43.224267Z",
+  "checked_at": "2026-10-10T10:01:30.000804Z",
   "requested_action": "schedule_daily",
   "requested_channels": [
     "x",
@@ -210,9 +231,9 @@
   },
   "all_scheduled": true,
   "daily_idempotent": true,
-  "all_provider_sent": false,
-  "all_public_verified": false,
-  "all_daily_channels_provider_sent": false,
+  "all_provider_sent": true,
+  "all_public_verified": true,
+  "all_daily_channels_provider_sent": true,
   "all_daily_channels_scheduled": true,
   "email_verified": false,
   "complete": false
