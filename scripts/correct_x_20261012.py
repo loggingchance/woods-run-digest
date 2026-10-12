@@ -38,9 +38,12 @@ def validate_request(request):
     require(request.get('mode') in ('audit', 'publish'), 'Invalid correction mode')
     if request['mode'] == 'publish':
         require(request.get('activation') == ACTIVATION, 'Publishing is not activated')
-        require(request.get('owner_confirmed_old_x_deleted') is True,
-                'Awaiting owner confirmation that old X post was deleted directly on X')
-        require(bool(request.get('deletion_confirmation_reference')), 'Missing confirmation reference')
+        deleted = request.get('owner_confirmed_old_x_deleted') is True
+        owner_handles = (request.get('owner_handles_deletion') is True and
+                         request.get('owner_allows_replacement_before_deletion') is True)
+        require(deleted or owner_handles,
+                'Awaiting owner confirmation or explicit authorization to post before deletion')
+        require(bool(request.get('authorization_reference')), 'Missing authorization reference')
         require(datetime.now(ZoneInfo('America/Denver')).date().isoformat() == DATE,
                 'One-off publication date expired; no post created')
 
@@ -124,14 +127,17 @@ def main():
     report = {'mode': request['mode'], 'old_post': old, 'canonical_url': PAGE,
               'photo_url': PHOTO, 'photo_sha256': PHOTO_HASH, 'proposed_text': payload['text'],
               'posts_checked': len(posts), 'replacement': existing,
-              'note': 'Buffer cannot delete published X posts. Deletion requires owner confirmation.'}
+              'note': 'Buffer cannot delete published X posts. The owner handles removal.'}
     if request['mode'] == 'audit':
         print('CORRECTION_AUDIT ' + json.dumps(report, ensure_ascii=False))
         return
     require(os.environ.get('GITHUB_ACTIONS') == 'true', 'Publication only allowed in existing GitHub runtime')
     if not existing:
         receipt = {'old_buffer_id': OLD_BUFFER, 'old_x_id': OLD_X,
-                   'deletion_confirmation_reference': request['deletion_confirmation_reference'],
+                   'authorization_reference': request['authorization_reference'],
+                   'owner_confirmed_old_x_deleted': request.get('owner_confirmed_old_x_deleted') is True,
+                   'owner_handles_deletion': request.get('owner_handles_deletion') is True,
+                   'owner_allows_replacement_before_deletion': request.get('owner_allows_replacement_before_deletion') is True,
                    'attempt_started_at': datetime.now(timezone.utc).isoformat(), 'payload': payload,
                    'state': 'attempt_started'}
         persist(receipt)

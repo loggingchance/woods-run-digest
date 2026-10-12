@@ -26,6 +26,17 @@ class CorrectionGuards(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, 'Awaiting owner confirmation'):
             c.validate_request(self.request(mode='publish', activation=c.ACTIVATION))
 
+    def test_owner_can_authorize_post_before_deletion(self):
+        with patch.object(c, 'DATE', c.datetime.now(c.ZoneInfo('America/Denver')).date().isoformat()):
+            c.validate_request(self.request(mode='publish', activation=c.ACTIVATION,
+                owner_confirmed_old_x_deleted=False, owner_handles_deletion=True,
+                owner_allows_replacement_before_deletion=True, authorization_reference='owner-message'))
+
+    def test_owner_handles_deletion_alone_does_not_authorize_posting(self):
+        with self.assertRaises(ValueError):
+            c.validate_request(self.request(mode='publish', activation=c.ACTIVATION,
+                owner_handles_deletion=True, authorization_reference='owner-message'))
+
     def test_wrong_target_fails(self):
         with self.assertRaises(ValueError):
             c.validate_request(self.request(old_x_id='different'))
