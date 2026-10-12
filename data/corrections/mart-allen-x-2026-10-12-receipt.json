@@ -1,0 +1,26 @@
+{
+  "old_buffer_id": "6acca251712ba82086b3e38c",
+  "old_x_id": "2109584944016113910",
+  "authorization_reference": "Owner instruction 2026-10-12T12:26:55Z: I can delete. Just post the new one.",
+  "owner_confirmed_old_x_deleted": false,
+  "owner_handles_deletion": true,
+  "owner_allows_replacement_before_deletion": true,
+  "attempt_started_at": "2026-10-12T12:28:55.708978+00:00",
+  "payload": {
+    "channelId": "6843193ed6d25b49a145ff6e",
+    "text": "Mart Allen, Adirondack Forester and Friend to Many, Dies at 99. Remembering Mart Allen (1927–2026), Adirondack woodsman, ranger and friend. A tribute to Mart leads the October 12 Woods Run Digest.\n\nhttps://woods-run-digest.steve760060.chatgpt.site/2026/10/12/",
+    "mode": "shareNow",
+    "schedulingType": "automatic",
+    "source": "woods-run-mart-allen-correction-20261012",
+    "assets": [
+      {
+        "image": {
+          "url": "https://woods-run-digest.steve760060.chatgpt.site/assets/mart-allen-memorial-2026-10-12.png"
+        }
+      }
+    ],
+    "saveToDraft": false,
+    "needsApproval": false
+  },
+  "state": "attempt_started"
+}
