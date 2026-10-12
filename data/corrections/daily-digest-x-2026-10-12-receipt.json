@@ -22,5 +22,29 @@
     "saveToDraft": false,
     "needsApproval": false
   },
-  "state": "attempt_started"
+  "state": "accepted",
+  "replacement": {
+    "id": "6accd404355aa519678a78fd",
+    "text": "Mart Allen, Adirondack Forester and Friend to Many, Dies at 99. Remembering Mart Allen (1927–2026), Adirondack woodsman, ranger and friend. The full personal tribute leads the October 12 Woods Run Digest.\n\nhttps://woods-run-digest.steve760060.chatgpt.site/2026/10/12/",
+    "status": "sent",
+    "createdAt": "2026-10-12T12:35:16.755Z",
+    "dueAt": "2026-10-12T12:35:16.812Z",
+    "channelId": "6843193ed6d25b49a145ff6e",
+    "externalLink": "https://twitter.com/ForestBizSchool/status/2109623943011226012",
+    "assets": [
+      {
+        "source": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/cards/2026-10-12.png",
+        "mimeType": "image/png"
+      }
+    ],
+    "allowedActions": [
+      "viewPost",
+      "sharePostLink",
+      "copyPostLink",
+      "updatePostTags",
+      "addPostNote",
+      "duplicatePost",
+      "updateShopGridLink"
+    ]
+  }
 }
