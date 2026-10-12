@@ -1,0 +1,30 @@
+name: Woods Run October 12 original Digest X correction
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'data/corrections/daily-digest-x-2026-10-12-request.json'
+permissions:
+  contents: write
+concurrency:
+  group: woods-run-daily-digest-x-correction-20261012
+  cancel-in-progress: false
+jobs:
+  correction:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Check one-off correction safeguards
+        run: python -m unittest discover -s tests -p test_daily_digest_x_correction_20261012.py -v
+      - name: Inspect or publish only the explicitly activated correction
+        env:
+          BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
+        run: python scripts/correct_daily_digest_x_20261012.py
