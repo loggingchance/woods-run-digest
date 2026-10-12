@@ -1,6 +1,6 @@
 {
   "attempt_started_at": "2026-10-12T21:01:50.958218+00:00",
-  "state": "attempt_started",
+  "state": "accepted",
   "history_count": 315,
   "payload": {
     "channelId": "6843193ed6d25b49a145ff6e",
@@ -20,5 +20,20 @@
   },
   "authorization": "Owner at 20:57 UTC October 12: did the striking post get published yet? we have enough on old Marty, post a different story if you haven’t put one up yet",
   "source": "https://www.blm.gov/press-release/blm-timber-sales-generate-nearly-30-million-support-american-jobs-third-quarter",
-  "image_sha256": "997354fb261e31a71d9491469a96e4303a6442c557e9f774a301dd03f90d708d"
+  "image_sha256": "997354fb261e31a71d9491469a96e4303a6442c557e9f774a301dd03f90d708d",
+  "replacement": {
+    "id": "6acd4ac0a36dd851812f615d",
+    "text": "121 million board feet sold. $29.8M in revenue. BLM reports its Q3 timber sales, with 46 million board feet planned for October offerings. Sold timber is not delivered wood. Details in today’s Woods Run Digest:\n\nhttps://woods-run-digest.steve760060.chatgpt.site/2026/10/12/",
+    "status": "sent",
+    "createdAt": "2026-10-12T21:01:52.771Z",
+    "dueAt": "2026-10-12T21:01:52.886Z",
+    "channelId": "6843193ed6d25b49a145ff6e",
+    "externalLink": "https://twitter.com/ForestBizSchool/status/2109751434660995251",
+    "assets": [
+      {
+        "source": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/e3e35b203f0e1cf2b60e6108061dfabc50f8bf09/assets/striking/2026-10-12-blm.png",
+        "mimeType": "image/png"
+      }
+    ]
+  }
 }
