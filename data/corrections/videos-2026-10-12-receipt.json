@@ -32,7 +32,22 @@
         "saveToDraft": false,
         "needsApproval": false
       },
-      "state": "attempt_started"
+      "state": "accepted",
+      "replacement": {
+        "id": "6accdebf7659eb754b70dfff",
+        "text": "Woods Run Digest — October 12, 2026\n\nDaily North American forestry & forest-products intelligence from The Forest Business School.\n\nRead today’s edition: https://woods-run-digest.steve760060.chatgpt.site/2026/10/12/",
+        "status": "sending",
+        "createdAt": "2026-10-12T13:21:02.973Z",
+        "dueAt": "2026-10-12T13:21:03.058Z",
+        "channelId": "6844cc71d6d25b49a1de682e",
+        "externalLink": null,
+        "assets": [
+          {
+            "source": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/22913156ccedc592e8dc0d03eed58f9fcd5f7014/assets/videos/2026-10-12-30fps.mp4",
+            "mimeType": "video/mp4"
+          }
+        ]
+      }
     }
   },
   "authorization_reference": "Owner instruction 2026-10-12T12:38:14Z: The new style for the instagram and YouTube versions still hasn’t been posted. Fix now and stop making me repeat myself asking you to. Parent confirmed exact final media commit and hash for immediate publication.",
