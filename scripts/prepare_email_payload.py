@@ -41,6 +41,11 @@ def inline(node, urls: set[str]) -> str:
         address=normalize_url(node.get('href',''))
         urls.add(address)
         return f'<a href="{html.escape(address,quote=True)}" style="{LINK_STYLE}">{children}</a>'
+    if node.name=='img':
+        address=normalize_url(node.get('src',''))
+        urls.add(address)
+        alt=' '.join(node.get('alt','').split())
+        return f'<img src="{html.escape(address,quote=True)}" alt="{html.escape(alt,quote=True)}" style="display:block;max-width:100%;height:auto;">'
     if node.name=='br':return '<br>'
     if node.name in ('em','i'):return '<em>'+children+'</em>'
     return children
@@ -54,12 +59,18 @@ def compile_payload(page: str, issue: dict) -> dict:
     for element in article.select('nav, .edition-nav, .growth-strip'):
         element.decompose()
     urls=set(); body=[]; plain=[]; source_paragraphs=[]
-    for node in article.find_all(['h1','h2','h3','p','li','blockquote']):
-        if any(p.name in ('p','li','blockquote') for p in node.parents if p is not article):continue
+    for node in article.find_all(['h1','h2','h3','p','li','blockquote','figure']):
+        if any(p.name in ('p','li','blockquote','figure') for p in node.parents if p is not article):continue
         text=' '.join(node.get_text(' ',strip=True).split())
+        rendered=inline(node,urls)
+        if node.name=='figure':
+            if not node.find('img',src=True):continue
+            body.append(f'<div style="margin-top:20px;margin-bottom:20px;">{rendered}</div>')
+            alt=' '.join((node.find('img').get('alt') or '').split())
+            if alt:plain.append('Image: '+alt)
+            continue
         if not text:continue
         source_paragraphs.append(text)
-        rendered=inline(node,urls)
         if node.name.startswith('h'):
             level=node.name
             style='font-family:Georgia,Times New Roman,serif;font-size:24px;line-height:30px;color:#1f3b2b;'
