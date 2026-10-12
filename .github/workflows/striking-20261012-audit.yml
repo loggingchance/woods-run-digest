@@ -1,0 +1,25 @@
+name: October 12 striking post history audit
+on:
+  push:
+    paths: ['data/corrections/striking-2026-10-12-audit-request.json']
+permissions:
+  contents: write
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with: {ref: main}
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: python scripts/audit_striking_20261012.py
+        env:
+          BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
+      - run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/corrections/striking-2026-10-12-audit.json
+          git commit -m 'Record read-only October 12 X history audit'
+          git pull --rebase origin main
+          git push origin HEAD:main
