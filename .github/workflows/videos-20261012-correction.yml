@@ -1,0 +1,30 @@
+name: Woods Run October 12 approved video corrections
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'data/corrections/videos-2026-10-12-request.json'
+permissions:
+  contents: write
+concurrency:
+  group: woods-run-video-corrections-20261012
+  cancel-in-progress: false
+jobs:
+  corrections:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verify correction safeguards
+        run: python -m unittest discover -s tests -p test_video_correction_20261012.py -v
+      - name: Correct only explicitly activated Instagram and YouTube videos
+        env:
+          BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
+        run: python scripts/correct_videos_20261012.py
