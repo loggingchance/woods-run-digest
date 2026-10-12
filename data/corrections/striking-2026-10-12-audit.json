@@ -1,0 +1,637 @@
+{
+  "checked_at": "2026-10-12T20:59:08.323289+00:00",
+  "count": 315,
+  "channel": {
+    "id": "6843193ed6d25b49a145ff6e",
+    "name": "ForestBizSchool",
+    "service": "twitter",
+    "serviceId": "1487833905197637637",
+    "externalLink": "https://twitter.com/ForestBizSchool",
+    "isDisconnected": false,
+    "isLocked": false,
+    "isQueuePaused": false,
+    "timezone": "America/Denver"
+  },
+  "recent": [
+    {
+      "id": "6accd404355aa519678a78fd",
+      "text": "Mart Allen, Adirondack Forester and Friend to Many, Dies at 99. Remembering Mart Allen (1927\u20132026), Adirondack woodsman, ranger and friend. The full personal tribute leads the October 12 Woods Run Digest.\n\nhttps://woods-run-digest.steve760060.chatgpt.site/2026/10/12/",
+      "status": "sent",
+      "createdAt": "2026-10-12T12:35:16.755Z",
+      "dueAt": "2026-10-12T12:35:16.812Z",
+      "channelId": "6843193ed6d25b49a145ff6e",
+      "externalLink": "https://x.com/1487833905197637637/status/2109623943011226012",
+      "assets": [
+        {
+          "source": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/cards/2026-10-12.png",
+          "mimeType": "image/png"
+        }
+      ]
+    },
+    {
+      "id": "6accd289355aa519678a0307",
+      "text": "Mart Allen, Adirondack Forester and Friend to Many, Dies at 99. Remembering Mart Allen (1927\u20132026), Adirondack woodsman, ranger and friend. A tribute to Mart leads the October 12 Woods Run Digest.\n\nhttps://woods-run-digest.steve760060.chatgpt.site/2026/10/12/",
+      "status": "sent",
+      "createdAt": "2026-10-12T12:28:57.926Z",
+      "dueAt": "2026-10-12T12:28:57.972Z",
+      "channelId": "6843193ed6d25b49a145ff6e",
+      "externalLink": "https://x.com/1487833905197637637/status/2109622356331188509",
+      "assets": [
+        {
+          "source": "https://woods-run-digest.steve760060.chatgpt.site/assets/mart-allen-memorial-2026-10-12.png",
+          "mimeType": "image/png"
+        }
+      ]
+    },
+    {
+      "id": "6acca251712ba82086b3e38c",
+      "text": "Mart Allen, Adirondack Forester and Friend to Many, Dies at 99. Remembering Mart Allen (1927\u20132026), Adirondack woodsman, ranger and friend. Steven Bick\u2019s full personal tribute leads the October 12 Woods Run Digest.\n\nhttps://woods-run-digest.steve760060.chatgpt.site/2026/10/12/",
+      "status": "sent",
+      "createdAt": "2026-10-12T09:03:13.885Z",
+      "dueAt": "2026-10-12T10:00:00.000Z",
+      "channelId": "6843193ed6d25b49a145ff6e",
+      "externalLink": "https://x.com/1487833905197637637/status/2109584944016113910",
+      "assets": [
+        {
+          "source": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/cards/2026-10-12.png",
+          "mimeType": "image/png"
+        }
+      ]
+    },
+    {
+      "id": "6acb517ad9cab260a7f0a925",
+      "text": "Maryland\u2019s new hauling relief has a federal fuel limit. Also: Chemainus manufacturing, Nackawic logistics, Michigan grants, New Hampshire markets and regional forestry opportunities. October 11 Woods Run Digest.\n\nhttps://woods-run-digest.steve760060.chatgpt.site/2026/10/11/",
+      "status": "sent",
+      "createdAt": "2026-10-11T09:06:02.300Z",
+      "dueAt": "2026-10-11T10:00:00.000Z",
+      "channelId": "6843193ed6d25b49a145ff6e",
+      "externalLink": "https://x.com/1487833905197637637/status/2109222554065932438",
+      "assets": [
+        {
+          "source": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/cards/2026-10-11.png",
+          "mimeType": "image/png"
+        }
+      ]
+    },
+    {
+      "id": "6acaf19b92bca86aab09f92d",
+      "text": "https://t.co/Jz6deLHiwP",
+      "status": "sent",
+      "createdAt": "2026-10-11T02:16:50.000Z",
+      "dueAt": "2026-10-11T02:16:50.000Z",
+      "channelId": "6843193ed6d25b49a145ff6e",
+      "externalLink": "https://x.com/1487833905197637637/status/2109105916520149006",
+      "assets": []
+    },
+    {
+      "id": "6acaf17a92bca86aab09f8d5",
+      "text": "https://t.co/4Pm43fkTum",
+      "status": "sent",
+      "createdAt": "2026-10-11T02:16:17.000Z",
+      "dueAt": "2026-10-11T02:16:17.000Z",
+      "channelId": "6843193ed6d25b49a145ff6e",
+      "externalLink": "https://x.com/1487833905197637637/status/2109105776832962926",
+      "assets": []
+    },
+    {
+      "id": "6aca639ebba9419ccb0a2ac7",
+      "text": "An ownership proposal becomes useful to suppliers when it leads to confirmed orders and delivery arrangements. Today\u2019s Woods Run Digest tracks T\u00e9miscaming\u2019s local coalition, a changing hardwood buyer network and the full cost of delivering lumber.",
+      "status": "sent",
+      "createdAt": "2026-10-10T16:11:10.322Z",
+      "dueAt": "2026-10-10T16:11:10.390Z",
+      "channelId": "6843193ed6d25b49a145ff6e",
+      "externalLink": "https://x.com/1487833905197637637/status/2108953495906779339",
+      "assets": []
+    },
+    {
+      "id": "6aca22aa389cf4fd59a1f54b",
+      "text": "Scary but true - 151 hardwood sawmill closures in the US since 2023:\nhttps://t.co/0tHsQ0d9ek",
+      "status": "sent",
+      "createdAt": "2026-10-10T11:33:52.000Z",
+      "dueAt": "2026-10-10T11:33:52.000Z",
+      "channelId": "6843193ed6d25b49a145ff6e",
+      "externalLink": "https://x.com/1487833905197637637/status/2108883712171811183",
+      "assets": []
+    },
+    {
+      "id": "6ac9fefbc4de2d2b121f4ad9",
+      "text": "A local coalition pursues T\u00e9miscaming\u2019s mill. Also: hardwood buyer networks, the latest lumber index, upcoming forestry deadlines, Maine\u2019s BMP report and Wisconsin tours. October 10 Woods Run Digest.\n\nhttps://woods-run-digest.steve760060.chatgpt.site/2026/10/10/",
+      "status": "sent",
+      "createdAt": "2026-10-10T09:01:47.766Z",
+      "dueAt": "2026-10-10T10:00:00.000Z",
+      "channelId": "6843193ed6d25b49a145ff6e",
+      "externalLink": "https://x.com/1487833905197637637/status/2108860117235954144",
+      "assets": [
+        {
+          "source": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/cards/2026-10-10.png",
+          "mimeType": "image/png"
+        }
+      ]
+    },
+    {
+      "id": "6ac9170d57c4b87d9cfb7f01",
+      "text": "Marks Lumber of Clancy, Montana, will stop accepting special-cut orders October 20, end sawing November 6, and sell remaining inventory into 2027.",
+      "status": "sent",
+      "createdAt": "2026-10-09T16:32:13.904Z",
+      "dueAt": "2026-10-09T16:32:14.022Z",
+      "channelId": "6843193ed6d25b49a145ff6e",
+      "externalLink": "https://x.com/1487833905197637637/status/2108596408206950700",
+      "assets": []
+    },
+    {
+      "id": "6ac8cc335e9e68eeb1db875b",
+      "text": "Marks Lumber to stop sawing Nov. 6; amended Arnold AFB timber bids due Oct. 16; Ontario biomass funding closes Oct. 15.\n\nhttps://woods-run-digest.steve760060.chatgpt.site/2026/10/09/",
+      "status": "sent",
+      "createdAt": "2026-10-09T11:12:51.000Z",
+      "dueAt": "2026-10-09T11:20:00.000Z",
+      "channelId": "6843193ed6d25b49a145ff6e",
+      "externalLink": "https://x.com/1487833905197637637/status/2108517838453404098",
+      "assets": [
+        {
+          "source": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/cards/2026-10-09.png",
+          "mimeType": "image/png"
+        }
+      ]
+    },
+    {
+      "id": "6ac80e32738092739d1314c3",
+      "text": "Mercer defers $25.8M interest while its mass-timber plants keep running; Maine, Indiana and Montana timber bids close today; Ontario biomass grants close October 15.\n\nhttps://woods-run-digest.steve760060.chatgpt.site/2026/10/08/\n\n[WR TEST E2E-20261008-1600]",
+      "status": "sent",
+      "createdAt": "2026-10-08T21:42:10.032Z",
+      "dueAt": "2026-10-08T22:00:00.000Z",
+      "channelId": "6843193ed6d25b49a145ff6e",
+      "externalLink": "https://x.com/1487833905197637637/status/2108316523135635810",
+      "assets": [
+        {
+          "source": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/cards/2026-10-08.png",
+          "mimeType": "image/png"
+        }
+      ]
+    },
+    {
+      "id": "6ac76e516a3120c310958590",
+      "text": "Mercer defers $25.8M interest while its mass-timber plants keep running; Maine, Indiana and Montana timber bids close today; Ontario biomass grants close October 15.\n\nhttps://woods-run-digest.steve760060.chatgpt.site/2026/10/08/",
+      "status": "sent",
+      "createdAt": "2026-10-08T10:20:01.175Z",
+      "dueAt": "2026-10-08T10:20:01.239Z",
+      "channelId": "6843193ed6d25b49a145ff6e",
+      "externalLink": "https://x.com/1487833905197637637/status/2108140352867541421",
+      "assets": [
+        {
+          "source": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/cards/2026-10-08.png",
+          "mimeType": "image/png"
+        }
+      ]
+    },
+    {
+      "id": "6ac769ee2b303c75a3d64362",
+      "text": "Mercer defers $25.8M interest while its mass-timber plants keep running; Maine, Indiana and Montana timber bids close today; Ontario biomass grants close October 15.\n\nhttps://woodsrun.forestenterprise.org/2026/10/08/",
+      "status": "sent",
+      "createdAt": "2026-10-08T10:01:18.733Z",
+      "dueAt": "2026-10-08T10:01:19.869Z",
+      "channelId": "6843193ed6d25b49a145ff6e",
+      "externalLink": "https://x.com/1487833905197637637/status/2108135650369196191",
+      "assets": [
+        {
+          "source": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/cards/2026-10-08.png",
+          "mimeType": "image/png"
+        }
+      ]
+    },
+    {
+      "id": "6ac66db8afc53d16cec23848",
+      "text": "In northwestern Ontario, mixed Crown stands can be bypassed when the softwood has a market but the poplar and white birch do not. A viable hardwood outlet can unlock the whole stand.",
+      "status": "sent",
+      "createdAt": "2026-10-07T16:05:12.413Z",
+      "dueAt": "2026-10-07T16:05:12.470Z",
+      "channelId": "6843193ed6d25b49a145ff6e",
+      "externalLink": "https://x.com/1487833905197637637/status/2107864831114047512",
+      "assets": []
+    },
+    {
+      "id": "6ac61899e94d01075006504e",
+      "text": "Thunder Bay courts Scandinavian manufacturers for underused poplar and white birch; Pennsylvania hardwood bids close today; Montana's 7,029-ton Douglas-fir salvage sale opens tomorrow.\n\nhttps://woodsrun.forestenterprise.org/2026/10/07/",
+      "status": "sent",
+      "createdAt": "2026-10-07T10:02:00.990Z",
+      "dueAt": "2026-10-07T10:02:01.031Z",
+      "channelId": "6843193ed6d25b49a145ff6e",
+      "externalLink": "https://x.com/1487833905197637637/status/2107773433937383662",
+      "assets": [
+        {
+          "source": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/cards/2026-10-07.png",
+          "mimeType": "image/png"
+        }
+      ]
+    },
+    {
+      "id": "6ac51bad6531870e15cea214",
+      "text": "The new Woods-Ready Safety Plan turns job-site coordinates, responder directions, contacts, hazards and emergency details into one shareable plan that can stay available offline after loading.",
+      "status": "sent",
+      "createdAt": "2026-10-06T16:02:53.101Z",
+      "dueAt": "2026-10-06T16:02:53.167Z",
+      "channelId": "6843193ed6d25b49a145ff6e",
+      "externalLink": "https://x.com/1487833905197637637/status/2107501858944168283",
+      "assets": []
+    },
+    {
+      "id": "6ac5016650ef5afb9d0339b6",
+      "text": "https://t.co/yYj1SUEIO5",
+      "status": "sent",
+      "createdAt": "2026-10-06T14:10:37.000Z",
+      "dueAt": "2026-10-06T14:10:37.000Z",
+      "channelId": "6843193ed6d25b49a145ff6e",
+      "externalLink": "https://x.com/1487833905197637637/status/2107473604984381458",
+      "assets": []
+    },
+    {
+      "id": "6ac500d7dc9b90db44a532ef",
+      "text": "The free Woods-Ready Safety Plan app helps loggers and foresters quickly create site-specific emergency response plans. Built for NELA with grant support from the THATS Foundation. Give it a try and share it with your networks: \nhttps://t.co/2ror186ur8",
+      "status": "sent",
+      "createdAt": "2026-10-06T14:08:14.000Z",
+      "dueAt": "2026-10-06T14:08:14.000Z",
+      "channelId": "6843193ed6d25b49a145ff6e",
+      "externalLink": "https://x.com/1487833905197637637/status/2107473006582985197",
+      "assets": []
+    },
+    {
+      "id": "6ac4c9d8f3da78683bb69436",
+      "text": "Free Woods-Ready Safety Plan app launches for logging crews; Pennsylvania and Montana timber sales hit bid day; Bearlodge Forest Products plans to close October 31.\n\nhttps://woodsrun.forestenterprise.org/2026/10/06/",
+      "status": "sent",
+      "createdAt": "2026-10-06T10:13:44.837Z",
+      "dueAt": "2026-10-06T10:13:44.889Z",
+      "channelId": "6843193ed6d25b49a145ff6e",
+      "externalLink": "https://x.com/1487833905197637637/status/2107413997758607820",
+      "assets": [
+        {
+          "source": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/cards/2026-10-06.png",
+          "mimeType": "image/png"
+        }
+      ]
+    },
+    {
+      "id": "6ac3ca102156cd98cf603b0b",
+      "text": "RYAM has started construction on a 70 MW Georgia biomass cogeneration project fueled by regional forestry residues; once operating, it expects $8\u201310 million in annual distributions and about $30 million in avoided Jesup utility capital spending.",
+      "status": "sent",
+      "createdAt": "2026-10-05T16:02:24.049Z",
+      "dueAt": "2026-10-05T16:02:24.102Z",
+      "channelId": "6843193ed6d25b49a145ff6e",
+      "externalLink": "https://x.com/1487833905197637637/status/2107139349355659354",
+      "assets": []
+    },
+    {
+      "id": "6ac37653fedacae4e361bee5",
+      "text": "RYAM starts a 70 MW Georgia biomass project using regional forestry residues; the Navy puts 281,190 board feet to bid Thursday in Indiana; Ontario biomass grants close October 15.\n\nhttps://woodsrun.forestenterprise.org/2026/10/05/",
+      "status": "sent",
+      "createdAt": "2026-10-05T10:05:07.622Z",
+      "dueAt": "2026-10-05T10:05:07.705Z",
+      "channelId": "6843193ed6d25b49a145ff6e",
+      "externalLink": "https://x.com/1487833905197637637/status/2107049441299439803",
+      "assets": [
+        {
+          "source": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/cards/2026-10-05.png",
+          "mimeType": "image/png"
+        }
+      ]
+    },
+    {
+      "id": "6ac2793c6ae9cbb01a500a3f",
+      "text": "Idaho\u2019s new $12.4 million Good Neighbor Authority package is expected to support more than 100 future timber sales\u2014and one agreement creates a 20-year statewide framework covering every national forest in the state.",
+      "status": "sent",
+      "createdAt": "2026-10-04T16:05:16.308Z",
+      "dueAt": "2026-10-04T16:05:16.399Z",
+      "channelId": "6843193ed6d25b49a145ff6e",
+      "externalLink": "https://x.com/1487833905197637637/status/2106777684235723078",
+      "assets": []
+    },
+    {
+      "id": "6ac224547d53b827e004e831",
+      "text": "Idaho\u2019s new $12.4M GNA package points to 100+ future timber sales; Burnett County timber bids close this week; Florida pine-beetle prevention applications close Friday.\n\nhttps://woodsrun.forestenterprise.org/2026/10/04/",
+      "status": "sent",
+      "createdAt": "2026-10-04T10:03:00.647Z",
+      "dueAt": "2026-10-04T10:03:00.734Z",
+      "channelId": "6843193ed6d25b49a145ff6e",
+      "externalLink": "https://x.com/1487833905197637637/status/2106686520694292837",
+      "assets": [
+        {
+          "source": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/cards/2026-10-04.png",
+          "mimeType": "image/png"
+        }
+      ]
+    },
+    {
+      "id": "6ac125953bfd38430fe7a184",
+      "text": "Minnesota's temporary 10% load allowance turns the diesel-price spike into an immediate hauling-economics change: more forest products per trip on state and local highways through October 30.",
+      "status": "sent",
+      "createdAt": "2026-10-03T15:56:05.834Z",
+      "dueAt": "2026-10-03T15:56:05.896Z",
+      "channelId": "6843193ed6d25b49a145ff6e",
+      "externalLink": "https://x.com/1487833905197637637/status/2106412987099603210",
+      "assets": []
+    },
+    {
+      "id": "6ac0d257814d657011be8461",
+      "text": "Minnesota gives forest-product haulers a temporary 10% weight allowance; Pennsylvania opens 1,213.7 MBF Tuesday; Florida posts 16,094 tons of sand-pine pulpwood.\n\nhttps://woodsrun.forestenterprise.org/2026/10/03/",
+      "status": "sent",
+      "createdAt": "2026-10-03T10:00:54.998Z",
+      "dueAt": "2026-10-03T10:00:55.102Z",
+      "channelId": "6843193ed6d25b49a145ff6e",
+      "externalLink": "https://x.com/1487833905197637637/status/2106323605621551473",
+      "assets": [
+        {
+          "source": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/cards/2026-10-03.png",
+          "mimeType": "image/png"
+        }
+      ]
+    },
+    {
+      "id": "6ac00c2ca82b64098f42ff14",
+      "text": "Eastern Oregon research models 365 jobs and $105 million in regional output from turning small-diameter restoration wood into mass timber\u2014and finds another 31 cents of regional activity for every processing dollar invested.",
+      "status": "sent",
+      "createdAt": "2026-10-02T19:55:24.248Z",
+      "dueAt": "2026-10-02T19:55:24.299Z",
+      "channelId": "6843193ed6d25b49a145ff6e",
+      "externalLink": "https://x.com/1487833905197637637/status/2106110822850117799",
+      "assets": []
+    },
+    {
+      "id": "6abf9fcab41a266eabf913d9",
+      "text": "Pennsylvania puts 1,207 MBF of state-forest timber to bid today; Montana stacks three timber openings over 11 days; Big River is two weeks from a 250-MMBF sawmill curtailment.\n\nhttps://woodsrun.forestenterprise.org/2026/10/02/",
+      "status": "sent",
+      "createdAt": "2026-10-02T12:12:58.797Z",
+      "dueAt": "2026-10-02T12:12:58.846Z",
+      "channelId": "6843193ed6d25b49a145ff6e",
+      "externalLink": "https://x.com/1487833905197637637/status/2105994452875567498",
+      "assets": [
+        {
+          "source": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/cards/2026-10-02.png",
+          "mimeType": "image/png"
+        }
+      ]
+    },
+    {
+      "id": "6abe33ea5a836d477a9c7e8f",
+      "text": "Adeptus plans a $215.56M South Carolina wood-products plant; Arkansas gives qualifying loggers temporary dyed-diesel relief; a Bozeman helicopter-yarding project seeks contractors.\n\nhttps://woodsrun.forestenterprise.org/2026/10/01/",
+      "status": "sent",
+      "createdAt": "2026-10-01T10:20:26.108Z",
+      "dueAt": "2026-10-01T10:20:26.154Z",
+      "channelId": "6843193ed6d25b49a145ff6e",
+      "externalLink": "https://x.com/1487833905197637637/status/2105603741860704759",
+      "assets": [
+        {
+          "source": "https://raw.githubusercontent.com/loggingchance/wrdigest/main/assets/cards/2026-10-01.png",
+          "mimeType": "image/png"
+        }
+      ]
+    },
+    {
+      "id": "6abe33b05a836d477a9c759c",
+      "text": "Arkansas is temporarily letting qualifying forestry businesses run dyed off-road diesel in highway vehicles through October 30\u2014a direct operating-cost change for eligible logging contractors.",
+      "status": "sent",
+      "createdAt": "2026-10-01T10:19:28.811Z",
+      "dueAt": "2026-10-01T10:19:28.856Z",
+      "channelId": "6843193ed6d25b49a145ff6e",
+      "externalLink": "https://x.com/1487833905197637637/status/2105603498997940692",
+      "assets": []
+    },
+    {
+      "id": "6abcf1a662d40f4003114a63",
+      "text": "Texas changes fuel and weight rules for timber haulers during the diesel disruption; Montana's Cutaway Deck GNA sale and a Pennsylvania salvage sale hit bid day.\n\nhttps://woodsrun.forestenterprise.org/2026/09/30/",
+      "status": "sent",
+      "createdAt": "2026-09-30T11:25:26.921Z",
+      "dueAt": "2026-09-30T11:25:26.976Z",
+      "channelId": "6843193ed6d25b49a145ff6e",
+      "externalLink": "https://x.com/1487833905197637637/status/2105257715186434530",
+      "assets": [
+        {
+          "source": "https://raw.githubusercontent.com/loggingchance/wrdigest/main/assets/cards/2026-09-30.png",
+          "mimeType": "image/png"
+        }
+      ]
+    },
+    {
+      "id": "6abbe07d564c3818f74857fa",
+      "text": "Idaho\u2019s Gold Hill sale puts 6,950 MBF on the block at an appraised net value of $1.23M, or about $177/MBF. The required bid deposit is $122,960\u201410% up front.",
+      "status": "sent",
+      "createdAt": "2026-09-29T15:59:57.657Z",
+      "dueAt": "2026-09-29T15:59:57.708Z",
+      "channelId": "6843193ed6d25b49a145ff6e",
+      "externalLink": "https://x.com/1487833905197637637/status/2104964408480805193",
+      "assets": []
+    },
+    {
+      "id": "6abbbe04838f5c63317a03df",
+      "text": "The National Forest Products Tax Credit Sourecebook in now available:\nhttps://t.co/tzFyLctfUV",
+      "status": "sent",
+      "createdAt": "2026-09-29T13:32:42.000Z",
+      "dueAt": "2026-09-29T13:32:42.000Z",
+      "channelId": "6843193ed6d25b49a145ff6e",
+      "externalLink": "https://x.com/1487833905197637637/status/2104927351553606130",
+      "assets": []
+    },
+    {
+      "id": "6abb9d7c0e3b9bda5ff7e779",
+      "text": "New tax.lumbermen.org puts federal + state tax credits for forest-products businesses into a searchable sourcebook; Idaho auctions 6,950 MBF today; FPL seeks mass-timber research priorities.\n\nhttps://woodsrun.forestenterprise.org/2026/09/29/",
+      "status": "sent",
+      "createdAt": "2026-09-29T11:14:04.593Z",
+      "dueAt": "2026-09-29T11:14:04.658Z",
+      "channelId": "6843193ed6d25b49a145ff6e",
+      "externalLink": "https://x.com/1487833905197637637/status/2104892466054717708",
+      "assets": [
+        {
+          "source": "https://raw.githubusercontent.com/loggingchance/wrdigest/main/assets/cards/2026-09-29.png",
+          "mimeType": "image/png"
+        }
+      ]
+    },
+    {
+      "id": "6abb8f8dc8e169381e69ef1f",
+      "text": "A new searchable sourcebook brings federal and state tax-credit programs relevant to forest-products businesses into one resource, with the complete 2026 publication available from the launch site.",
+      "status": "sent",
+      "createdAt": "2026-09-29T10:14:37.224Z",
+      "dueAt": "2026-09-29T10:14:37.398Z",
+      "channelId": "6843193ed6d25b49a145ff6e",
+      "externalLink": "https://x.com/1487833905197637637/status/2104877501377912904",
+      "assets": []
+    },
+    {
+      "id": "6aba9197f3fa1ca5e920ed81",
+      "text": "Wisconsin green 4/4 FAS white oak is nearly 24% below a year ago and about 30% below two years ago, while mills say log costs remain high. That spread is where the squeeze is showing up.",
+      "status": "sent",
+      "createdAt": "2026-09-28T16:11:03.760Z",
+      "dueAt": "2026-09-28T16:11:03.811Z",
+      "channelId": "6843193ed6d25b49a145ff6e",
+      "externalLink": "https://x.com/1487833905197637637/status/2104604814273368349",
+      "assets": []
+    },
+    {
+      "id": "6aba5c4186dbef624b4aa42d",
+      "text": "Wisconsin pulpwood outlets remain tight and white oak prices lag badly; a 50-year Maine study finds whole-tree harvesting changed species composition more than long-term productivity.\n\nhttps://woodsrun.forestenterprise.org/2026/09/28/",
+      "status": "sent",
+      "createdAt": "2026-09-28T12:23:29.405Z",
+      "dueAt": "2026-09-28T12:23:29.452Z",
+      "channelId": "6843193ed6d25b49a145ff6e",
+      "externalLink": "https://x.com/1487833905197637637/status/2104547547159175552",
+      "assets": [
+        {
+          "source": "https://raw.githubusercontent.com/loggingchance/wrdigest/main/assets/cards/2026-09-28.png",
+          "mimeType": "image/png"
+        }
+      ]
+    },
+    {
+      "id": "6ab940b136a0dcfcb3db9840",
+      "text": "Michigan\u2019s Jan. 1 firewood quarantine turns the state line into a hard compliance boundary: untreated out-of-state firewood is barred, and receivers must keep treatment and certification records for 36 months.",
+      "status": "sent",
+      "createdAt": "2026-09-27T16:13:37.268Z",
+      "dueAt": "2026-09-27T16:13:37.331Z",
+      "channelId": "6843193ed6d25b49a145ff6e",
+      "externalLink": "https://x.com/1487833905197637637/status/2104243070397034996",
+      "assets": []
+    },
+    {
+      "id": "6ab911841bf030e330a7629e",
+      "text": "Michigan sets a January 1 firewood compliance line; a $1M Forest Service grant targets community-tree wood utilization; CAL FIRE refreshes its harvest-plan viewer.\n\nhttps://woodsrun.forestenterprise.org/2026/09/27/",
+      "status": "sent",
+      "createdAt": "2026-09-27T12:52:20.058Z",
+      "dueAt": "2026-09-27T12:52:20.109Z",
+      "channelId": "6843193ed6d25b49a145ff6e",
+      "externalLink": "https://x.com/1487833905197637637/status/2104192417431724232",
+      "assets": [
+        {
+          "source": "https://raw.githubusercontent.com/loggingchance/wrdigest/main/assets/cards/2026-09-27.png",
+          "mimeType": "image/png"
+        }
+      ]
+    },
+    {
+      "id": "6ab7a6e33afb9171a82ed1e6",
+      "text": "FRA says diesel at $6.529/gal is tightening logging and log-hauling margins and pushing uncertainty into delivered-wood costs.",
+      "status": "sent",
+      "createdAt": "2026-09-26T11:05:07.149Z",
+      "dueAt": "2026-09-26T11:05:07.212Z",
+      "channelId": "6843193ed6d25b49a145ff6e",
+      "externalLink": "https://x.com/1487833905197637637/status/2103803044919918803",
+      "assets": []
+    },
+    {
+      "id": "6ab79d74712d68a8b1452e6d",
+      "text": "Gillfor's Teal-Jones acquisition clears court approval; FRA makes its diesel-cost analysis public; Washington resets older-forest conservation at roughly 55,000 acres.\n\nhttps://woodsrun.forestenterprise.org/2026/09/26/",
+      "status": "sent",
+      "createdAt": "2026-09-26T10:24:52.685Z",
+      "dueAt": "2026-09-26T10:24:52.733Z",
+      "channelId": "6843193ed6d25b49a145ff6e",
+      "externalLink": "https://x.com/1487833905197637637/status/2103792920813883606",
+      "assets": [
+        {
+          "source": "https://woodsrun.forestenterprise.org/assets/cards/2026-09-26.png",
+          "mimeType": "image/png"
+        }
+      ]
+    },
+    {
+      "id": "6ab69ac6d86d921cdb17798f",
+      "text": "Alberta cut September coniferous Crown dues 26.6% in one month, to C$9.31/m\u00b3 from C$12.68. For operators on Crown timber, that is an immediate harvest-cost reset\u2014not a forecast.",
+      "status": "sent",
+      "createdAt": "2026-09-25T16:01:10.784Z",
+      "dueAt": "2026-09-25T16:01:10.840Z",
+      "channelId": "6843193ed6d25b49a145ff6e",
+      "externalLink": "https://x.com/1487833905197637637/status/2103515166075740248",
+      "assets": []
+    },
+    {
+      "id": "6ab649a6cbe818dd4f02418c",
+      "text": "Alberta's September conifer dues fall 26.6%; Pennsylvania puts 257.2 MBF + 4,650 tons to bid Tuesday; salvaged glulam gets a new commercial role.\n\nhttps://woodsrun.forestenterprise.org/2026/09/25/",
+      "status": "sent",
+      "createdAt": "2026-09-25T10:15:02.934Z",
+      "dueAt": "2026-09-25T10:15:03.025Z",
+      "channelId": "6843193ed6d25b49a145ff6e",
+      "externalLink": "https://x.com/1487833905197637637/status/2103428060175303121",
+      "assets": [
+        {
+          "source": "https://woodsrun.forestenterprise.org/assets/cards/2026-09-25.png",
+          "mimeType": "image/png"
+        }
+      ]
+    },
+    {
+      "id": "6ab549ded1b34ff0b3088ce7",
+      "text": "For prescribed fire, Forest Service research says the main barriers to doing more are capacity and funding\u2014not air quality. The constraint is people, planning bandwidth and execution, not just treatment design.",
+      "status": "sent",
+      "createdAt": "2026-09-24T16:03:42.867Z",
+      "dueAt": "2026-09-24T16:03:43.047Z",
+      "channelId": "6843193ed6d25b49a145ff6e",
+      "externalLink": "https://x.com/1487833905197637637/status/2103153413882044777",
+      "assets": []
+    },
+    {
+      "id": "6ab4f83da3079861f480ac3f",
+      "text": "Vermont opens a year-end outlet for qualifying Finch-stranded low-grade wood; Washington puts 6,629 MBF to bid this morning; mill and logging equipment liquidations stack up from Wisconsin to West Virginia.\n\nhttps://woodsrun.forestenterprise.org/2026/09/24/",
+      "status": "sent",
+      "createdAt": "2026-09-24T10:15:25.487Z",
+      "dueAt": "2026-09-24T10:15:25.546Z",
+      "channelId": "6843193ed6d25b49a145ff6e",
+      "externalLink": "https://x.com/1487833905197637637/status/2103065766639653053",
+      "assets": [
+        {
+          "source": "https://woodsrun.forestenterprise.org/assets/cards/2026-09-24.png",
+          "mimeType": "image/png"
+        }
+      ]
+    },
+    {
+      "id": "6ab48cb9c3888d6907cc7a32",
+      "text": "https://t.co/ru6djfKmS4",
+      "status": "sent",
+      "createdAt": "2026-09-24T02:36:32.000Z",
+      "dueAt": "2026-09-24T02:36:32.000Z",
+      "channelId": "6843193ed6d25b49a145ff6e",
+      "externalLink": "https://x.com/1487833905197637637/status/2102950281193664876",
+      "assets": []
+    },
+    {
+      "id": "6ab4843ae474f06fd45ce111",
+      "text": "Pub isn't new but the website is:\nhttps://t.co/ru6djfKmS4",
+      "status": "sent",
+      "createdAt": "2026-09-24T02:00:17.000Z",
+      "dueAt": "2026-09-24T02:00:17.000Z",
+      "channelId": "6843193ed6d25b49a145ff6e",
+      "externalLink": "https://x.com/1487833905197637637/status/2102941158372737338",
+      "assets": []
+    },
+    {
+      "id": "6ab4664407ef45bf8718ab7c",
+      "text": "https://t.co/ru6djfKmS4",
+      "status": "sent",
+      "createdAt": "2026-09-23T23:52:26.000Z",
+      "dueAt": "2026-09-23T23:52:26.000Z",
+      "channelId": "6843193ed6d25b49a145ff6e",
+      "externalLink": "https://x.com/1487833905197637637/status/2102908985242526041",
+      "assets": []
+    },
+    {
+      "id": "6ab3f7ece3f202d1af1e4443",
+      "text": "Diesel rose another 24.4\u00a2 in a week to $6.529/gal while November lumber fell 6.1% to $533.50/MBF. The cost side is moving the wrong way faster than the product-price side can absorb it.",
+      "status": "sent",
+      "createdAt": "2026-09-23T16:01:48.023Z",
+      "dueAt": "2026-09-23T16:01:48.174Z",
+      "channelId": "6843193ed6d25b49a145ff6e",
+      "externalLink": "https://x.com/1487833905197637637/status/2102790546439786809",
+      "assets": []
+    },
+    {
+      "id": "6ab3a68603dfec2f33d540fa",
+      "text": "Georgia picks Langdale for an $8.9M forest-products pilot; Wisconsin opens a forestry-grant rulemaking path; diesel climbs to $6.529/gal; two new forest-tech tools target the forest-to-mill data gap.\n\nhttps://woodsrun.forestenterprise.org/2026/09/23/",
+      "status": "sent",
+      "createdAt": "2026-09-23T10:14:30.023Z",
+      "dueAt": "2026-09-23T10:14:30.184Z",
+      "channelId": "6843193ed6d25b49a145ff6e",
+      "externalLink": "https://x.com/1487833905197637637/status/2102703146409607181",
+      "assets": [
+        {
+          "source": "https://woodsrun.forestenterprise.org/assets/cards/2026-09-23.png",
+          "mimeType": "image/png"
+        }
+      ]
+    }
+  ]
+}
