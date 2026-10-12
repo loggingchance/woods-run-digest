@@ -49,6 +49,37 @@
         ]
       },
       "verified_at": "2026-10-12T13:22:05.403919+00:00"
+    },
+    "youtube": {
+      "attempt_started_at": "2026-10-12T13:22:06.780349+00:00",
+      "payload": {
+        "channelId": "6ab14319ea19ca0bdea627e2",
+        "text": "Woods Run Digest — October 12, 2026\n\nRemembering Mart Allen (1927–2026), Adirondack forester, ranger and friend to many, who died October 11 at 99. The full personal tribute leads today’s edition, followed by regional forestry news, deadlines and resources.\n\nRead the full edition: https://woods-run-digest.steve760060.chatgpt.site/2026/10/12/\n\nDaily forestry & forest-products intelligence from The Forest Business School.",
+        "assets": [
+          {
+            "video": {
+              "url": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/22913156ccedc592e8dc0d03eed58f9fcd5f7014/assets/videos/2026-10-12-30fps.mp4"
+            }
+          }
+        ],
+        "metadata": {
+          "youtube": {
+            "title": "Mart Allen, Adirondack Forester and Friend to Many, Dies at 99",
+            "categoryId": "27",
+            "privacy": "public",
+            "madeForKids": false,
+            "notifySubscribers": true,
+            "embeddable": true,
+            "license": "youtube"
+          }
+        },
+        "mode": "shareNow",
+        "schedulingType": "automatic",
+        "source": "woods-run-approved-v4-correction-20261012",
+        "saveToDraft": false,
+        "needsApproval": false
+      },
+      "state": "attempt_started"
     }
   },
   "authorization_reference": "Owner instruction 2026-10-12T12:38:14Z: The new style for the instagram and YouTube versions still hasn’t been posted. Fix now and stop making me repeat myself asking you to. Parent confirmed exact final media commit and hash for immediate publication.",
