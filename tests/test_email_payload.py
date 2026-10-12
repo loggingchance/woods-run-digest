@@ -19,6 +19,15 @@ class EmailTests(unittest.TestCase):
     def test_rotation_next_day(self):
         p=compile_payload(self.page('October 9, 2026'),self.issue('2026-10-09'))
         self.assertEqual(p['featured_book']['title'],'Wet Woods')
+    def test_added_book_without_duplicate_fallback(self):
+        from book_rotation import book_html
+        issue={'date':'2026-10-13','displayDate':'October 13, 2026','url':'/2026/10/13/'}
+        page=self.page(issue['displayDate']).replace('</article>',book_html(issue['date'])+'</article>')
+        payload=compile_payload(page,issue)
+        self.assertEqual(payload['featured_book']['title'],'Continuous Improvement in Logging')
+        self.assertEqual(payload['html'].count('https://cinl.loggingchance.com/'),1)
+        self.assertIn('Jeffrey G. Benjamin',payload['text'])
+        self.assertNotIn('View Timber Tempo on Amazon',payload['html'])
     def test_linked_image_preserved(self):
         page=self.page().replace('<p>Full source paragraph.</p>','<figure><a href="/assets/memorial.png"><img src="/assets/memorial.png" alt="Memorial portrait"></a></figure><p>Full source paragraph.</p>')
         p=compile_payload(page,self.issue())

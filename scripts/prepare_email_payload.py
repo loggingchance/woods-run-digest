@@ -12,9 +12,7 @@ from bs4 import BeautifulSoup, NavigableString
 
 ROOT = Path(__file__).resolve().parents[1]
 SITE = 'https://woods-run-digest.steve760060.chatgpt.site'
-BOOKS = [('Wet Woods', 'https://www.amazon.com/dp/B0FP98Y3YN'),
-         ('Timber Tempo', 'https://www.amazon.com/dp/B0DRYY34KW'),
-         ('After Wood', 'https://www.amazon.com/dp/B0DRYZLRTF')]
+from book_rotation import featured_book
 UNSUB = '{{{RESEND_UNSUBSCRIBE_URL}}}'
 BODY_STYLE='font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:25px;color:#333333;'
 LINK_STYLE='font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:25px;color:#1f5b3a;'
@@ -81,9 +79,10 @@ def compile_payload(page: str, issue: dict) -> dict:
     if len(source_paragraphs)<5:raise ValueError('Edition content is too short')
     expected={normalize_url(a['href']) for a in article.find_all('a',href=True)}
     if expected-urls:raise ValueError('Source link lost while compiling email')
-    title,link=BOOKS[(date.fromisoformat(issue['date'])-date(2026,10,3)).days%3]
+    book=featured_book(issue['date']);title,link=book['title'],book['url']
     if link not in urls:
-        body.append(f'<h2 style="font-family:Georgia,Times New Roman,serif;font-size:22px;line-height:28px;color:#1f3b2b;">Featured book: {html.escape(title)}</h2><p style="{BODY_STYLE}"><a href="{link}" style="{LINK_STYLE}">View {html.escape(title)} on Amazon</a></p>')
+        label=('View '+html.escape(title)+' on Amazon') if 'amazon.com/' in link else ('Explore '+html.escape(title))
+        body.append(f'<h2 style="font-family:Georgia,Times New Roman,serif;font-size:22px;line-height:28px;color:#1f3b2b;">Featured book: {html.escape(title)}</h2><p style="{BODY_STYLE}"><a href="{link}" style="{LINK_STYLE}">{label}</a></p>')
         plain.extend(['FEATURED BOOK: '+title,link]);urls.add(link)
     page_url=SITE+issue['url'];subscribe=SITE+'/subscribe/'
     body.append(f'<p style="{BODY_STYLE}"><a href="{page_url}" style="{LINK_STYLE}">Read today’s web edition</a> · <a href="{subscribe}" style="{LINK_STYLE}">Subscribe</a></p>')
