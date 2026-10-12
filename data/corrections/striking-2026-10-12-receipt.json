@@ -1,6 +1,6 @@
 {
   "attempt_started_at": "2026-10-12T21:01:50.958218+00:00",
-  "state": "accepted",
+  "state": "sent",
   "history_count": 315,
   "payload": {
     "channelId": "6843193ed6d25b49a145ff6e",
@@ -34,6 +34,16 @@
         "source": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/e3e35b203f0e1cf2b60e6108061dfabc50f8bf09/assets/striking/2026-10-12-blm.png",
         "mimeType": "image/png"
       }
+    ],
+    "allowedActions": [
+      "viewPost",
+      "sharePostLink",
+      "copyPostLink",
+      "updatePostTags",
+      "addPostNote",
+      "duplicatePost",
+      "updateShopGridLink"
     ]
-  }
+  },
+  "verified_at": "2026-10-12T21:01:56.382199+00:00"
 }
