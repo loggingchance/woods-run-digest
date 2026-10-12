@@ -19,6 +19,13 @@ class EmailTests(unittest.TestCase):
     def test_rotation_next_day(self):
         p=compile_payload(self.page('October 9, 2026'),self.issue('2026-10-09'))
         self.assertEqual(p['featured_book']['title'],'Wet Woods')
+    def test_linked_image_preserved(self):
+        page=self.page().replace('<p>Full source paragraph.</p>','<figure><a href="/assets/memorial.png"><img src="/assets/memorial.png" alt="Memorial portrait"></a></figure><p>Full source paragraph.</p>')
+        p=compile_payload(page,self.issue())
+        url='https://woods-run-digest.steve760060.chatgpt.site/assets/memorial.png'
+        self.assertIn(f'<img src="{url}" alt="Memorial portrait"',p['html'])
+        self.assertIn(url,p['all_urls'])
+        self.assertTrue(p['links_preserved'])
     def test_internal_urls(self):
         self.assertEqual(normalize_url('/subscribe/'),'https://woods-run-digest.steve760060.chatgpt.site/subscribe/')
     def test_legacy_root_rewrite(self):
