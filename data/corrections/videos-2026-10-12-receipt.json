@@ -1,0 +1,40 @@
+{
+  "date": "2026-10-12",
+  "media_url": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/038c5943293a422f92cf380a4994c0bae03a6503/assets/videos/2026-10-12.mp4",
+  "media_sha256": "e879f3cd923d7b72b16d883c6f55f8c3bdcfd4fecbbacf40b027fda83c993a8e",
+  "duration_seconds": 41.534,
+  "format": "approved-v4",
+  "channels": {
+    "instagram": {
+      "attempt_started_at": "2026-10-12T12:58:57.727785+00:00",
+      "payload": {
+        "channelId": "6844cc71d6d25b49a1de682e",
+        "text": "Woods Run Digest — October 12, 2026\n\nDaily North American forestry & forest-products intelligence from The Forest Business School.\n\nRead today’s edition: https://woods-run-digest.steve760060.chatgpt.site/2026/10/12/",
+        "assets": [
+          {
+            "video": {
+              "url": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/038c5943293a422f92cf380a4994c0bae03a6503/assets/videos/2026-10-12.mp4",
+              "metadata": {
+                "thumbnailOffset": 1500
+              }
+            }
+          }
+        ],
+        "metadata": {
+          "instagram": {
+            "type": "reel",
+            "shouldShareToFeed": true
+          }
+        },
+        "mode": "shareNow",
+        "schedulingType": "automatic",
+        "source": "woods-run-approved-v4-correction-20261012",
+        "saveToDraft": false,
+        "needsApproval": false
+      },
+      "state": "attempt_started"
+    }
+  },
+  "authorization_reference": "Owner instruction 2026-10-12T12:38:14Z: The new style for the instagram and YouTube versions still hasn’t been posted. Fix now and stop making me repeat myself asking you to. Parent confirmed exact final media commit and hash for immediate publication.",
+  "old_posts_deleted": false
+}
