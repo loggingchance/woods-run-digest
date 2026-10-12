@@ -13,7 +13,7 @@ from PIL import Image, ImageDraw, ImageFont, ImageOps
 
 ROOT = Path(__file__).resolve().parents[1]
 BRAND = ROOT / 'assets/video-brand'
-W, H, FPS = 1080, 1920, 15
+W, H, FPS = 1080, 1920, 30
 GREEN = '#103a25'
 PAPER = '#eee8d5'
 GOLD = '#ad8733'
@@ -177,8 +177,8 @@ def render(source, date, display, output, frames_dir=None):
             block(d,story['body'],(90,y+45,990,1110),49)
             im.paste(illustration(story,source),(0,1125));footer(im);frames.append(im)
         frames.append(Image.open(BRAND/'closing.webp').convert('RGB'))
-        # 15 fps cannot encode 2.5 seconds exactly: 38+5*105+60 = 623 frames.
-        counts=[round(DURATIONS[0]*FPS)]+[105]*5+[60]
+        # Derive every segment from seconds, preserving timing at 30 fps.
+        counts=segment_frame_counts()
         ffmpeg=os.environ.get('FFMPEG') or shutil.which('ffmpeg')
         if not ffmpeg:raise RuntimeError('ffmpeg is required')
         command=[ffmpeg,'-y','-f','rawvideo','-vcodec','rawvideo','-pix_fmt','rgb24','-s',f'{W}x{H}','-r',str(FPS),'-i','-','-an','-c:v','libx264','-preset','medium','-crf','20','-pix_fmt','yuv420p','-movflags','+faststart',str(output)]
@@ -192,6 +192,12 @@ def render(source, date, display, output, frames_dir=None):
         manifest=dict(date=date,format='approved-v4',dimensions=[W,H],fps=FPS,frames=sum(counts),duration_seconds=sum(counts)/FPS,segment_frames=counts,stories=stories,publication_attempted=False)
         output.with_suffix('.json').write_text(json.dumps(manifest,indent=2)+'\n')
     return output
+
+
+def segment_frame_counts():
+    if FPS < 23:
+        raise ValueError("Instagram Reels require at least 23 fps")
+    return [round(seconds * FPS) for seconds in DURATIONS]
 
 
 def main():

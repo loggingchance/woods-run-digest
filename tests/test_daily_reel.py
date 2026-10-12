@@ -8,7 +8,9 @@ import render_daily_reel as reel
 class ReelTests(unittest.TestCase):
     def test_approved_timing(self):
         self.assertEqual(sum(reel.DURATIONS),41.5)
-        self.assertEqual(reel.FPS,15)
+        self.assertEqual(reel.FPS,30)
+        self.assertEqual(reel.segment_frame_counts(), [75,210,210,210,210,210,120])
+        self.assertEqual(sum(reel.segment_frame_counts()) / reel.FPS, 41.5)
         self.assertEqual((reel.W,reel.H),(1080,1920))
 
     def test_selection_and_missing_art_fail_closed(self):

@@ -142,7 +142,8 @@ def main():
         print('VIDEO_CORRECTION_DISABLED: awaiting verified immutable media and parent confirmation; no Buffer calls')
         return
     media_url = ('https://raw.githubusercontent.com/loggingchance/woods-run-digest/' +
-                 request['media_commit'] + '/assets/videos/2026-10-12.mp4')
+                 request['media_commit'] + '/' + request.get('media_path', 'assets/videos/2026-10-12.mp4'))
+    require(request.get('media_path', 'assets/videos/2026-10-12.mp4') in ('assets/videos/2026-10-12.mp4', 'assets/videos/2026-10-12-30fps.mp4'), 'Unexpected video path')
     data = public(media_url)
     require(hashlib.sha256(data).hexdigest() == request['media_sha256'], 'Video hash mismatch')
     require((1080, 1920) in buffer_queue.mp4_dimensions(data), 'Video is not 1080x1920')
@@ -190,7 +191,10 @@ def main():
             response = adapter.graphql('mutation Correct($input: CreatePostInput!) { createPost(input: $input) {'
                                        ' ... on PostActionSuccess { post { ' + buffer_queue.POST_FIELDS + ' } }'
                                        ' ... on MutationError { message } } }', {'input': info['payload']})['createPost']
-            require(not response.get('message'), 'Buffer rejected ' + key + ': ' + str(response.get('message')))
+            if response.get('message'):
+                state.update(state='rejected', provider_error=response['message'], rejected_at=datetime.now(timezone.utc).isoformat())
+                persist(record)
+                raise ValueError('Buffer rejected ' + key + ': ' + response['message'])
             existing = response.get('post')
             require(existing and existing.get('id'), 'No Buffer receipt; reconcile before retry')
             state.update(replacement=existing, state='accepted')
