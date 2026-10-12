@@ -6,5 +6,6 @@
   "visual_review_confirmed": true,
   "parent_media_confirmed": true,
   "activation": "PUBLISH_APPROVED_V4_IG_YT_20261012",
-  "authorization_reference": "Owner instruction 2026-10-12T12:38:14Z: The new style for the instagram and YouTube versions still hasn’t been posted. Fix now and stop making me repeat myself asking you to. Parent confirmed exact final media commit and hash for immediate publication."
+  "authorization_reference": "Owner instruction 2026-10-12T12:38:14Z: The new style for the instagram and YouTube versions still hasn’t been posted. Fix now and stop making me repeat myself asking you to. Parent confirmed exact final media commit and hash for immediate publication.",
+  "dispatch_reference": "Verified branch-update activation for the exact approved October 12 media"
 }
