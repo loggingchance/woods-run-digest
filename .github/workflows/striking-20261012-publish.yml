@@ -1,0 +1,21 @@
+name: October 12 one-time BLM striking post
+on:
+  push:
+    paths: ['data/corrections/striking-2026-10-12-request.json']
+permissions:
+  contents: write
+concurrency:
+  group: woods-run-striking-20261012
+  cancel-in-progress: false
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+        with: {ref: main, fetch-depth: 0}
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: python scripts/publish_striking_20261012.py
+        env:
+          BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
