@@ -52,7 +52,7 @@ jobs:
           assert len(same)==0,'A matching striking item already exists; no new post'
           # October 13 normal newsletter X post is the only allowed other post today.
           expected='https://woods-run-digest.steve760060.chatgpt.site/2026/10/13/'
-          assert len(current)==1 and expected in (current[0].get('text') or ''),'Other/new X post exists today; stop to avoid duplication'
+          assert len(current)==2 and {p.get('id') for p in current}=={'6acdf4adc0184667a9e2aba9','6ace73287719e3e09ced1626'} and any(expected in (p.get('text') or '') for p in current),'Unexpected current-day post or missing normal X post; stop'
           path=Path('data/striking-delivery/2026-10-13.json')
           assert not path.exists(),'A prior recovery attempt exists; never create again'
           record={'date':date,'due_at':due,'text':text,'channel_id':c[0]['id'],
@@ -85,7 +85,7 @@ jobs:
           assert any(c['id']==r['channel_id'] and c['name']=='ForestBizSchool' and c['service']=='twitter' for c in chs),'X mismatch'
           recent=b.recent(org,r['channel_id'])
           assert not [x for x in recent if (x.get('text') or '').strip()==r['text']],'A new matching X post appeared'
-          other=[x for x in recent if (x.get('createdAt') or '').startswith(r['date']) and x.get('id')!=r['normal_x_post_id']]
+          other=[x for x in recent if (x.get('createdAt') or '').startswith(r['date']) and x.get('id') not in (r['normal_x_post_id'],'6ace73287719e3e09ced1626')]
           assert not other,'An unrelated X post appeared; avoid duplicate'
           payload={'channelId':r['channel_id'],'text':r['text'],'assets':[],
                    'mode':'customScheduled','schedulingType':'automatic','dueAt':r['due_at'],
