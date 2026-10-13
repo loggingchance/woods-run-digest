@@ -1,0 +1,152 @@
+name: One-time October 13 striking post recovery through Buffer
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/striking-recovery-20261013.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: woods-run-striking-20261013
+  cancel-in-progress: false
+
+jobs:
+  recovery:
+    runs-on: ubuntu-latest
+    timeout-minutes: 28
+    env:
+      BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Read complete X history and write durable pre-mutation guard
+        run: |
+          python - <<'PY'
+          import json,sys
+          from datetime import datetime,timezone,timedelta
+          from pathlib import Path
+          from zoneinfo import ZoneInfo
+          sys.path.insert(0,'scripts')
+          import buffer_queue as b
+          date='2026-10-13';due='2026-10-13T18:20:00Z'
+          assert datetime.now(ZoneInfo('America/Denver')).date().isoformat()==date,'Wrong local date'
+          assert b.parse_time(due)>b.now()+timedelta(minutes=2),'Scheduled deadline too close; NO immediate posting'
+          issue=json.loads(Path('data/issues.json').read_text())[0]
+          assert issue['date']==date and issue.get('strikingText'), 'Missing correct issue and striking text'
+          text=issue['strikingText'].strip()
+          assert len(text)<=280,'X character limit'
+          org,channels=b.get_channels()
+          c=[x for x in channels if x['name']=='ForestBizSchool' and x['service']=='twitter' and x['id']=='6843193ed6d25b49a145ff6e']
+          assert len(c)==1 and not any(c[0].get(k) for k in ('isDisconnected','isLocked','isQueuePaused')),'X channel unsafe'
+          posts=b.recent(org,c[0]['id'])
+          current=[x for x in posts if (x.get('createdAt') or '').startswith(date)]
+          same=[x for x in posts if (x.get('text') or '').strip()==text]
+          assert len(same)==0,'A matching striking item already exists; no new post'
+          # October 13 normal newsletter X post is the only allowed other post today.
+          expected='https://woods-run-digest.steve760060.chatgpt.site/2026/10/13/'
+          assert len(current)==1 and expected in (current[0].get('text') or ''),'Other/new X post exists today; stop to avoid duplication'
+          path=Path('data/striking-delivery/2026-10-13.json')
+          assert not path.exists(),'A prior recovery attempt exists; never create again'
+          record={'date':date,'due_at':due,'text':text,'channel_id':c[0]['id'],
+                  'normal_x_post_id':current[0]['id'],'attempt_started_at':b.iso(b.now()),
+                  'state':'attempt_started','duplicate_search_count':len(posts),'post_id':None,
+                  'source':'one-time-oct13-owner-striking-recovery','email_attempted':False}
+          path.parent.mkdir(parents=True,exist_ok=True)
+          path.write_text(json.dumps(record,indent=2)+'\n')
+          print('STRIKING_PRECHECK '+json.dumps(record))
+          PY
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/striking-delivery/2026-10-13.json
+          git commit -m "Guard October 13 striking-post recovery before Buffer mutation"
+          git pull --rebase origin main
+          git push origin HEAD:main
+      - name: Queue only the missing striking observation natively in Buffer
+        run: |
+          python - <<'PY'
+          import json,sys
+          from pathlib import Path
+          from datetime import timedelta
+          sys.path.insert(0,'scripts')
+          import buffer_queue as b
+          p=Path('data/striking-delivery/2026-10-13.json')
+          r=json.loads(p.read_text())
+          assert r['state']=='attempt_started' and r['post_id'] is None,'Unknown earlier mutation'
+          assert b.parse_time(r['due_at'])>b.now()+timedelta(seconds=60),'Missed scheduling lead-time; do not shareNow'
+          org,chs=b.get_channels()
+          assert any(c['id']==r['channel_id'] and c['name']=='ForestBizSchool' and c['service']=='twitter' for c in chs),'X mismatch'
+          recent=b.recent(org,r['channel_id'])
+          assert not [x for x in recent if (x.get('text') or '').strip()==r['text']],'A new matching X post appeared'
+          other=[x for x in recent if (x.get('createdAt') or '').startswith(r['date']) and x.get('id')!=r['normal_x_post_id']]
+          assert not other,'An unrelated X post appeared; avoid duplicate'
+          payload={'channelId':r['channel_id'],'text':r['text'],'assets':[],
+                   'mode':'customScheduled','schedulingType':'automatic','dueAt':r['due_at'],
+                   'source':'woods-run-striking-20261013','saveToDraft':False,'needsApproval':False}
+          query='mutation Schedule($input:CreatePostInput!){createPost(input:$input){... on PostActionSuccess{post{'+b.POST_FIELDS+'}} ... on MutationError{message}}}'
+          resp=b.gql(query,{'input':payload})['createPost']
+          assert not resp.get('message'),resp.get('message')
+          post=resp.get('post')
+          assert post and post.get('id'),'Mutation ambiguous; do not resubmit'
+          r.update(state='accepted',post_id=post['id'],provider_status=post.get('status'),
+                   accepted_at=b.iso(b.now()),provider_due_at=post.get('dueAt'),
+                   external_url=post.get('externalLink'))
+          r['schedule_verified']=bool(post.get('dueAt') and abs((b.parse_time(post['dueAt'])-b.parse_time(r['due_at'])).total_seconds())<=2 and post.get('status') in b.BLOCKING)
+          p.write_text(json.dumps(r,indent=2)+'\n')
+          print('STRIKING_BUFFER_ACCEPTED '+json.dumps(r))
+          assert r['schedule_verified'],'Provider did not confirm correct scheduled due time'
+          PY
+      - name: Persist accepted provider ID
+        if: always()
+        run: |
+          if [ -f data/striking-delivery/2026-10-13.json ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add data/striking-delivery/2026-10-13.json
+            if ! git diff --cached --quiet; then
+              git commit -m "Record October 13 striking post Buffer receipt"
+              git pull --rebase origin main
+              git push origin HEAD:main
+            fi
+          fi
+      - name: Verify original provider ID after Buffer delivery, no resubmission
+        run: |
+          python - <<'PY'
+          import json,sys,time
+          from pathlib import Path
+          sys.path.insert(0,'scripts')
+          import buffer_queue as b
+          p=Path('data/striking-delivery/2026-10-13.json')
+          r=json.loads(p.read_text())
+          assert r.get('post_id') and r.get('schedule_verified'),'No accepted provider post'
+          delay=b.parse_time(r['due_at']).timestamp()+100-time.time()
+          if delay>0:time.sleep(delay)
+          org,channels=b.get_channels()
+          matches=[x for x in b.recent(org,r['channel_id']) if x['id']==r['post_id']]
+          assert len(matches)==1,'Accepted provider post cannot be independently read'
+          post=matches[0]
+          r.update(verified_at=b.iso(b.now()),provider_status=post.get('status'),external_url=post.get('externalLink'),state='sent' if post.get('status')=='sent' and post.get('externalLink') else 'unverified')
+          p.write_text(json.dumps(r,indent=2)+'\n')
+          print('STRIKING_PROVIDER_RESULT '+json.dumps(r))
+          assert r['state']=='sent','Provider did not confirm public sent URL'
+          PY
+      - name: Preserve the final post-delivery verification
+        if: always()
+        run: |
+          if [ -f data/striking-delivery/2026-10-13.json ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add data/striking-delivery/2026-10-13.json
+            if ! git diff --cached --quiet; then
+              git commit -m "Verify October 13 striking post outcome"
+              git pull --rebase origin main
+              git push origin HEAD:main
+            fi
+          fi
