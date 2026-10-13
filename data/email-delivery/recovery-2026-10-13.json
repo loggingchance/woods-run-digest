@@ -1,0 +1,24 @@
+{
+  "date": "2026-10-13",
+  "kind": "authorized-one-time-email-recovery",
+  "broadcast_id": "250d9fee-4d50-42e4-845d-c90229bfca3e",
+  "status": "sent",
+  "sent_at": "2026-10-13T14:03:01.511706Z",
+  "campaign_name": "Woods Run Digest — October 13, 2026",
+  "segment_id": "ec27b7e4-84e2-47af-83ce-7d77732ed557",
+  "from": "Steve Bick | Woods Run Digest <no_reply@forestenterprise.org>",
+  "reply_to": "steve@northeastforests.com",
+  "html_sha256": "5274b4c15fed8f393bc3ffbde76075dccdbadea6f964e7238222a44a864c4489",
+  "text_sha256": "11ab88ac7be15c2f29d547146bafc4b3660f60c76dda9eaa3359257f0f8042ac",
+  "source_sha256": "b803d75411c981dda203cf85ef874f517ba876bf3fb9980393b3ccea45560883",
+  "featured_book": "Continuous Improvement in Logging",
+  "authorization": "Owner explicitly requested Get it sent at 14:00 UTC October 13",
+  "duplicate_checks": {
+    "before_create": 0,
+    "before_send": 1,
+    "after_send": 1
+  },
+  "google_sender_repaired": false,
+  "google_sender_blocker": "Mac locked; existing Apps Script validator inaccessible",
+  "note": "Already sent. Reconcile this provider ID before any further October 13 email action. No Buffer or schedule changes."
+}
