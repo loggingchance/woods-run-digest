@@ -38,7 +38,7 @@ jobs:
                     'createdAt':p.get('createdAt'),'dueAt':p.get('dueAt'),'text':p.get('text')}
                    for p in posts if (p.get('text') or '').strip()==text]
           day=[{'id':p.get('id'),'status':p.get('status'),'externalLink':p.get('externalLink'),
-                'createdAt':p.get('createdAt'),'text':(p.get('text') or '')[:250]}
+                'createdAt':p.get('createdAt'),'text':(p.get('text') or '')}
                for p in posts if str(p.get('createdAt') or '').startswith('2026-10-13')]
           print('STRIKING_AUDIT_READ_ONLY '+json.dumps({'date':'2026-10-13','exactText':text,
                   'providerHistoryCount':len(posts),'exactMatches':matches,'dayPosts':day,
