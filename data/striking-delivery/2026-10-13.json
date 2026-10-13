@@ -3,11 +3,12 @@
   "due_at": "2026-10-13T18:20:00Z",
   "text": "A firm OSB market is not automatically a stronger lumber market. Today\u2019s Woods Run Digest separates product signals and follows new forest projects, timber-rule comments and near-term bids.",
   "channel_id": "6843193ed6d25b49a145ff6e",
-  "normal_x_post_id": "6ace73287719e3e09ced1626",
+  "normal_x_post_id": "6acdf4adc0184667a9e2aba9",
   "attempt_started_at": "2026-10-13T18:08:48.337977Z",
   "state": "attempt_started",
   "duplicate_search_count": 318,
   "post_id": null,
   "source": "one-time-oct13-owner-striking-recovery",
-  "email_attempted": false
+  "email_attempted": false,
+  "pre_mutation_guard_reconciled": "Prior 18:08:51Z failure before Buffer createPost; corrected normal vs unrelated X identity"
 }
