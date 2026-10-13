@@ -1,0 +1,219 @@
+{
+  "run_id": "daily-2026-10-13",
+  "date": "2026-10-13",
+  "channels": {
+    "x": {
+      "duplicate_search": {
+        "complete": true,
+        "posts_checked": 316
+      },
+      "attempt_started_at": "2026-10-13T09:06:53.193216Z",
+      "newly_created": true,
+      "post_id": "6acdf4adc0184667a9e2aba9",
+      "status": "scheduled",
+      "due_at": "2026-10-13T10:00:00.000Z",
+      "created_at": "2026-10-13T09:06:53.399Z",
+      "external_url": null,
+      "assets": [
+        {
+          "source": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/cards/2026-10-13.png",
+          "mimeType": "image/png"
+        }
+      ],
+      "provider_text": "Maine opens timber-rule comments. Oregon funds forest-resiliency projects, while a Canadian yard reports mixed lumber and panel signals. Plus: Montana bids today, Wyoming’s mandatory pre-bid meeting tomorrow…\n\nhttps://woods-run-digest.steve760060.chatgpt.site/2026/10/13/",
+      "error": null,
+      "schedule_verified": true,
+      "provider_sent": false,
+      "delivery_state": "scheduled",
+      "existing_delivery": true,
+      "public_visibility": "not_independently_verified"
+    },
+    "instagram": {
+      "duplicate_search": {
+        "complete": true,
+        "posts_checked": 274
+      },
+      "attempt_started_at": "2026-10-13T09:06:54.939242Z",
+      "newly_created": true,
+      "post_id": "6acdf4af5540c90f0a84bfb4",
+      "status": "scheduled",
+      "due_at": "2026-10-13T10:00:00.000Z",
+      "created_at": "2026-10-13T09:06:55.210Z",
+      "external_url": null,
+      "assets": [
+        {
+          "source": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/videos/2026-10-13.mp4",
+          "mimeType": "video/mp4"
+        }
+      ],
+      "provider_text": "Woods Run Digest — October 13, 2026\n\nDaily North American forestry & forest-products intelligence from The Forest Business School.\n\nRead today’s edition: https://woods-run-digest.steve760060.chatgpt.site/2026/10/13/",
+      "error": null,
+      "schedule_verified": true,
+      "provider_sent": false,
+      "delivery_state": "scheduled",
+      "existing_delivery": true,
+      "public_visibility": "not_independently_verified"
+    },
+    "youtube": {
+      "duplicate_search": {
+        "complete": true,
+        "posts_checked": 75
+      },
+      "attempt_started_at": "2026-10-13T09:06:55.717522Z",
+      "newly_created": true,
+      "post_id": "6acdf4afc0184667a9e2abf9",
+      "status": "scheduled",
+      "due_at": "2026-10-13T10:00:00.000Z",
+      "created_at": "2026-10-13T09:06:55.971Z",
+      "external_url": null,
+      "assets": [
+        {
+          "source": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/videos/2026-10-13.mp4",
+          "mimeType": "video/mp4"
+        }
+      ],
+      "provider_text": "Woods Run Digest — October 13, 2026\n\nMaine opens timber-rule comments; Oregon announces forest-resiliency funding; a Canadian yard separates lumber and panel signals; Montana bids close today; and Wyoming, Pennsylvania, Southern fiber markets and Great Lakes mass timber merit attention.\n\nRead the full edition: https://woods-run-digest.steve760060.chatgpt.site/2026/10/13/\n\nDaily forestry & forest-products intelligence from The Forest Business School.",
+      "error": null,
+      "schedule_verified": true,
+      "provider_sent": false,
+      "delivery_state": "scheduled",
+      "existing_delivery": true,
+      "public_visibility": "not_independently_verified"
+    }
+  },
+  "checked_at": "2026-10-13T09:06:51.031207Z",
+  "requested_action": "schedule_daily",
+  "requested_channels": [
+    "x",
+    "instagram",
+    "youtube"
+  ],
+  "required_daily_channels": [
+    "x",
+    "instagram",
+    "youtube"
+  ],
+  "daily_target_due_at": "2026-10-13T10:00:00Z",
+  "channel_identity": [
+    {
+      "id": "6ab14319ea19ca0bdea627e2",
+      "name": "Logging Chance",
+      "service": "youtube",
+      "serviceId": "UCq-PscVBAKjmVE39qb2NyCg",
+      "externalLink": "https://www.youtube.com/channel/UCq-PscVBAKjmVE39qb2NyCg",
+      "isDisconnected": false,
+      "isLocked": false,
+      "isQueuePaused": false,
+      "timezone": "America/Denver"
+    },
+    {
+      "id": "6844cc71d6d25b49a1de682e",
+      "name": "northeastforests",
+      "service": "instagram",
+      "serviceId": "17841412643805979",
+      "externalLink": "https://instagram.com/northeastforests",
+      "isDisconnected": false,
+      "isLocked": false,
+      "isQueuePaused": false,
+      "timezone": "America/Denver"
+    },
+    {
+      "id": "6843193ed6d25b49a145ff6e",
+      "name": "ForestBizSchool",
+      "service": "twitter",
+      "serviceId": "1487833905197637637",
+      "externalLink": "https://twitter.com/ForestBizSchool",
+      "isDisconnected": false,
+      "isLocked": false,
+      "isQueuePaused": false,
+      "timezone": "America/Denver"
+    }
+  ],
+  "due_at": "2026-10-13T10:00:00Z",
+  "preflight_by_channel": {
+    "x": {
+      "page": {
+        "url": "https://woods-run-digest.steve760060.chatgpt.site/2026/10/13/",
+        "final_url": "https://woods-run-digest.steve760060.chatgpt.site/2026/10/13/",
+        "http_status": 200,
+        "content_type": "text/html",
+        "content_verified": true
+      },
+      "card": {
+        "url": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/cards/2026-10-13.png",
+        "dimensions": [
+          1200,
+          630
+        ],
+        "bytes": 203875,
+        "public": {
+          "url": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/cards/2026-10-13.png",
+          "final_url": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/cards/2026-10-13.png",
+          "http_status": 200,
+          "content_type": "image/png",
+          "content_verified": true
+        }
+      }
+    },
+    "instagram": {
+      "page": {
+        "url": "https://woods-run-digest.steve760060.chatgpt.site/2026/10/13/",
+        "final_url": "https://woods-run-digest.steve760060.chatgpt.site/2026/10/13/",
+        "http_status": 200,
+        "content_type": "text/html",
+        "content_verified": true
+      },
+      "video": {
+        "url": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/videos/2026-10-13.mp4",
+        "dimensions": [
+          [
+            1080,
+            1920
+          ]
+        ],
+        "bytes": 1675954,
+        "public": {
+          "url": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/videos/2026-10-13.mp4",
+          "final_url": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/videos/2026-10-13.mp4",
+          "http_status": 200,
+          "content_type": "application/octet-stream",
+          "content_verified": true
+        }
+      }
+    },
+    "youtube": {
+      "page": {
+        "url": "https://woods-run-digest.steve760060.chatgpt.site/2026/10/13/",
+        "final_url": "https://woods-run-digest.steve760060.chatgpt.site/2026/10/13/",
+        "http_status": 200,
+        "content_type": "text/html",
+        "content_verified": true
+      },
+      "video": {
+        "url": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/videos/2026-10-13.mp4",
+        "dimensions": [
+          [
+            1080,
+            1920
+          ]
+        ],
+        "bytes": 1675954,
+        "public": {
+          "url": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/videos/2026-10-13.mp4",
+          "final_url": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/videos/2026-10-13.mp4",
+          "http_status": 200,
+          "content_type": "application/octet-stream",
+          "content_verified": true
+        }
+      }
+    }
+  },
+  "all_scheduled": true,
+  "daily_idempotent": true,
+  "all_provider_sent": false,
+  "all_public_verified": false,
+  "all_daily_channels_provider_sent": false,
+  "all_daily_channels_scheduled": true,
+  "email_verified": false,
+  "complete": false
+}
