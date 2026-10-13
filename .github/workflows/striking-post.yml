@@ -1,26 +1,36 @@
-name: Woods Run striking X post
+name: Woods Run striking X post (native Buffer schedule)
 
 on:
   workflow_dispatch:
   push:
+    branches: [main]
     paths:
       - 'data/striking-trigger.json'
 
 permissions:
-  contents: read
+  contents: write
+
+concurrency:
+  group: woods-run-striking-native
+  cancel-in-progress: false
 
 jobs:
   post:
     runs-on: ubuntu-latest
+    timeout-minutes: 30
     env:
       BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
-      WRD_SOCIAL_MODE: striking
     steps:
       - uses: actions/checkout@v4
         with:
           ref: main
+          fetch-depth: 0
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Publish striking X post
-        run: python scripts/post_to_buffer.py
+      - name: Validate native striking publisher without publishing
+        run: python -m py_compile scripts/striking_queue.py scripts/buffer_queue.py scripts/post_to_buffer.py
+      - name: Queue only the current striking observation for 10 AM inside Buffer
+        run: python scripts/striking_queue.py
+      - name: Verify the accepted provider ID after Buffer's scheduled time
+        run: python scripts/striking_queue.py --verify
