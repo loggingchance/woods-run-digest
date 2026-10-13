@@ -50,6 +50,6 @@ jobs:
           assert ffmpeg
           info=subprocess.run([ffmpeg,'-i',str(video)],text=True,capture_output=True).stderr
           assert 'Video: h264' in info and '1080x1920' in info, info
-          assert re.search(r'Duration: 00:00:41\\.5[0-9]',info), info
+          assert 'Duration: 00:00:41.50' in info, info
           print('ARTWORK_DRY_RUN_PASS: full MP4 rendered; no email or social calls')
           PY
