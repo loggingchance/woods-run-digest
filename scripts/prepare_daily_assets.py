@@ -40,9 +40,23 @@ def main() -> None:
     source_changed = bool(previous and previous.get('source_sha256') != source_hash)
     card = ROOT / 'assets/cards' / (date + '.png')
     video = ROOT / 'assets/videos' / (date + '.mp4')
+    library = ROOT / 'assets/video-illustrations'
+    manifest = json.loads((library / 'manifest.json').read_text())
+    art_parts = []
+    if len(manifest.get('assets', [])) != 8:
+        raise ValueError('All eight approved video illustrations are required')
+    for entry in sorted(manifest['assets'], key=lambda x: x['category']):
+        art_path = ROOT / entry['file']
+        art_bytes = art_path.read_bytes()
+        if digest(art_bytes) != entry['sha256']:
+            raise ValueError('Approved video illustration SHA mismatch: ' + entry['file'])
+        art_parts.append(art_bytes)
     renderer_hash = digest((ROOT / 'scripts/generate_social_cards.py').read_bytes() +
                            (ROOT / 'assets/woodsrun-header.webp').read_bytes() +
-                           (ROOT / 'scripts/render_daily_reel.py').read_bytes())
+                           (ROOT / 'scripts/render_daily_reel.py').read_bytes() +
+                           (ROOT / 'scripts/video_illustration_library.py').read_bytes() +
+                           (library / 'manifest.json').read_bytes() +
+                           b''.join(art_parts))
     renderer_changed = previous.get('renderer_sha256') != renderer_hash
     generated = []
     if renderer_changed or source_changed or not card.exists() or not card.stat().st_size:

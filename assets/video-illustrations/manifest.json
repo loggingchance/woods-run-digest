@@ -1,0 +1,62 @@
+{
+  "version": 1,
+  "description": "Approved mixed hardwood/conifer illustrations for Woods Run Shorts/Reels",
+  "assets": [
+    {
+      "category": "logs",
+      "file": "assets/video-illustrations/logs.webp",
+      "width": 900,
+      "height": 900,
+      "sha256": "43b4eb7b835dbbe54ae97eba7f92dedeb403e0ed8efe5c9bd65d5112063d2a0c"
+    },
+    {
+      "category": "bids",
+      "file": "assets/video-illustrations/bids.webp",
+      "width": 900,
+      "height": 900,
+      "sha256": "a6c65a97891f3e3f7550dd0a079c41558157f0992e8bac5e3fa6499b514373a0"
+    },
+    {
+      "category": "feller_buncher",
+      "file": "assets/video-illustrations/feller_buncher.webp",
+      "width": 900,
+      "height": 900,
+      "sha256": "27715b529de19bbdbf89e9923a301e6a3610008dc9dea2a714252f2d6d99cda2"
+    },
+    {
+      "category": "sawmill",
+      "file": "assets/video-illustrations/sawmill.webp",
+      "width": 900,
+      "height": 900,
+      "sha256": "e49d921ae4784f9b6505423140f9c668b84ad30d244bb5aa0e16523e5b62a8d3"
+    },
+    {
+      "category": "log_truck",
+      "file": "assets/video-illustrations/log_truck.webp",
+      "width": 900,
+      "height": 900,
+      "sha256": "e33ea071b1635cdf934a61ecbd030093b1011213da5827ba6cd538234771ce7c"
+    },
+    {
+      "category": "forest_planning",
+      "file": "assets/video-illustrations/forest_planning.webp",
+      "width": 900,
+      "height": 900,
+      "sha256": "f40934fd0249bba07c4f62bcd9dd70e2cb4377922764fa973ac1783495797796"
+    },
+    {
+      "category": "biomass",
+      "file": "assets/video-illustrations/biomass.webp",
+      "width": 900,
+      "height": 900,
+      "sha256": "afb4f05aef7491eb8cbeaa37b00dc359de1115e443f66f98d521213bc4e8ddd6"
+    },
+    {
+      "category": "research",
+      "file": "assets/video-illustrations/research.webp",
+      "width": 900,
+      "height": 900,
+      "sha256": "9bcb319f58b53a267b8c495e3863ebb0faf2c73272e820e990aac80b68ddc70d"
+    }
+  ]
+}

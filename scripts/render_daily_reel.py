@@ -10,6 +10,7 @@ import subprocess
 import tempfile
 from bs4 import BeautifulSoup
 from PIL import Image, ImageDraw, ImageFont, ImageOps
+from video_illustration_library import topic_illustration
 
 ROOT = Path(__file__).resolve().parents[1]
 BRAND = ROOT / 'assets/video-brand'
@@ -105,49 +106,14 @@ def read_stories(source, date):
 
 
 def illustration(story, source):
-    """Use supplied story art, otherwise draw an editorial illustration by subject."""
+    """Prefer supplied story photography, then approved curated topic art."""
     if story['image']:
         path=(source/story['image'].lstrip('/')).resolve()
         if not path.is_relative_to(source.resolve()) or not path.is_file():
             raise ValueError('Missing local story image: '+story['image'])
         art=Image.open(path).convert('RGB')
         return ImageOps.pad(art,(W,480),color=PAPER)
-    im=Image.new('RGB',(W,480),'#d5ddcb'); d=ImageDraw.Draw(im)
-    words=(story['headline']+' '+story['body']).lower()
-    for i,x in enumerate(range(20,1100,95)): tree(d,x,340,.8+(i%3)*.15,i%2==0,fill='#7e9776')
-    d.rectangle((0,350,W,480),fill='#c3b28e')
-    if any(w in words for w in ['application','bids','bid opening','fund','deadline']):
-        d.rounded_rectangle((370,55,740,435),radius=14,fill=PAPER,outline=GREEN,width=4)
-        d.rectangle((455,35,655,85),fill='#776345')
-        for y in range(135,390,55):
-            d.rectangle((405,y,425,y+20),outline=GREEN,width=2)
-            d.line((450,y+10,690,y+10),fill='#8c8d76',width=3)
-        d.polygon([(800,355),(955,190),(975,213),(820,375)],fill=GOLD)
-        if 'bid' in words:
-            d.rectangle((110,220,330,360),fill='#f4efdf',outline=GREEN,width=3)
-            d.line((110,220,220,305,330,220),fill=GREEN,width=3)
-            d.text((425,91),'BID REVIEW',font=font(28,True),fill=GREEN)
-        else:
-            d.rectangle((80,130,310,320),fill=PAPER,outline=GREEN,width=3)
-            d.rectangle((80,130,310,180),fill='#a86e55')
-            d.text((105,200),'DEADLINE',font=font(25,True),fill=GREEN)
-            d.line((105,260,285,260),fill=GOLD,width=3)
-    elif any(w in words for w in ['equipment','investment','technology','machine']):
-        d.rounded_rectangle((220,300,800,410),radius=40,fill='#3b473b')
-        for x in range(265,780,85):d.ellipse((x-25,326,x+25,380),fill='#939b88')
-        d.rectangle((370,150,625,315),fill='#bd9a4d')
-        d.rectangle((395,170,590,270),fill='#d8e4df')
-        d.line((625,190,830,95,955,255),fill='#bd9a4d',width=40)
-        d.polygon([(925,245),(1020,270),(970,310),(900,290)],fill='#3b473b')
-    else:
-        # Timber sales, supply and mill stories: stacked sawlogs in a working forest.
-        for row in range(3):
-            for col in range(7-row):
-                x=180+col*110+row*55; y=382-row*82
-                d.rectangle((x,y-37,x+230,y+37),fill='#886e48',outline='#5c513b',width=2)
-                d.ellipse((x-40,y-38,x+40,y+38),fill='#d5b67e',outline='#6e593d',width=3)
-                d.ellipse((x-24,y-23,x+24,y+23),outline='#9d7c4f',width=2)
-    return im
+    return topic_illustration(story, source, (W, 480))
 
 
 def render(source, date, display, output, frames_dir=None):

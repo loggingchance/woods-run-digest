@@ -29,4 +29,7 @@ class ReelTests(unittest.TestCase):
         b=reel.illustration(dict(headline='Equipment investment',body='',image=None),Path('.'))
         c=reel.illustration(dict(headline='Application deadline',body='',image=None),Path('.'))
         e=reel.illustration(dict(headline='Bid opening',body='',image=None),Path('.'))
-        self.assertEqual(len({im.tobytes() for im in [a,b,c,e]}),4)
+        # Both an application deadline and a bid opening intentionally select
+        # the same approved bids illustration; unrelated topics remain distinct.
+        self.assertEqual(c.tobytes(), e.tobytes())
+        self.assertEqual(len({im.tobytes() for im in [a,b,c]}),3)
