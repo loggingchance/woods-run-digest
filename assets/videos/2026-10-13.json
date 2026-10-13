@@ -1,0 +1,53 @@
+{
+  "date": "2026-10-13",
+  "format": "approved-v4",
+  "dimensions": [
+    1080,
+    1920
+  ],
+  "fps": 30,
+  "frames": 1245,
+  "duration_seconds": 41.5,
+  "segment_frames": [
+    75,
+    210,
+    210,
+    210,
+    210,
+    210,
+    120
+  ],
+  "stories": [
+    {
+      "headline": "Maine opens a timber-rule comment window",
+      "body": "Maine Forest Service\u2019s public-comment period opened October 12 for proposed changes to Chapter 27, covering timber harvesting and related activities in unorganized and deorganized areas. The notice says the amendments would align that\u2026",
+      "region": "NORTHEAST \u2014 MAINE / TIMBER-HARVESTING RULES",
+      "image": null
+    },
+    {
+      "headline": "Oregon announces $10 million for work on more than 6,400 acres",
+      "body": "An October 12 Oregon Department of Forestry release announces $10 million in landscape-resiliency investments for projects in Douglas, Grant, Jackson and Josephine counties. The awards cover more than 6,400 acres, with work including\u2026",
+      "region": "WEST \u2014 OREGON / FOREST-RESILIENCY PROJECTS",
+      "image": null
+    },
+    {
+      "headline": "A September yard report separates OSB pressure from lumber demand",
+      "body": "Star Building Materials Calgary\u2019s September market report, posted October 7, describes a mixed picture: dimensional SPF lumber was broadly balanced, studs were firmer with tighter prompt supply, and OSB availability was constrained. Its\u2026",
+      "region": "CANADA \u2014 ALBERTA / LUMBER AND PANEL MARKETS",
+      "image": null
+    },
+    {
+      "headline": "CaseforPotomac timber bids close today in Missoula",
+      "body": "Montana DNRC\u2019s current timber-sale list gives October 13, 2026, at 2 p.m. Missoula time as the CaseforPotomac bid opening at 2705 Spurgin Road. The prospectus advertises an estimated 8,020 tons of sawlogs and a $2,496 bid deposit. Mailed or\u2026",
+      "region": "WEST \u2014 MONTANA / BID OPENING TODAY",
+      "image": null
+    },
+    {
+      "headline": "Shoshone consultant RFP requires an October 14 pre-bid session",
+      "body": "The National Forest Foundation lists a forest-wide NEPA interdisciplinary-team consultant opportunity for Wyoming\u2019s Shoshone National Forest. The mandatory online pre-bid session is October 14 from 9 to 11 a.m.; the page labels the time zone\u2026",
+      "region": "WEST \u2014 WYOMING / MANDATORY MEETING TOMORROW",
+      "image": null
+    }
+  ],
+  "publication_attempted": false
+}
