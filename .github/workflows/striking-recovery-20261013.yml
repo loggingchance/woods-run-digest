@@ -52,11 +52,21 @@ jobs:
           assert len(same)==0,'A matching striking item already exists; no new post'
           # October 13 normal newsletter X post is the only allowed other post today.
           expected='https://woods-run-digest.steve760060.chatgpt.site/2026/10/13/'
-          assert len(current)==2 and {p.get('id') for p in current}=={'6acdf4adc0184667a9e2aba9','6ace73287719e3e09ced1626'} and any(expected in (p.get('text') or '') for p in current),'Unexpected current-day post or missing normal X post; stop'
+          assert len(current)==2 and {p.get('id') for p in current}=={'6acdf4adc0184667a9e2aba9','6ace73287719e3e09ced1626'} and len([p for p in current if expected in (p.get('text') or '')])==1,'Unexpected current-day post or missing normal X post; stop'
+          normal=next(p for p in current if expected in (p.get('text') or ''))
           path=Path('data/striking-delivery/2026-10-13.json')
-          assert not path.exists(),'A prior recovery attempt exists; never create again'
+          if path.exists():
+            old=json.loads(path.read_text())
+            # The prior workflow stopped on a pre-mutation assertion before any createPost call.
+            # Preserve its durable marker; correct only the misidentified normal X post.
+            assert old['state']=='attempt_started' and old.get('post_id') is None and old['normal_x_post_id']=='6ace73287719e3e09ced1626' and old['attempt_started_at']=='2026-10-13T18:08:48.337977Z','Unknown prior mutation; stop'
+            old['normal_x_post_id']=normal['id']
+            old['pre_mutation_guard_reconciled']='Prior 18:08:51Z failure before Buffer createPost; corrected normal vs unrelated X identity'
+            path.write_text(json.dumps(old,indent=2)+chr(10))
+            print('RECONCILED_PRE_MUTATION_GUARD '+json.dumps(old))
+            sys.exit(0)
           record={'date':date,'due_at':due,'text':text,'channel_id':c[0]['id'],
-                  'normal_x_post_id':current[0]['id'],'attempt_started_at':b.iso(b.now()),
+                  'normal_x_post_id':normal['id'],'attempt_started_at':b.iso(b.now()),
                   'state':'attempt_started','duplicate_search_count':len(posts),'post_id':None,
                   'source':'one-time-oct13-owner-striking-recovery','email_attempted':False}
           path.parent.mkdir(parents=True,exist_ok=True)
