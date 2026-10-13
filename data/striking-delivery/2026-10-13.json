@@ -5,10 +5,15 @@
   "channel_id": "6843193ed6d25b49a145ff6e",
   "normal_x_post_id": "6acdf4adc0184667a9e2aba9",
   "attempt_started_at": "2026-10-13T18:08:48.337977Z",
-  "state": "attempt_started",
+  "state": "accepted",
   "duplicate_search_count": 318,
-  "post_id": null,
+  "post_id": "6ace740d0e2628184670b8d4",
   "source": "one-time-oct13-owner-striking-recovery",
   "email_attempted": false,
-  "pre_mutation_guard_reconciled": "Prior 18:08:51Z failure before Buffer createPost; corrected normal vs unrelated X identity"
+  "pre_mutation_guard_reconciled": "Prior 18:08:51Z failure before Buffer createPost; corrected normal vs unrelated X identity",
+  "provider_status": "scheduled",
+  "accepted_at": "2026-10-13T18:10:22.058912Z",
+  "provider_due_at": "2026-10-13T18:20:00.000Z",
+  "external_url": null,
+  "schedule_verified": true
 }
