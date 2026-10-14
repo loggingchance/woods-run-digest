@@ -127,7 +127,8 @@ def opener_art(issue_date):
     if not filename:
         return Image.open(fallback).convert('RGB')
     try:
-        payload = (BRAND / 'weekday' / filename).read_text(encoding='ascii').strip()
+        payload = (BRAND / 'weekday' / filename).read_text(encoding='ascii')
+        payload = ''.join(payload.split())
         data = base64.b64decode(payload, validate=True)
         with Image.open(io.BytesIO(data)) as art:
             return art.convert('RGB')
