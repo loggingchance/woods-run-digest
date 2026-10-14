@@ -3,6 +3,7 @@
 from pathlib import Path
 import argparse
 import base64
+import binascii
 import io
 import json
 import math
@@ -130,7 +131,7 @@ def opener_art(issue_date):
         data = base64.b64decode(payload, validate=True)
         with Image.open(io.BytesIO(data)) as art:
             return art.convert('RGB')
-    except (OSError, ValueError, base64.binascii.Error):
+    except (OSError, ValueError, binascii.Error):
         return Image.open(fallback).convert('RGB')
 
 
