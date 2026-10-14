@@ -102,3 +102,25 @@ jobs:
                       except Exception as e:
                           print('AUTH_ERROR '+json.dumps({'nameserver':server,'name':name,'type':typ,'error':str(e)[:300]}),flush=True)
           PY
+
+      - name: Check for accidentally doubled GoDaddy hostnames
+        run: |
+          python -m pip install --disable-pip-version-check dnspython==2.8.0
+          python - <<'PY'
+          import dns.message,dns.query,dns.flags,json
+          ip='97.74.106.17'
+          names=['woodsrun.forestenterprise.org.forestenterprise.org',
+             '_openai-site-verification.woodsrun.forestenterprise.org.forestenterprise.org',
+             'm-hostname.woodsrun.forestenterprise.org.forestenterprise.org',
+             '_openai-site-verification.woodsrun.forestenterprise.org',
+             'm-hostname.woodsrun.forestenterprise.org']
+          for n in names:
+            for t in ['CNAME','TXT']:
+              q=dns.message.make_query(n,t)
+              q.flags &= ~dns.flags.RD
+              try:
+                r=dns.query.udp(q,ip,timeout=5)
+                ans=[str(rr) for a in r.answer for rr in a]
+                print('DUPLICATE_NAME_CHECK '+json.dumps({'name':n,'type':t,'rcode':r.rcode(),'answers':ans}),flush=True)
+              except Exception as ex:print('DUPLICATE_NAME_CHECK '+json.dumps({'name':n,'type':t,'error':str(ex)}),flush=True)
+          PY
