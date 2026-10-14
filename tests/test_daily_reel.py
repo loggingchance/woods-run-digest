@@ -1,7 +1,10 @@
 import sys
 import tempfile
 import unittest
+import base64
+import io
 from pathlib import Path
+from PIL import Image
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'scripts'))
 import render_daily_reel as reel
 
@@ -33,3 +36,34 @@ class ReelTests(unittest.TestCase):
         # the same approved bids illustration; unrelated topics remain distinct.
         self.assertEqual(c.tobytes(), e.tobytes())
         self.assertEqual(len({im.tobytes() for im in [a,b,c]}),3)
+
+
+    def test_weekday_opener_rotation_and_monday_fallback(self):
+        self.assertNotIn('Monday', reel.WEEKDAY_COVERS)
+        self.assertEqual(reel.WEEKDAY_COVERS['Tuesday'], 'tuesday.jpg.b64')
+        self.assertEqual(reel.WEEKDAY_COVERS['Wednesday'], 'wednesday.jpg.b64')
+        self.assertEqual(reel.WEEKDAY_COVERS['Thursday'], 'thursday.jpg.b64')
+        self.assertEqual(reel.WEEKDAY_COVERS['Friday'], 'friday.jpg.b64')
+        self.assertEqual(reel.WEEKDAY_COVERS['Saturday'], 'saturday.jpg.b64')
+        self.assertEqual(reel.WEEKDAY_COVERS['Sunday'], 'sunday.jpg.b64')
+        original = reel.BRAND
+        try:
+            with tempfile.TemporaryDirectory() as td:
+                brand = Path(td)
+                (brand / 'weekday').mkdir()
+                Image.new('RGB', (12, 12), (20, 40, 60)).save(brand / 'forester.webp', 'WEBP')
+                buf = io.BytesIO()
+                Image.new('RGB', (12, 12), (180, 120, 60)).save(buf, 'JPEG')
+                (brand / 'weekday' / 'tuesday.jpg.b64').write_text(
+                    base64.b64encode(buf.getvalue()).decode('ascii')
+                )
+                reel.BRAND = brand
+                monday = reel.opener_art('2026-10-19')
+                tuesday = reel.opener_art('2026-10-20')
+                self.assertEqual(monday.size, (12, 12))
+                self.assertEqual(tuesday.size, (12, 12))
+                self.assertNotEqual(monday.getpixel((5,5)), tuesday.getpixel((5,5)))
+                wednesday = reel.opener_art('2026-10-21')
+                self.assertEqual(wednesday.getpixel((5,5)), monday.getpixel((5,5)))
+        finally:
+            reel.BRAND = original
