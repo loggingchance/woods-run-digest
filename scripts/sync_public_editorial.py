@@ -35,9 +35,30 @@ def validate(page, issue):
     if not article or expected not in article.get_text(' ', strip=True):
         raise ValueError('Complete canonical dated edition not found')
     text = article.get_text(' ', strip=True)
-    for section in ('By the Numbers', 'Action Detector', 'Under the Radar', 'Forest Business School'):
+    for section in ('Action Detector', 'Under the Radar'):
         if section.lower() not in text.lower():
             raise ValueError('Canonical edition missing ' + section)
+    if day >= datetime(2026, 10, 15).date():
+        if 'books & apps' not in text.lower():
+            raise ValueError('Canonical edition missing Books & Apps rotation')
+        promo_sections = []
+        for section in article.find_all('section'):
+            kicker = section.select_one('.section-kicker')
+            if kicker and 'books & apps' in kicker.get_text(' ', strip=True).lower():
+                promo_sections.append(section)
+        if len(promo_sections) != 1:
+            raise ValueError('Canonical edition must contain exactly one Books & Apps feature')
+        numbers_section = None
+        for section in article.find_all('section'):
+            heading = section.find('h2')
+            if heading and heading.get_text(' ', strip=True).lower() == 'by the numbers':
+                numbers_section = section
+                break
+        if numbers_section:
+            number_urls = {a.get('href') for a in numbers_section.find_all('a', href=True)}
+            story_urls = {a.get('href') for story in article.select('article.story') for a in story.find_all('a', href=True)}
+            if number_urls & story_urls:
+                raise ValueError('By the Numbers duplicates source material developed again in stories')
     if len(article.find_all('p')) < 10 or len(article.select('article.story')) < 3:
         raise ValueError('Canonical edition is incomplete')
     return article
