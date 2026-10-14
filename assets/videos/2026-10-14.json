@@ -1,0 +1,53 @@
+{
+  "date": "2026-10-14",
+  "format": "approved-v4",
+  "dimensions": [
+    1080,
+    1920
+  ],
+  "fps": 30,
+  "frames": 1245,
+  "duration_seconds": 41.5,
+  "segment_frames": [
+    75,
+    210,
+    210,
+    210,
+    210,
+    210,
+    120
+  ],
+  "stories": [
+    {
+      "headline": "Petit Paris plans a smaller restart while protecting its wood supply",
+      "body": "Le R\u00e9veil reports that the Petit Paris sawmill in Saint-Ludger-de-Milot plans to restart part of its production in mid-October with about 20 employees, compared with roughly 80 before its 2024 shutdown. The original report was published\u2026",
+      "region": "CANADA \u2014 QUEBEC / SAWMILL RESTART",
+      "image": null
+    },
+    {
+      "headline": "Atlas completes commissioning; production performance is the next test",
+      "body": "Atlas Engineered Products announced October 8 that commissioning is complete at its new 42,000-square-foot facility in Clinton, Ontario. Training and testing are underway on sellable roof-truss production runs. The company describes the\u2026",
+      "region": "CANADA \u2014 ONTARIO / WOOD COMPONENTS",
+      "image": null
+    },
+    {
+      "headline": "BLM reports timber sold, with another October offering plan",
+      "body": "BLM\u2019s October 7 quarterly release reports $29.8 million in timber-sale revenue and about 121 million board feet sold across 5,300 acres during July\u2013September 2026 in Oregon, Washington, Wyoming and Idaho. The agency also describes plans for\u2026",
+      "region": "WEST \u2014 OREGON / WASHINGTON / WYOMING / IDAHO",
+      "image": null
+    },
+    {
+      "headline": "Iron County\u2019s thirteen timber tracts close October 15 at 8:30 a.m.",
+      "body": "Iron County\u2019s Fall 2026 prospectus accepts sealed bids for thirteen timber tracts until October 15 at 8:30 a.m. Hurley time, with opening at 9 a.m. Bids must reach the Forestry Department Office at 607 Third Avenue North, Suite 2, Hurley.\u2026",
+      "region": "MIDWEST \u2014 WISCONSIN / BIDS DUE TOMORROW",
+      "image": null
+    },
+    {
+      "headline": "Sand Hills offers separate pine and hardwood prices per ton",
+      "body": "South Carolina Forestry Commission\u2019s current Sand Hills sale SHSF-5378-ADV-TS-27 opens October 27 at 10 a.m. South Carolina time. The prospectus estimates about 7,600 tons of pine and 500 tons of hardwood on roughly 72 acres in Darlington\u2026",
+      "region": "SOUTH \u2014 SOUTH CAROLINA / OCTOBER 27 BIDS",
+      "image": null
+    }
+  ],
+  "publication_attempted": false
+}
