@@ -28,6 +28,20 @@ class EmailTests(unittest.TestCase):
         self.assertEqual(payload['html'].count('https://cinl.loggingchance.com/'),1)
         self.assertIn('Jeffrey G. Benjamin',payload['text'])
         self.assertNotIn('View Timber Tempo on Amazon',payload['html'])
+    def test_books_and_apps_rotation(self):
+        from book_rotation import featured_item, item_html
+        self.assertEqual(featured_item('2026-10-14')['title'],'Wet Woods')
+        self.assertEqual(featured_item('2026-10-15')['title'],'Timber Tempo')
+        self.assertEqual(featured_item('2026-10-16')['title'],'After Wood')
+        self.assertEqual(featured_item('2026-10-17')['title'],'Continuous Improvement in Logging')
+        self.assertEqual(featured_item('2026-10-18')['title'],'Woods-Ready Safety Plan')
+        issue={'date':'2026-10-18','displayDate':'October 18, 2026','url':'/2026/10/18/'}
+        page=self.page(issue['displayDate']).replace('</article>',item_html(issue['date'])+'</article>')
+        payload=compile_payload(page,issue)
+        self.assertEqual(payload['featured_item']['kind'],'app')
+        self.assertEqual(payload['featured_item']['title'],'Woods-Ready Safety Plan')
+        self.assertIn('logging crews assemble coordinates',payload['text'])
+        self.assertEqual(payload['html'].count('https://wrsp.lumbermen.org/'),1)
     def test_linked_image_preserved(self):
         page=self.page().replace('<p>Full source paragraph.</p>','<figure><a href="/assets/memorial.png"><img src="/assets/memorial.png" alt="Memorial portrait"></a></figure><p>Full source paragraph.</p>')
         p=compile_payload(page,self.issue())
