@@ -11,6 +11,17 @@ Updated October 13, 2026. All issue dates and daily times use America/Denver.
 - Buffer alone schedules X (ForestBizSchool), Instagram (northeastforests) and YouTube (Logging Chance). GitHub is an advance preparation/handoff mechanism, not a social delivery clock. No GitHub cron is configured.
 - Do not introduce Metricool, Render, another paid service, or a Mac dependency.
 
+## Editorial format contract — effective October 15, 2026
+
+- After the edition header, go directly into the lead story. Do not put a recap/list of the day's stories above the stories and then report the same material again below.
+- `By the Numbers` is optional. Use it only for genuinely useful standalone figures that are not developed again in the issue. If its source or fact is part of a later story, omit it from `By the Numbers`.
+- Keep the useful editorial flow: lead story, topical/regional sections as warranted, `Action Detector`, and `Under the Radar`. Thursday Deep Dive remains a Thursday feature when due.
+- Do not run a standing daily Woods-Ready Safety Plan resource box. Routine house promotion is one single rotation box near the bottom labeled `BOOKS & APPS`.
+- The `BOOKS & APPS` rotation is anchored as follows and repeats every five days beginning October 14, 2026: Wet Woods → Timber Tempo → After Wood → Continuous Improvement in Logging → Woods-Ready Safety Plan.
+- Every featured item gets a useful one- or two-sentence description of what it is and why a Woods Run reader might care. Never use filler such as “Today’s featured title” or a name/link by itself.
+- Preserve these canonical destinations: Wet Woods https://www.amazon.com/dp/B0FP98Y3YN ; Timber Tempo https://www.amazon.com/dp/B0DRYY34KW ; After Wood https://www.amazon.com/dp/B0DRYZLRTF ; Continuous Improvement in Logging https://cinl.loggingchance.com/ ; Woods-Ready Safety Plan https://wrsp.lumbermen.org/.
+- Do not advertise remaining Essentials places.
+
 ## Daily path
 
 1. Site editorial begins 02:30. Editorial handoff checks/mirrors the same edition at03:00, writing the dated page first and data/issues.json last. Never invent a new date on old content.
