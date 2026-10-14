@@ -57,3 +57,23 @@ jobs:
                           print('REQUEST_ERROR',json.dumps({'follow_redirects':follow,'error':str(exc)}),flush=True)
           print('DONE_DIAGNOSTIC_NO_WRITES',flush=True)
           PY
+
+      - name: Inspect DNS CNAME/A/AAAA/TXT and authoritative nameservers
+        run: |
+          python -m pip install --disable-pip-version-check dnspython==2.8.0
+          python - <<'PY'
+          import dns.resolver,json
+          names=['forestenterprise.org','woodsrun.forestenterprise.org','_openai-site-verification.woodsrun.forestenterprise.org','m-hostname.woodsrun.forestenterprise.org']
+          providers={'default':None,'cloudflare':'1.1.1.1','google':'8.8.8.8'}
+          for provider,ip in providers.items():
+              res=dns.resolver.Resolver()
+              if ip:res.nameservers=[ip]
+              res.lifetime=7;res.timeout=4
+              for name in names:
+                  for typ in (['NS'] if name=='forestenterprise.org' else ['CNAME','A','AAAA','TXT']):
+                      try:
+                          ans=res.resolve(name,typ,raise_on_no_answer=False,search=False)
+                          lines=[str(v) for v in ans] if ans.rrset else []
+                          print('DNS_QUERY '+json.dumps({'provider':provider,'name':name,'type':typ,'answers':lines,'ttl':ans.rrset.ttl if ans.rrset else None}),flush=True)
+                      except Exception as e:print('DNS_QUERY '+json.dumps({'provider':provider,'name':name,'type':typ,'error':type(e).__name__+': '+str(e)[:130]}),flush=True)
+          PY
