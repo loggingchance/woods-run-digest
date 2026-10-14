@@ -12,7 +12,7 @@ from bs4 import BeautifulSoup, NavigableString
 
 ROOT = Path(__file__).resolve().parents[1]
 SITE = 'https://woodsrun.forestenterprise.org'
-from book_rotation import featured_book
+from book_rotation import featured_item
 UNSUB = '{{{RESEND_UNSUBSCRIBE_URL}}}'
 BODY_STYLE='font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:25px;color:#333333;'
 LINK_STYLE='font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:25px;color:#1f5b3a;'
@@ -79,11 +79,11 @@ def compile_payload(page: str, issue: dict) -> dict:
     if len(source_paragraphs)<5:raise ValueError('Edition content is too short')
     expected={normalize_url(a['href']) for a in article.find_all('a',href=True)}
     if expected-urls:raise ValueError('Source link lost while compiling email')
-    book=featured_book(issue['date']);title,link=book['title'],book['url']
+    item=featured_item(issue['date']);title,link=item['title'],item['url']
     if link not in urls:
-        label=('View '+html.escape(title)+' on Amazon') if 'amazon.com/' in link else ('Explore '+html.escape(title))
-        body.append(f'<h2 style="font-family:Georgia,Times New Roman,serif;font-size:22px;line-height:28px;color:#1f3b2b;">Featured book: {html.escape(title)}</h2><p style="{BODY_STYLE}"><a href="{link}" style="{LINK_STYLE}">{label}</a></p>')
-        plain.extend(['FEATURED BOOK: '+title,link]);urls.add(link)
+        label=('Open '+html.escape(title)) if item.get('kind')=='app' else ('Explore '+html.escape(title))
+        body.append(f'<h2 style="font-family:Georgia,Times New Roman,serif;font-size:22px;line-height:28px;color:#1f3b2b;">Books &amp; Apps: {html.escape(title)}</h2><p style="{BODY_STYLE}">{html.escape(item["description"])}</p><p style="{BODY_STYLE}"><a href="{link}" style="{LINK_STYLE}">{label}</a></p>')
+        plain.extend(['BOOKS & APPS: '+title,item['description'],link]);urls.add(link)
     page_url=SITE+issue['url'];subscribe=SITE+'/subscribe/'
     body.append(f'<p style="{BODY_STYLE}"><a href="{page_url}" style="{LINK_STYLE}">Read today’s web edition</a> · <a href="{subscribe}" style="{LINK_STYLE}">Subscribe</a></p>')
     plain.extend(['Read today’s web edition: '+page_url,'Subscribe: '+subscribe]);urls.update([page_url,subscribe])
@@ -98,7 +98,7 @@ def compile_payload(page: str, issue: dict) -> dict:
             'text':text+'\n\nUnsubscribe: '+UNSUB,
             'owner_test_html':wrapper+full+footer,'owner_test_text':text,
             'source_urls':sorted(expected),'all_urls':sorted(urls),'source_paragraph_count':len(source_paragraphs),
-            'featured_book':{'title':title,'url':link},'links_preserved':True}
+            'featured_item':{'kind':item.get('kind'),'title':title,'url':link,'description':item['description']},'featured_book':{'title':title,'url':link},'links_preserved':True}
 
 
 def main():
@@ -110,6 +110,6 @@ def main():
     payload['source_sha256']=hashlib.sha256(json.dumps(issue,sort_keys=True,ensure_ascii=False).encode()+b'\n'+page).hexdigest()
     output=ROOT/'data/email-payloads'/f'{today}.json';output.parent.mkdir(parents=True,exist_ok=True)
     output.write_text(json.dumps(payload,ensure_ascii=False,indent=2)+'\n')
-    print(json.dumps({'email_payload_ready':str(output.relative_to(ROOT)),'date':today,'links_preserved':True,'source_paragraph_count':payload['source_paragraph_count'],'featured_book':payload['featured_book'],'email_sent':False}))
+    print(json.dumps({'email_payload_ready':str(output.relative_to(ROOT)),'date':today,'links_preserved':True,'source_paragraph_count':payload['source_paragraph_count'],'featured_item':payload['featured_item'],'featured_book':payload['featured_book'],'email_sent':False}))
 
 if __name__=='__main__':main()
