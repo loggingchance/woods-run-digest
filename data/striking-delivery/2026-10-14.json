@@ -3,15 +3,16 @@
   "text": "Timber sold is not timber delivered. BLM’s quarterly figures describe sales, while a useful supply plan still depends on sale-specific access, timing and delivered costs. Read today’s Woods Run Digest for the market context and regional opportunities.",
   "due_at": "2026-10-14T16:00:00Z",
   "channel_id": "6843193ed6d25b49a145ff6e",
-  "state": "accepted",
+  "state": "sent",
   "attempt_started_at": "2026-10-14T15:55:47.632732Z",
   "post_id": "6acfa60561a1b9da7364c77c",
   "history_checked": 320,
   "source": "native-daily-striking",
   "email_attempted": false,
-  "provider_status": "scheduled",
+  "provider_status": "sent",
   "provider_due_at": "2026-10-14T16:00:00.000Z",
-  "external_url": null,
+  "external_url": "https://x.com/1487833905197637637/status/2110400253555847633",
   "accepted_at": "2026-10-14T15:55:49.356516Z",
-  "schedule_verified": true
+  "schedule_verified": true,
+  "verified_at": "2026-10-14T16:01:36.101366Z"
 }
