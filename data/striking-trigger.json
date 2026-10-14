@@ -1,6 +1,7 @@
 {
-  "date": "2026-10-10",
-  "requestedAt": "2026-10-10T16:10:59.361Z",
-  "purpose": "striking-x-post",
-  "reason": "Owner-authorized recovery of October 10 striking observation; Buffer exact-text duplicate guard"
+  "action": "schedule_striking",
+  "date": "2026-10-14",
+  "due_at": "2026-10-14T16:00:00Z",
+  "requestedAt": "2026-10-14T15:55:00Z",
+  "reason": "Authorized recovery of missing current-day handoff. Existing native publisher must inspect Buffer history first and preserve its 90-second lead-time guard."
 }
