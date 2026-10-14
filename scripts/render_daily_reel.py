@@ -2,12 +2,15 @@
 """Render approved v4 daily Reels/Shorts locally; never publish or queue posts."""
 from pathlib import Path
 import argparse
+import base64
+import io
 import json
 import math
 import os
 import shutil
 import subprocess
 import tempfile
+from datetime import date as Date
 from bs4 import BeautifulSoup
 from PIL import Image, ImageDraw, ImageFont, ImageOps
 from video_illustration_library import topic_illustration
@@ -105,6 +108,32 @@ def read_stories(source, date):
     return stories[:5]
 
 
+WEEKDAY_COVERS = {
+    'Tuesday': 'tuesday.jpg.b64',
+    'Wednesday': 'wednesday.jpg.b64',
+    'Thursday': 'thursday.jpg.b64',
+    'Friday': 'friday.jpg.b64',
+    'Saturday': 'saturday.jpg.b64',
+    'Sunday': 'sunday.jpg.b64',
+}
+
+
+def opener_art(issue_date):
+    """Return fixed weekday opener art; Monday and any failure use the established forester."""
+    fallback = BRAND / 'forester.webp'
+    weekday = Date.fromisoformat(issue_date).strftime('%A')
+    filename = WEEKDAY_COVERS.get(weekday)
+    if not filename:
+        return Image.open(fallback).convert('RGB')
+    try:
+        payload = (BRAND / 'weekday' / filename).read_text(encoding='ascii').strip()
+        data = base64.b64decode(payload, validate=True)
+        with Image.open(io.BytesIO(data)) as art:
+            return art.convert('RGB')
+    except (OSError, ValueError, base64.binascii.Error):
+        return Image.open(fallback).convert('RGB')
+
+
 def illustration(story, source):
     """Prefer supplied story photography, then approved curated topic art."""
     if story['image']:
@@ -128,7 +157,7 @@ def render(source, date, display, output, frames_dir=None):
         center(d,'WOODS RUN',180,108,True);center(d,'DIGEST',320,82,True)
         center(d,display,455,55,True)
         center(d,'Daily forestry & forest products intelligence',540,38)
-        art=Image.open(BRAND/'forester.webp').convert('RGB')
+        art=opener_art(date)
         im.paste(ImageOps.fit(art,(680,1010)),(250,590))
         d=ImageDraw.Draw(im)
         for i,t in enumerate(['PEOPLE','MARKETS','FORESTS']):d.text((55,1260+i*60),t,font=font(32),fill=GREEN)
