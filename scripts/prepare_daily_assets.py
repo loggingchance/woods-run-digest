@@ -51,12 +51,21 @@ def main() -> None:
         if digest(art_bytes) != entry['sha256']:
             raise ValueError('Approved video illustration SHA mismatch: ' + entry['file'])
         art_parts.append(art_bytes)
+    cover_dir = ROOT / 'assets/video-brand/weekday'
+    cover_names = ('tuesday.jpg.b64', 'wednesday.jpg.b64', 'thursday.jpg.b64',
+                   'friday.jpg.b64', 'saturday.jpg.b64', 'sunday.jpg.b64')
+    cover_parts = [(ROOT / 'assets/video-brand/forester.webp').read_bytes()]
+    for name in cover_names:
+        path = cover_dir / name
+        if not path.is_file() or not path.stat().st_size:
+            raise ValueError('Missing weekday video opener art: ' + name)
+        cover_parts.append(path.read_bytes())
     renderer_hash = digest((ROOT / 'scripts/generate_social_cards.py').read_bytes() +
                            (ROOT / 'assets/woodsrun-header.webp').read_bytes() +
                            (ROOT / 'scripts/render_daily_reel.py').read_bytes() +
                            (ROOT / 'scripts/video_illustration_library.py').read_bytes() +
                            (library / 'manifest.json').read_bytes() +
-                           b''.join(art_parts))
+                           b''.join(art_parts) + b''.join(cover_parts))
     renderer_changed = previous.get('renderer_sha256') != renderer_hash
     generated = []
     if renderer_changed or source_changed or not card.exists() or not card.stat().st_size:
