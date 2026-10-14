@@ -1,0 +1,59 @@
+name: Woods Run custom domain diagnostic (read only)
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/woods-run-domain-diagnostic-20261013.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  diagnostics:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - name: Compare public production hosts, DNS, and editions without modifications
+        run: |
+          python3 - <<'PY'
+          import urllib.request,urllib.error,ssl,socket,json,hashlib,datetime,re
+          hosts=['woodsrun.forestenterprise.org','woods-run-digest.steve760060.chatgpt.site']
+          paths=['/','/archive/','/2026/10/13/','/data/issues.json']
+          for host in hosts:
+              print('HOST',host, flush=True)
+              try:
+                  ips=sorted({x[4][0] for x in socket.getaddrinfo(host,443)})
+                  print('RESOLVED_IPS',json.dumps(ips), flush=True)
+              except Exception as exc:print('DNS_ERROR',repr(exc),flush=True)
+              for path in paths:
+                  url='https://'+host+path
+                  print('PATH',path,flush=True)
+                  for follow in (False,True):
+                      try:
+                          class NoRedirect(urllib.request.HTTPRedirectHandler):
+                              def redirect_request(self,req,fp,code,msg,hdrs,newurl):return None
+                          opener=urllib.request.build_opener() if follow else urllib.request.build_opener(NoRedirect)
+                          req=urllib.request.Request(url,headers={'User-Agent':'WoodsRunDomainDiagnostic/20261013','Cache-Control':'no-cache'})
+                          with opener.open(req,timeout=14) as response:
+                              body=response.read(2_000_000)
+                              txt=body.decode('utf8','replace')
+                              title=re.search(r'<title[^>]*>([^<]{0,200})</title>',txt,re.I)
+                              result={'url':url,'follow_redirects':follow,'status':response.status,
+                                  'final_url':response.url,'content_type':response.headers.get('Content-Type'),
+                                  'date':response.headers.get('Date'),'cache_control':response.headers.get('Cache-Control'),
+                                  'age':response.headers.get('Age'),
+                                  'server':response.headers.get('Server'),
+                                  'cf_ray':response.headers.get('CF-Ray'),
+                                  'etag':response.headers.get('ETag'),'last_modified':response.headers.get('Last-Modified'),
+                                  'bytes_read':len(body),'sha256':hashlib.sha256(body).hexdigest(),
+                                  'title':title.group(1) if title else None,
+                                  'oct13':txt.find('October 13, 2026'),'oct1':txt.find('October 1, 2026'),
+                                  'first_entry_date':(re.search(r'"date"\s*:\s*"(20\d{2}-\d{2}-\d{2})"',txt) or [None,None])[1]}
+                              print('RESULT',json.dumps(result),flush=True)
+                      except urllib.error.HTTPError as exc:
+                          print('HTTP_ERROR',json.dumps({'follow_redirects':follow,'code':exc.code,'location':exc.headers.get('Location'),'reason':str(exc)}),flush=True)
+                      except Exception as exc:
+                          print('REQUEST_ERROR',json.dumps({'follow_redirects':follow,'error':str(exc)}),flush=True)
+          print('DONE_DIAGNOSTIC_NO_WRITES',flush=True)
+          PY
