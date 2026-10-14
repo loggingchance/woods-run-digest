@@ -13,7 +13,7 @@ from pathlib import Path
 from zoneinfo import ZoneInfo
 
 ROOT = Path(__file__).resolve().parents[1]
-SITE_ROOT = "https://woods-run-digest.steve760060.chatgpt.site"
+SITE_ROOT = "https://woodsrun.forestenterprise.org"
 DENVER = ZoneInfo("America/Denver")
 EASTERN = ZoneInfo("America/New_York")
 

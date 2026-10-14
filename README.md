@@ -1,10 +1,11 @@
 # Woods Run Digest — production delivery contract
 
-Updated October 8, 2026. All issue dates and daily times use America/Denver.
+Updated October 13, 2026. All issue dates and daily times use America/Denver.
 
 ## Owners and delivery clocks
 
-- The published Site edition is authoritative: https://woods-run-digest.steve760060.chatgpt.site until custom-domain cutover is actually verified.
+- The published Site edition is authoritative: https://woodsrun.forestenterprise.org. Custom-domain activation was verified October 13: homepage, archive, dated editions, metadata, subscription page and media return HTTP 200 and match the existing Site.
+- Retain https://woods-run-digest.steve760060.chatgpt.site as a working alias without redirects; the private Google Apps Script still uses its existing source configuration.
 - This repository holds the faithful dated editorial copy, metadata, generated media, public email payloads and delivery receipts.
 - Resend alone schedules and sends email. No GitHub workflow sends email, contains a Resend credential, or acts as the email clock.
 - Buffer alone schedules X (ForestBizSchool), Instagram (northeastforests) and YouTube (Logging Chance). GitHub is an advance preparation/handoff mechanism, not a social delivery clock. No GitHub cron is configured.

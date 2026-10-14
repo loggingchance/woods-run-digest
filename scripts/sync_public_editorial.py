@@ -10,7 +10,7 @@ from zoneinfo import ZoneInfo
 from bs4 import BeautifulSoup
 
 ROOT = Path(__file__).resolve().parents[1]
-SITE = 'https://woods-run-digest.steve760060.chatgpt.site'
+SITE = 'https://woodsrun.forestenterprise.org'
 
 
 def fetch(path):

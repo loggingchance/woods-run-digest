@@ -15,7 +15,7 @@ import urllib.request
 from pathlib import Path
 
 BUFFER_API = "https://api.buffer.com"
-SITE_ROOT = "https://woods-run-digest.steve760060.chatgpt.site"
+SITE_ROOT = "https://woodsrun.forestenterprise.org"
 MAX_X_TEXT = 280
 
 TARGETS = (
@@ -164,12 +164,13 @@ def recent_post_exists(
     """
     data = graphql(query, {"organizationId": organization_id, "channelId": channel_id})
     reel_name = reel_url.rsplit("/", 1)[-1]
+    page_aliases = (page_url, page_url.replace(SITE_ROOT, "https://woods-run-digest.steve760060.chatgpt.site", 1))
     for edge in data.get("posts", {}).get("edges", []):
         post = edge.get("node", {})
         text = post.get("text") or ""
         assets = post.get("assets") or []
         sources = {(asset.get("source") or "").strip() for asset in assets}
-        if service == "twitter" and page_url in text:
+        if service == "twitter" and any(url in text for url in page_aliases):
             print(f"X already contains this issue ({post.get('status')}): {post.get('id')} public_url={post.get('externalLink') or '(unverified)'}")
             return True
         if service in ("instagram", "youtube") and any(
@@ -178,7 +179,7 @@ def recent_post_exists(
             label = "Instagram" if service == "instagram" else "YouTube"
             print(f"{label} already contains this issue reel ({post.get('status')}): {post.get('id')} public_url={post.get('externalLink') or '(unverified)'}")
             return True
-        if service == "youtube" and page_url in text:
+        if service == "youtube" and any(url in text for url in page_aliases):
             print(f"YouTube already contains this issue ({post.get('status')}): {post.get('id')} public_url={post.get('externalLink') or '(unverified)'}")
             return True
     return False

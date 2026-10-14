@@ -31,14 +31,14 @@ class EmailTests(unittest.TestCase):
     def test_linked_image_preserved(self):
         page=self.page().replace('<p>Full source paragraph.</p>','<figure><a href="/assets/memorial.png"><img src="/assets/memorial.png" alt="Memorial portrait"></a></figure><p>Full source paragraph.</p>')
         p=compile_payload(page,self.issue())
-        url='https://woods-run-digest.steve760060.chatgpt.site/assets/memorial.png'
+        url='https://woodsrun.forestenterprise.org/assets/memorial.png'
         self.assertIn(f'<img src="{url}" alt="Memorial portrait"',p['html'])
         self.assertIn(url,p['all_urls'])
         self.assertTrue(p['links_preserved'])
     def test_internal_urls(self):
-        self.assertEqual(normalize_url('/subscribe/'),'https://woods-run-digest.steve760060.chatgpt.site/subscribe/')
+        self.assertEqual(normalize_url('/subscribe/'),'https://woodsrun.forestenterprise.org/subscribe/')
     def test_legacy_root_rewrite(self):
-        self.assertEqual(normalize_url('https://woodsrun.forestenterprise.org/2026/10/08/'),'https://woods-run-digest.steve760060.chatgpt.site/2026/10/08/')
+        self.assertEqual(normalize_url('https://woods-run-digest.steve760060.chatgpt.site/2026/10/08/'),'https://woodsrun.forestenterprise.org/2026/10/08/')
     def test_token_rejected(self):
         with self.assertRaises(ValueError):normalize_url('https://unsubscribe.resend.com/?token=secret')
     def test_javascript_rejected(self):

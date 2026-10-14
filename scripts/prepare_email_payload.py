@@ -11,7 +11,7 @@ from zoneinfo import ZoneInfo
 from bs4 import BeautifulSoup, NavigableString
 
 ROOT = Path(__file__).resolve().parents[1]
-SITE = 'https://woods-run-digest.steve760060.chatgpt.site'
+SITE = 'https://woodsrun.forestenterprise.org'
 from book_rotation import featured_book
 UNSUB = '{{{RESEND_UNSUBSCRIBE_URL}}}'
 BODY_STYLE='font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:25px;color:#333333;'
