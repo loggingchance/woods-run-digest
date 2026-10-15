@@ -3,15 +3,16 @@
   "text": "A forwarder can be busy and still limit the whole crew’s output. Thursday’s Woods Run Deep Dive examines research on separating extraction from truck loading, and the operating evidence needed before buying more capacity.",
   "due_at": "2026-10-15T16:00:00Z",
   "channel_id": "6843193ed6d25b49a145ff6e",
-  "state": "accepted",
+  "state": "sent",
   "attempt_started_at": "2026-10-15T15:47:06.273403Z",
   "post_id": "6ad0f57c954b407d779ccb80",
   "history_checked": 322,
   "source": "native-daily-striking",
   "email_attempted": false,
-  "provider_status": "scheduled",
+  "provider_status": "sent",
   "provider_due_at": "2026-10-15T16:00:00.000Z",
-  "external_url": null,
+  "external_url": "https://x.com/1487833905197637637/status/2110762659448512521",
   "accepted_at": "2026-10-15T15:47:08.583973Z",
-  "schedule_verified": true
+  "schedule_verified": true,
+  "verified_at": "2026-10-15T16:01:37.079431Z"
 }
