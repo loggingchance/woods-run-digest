@@ -1,0 +1,53 @@
+{
+  "date": "2026-10-15",
+  "format": "approved-v4",
+  "dimensions": [
+    1080,
+    1920
+  ],
+  "fps": 30,
+  "frames": 1245,
+  "duration_seconds": 41.5,
+  "segment_frames": [
+    75,
+    210,
+    210,
+    210,
+    210,
+    210,
+    120
+  ],
+  "stories": [
+    {
+      "headline": "Canada proposes up to C$50 million for matching wood supply to mill needs",
+      "body": "Natural Resources Canada announced October 14 a conditional investment of up to C$50 million toward a proposed Strategic Innovation Centre in Digital Forestry in New Brunswick. The approximately C$86 million initiative is led by the Northern\u2026",
+      "region": "CANADA \u2014 NEW BRUNSWICK / DIGITAL FORESTRY",
+      "image": null
+    },
+    {
+      "headline": "Freight can change the deal even when the lumber price holds",
+      "body": "Madison\u2019s October 14 market commentary describes truck and rail availability and diesel costs as significant obstacles to lumber deliveries. Its quoted benchmark covers the week ending October 2: Western SPF 2\u00d74 #2 and better, kiln-dried\u2026",
+      "region": "CANADA / U.S. \u2014 LUMBER MARKETS",
+      "image": null
+    },
+    {
+      "headline": "North Carolina\u2019s fuel relief carries separate dates and reporting duties",
+      "body": "NCDOR\u2019s October 12 notice sets the state motor-fuel excise rate at zero from October 10 through November 30, 2026. Applicable fuel and motor-carrier returns, gallons and mileage reporting continue. The notice says sales-and-use-tax treatment\u2026",
+      "region": "SOUTH \u2014 NORTH CAROLINA / FUEL COSTS",
+      "image": null
+    },
+    {
+      "headline": "A small Palmer\u2019s Pond sale puts access costs in the foreground",
+      "body": "DEC\u2019s TX000078 sale on Palmer\u2019s Pond State Forest in Allegany County covers about 8.6 acres. Sealed bids are due October 29 at 11 a.m. New York time at DEC, 182 East Union Street, Suite 3, Allegany. The minimum bid is US$2,440.",
+      "region": "NORTHEAST \u2014 NEW YORK / OCTOBER 29 TIMBER BIDS",
+      "image": null
+    },
+    {
+      "headline": "Oneida County offers thirteen tracts with distinct cash requirements",
+      "body": "Oneida County\u2019s Fall 2026 packet offers thirteen timber tracts totaling approximately 860 acres in Cassian, Enterprise, Little Rice, Lynne and Woodboro. Bids must arrive by noon October 29, Rhinelander time, at the County Courthouse, second\u2026",
+      "region": "MIDWEST \u2014 WISCONSIN / OCTOBER 29 TIMBER BIDS",
+      "image": null
+    }
+  ],
+  "publication_attempted": false
+}
