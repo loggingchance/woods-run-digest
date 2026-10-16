@@ -3,10 +3,15 @@
   "text": "A national wildfire total does not measure merchantable timber lost or available salvage. Today’s Woods Run Digest puts Canada’s latest update alongside local supply questions, new market funding and regional opportunities.",
   "due_at": "2026-10-16T16:00:00Z",
   "channel_id": "6843193ed6d25b49a145ff6e",
-  "state": "attempt_started",
+  "state": "accepted",
   "attempt_started_at": "2026-10-16T15:46:28.194102Z",
-  "post_id": null,
+  "post_id": "6ad246d6fd83dd559ba13f5a",
   "history_checked": 325,
   "source": "native-daily-striking",
-  "email_attempted": false
+  "email_attempted": false,
+  "provider_status": "scheduled",
+  "provider_due_at": "2026-10-16T16:00:00.000Z",
+  "external_url": null,
+  "accepted_at": "2026-10-16T15:46:30.429694Z",
+  "schedule_verified": true
 }
