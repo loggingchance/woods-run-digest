@@ -1,0 +1,53 @@
+{
+  "date": "2026-10-16",
+  "format": "approved-v4",
+  "dimensions": [
+    1080,
+    1920
+  ],
+  "fps": 30,
+  "frames": 1245,
+  "duration_seconds": 41.5,
+  "segment_frames": [
+    75,
+    210,
+    210,
+    210,
+    210,
+    210,
+    120
+  ],
+  "stories": [
+    {
+      "headline": "New funding targets regional markets for small wood and residues",
+      "body": "The U.S. Endowment for Forestry and Communities announced a regional wood-fibre markets funding call on October 15. It anticipates approximately US$50,000 for each selected organization to identify priorities, partners and investment\u2026",
+      "region": "NATIONAL \u2014 WOOD-FIBRE MARKETS / NEW FUNDING",
+      "image": null
+    },
+    {
+      "headline": "Canada\u2019s October update records 4.5 million hectares burned",
+      "body": "Public Safety Canada\u2019s October 15 update reports more than 5,400 wildfires and approximately 4.5 million hectares burned during 2026 to date. The Northwest Territories accounts for over one-third of the burned area. Several fires remain\u2026",
+      "region": "CANADA \u2014 WILDFIRE / FIBRE-SUPPLY CONTEXT",
+      "image": null
+    },
+    {
+      "headline": "Forest Products Week offers a reason to refresh the buyer list",
+      "body": "Minnesota DNR\u2019s October 15 release previews National Forest Products Week, October 18\u201324. The agency estimates that forest products support more than 72,000 jobs and over US$25 billion in total economic output in the state. These are sector\u2026",
+      "region": "MIDWEST \u2014 MINNESOTA / FOREST-PRODUCTS MARKETS",
+      "image": null
+    },
+    {
+      "headline": "Maine scholarships connect tuition support with sawmill experience",
+      "body": "Irving Forest Products\u2019 Maine engineering and skilled-trades scholarships accept applications through October 23, 2026. The program provides 50% of tuition, paid summer sawmill internships and, according to the company\u2019s announcement,\u2026",
+      "region": "NORTHEAST \u2014 MAINE / OCTOBER 23 APPLICATIONS",
+      "image": null
+    },
+    {
+      "headline": "Community-forestry proposals approach the first review cutoff",
+      "body": "Montana DNRC\u2019s current Urban and Community Forestry Initiative lists October 20, 2026, at 5 p.m. as the first-review application cutoff. The program supports larger community tree-planting and establishment projects. Confirm the submission\u2026",
+      "region": "WEST \u2014 MONTANA / OCTOBER 20 FIRST REVIEW",
+      "image": null
+    }
+  ],
+  "publication_attempted": false
+}
