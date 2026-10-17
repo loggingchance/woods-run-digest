@@ -3,15 +3,16 @@
   "text": "An inauguration is not full design output, and a published rate is not every shipment’s combined tariff. The October 17 Woods Run Digest follows the details behind lumber trade, mill transitions and wood-processing developments.",
   "due_at": "2026-10-17T16:00:00Z",
   "channel_id": "6843193ed6d25b49a145ff6e",
-  "state": "accepted",
+  "state": "sent",
   "attempt_started_at": "2026-10-17T15:45:51.583254Z",
   "post_id": "6ad39831938409f1d091e0cc",
   "history_checked": 327,
   "source": "native-daily-striking",
   "email_attempted": false,
-  "provider_status": "scheduled",
+  "provider_status": "sent",
   "provider_due_at": "2026-10-17T16:00:00.000Z",
-  "external_url": null,
+  "external_url": "https://x.com/1487833905197637637/status/2111487413562245462",
   "accepted_at": "2026-10-17T15:45:53.468918Z",
-  "schedule_verified": true
+  "schedule_verified": true,
+  "verified_at": "2026-10-17T16:01:36.696652Z"
 }
