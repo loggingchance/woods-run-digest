@@ -1,0 +1,53 @@
+{
+  "date": "2026-10-17",
+  "format": "approved-v4",
+  "dimensions": [
+    1080,
+    1920
+  ],
+  "fps": 30,
+  "frames": 1245,
+  "duration_seconds": 41.5,
+  "segment_frames": [
+    75,
+    210,
+    210,
+    210,
+    210,
+    210,
+    120
+  ],
+  "stories": [
+    {
+      "headline": "Canadian lumber subsidy rates head for Monday publication",
+      "body": "A U.S. Commerce Department notice on public inspection sets final Canadian softwood lumber countervailing-duty review rates. Dated October 13, it is scheduled for Federal Register publication on October 19. The notice ties new cash-deposit\u2026",
+      "region": "U.S. / CANADA \u2014 SOFTWOOD LUMBER TRADE",
+      "image": null
+    },
+    {
+      "headline": "Big River\u2019s curtailment reaches the layoff stage",
+      "body": "Original reporting by paNOW on October 16 describes layoffs beginning at Carrier Forest Products\u2019 Big River sawmill. At Friday\u2019s press conference, opposition MLA Jordan McPhail said the first round began this week, with more expected in\u2026",
+      "region": "CANADA \u2014 SASKATCHEWAN / MILL CURTAILMENT",
+      "image": null
+    },
+    {
+      "headline": "Youth forestry contest puts practical field skills in view",
+      "body": "The University of Tennessee\u2019s October 16 report names Monroe County\u2019s Thomas Stroud, Levi West, William Warwick and Lucas Partin as the winning team at the state 4-H forestry competition. The contest took place October 10 at the UT\u2026",
+      "region": "SOUTH \u2014 TENNESSEE / FORESTRY SKILLS",
+      "image": null
+    },
+    {
+      "headline": "Antigo opens its sawmill and saw-filing shop to visitors",
+      "body": "Northcentral Technical College hosts Breakfast at the Sawmill today, October 17, from 9 a.m. to noon at its Antigo campus, 312 Forrest Avenue. The official listing includes hands-on tours and activities at the Wood Technology Center of\u2026",
+      "region": "MIDWEST \u2014 WISCONSIN / TODAY 9 A.M.\u2013NOON",
+      "image": null
+    },
+    {
+      "headline": "Log-brand owners have a Monday address check",
+      "body": "Oregon\u2019s October 15 forestry notice says the five-year log-brand renewal period opens October 19 and runs through December 31, 2026. Renewal forms will be mailed Monday. Owners whose mailing addresses have changed should update the Log\u2026",
+      "region": "WEST \u2014 OREGON / RENEWAL OPENS MONDAY",
+      "image": null
+    }
+  ],
+  "publication_attempted": false
+}
