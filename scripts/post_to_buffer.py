@@ -8,6 +8,7 @@ card and vertical MP4 remain authoritative media assets.
 from __future__ import annotations
 
 import json
+from html.parser import HTMLParser
 import os
 import sys
 import urllib.error
@@ -135,6 +136,39 @@ def fetch_public(url: str) -> tuple[int, bytes, str]:
         return 0, b"", ""
 
 
+class CardMetaParser(HTMLParser):
+    def __init__(self):
+        super().__init__()
+        self.meta = {}
+    def handle_starttag(self, tag, attrs):
+        attrs = dict(attrs)
+        if tag == 'meta':
+            key = attrs.get('name') or attrs.get('property')
+            if key: self.meta[key] = attrs.get('content', '')
+
+
+def verify_x_link_card(page_url: str, card_url: str) -> dict:
+    """Verify the dated artwork X will crawl; never upload it as a photo."""
+    status, body, kind = fetch_public(page_url)
+    if status != 200 or 'text/html' not in kind:
+        raise ValueError('X link-card page is not public HTML')
+    parsed = CardMetaParser()
+    parsed.feed(body.decode('utf-8'))
+    meta = parsed.meta
+    image = meta.get('twitter:image') or meta.get('og:image')
+    if meta.get('twitter:card') != 'summary_large_image' or image != card_url:
+        raise ValueError('X link card metadata must select the dated 1200x630 artwork')
+    if not (meta.get('twitter:title') or meta.get('og:title')):
+        raise ValueError('X link-card title missing')
+    status, body, kind = fetch_public(card_url)
+    if status != 200 or not body.startswith(b'\x89PNG\r\n\x1a\n'):
+        raise ValueError('X link-card artwork is not a public PNG')
+    if len(body) > 5_000_000:
+        raise ValueError('X link-card artwork exceeds 5 MB')
+    return {'page_url': page_url, 'image_url': card_url, 'card': 'summary_large_image',
+            'image_bytes': len(body), 'metadata_verified': True}
+
+
 def recent_post_exists(
     organization_id: str,
     channel_id: str,
@@ -236,6 +270,7 @@ def publish(
     asset_url: str,
     service: str,
     youtube_title: str | None = None,
+    link_card: bool = False,
 ) -> dict:
     mutation = """
     mutation PublishWoodsRun($input: CreatePostInput!) {
@@ -266,7 +301,8 @@ def publish(
             }
         }
     else:
-        assets = [{"image": {"url": asset_url}}] if asset_url else []
+        # X crawls the URL metadata itself. Attached photos suppress clickable cards.
+        assets = [] if link_card else ([{"image": {"url": asset_url}}] if asset_url else [])
         metadata = None
 
     post_input = {
@@ -287,7 +323,7 @@ def publish(
     post = payload.get("post")
     if not post:
         fail(f"Unexpected Buffer createPost response for {service}: {json.dumps(payload)}")
-    if asset_url and not (post.get("assets") or []):
+    if asset_url and not link_card and not (post.get("assets") or []):
         fail(f"Buffer accepted the {service} post but did not attach the requested media asset")
     return post
 
@@ -382,7 +418,9 @@ def main() -> None:
             print(f"VERIFY_MISSING {label}: no matching sent/scheduled/sending Buffer post")
             continue
 
-        print(f"Publishing Woods Run to {label} through Buffer with the dated social asset attached:")
+        if service == "twitter":
+            verify_x_link_card(page_url, card_url)
+        print(f"Publishing Woods Run to {label} through Buffer:")
         print(texts[service])
         asset_url = publish_reel_url if service in ("instagram", "youtube") else publish_card_url
         post = publish(
@@ -391,6 +429,7 @@ def main() -> None:
             asset_url,
             service,
             youtube_title=youtube_title if service == "youtube" else None,
+            link_card=service == "twitter",
         )
         print(
             f"{label}: Buffer accepted post {post.get('id')} with status {post.get('status')} and "
@@ -405,3 +444,4 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+
