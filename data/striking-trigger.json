@@ -1,7 +1,7 @@
 {
   "action": "schedule_striking",
-  "date": "2026-10-17",
-  "due_at": "2026-10-17T16:00:00Z",
-  "requestedAt": "2026-10-17T15:45:38.543Z",
-  "reason": "native Buffer scheduled daily striking observation"
+  "date": "2026-10-18",
+  "due_at": "2026-10-18T16:00:00Z",
+  "requestedAt": "2026-10-18T15:48:56Z",
+  "reason": "Authorized recovery of missing current-day handoff. Existing native publisher must inspect Buffer history first and preserve its 90-second lead-time guard."
 }
