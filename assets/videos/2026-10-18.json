@@ -1,0 +1,53 @@
+{
+  "date": "2026-10-18",
+  "format": "approved-v4",
+  "dimensions": [
+    1080,
+    1920
+  ],
+  "fps": 30,
+  "frames": 1245,
+  "duration_seconds": 41.5,
+  "segment_frames": [
+    75,
+    210,
+    210,
+    210,
+    210,
+    210,
+    120
+  ],
+  "stories": [
+    {
+      "headline": "Transformer insulation gives Canadian pulp a new industrial outlet",
+      "body": "Hitachi Energy announced October 16 that it plans a C$479 million transformer-insulation factory in London, Ontario. The company expects the 21,000-square-metre facility to be completed by 2028 and create more than 100 permanent skilled\u2026",
+      "region": "CANADA \u2014 ONTARIO / NEW USES FOR WOOD FIBRE",
+      "image": null
+    },
+    {
+      "headline": "Cass County\u2019s auction asks bidders to plan access and cash together",
+      "body": "Cass County\u2019s current timber packet advertises an oral auction October 29 at 10 a.m. in the Upper Meeting Room in Backus, Minnesota. Seventeen tracts are offered: eleven intermediate and six regular. The county recommends registration before\u2026",
+      "region": "MIDWEST \u2014 MINNESOTA / OCTOBER 29 AUCTION",
+      "image": null
+    },
+    {
+      "headline": "Chester workshop addresses the weak points exposed by heavy rain",
+      "body": "Maine Forest Service\u2019s October 16 bulletin advertises a Forestry Best Management Practices for Extreme Weather workshop on October 21, from 9 a.m. to 2:30 p.m. The location is 16 Access Road in Chester, with W.T. Gardner & Sons hosting for\u2026",
+      "region": "NORTHEAST \u2014 MAINE / OCTOBER 21 WORKSHOP",
+      "image": null
+    },
+    {
+      "headline": "Chuck Swan hardwood offerings approach Tuesday\u2019s opening",
+      "body": "Tennessee\u2019s current state-forest sales page lists two Chuck Swan hardwood offerings opening October 20, 2026. Sale A-04-27-01 covers 28 acres with an estimated 178,300 board feet; A-04-27-02 covers 58 acres with 389,400 board feet. The\u2026",
+      "region": "SOUTH \u2014 TENNESSEE / OCTOBER 20 BIDS",
+      "image": null
+    },
+    {
+      "headline": "NHAL offers twenty-three tracts with two delivery cutoffs",
+      "body": "Wisconsin DNR\u2019s current Northern Highland-American Legion package offers 23 timber tracts totaling 2,538 acres across Iron, Vilas and Oneida counties. The bid opening is November 4. The current public notice distinguishes delivery to the\u2026",
+      "region": "MIDWEST \u2014 WISCONSIN / NOVEMBER 4 SEALED BIDS",
+      "image": null
+    }
+  ],
+  "publication_attempted": false
+}
