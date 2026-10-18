@@ -91,6 +91,10 @@ def preflight(issue, channels):
     result = {'page': probe(adapter.SITE_ROOT + issue['url'], [issue['displayDate']])}
     if not result['page']['content_verified']:
         raise ValueError('Public dated issue not verified: ' + json.dumps(result))
+    if 'x' in channels:
+        result['link_card'] = adapter.verify_x_link_card(
+            adapter.SITE_ROOT + issue['url'],
+            adapter.SITE_ROOT + '/assets/cards/' + issue['date'] + '.png')
     raw = 'https://raw.githubusercontent.com/loggingchance/woods-run-digest/main'
     for key, folder, extension in [('card', 'cards', 'png'), ('video', 'videos', 'mp4')]:
         if key == 'card' and 'x' not in channels: continue
@@ -156,7 +160,8 @@ def matches(post, issue, marker, saved_id=None):
 def make_input(key, channel, issue, assets, due, marker):
     if key == 'x':
         text = adapter.compose_x_post(issue, adapter.SITE_ROOT + issue['url'])
-        media = [{'image': {'url': assets['card']['url']}}]
+        # Keep the dated page URL and let X render its clickable large-image card.
+        media = []
         metadata = None
     elif key == 'instagram':
         text = adapter.compose_instagram_post(issue)
@@ -302,3 +307,4 @@ if __name__ == '__main__':
     except Exception as exc:
         print('BUFFER_ERROR ' + str(exc), file=sys.stderr)
         raise SystemExit(1)
+
