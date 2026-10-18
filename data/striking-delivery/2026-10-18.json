@@ -3,15 +3,16 @@
   "text": "A specialized pulp product sits inside the electricity supply chain. Today’s Woods Run Digest examines Hitachi Energy’s planned Ontario insulation factory, regional operating opportunities and tools for measuring wood and carbon.",
   "due_at": "2026-10-18T16:00:00Z",
   "channel_id": "6843193ed6d25b49a145ff6e",
-  "state": "accepted",
+  "state": "sent",
   "attempt_started_at": "2026-10-18T15:50:37.917562Z",
   "post_id": "6ad4eacfae173d6e000ac58f",
   "history_checked": 329,
   "source": "native-daily-striking",
   "email_attempted": false,
-  "provider_status": "scheduled",
+  "provider_status": "sent",
   "provider_due_at": "2026-10-18T16:00:00.000Z",
-  "external_url": null,
+  "external_url": "https://x.com/1487833905197637637/status/2111849804384841898",
   "accepted_at": "2026-10-18T15:50:39.602439Z",
-  "schedule_verified": true
+  "schedule_verified": true,
+  "verified_at": "2026-10-18T16:01:36.678067Z"
 }
