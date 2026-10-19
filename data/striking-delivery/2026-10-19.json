@@ -3,10 +3,15 @@
   "text": "From nanocellulose to multistory buildings, wood research connects a working forest with changing markets. Today’s Woods Run Digest leads with National Forest Products Week and follows regional conditions and operating opportunities.",
   "due_at": "2026-10-19T22:09:00Z",
   "channel_id": "6843193ed6d25b49a145ff6e",
-  "state": "attempt_started",
+  "state": "accepted",
   "attempt_started_at": "2026-10-19T22:05:36.804611Z",
-  "post_id": null,
+  "post_id": "6ad69432fb737fdba8f1d119",
   "history_checked": 331,
   "source": "native-daily-striking",
-  "email_attempted": false
+  "email_attempted": false,
+  "provider_status": "scheduled",
+  "provider_due_at": "2026-10-19T22:09:00.000Z",
+  "external_url": null,
+  "accepted_at": "2026-10-19T22:05:38.946533Z",
+  "schedule_verified": true
 }
