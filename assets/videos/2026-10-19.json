@@ -1,0 +1,53 @@
+{
+  "date": "2026-10-19",
+  "format": "approved-v4",
+  "dimensions": [
+    1080,
+    1920
+  ],
+  "fps": 30,
+  "frames": 1245,
+  "duration_seconds": 41.5,
+  "segment_frames": [
+    75,
+    210,
+    210,
+    210,
+    210,
+    210,
+    120
+  ],
+  "stories": [
+    {
+      "headline": "National Forest Products Week puts new uses for wood in the spotlight",
+      "body": "National Forest Products Week runs October 18\u201324. Established by Congress in 1960, the observance recognizes the importance of forest products and their sustainable use. This year, the U.S. Forest Service\u2019s Forest Products Laboratory is\u2026",
+      "region": "UNITED STATES \u2014 NATIONAL FOREST PRODUCTS WEEK",
+      "image": null
+    },
+    {
+      "headline": "Recent rain leaves a difficult ground-fire problem in the U.P.",
+      "body": "Michigan Public\u2019s October 18 reporting describes continuing suppression work at the three Upper Peninsula fires managed as the Rugged Terrain Complex. Its Sunday evening update says the state confirmed lightning as the cause of the Black\u2026",
+      "region": "MIDWEST \u2014 MICHIGAN / OCTOBER 18 FIRE UPDATE",
+      "image": null
+    },
+    {
+      "headline": "New Hampshire market discussion brings several perspectives together",
+      "body": "UNH Extension\u2019s Forest Products Markets Update is scheduled for October 22, from 5 to 6:30 p.m., online through Zoom. Registration is required. The current listing offers 1.5 Society of American Foresters continuing forestry education credits.",
+      "region": "NORTHEAST \u2014 NEW HAMPSHIRE / OCTOBER 22 ROUNDTABLE",
+      "image": null
+    },
+    {
+      "headline": "Training-equipment funding lowers the required cash share",
+      "body": "Canada\u2019s Union Training and Innovation Program equipment stream now requires a minimum 30% cash contribution toward new training equipment and materials, down from 50%. The program page, updated October 16, lists continuous intake and\u2026",
+      "region": "CANADA \u2014 TRADES TRAINING / EQUIPMENT FUNDING",
+      "image": null
+    },
+    {
+      "headline": "Sand Hills offers a forest product measured in raking work",
+      "body": "South Carolina Forestry Commission\u2019s current listing accepts sealed bids for Sand Hills pine-straw sale SHSF-5381-ADV-PS-27 until October 22 at 10 a.m. The listed areas comprise 49 longleaf and mixed-pine stands in compartments 19 and 20 of\u2026",
+      "region": "SOUTH \u2014 SOUTH CAROLINA / OCTOBER 22 PINE STRAW BIDS",
+      "image": null
+    }
+  ],
+  "publication_attempted": false
+}
