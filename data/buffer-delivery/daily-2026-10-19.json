@@ -1,0 +1,221 @@
+{
+  "run_id": "daily-2026-10-19",
+  "date": "2026-10-19",
+  "channels": {
+    "x": {
+      "duplicate_search": {
+        "complete": true,
+        "posts_checked": 330
+      },
+      "attempt_started_at": "2026-10-19T08:55:38.745473Z",
+      "newly_created": true,
+      "post_id": "6ad5db0ae1ba3b5f47d6494b",
+      "status": "scheduled",
+      "due_at": "2026-10-19T10:00:00.000Z",
+      "created_at": "2026-10-19T08:55:38.833Z",
+      "external_url": null,
+      "assets": [],
+      "provider_text": "National Forest Products Week puts wood innovation in focus. Forest Service webinars October 20 and 22 connect research with future uses. Plus regional fire updates, markets, training and forest-product opportunities in the…\n\nhttps://woodsrun.forestenterprise.org/2026/10/19/",
+      "error": null,
+      "schedule_verified": true,
+      "provider_sent": false,
+      "delivery_state": "scheduled",
+      "existing_delivery": true,
+      "public_visibility": "not_independently_verified"
+    },
+    "instagram": {
+      "duplicate_search": {
+        "complete": true,
+        "posts_checked": 282
+      },
+      "attempt_started_at": "2026-10-19T08:55:39.947292Z",
+      "newly_created": true,
+      "post_id": "6ad5db0ce1ba3b5f47d64986",
+      "status": "scheduled",
+      "due_at": "2026-10-19T10:00:00.000Z",
+      "created_at": "2026-10-19T08:55:40.199Z",
+      "external_url": null,
+      "assets": [
+        {
+          "source": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/videos/2026-10-19.mp4",
+          "mimeType": "video/mp4"
+        }
+      ],
+      "provider_text": "Woods Run Digest — October 19, 2026\n\nDaily North American forestry & forest-products intelligence from The Forest Business School.\n\nRead today’s edition: https://woodsrun.forestenterprise.org/2026/10/19/",
+      "error": null,
+      "schedule_verified": true,
+      "provider_sent": false,
+      "delivery_state": "scheduled",
+      "existing_delivery": true,
+      "public_visibility": "not_independently_verified"
+    },
+    "youtube": {
+      "duplicate_search": {
+        "complete": true,
+        "posts_checked": 81
+      },
+      "attempt_started_at": "2026-10-19T08:55:40.572698Z",
+      "newly_created": true,
+      "post_id": "6ad5db0cea5ddfc300f4b291",
+      "status": "scheduled",
+      "due_at": "2026-10-19T10:00:00.000Z",
+      "created_at": "2026-10-19T08:55:40.831Z",
+      "external_url": null,
+      "assets": [
+        {
+          "source": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/videos/2026-10-19.mp4",
+          "mimeType": "video/mp4"
+        }
+      ],
+      "provider_text": "Woods Run Digest — October 19, 2026\n\nNational Forest Products Week highlights new uses for wood and two Forest Service webinars. Today’s regional reporting covers Upper Peninsula fires, New Hampshire markets, Canadian training equipment, South Carolina pine straw and a Washington contract amendment, followed by wood-science resources.\n\nRead the full edition: https://woodsrun.forestenterprise.org/2026/10/19/\n\nDaily forestry & forest-products intelligence from The Forest Business School.",
+      "error": null,
+      "schedule_verified": true,
+      "provider_sent": false,
+      "delivery_state": "scheduled",
+      "existing_delivery": true,
+      "public_visibility": "not_independently_verified"
+    }
+  },
+  "checked_at": "2026-10-19T08:55:35.536617Z",
+  "requested_action": "schedule_daily",
+  "requested_channels": [
+    "x",
+    "instagram",
+    "youtube"
+  ],
+  "required_daily_channels": [
+    "x",
+    "instagram",
+    "youtube"
+  ],
+  "daily_target_due_at": "2026-10-19T10:00:00Z",
+  "channel_identity": [
+    {
+      "id": "6ab14319ea19ca0bdea627e2",
+      "name": "Logging Chance",
+      "service": "youtube",
+      "serviceId": "UCq-PscVBAKjmVE39qb2NyCg",
+      "externalLink": "https://www.youtube.com/channel/UCq-PscVBAKjmVE39qb2NyCg",
+      "isDisconnected": false,
+      "isLocked": false,
+      "isQueuePaused": false,
+      "timezone": "America/Denver"
+    },
+    {
+      "id": "6844cc71d6d25b49a1de682e",
+      "name": "northeastforests",
+      "service": "instagram",
+      "serviceId": "17841412643805979",
+      "externalLink": "https://instagram.com/northeastforests",
+      "isDisconnected": false,
+      "isLocked": false,
+      "isQueuePaused": false,
+      "timezone": "America/Denver"
+    },
+    {
+      "id": "6843193ed6d25b49a145ff6e",
+      "name": "ForestBizSchool",
+      "service": "twitter",
+      "serviceId": "1487833905197637637",
+      "externalLink": "https://twitter.com/ForestBizSchool",
+      "isDisconnected": false,
+      "isLocked": false,
+      "isQueuePaused": false,
+      "timezone": "America/Denver"
+    }
+  ],
+  "due_at": "2026-10-19T10:00:00Z",
+  "preflight_by_channel": {
+    "x": {
+      "page": {
+        "url": "https://woodsrun.forestenterprise.org/2026/10/19/",
+        "final_url": "https://woodsrun.forestenterprise.org/2026/10/19/",
+        "http_status": 200,
+        "content_type": "text/html",
+        "content_verified": true
+      },
+      "link_card": {
+        "page_url": "https://woodsrun.forestenterprise.org/2026/10/19/",
+        "image_url": "https://woodsrun.forestenterprise.org/assets/cards/2026-10-19.png",
+        "card": "summary_large_image",
+        "image_bytes": 202303,
+        "metadata_verified": true
+      },
+      "card": {
+        "url": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/cards/2026-10-19.png",
+        "dimensions": [
+          1200,
+          630
+        ],
+        "bytes": 202303,
+        "public": {
+          "url": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/cards/2026-10-19.png",
+          "final_url": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/cards/2026-10-19.png",
+          "http_status": 200,
+          "content_type": "image/png",
+          "content_verified": true
+        }
+      }
+    },
+    "instagram": {
+      "page": {
+        "url": "https://woodsrun.forestenterprise.org/2026/10/19/",
+        "final_url": "https://woodsrun.forestenterprise.org/2026/10/19/",
+        "http_status": 200,
+        "content_type": "text/html",
+        "content_verified": true
+      },
+      "video": {
+        "url": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/videos/2026-10-19.mp4",
+        "dimensions": [
+          [
+            1080,
+            1920
+          ]
+        ],
+        "bytes": 1890126,
+        "public": {
+          "url": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/videos/2026-10-19.mp4",
+          "final_url": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/videos/2026-10-19.mp4",
+          "http_status": 200,
+          "content_type": "application/octet-stream",
+          "content_verified": true
+        }
+      }
+    },
+    "youtube": {
+      "page": {
+        "url": "https://woodsrun.forestenterprise.org/2026/10/19/",
+        "final_url": "https://woodsrun.forestenterprise.org/2026/10/19/",
+        "http_status": 200,
+        "content_type": "text/html",
+        "content_verified": true
+      },
+      "video": {
+        "url": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/videos/2026-10-19.mp4",
+        "dimensions": [
+          [
+            1080,
+            1920
+          ]
+        ],
+        "bytes": 1890126,
+        "public": {
+          "url": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/videos/2026-10-19.mp4",
+          "final_url": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/videos/2026-10-19.mp4",
+          "http_status": 200,
+          "content_type": "application/octet-stream",
+          "content_verified": true
+        }
+      }
+    }
+  },
+  "all_scheduled": true,
+  "daily_idempotent": true,
+  "all_provider_sent": false,
+  "all_public_verified": false,
+  "all_daily_channels_provider_sent": false,
+  "all_daily_channels_scheduled": true,
+  "email_verified": false,
+  "complete": false
+}
