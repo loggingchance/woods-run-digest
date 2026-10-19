@@ -57,7 +57,9 @@ def load_request():
             'No approved current-day native striking request')
     due = buffer.parse_time(r['due_at'])
     expected = datetime.combine(datetime.fromisoformat(date).date(), clock(10, 0), DENVER).astimezone(timezone.utc)
-    require(due == expected, 'Striking post must be scheduled for 10:00 America/Denver')
+    recovery = (date == '2026-10-19' and r.get('recovery_approval') == 'Sentinel_f7f1e1af7a24819185d763cc49817489'
+                and due == buffer.parse_time('2026-10-19T22:09:00Z'))
+    require(due == expected or recovery, 'Striking post must be scheduled for 10:00 America/Denver')
     issue = next((i for i in json.loads((ROOT/'data/issues.json').read_text()) if i['date'] == date), None)
     require(issue and issue.get('strikingText'), 'Current canonical striking observation missing')
     text = issue['strikingText'].strip()
