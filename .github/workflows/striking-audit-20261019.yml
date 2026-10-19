@@ -1,0 +1,46 @@
+name: Audit October 19 Woods Run striking post (read only)
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/striking-audit-20261019.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    env:
+      BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Read the existing X provider history without creating posts
+        run: |
+          python - <<'PY'
+          import json, sys
+          from pathlib import Path
+          sys.path.insert(0,'scripts')
+          import buffer_queue as b
+          issues=json.loads(Path('data/issues.json').read_text())
+          assert issues[0]['date']=='2026-10-19','Wrong date, no audit'
+          text=issues[0]['strikingText'].strip()
+          org, channels=b.get_channels()
+          ch=[c for c in channels if c['service']=='twitter' and c['name']=='ForestBizSchool']
+          assert len(ch)==1,'Missing or ambiguous X channel'
+          posts=b.recent(org,ch[0]['id'])
+          matches=[{'id':p.get('id'),'status':p.get('status'),'externalLink':p.get('externalLink'),
+                    'createdAt':p.get('createdAt'),'dueAt':p.get('dueAt'),'text':p.get('text')}
+                   for p in posts if (p.get('text') or '').strip()==text]
+          day=[{'id':p.get('id'),'status':p.get('status'),'externalLink':p.get('externalLink'),
+                'createdAt':p.get('createdAt'),'text':(p.get('text') or '')}
+               for p in posts if str(p.get('createdAt') or '').startswith('2026-10-19')]
+          print('STRIKING_AUDIT_READ_ONLY '+json.dumps({'date':'2026-10-19','exactText':text,
+                  'providerHistoryCount':len(posts),'exactMatches':matches,'dayPosts':day,
+                  'writesAttempted':False},ensure_ascii=False))
+          PY
