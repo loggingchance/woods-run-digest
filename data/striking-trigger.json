@@ -1,8 +1,7 @@
 {
   "action": "schedule_striking",
-  "date": "2026-10-19",
-  "due_at": "2026-10-19T22:09:00Z",
-  "requestedAt": "2026-10-19T22:05:15Z",
-  "recovery_approval": "Sentinel_f7f1e1af7a24819185d763cc49817489",
-  "reason": "Explicitly approved cloud-only recovery; public X duplicate check clear, publisher must freshly check complete Buffer history before single attempt."
+  "date": "2026-10-20",
+  "due_at": "2026-10-20T16:00:00Z",
+  "requestedAt": "2026-10-20T15:44:06.262Z",
+  "reason": "native Buffer scheduled daily striking observation"
 }
