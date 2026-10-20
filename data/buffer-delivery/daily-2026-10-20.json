@@ -5,36 +5,43 @@
     "x": {
       "duplicate_search": {
         "complete": true,
-        "posts_checked": 332
+        "posts_checked": 333
       },
       "attempt_started_at": "2026-10-20T08:56:24.518808Z",
       "newly_created": true,
       "post_id": "6ad72cb8ed43fb48e28f4595",
-      "status": "scheduled",
+      "status": "sent",
       "due_at": "2026-10-20T10:00:00.000Z",
       "created_at": "2026-10-20T08:56:24.628Z",
-      "external_url": null,
+      "external_url": "https://x.com/1487833905197637637/status/2112483991571841439",
       "assets": [],
       "provider_text": "U.S. builder confidence falls to a 14-year low. The October 20 Woods Run Digest covers the demand signal, paper shipments, Canadian lumber duties, a B.C. tenure agreement and current forest-business opportunities.\n\nhttps://woodsrun.forestenterprise.org/2026/10/20/",
       "error": null,
       "schedule_verified": true,
-      "provider_sent": false,
-      "delivery_state": "scheduled",
+      "provider_sent": true,
+      "delivery_state": "sent",
       "existing_delivery": true,
-      "public_visibility": "not_independently_verified"
+      "public_visibility": "verified",
+      "public_probe": {
+        "url": "https://x.com/1487833905197637637/status/2112483991571841439",
+        "final_url": "https://x.com/ForestBizSchool/status/2112483991571841439",
+        "http_status": 200,
+        "content_type": "text/html; charset=UTF-8",
+        "content_verified": true
+      }
     },
     "instagram": {
       "duplicate_search": {
         "complete": true,
-        "posts_checked": 283
+        "posts_checked": 284
       },
       "attempt_started_at": "2026-10-20T08:56:26.162778Z",
       "newly_created": true,
       "post_id": "6ad72cbaed43fb48e28f45dd",
-      "status": "scheduled",
+      "status": "sent",
       "due_at": "2026-10-20T10:00:00.000Z",
       "created_at": "2026-10-20T08:56:26.467Z",
-      "external_url": null,
+      "external_url": "https://www.instagram.com/reel/DetkYCXEggN/",
       "assets": [
         {
           "source": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/videos/2026-10-20.mp4",
@@ -44,23 +51,30 @@
       "provider_text": "Woods Run Digest — October 20, 2026\n\nDaily North American forestry & forest-products intelligence from The Forest Business School.\n\nRead today’s edition: https://woodsrun.forestenterprise.org/2026/10/20/",
       "error": null,
       "schedule_verified": true,
-      "provider_sent": false,
-      "delivery_state": "scheduled",
+      "provider_sent": true,
+      "delivery_state": "sent",
       "existing_delivery": true,
-      "public_visibility": "not_independently_verified"
+      "public_visibility": "verified",
+      "public_probe": {
+        "url": "https://www.instagram.com/reel/DetkYCXEggN/",
+        "final_url": "https://www.instagram.com/reel/DetkYCXEggN/",
+        "http_status": 200,
+        "content_type": "text/html; charset=\"utf-8\"",
+        "content_verified": true
+      }
     },
     "youtube": {
       "duplicate_search": {
         "complete": true,
-        "posts_checked": 82
+        "posts_checked": 83
       },
       "attempt_started_at": "2026-10-20T08:56:27.134115Z",
       "newly_created": true,
       "post_id": "6ad72cbbc4a5f1eea4c8eda7",
-      "status": "scheduled",
+      "status": "sent",
       "due_at": "2026-10-20T10:00:00.000Z",
       "created_at": "2026-10-20T08:56:27.430Z",
-      "external_url": null,
+      "external_url": "https://www.youtube.com/watch?v=2X9_xOY9VAY",
       "assets": [
         {
           "source": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/videos/2026-10-20.mp4",
@@ -70,13 +84,20 @@
       "provider_text": "Woods Run Digest — October 20, 2026\n\nBuilder confidence reaches a 14-year low as price concessions spread. Also: weaker printing-writing paper shipments, final Canadian lumber duty reviews, a British Columbia tenure agreement, Florida contracting, Maine mill-community assistance and updated sawmill profiles.\n\nRead the full edition: https://woodsrun.forestenterprise.org/2026/10/20/\n\nDaily forestry & forest-products intelligence from The Forest Business School.",
       "error": null,
       "schedule_verified": true,
-      "provider_sent": false,
-      "delivery_state": "scheduled",
+      "provider_sent": true,
+      "delivery_state": "sent",
       "existing_delivery": true,
-      "public_visibility": "not_independently_verified"
+      "public_visibility": "verified",
+      "public_probe": {
+        "url": "https://www.youtube.com/watch?v=2X9_xOY9VAY",
+        "final_url": "https://www.youtube.com/watch?v=2X9_xOY9VAY",
+        "http_status": 200,
+        "content_type": "text/html; charset=utf-8",
+        "content_verified": true
+      }
     }
   },
-  "checked_at": "2026-10-20T08:56:20.683345Z",
+  "checked_at": "2026-10-20T10:01:30.001051Z",
   "requested_action": "schedule_daily",
   "requested_channels": [
     "x",
@@ -212,9 +233,9 @@
   },
   "all_scheduled": true,
   "daily_idempotent": true,
-  "all_provider_sent": false,
-  "all_public_verified": false,
-  "all_daily_channels_provider_sent": false,
+  "all_provider_sent": true,
+  "all_public_verified": true,
+  "all_daily_channels_provider_sent": true,
   "all_daily_channels_scheduled": true,
   "email_verified": false,
   "complete": false
