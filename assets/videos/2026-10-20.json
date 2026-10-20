@@ -1,0 +1,53 @@
+{
+  "date": "2026-10-20",
+  "format": "approved-v4",
+  "dimensions": [
+    1080,
+    1920
+  ],
+  "fps": 30,
+  "frames": 1245,
+  "duration_seconds": 41.5,
+  "segment_frames": [
+    75,
+    210,
+    210,
+    210,
+    210,
+    210,
+    120
+  ],
+  "stories": [
+    {
+      "headline": "Builder confidence falls to a 14-year low",
+      "body": "Confidence among U.S. single-family home builders fell three points to 29 in October, the lowest reading since June 2012. The NAHB/Wells Fargo Housing Market Index, released October 19, also showed prospective-buyer traffic dropping five\u2026",
+      "region": "U.S. MARKETS \u2014 OCTOBER 19 RELEASE",
+      "image": null
+    },
+    {
+      "headline": "Printing-writing paper shipments fall 9% in September",
+      "body": "The American Forest & Paper Association reported October 19 that September printing-writing paper shipments were 9% below September 2025. Inventories declined 6% from August 2026.",
+      "region": "U.S. PAPER MARKETS \u2014 OCTOBER 19 RELEASE",
+      "image": null
+    },
+    {
+      "headline": "Final lumber reviews establish new company-specific deposits",
+      "body": "Commerce published final results of its 2024 Canadian softwood-lumber duty reviews on October 19. The antidumping review lists margins of 17.00% for Canfor, 4.71% for West Fraser, 13.13% for Resolute and 10.64% for the non-selected companies\u2026",
+      "region": "CANADA / U.S. \u2014 OCTOBER 19 EFFECTIVE DATE",
+      "image": null
+    },
+    {
+      "headline": "Ntityix and Tolko pair tenure rights with a 15-year fibre customer",
+      "body": "Westbank First Nation\u2019s Ntityix Resources and Tolko announced an agreement to transfer Forest Licence A98912 to Ntityix, alongside a 15-year fibre-supply agreement. The announcement is dated October 14 and was posted by Ntityix October 15.\u2026",
+      "region": "WEST \u2014 BRITISH COLUMBIA / OCTOBER 14 AGREEMENT",
+      "image": null
+    },
+    {
+      "headline": "Ocala seeks crews for 1,575 acres of stand improvement",
+      "body": "The Forest Service is soliciting small-business offers to cut designated small oaks and pines in longleaf plantations across approximately 1,575 acres of Ocala National Forest. Solicitation 12444726Q0070 was posted October 9; offers are due\u2026",
+      "region": "SOUTH \u2014 FLORIDA / OFFERS DUE OCTOBER 26",
+      "image": null
+    }
+  ],
+  "publication_attempted": false
+}
