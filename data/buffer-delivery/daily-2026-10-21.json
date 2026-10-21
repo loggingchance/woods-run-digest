@@ -1,0 +1,221 @@
+{
+  "run_id": "daily-2026-10-21",
+  "date": "2026-10-21",
+  "channels": {
+    "x": {
+      "duplicate_search": {
+        "complete": true,
+        "posts_checked": 338
+      },
+      "attempt_started_at": "2026-10-21T08:51:58.427289Z",
+      "newly_created": true,
+      "post_id": "6ad87d2ed1cf44a4af48ffe9",
+      "status": "scheduled",
+      "due_at": "2026-10-21T10:00:00.000Z",
+      "created_at": "2026-10-21T08:51:58.603Z",
+      "external_url": null,
+      "assets": [],
+      "provider_text": "Barge Forest Products plans more than $8.3 million for its Mississippi sawmill. The October 21 Woods Run Digest follows new capacity, housing estimates, Södra’s Boston office and current forest-business opportunities.\n\nhttps://woodsrun.forestenterprise.org/2026/10/21/",
+      "error": null,
+      "schedule_verified": true,
+      "provider_sent": false,
+      "delivery_state": "scheduled",
+      "existing_delivery": true,
+      "public_visibility": "not_independently_verified"
+    },
+    "instagram": {
+      "duplicate_search": {
+        "complete": true,
+        "posts_checked": 285
+      },
+      "attempt_started_at": "2026-10-21T08:52:00.408885Z",
+      "newly_created": true,
+      "post_id": "6ad87d3172c2785114683b45",
+      "status": "scheduled",
+      "due_at": "2026-10-21T10:00:00.000Z",
+      "created_at": "2026-10-21T08:52:01.131Z",
+      "external_url": null,
+      "assets": [
+        {
+          "source": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/videos/2026-10-21.mp4",
+          "mimeType": "video/mp4"
+        }
+      ],
+      "provider_text": "Woods Run Digest — October 21, 2026\n\nDaily North American forestry & forest-products intelligence from The Forest Business School.\n\nRead today’s edition: https://woodsrun.forestenterprise.org/2026/10/21/",
+      "error": null,
+      "schedule_verified": true,
+      "provider_sent": false,
+      "delivery_state": "scheduled",
+      "existing_delivery": true,
+      "public_visibility": "not_independently_verified"
+    },
+    "youtube": {
+      "duplicate_search": {
+        "complete": true,
+        "posts_checked": 83
+      },
+      "attempt_started_at": "2026-10-21T08:52:02.090301Z",
+      "newly_created": true,
+      "post_id": "6ad87d32d0cc3336f11526dd",
+      "status": "scheduled",
+      "due_at": "2026-10-21T10:00:00.000Z",
+      "created_at": "2026-10-21T08:52:02.431Z",
+      "external_url": null,
+      "assets": [
+        {
+          "source": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/videos/2026-10-21.mp4",
+          "mimeType": "video/mp4"
+        }
+      ],
+      "provider_text": "Woods Run Digest — October 21, 2026\n\nBarge Forest Products plans more than $8.3 million in Mississippi sawmill investment. Also: September housing estimates, Södra’s Boston sales office, a Vermont contract site visit, Ontario business acceleration, dealer software and updated Northwest industry data.\n\nRead the full edition: https://woodsrun.forestenterprise.org/2026/10/21/\n\nDaily forestry & forest-products intelligence from The Forest Business School.",
+      "error": null,
+      "schedule_verified": true,
+      "provider_sent": false,
+      "delivery_state": "scheduled",
+      "existing_delivery": true,
+      "public_visibility": "not_independently_verified"
+    }
+  },
+  "checked_at": "2026-10-21T08:51:55.730506Z",
+  "requested_action": "schedule_daily",
+  "requested_channels": [
+    "x",
+    "instagram",
+    "youtube"
+  ],
+  "required_daily_channels": [
+    "x",
+    "instagram",
+    "youtube"
+  ],
+  "daily_target_due_at": "2026-10-21T10:00:00Z",
+  "channel_identity": [
+    {
+      "id": "6ab14319ea19ca0bdea627e2",
+      "name": "Logging Chance",
+      "service": "youtube",
+      "serviceId": "UCq-PscVBAKjmVE39qb2NyCg",
+      "externalLink": "https://www.youtube.com/channel/UCq-PscVBAKjmVE39qb2NyCg",
+      "isDisconnected": false,
+      "isLocked": false,
+      "isQueuePaused": false,
+      "timezone": "America/Denver"
+    },
+    {
+      "id": "6844cc71d6d25b49a1de682e",
+      "name": "northeastforests",
+      "service": "instagram",
+      "serviceId": "17841412643805979",
+      "externalLink": "https://instagram.com/northeastforests",
+      "isDisconnected": false,
+      "isLocked": false,
+      "isQueuePaused": false,
+      "timezone": "America/Denver"
+    },
+    {
+      "id": "6843193ed6d25b49a145ff6e",
+      "name": "ForestBizSchool",
+      "service": "twitter",
+      "serviceId": "1487833905197637637",
+      "externalLink": "https://twitter.com/ForestBizSchool",
+      "isDisconnected": false,
+      "isLocked": false,
+      "isQueuePaused": false,
+      "timezone": "America/Denver"
+    }
+  ],
+  "due_at": "2026-10-21T10:00:00Z",
+  "preflight_by_channel": {
+    "x": {
+      "page": {
+        "url": "https://woodsrun.forestenterprise.org/2026/10/21/",
+        "final_url": "https://woodsrun.forestenterprise.org/2026/10/21/",
+        "http_status": 200,
+        "content_type": "text/html",
+        "content_verified": true
+      },
+      "link_card": {
+        "page_url": "https://woodsrun.forestenterprise.org/2026/10/21/",
+        "image_url": "https://woodsrun.forestenterprise.org/assets/cards/2026-10-21.png",
+        "card": "summary_large_image",
+        "image_bytes": 203612,
+        "metadata_verified": true
+      },
+      "card": {
+        "url": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/cards/2026-10-21.png",
+        "dimensions": [
+          1200,
+          630
+        ],
+        "bytes": 203612,
+        "public": {
+          "url": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/cards/2026-10-21.png",
+          "final_url": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/cards/2026-10-21.png",
+          "http_status": 200,
+          "content_type": "image/png",
+          "content_verified": true
+        }
+      }
+    },
+    "instagram": {
+      "page": {
+        "url": "https://woodsrun.forestenterprise.org/2026/10/21/",
+        "final_url": "https://woodsrun.forestenterprise.org/2026/10/21/",
+        "http_status": 200,
+        "content_type": "text/html",
+        "content_verified": true
+      },
+      "video": {
+        "url": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/videos/2026-10-21.mp4",
+        "dimensions": [
+          [
+            1080,
+            1920
+          ]
+        ],
+        "bytes": 1822710,
+        "public": {
+          "url": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/videos/2026-10-21.mp4",
+          "final_url": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/videos/2026-10-21.mp4",
+          "http_status": 200,
+          "content_type": "application/octet-stream",
+          "content_verified": true
+        }
+      }
+    },
+    "youtube": {
+      "page": {
+        "url": "https://woodsrun.forestenterprise.org/2026/10/21/",
+        "final_url": "https://woodsrun.forestenterprise.org/2026/10/21/",
+        "http_status": 200,
+        "content_type": "text/html",
+        "content_verified": true
+      },
+      "video": {
+        "url": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/videos/2026-10-21.mp4",
+        "dimensions": [
+          [
+            1080,
+            1920
+          ]
+        ],
+        "bytes": 1822710,
+        "public": {
+          "url": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/videos/2026-10-21.mp4",
+          "final_url": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/videos/2026-10-21.mp4",
+          "http_status": 200,
+          "content_type": "application/octet-stream",
+          "content_verified": true
+        }
+      }
+    }
+  },
+  "all_scheduled": true,
+  "daily_idempotent": true,
+  "all_provider_sent": false,
+  "all_public_verified": false,
+  "all_daily_channels_provider_sent": false,
+  "all_daily_channels_scheduled": true,
+  "email_verified": false,
+  "complete": false
+}
