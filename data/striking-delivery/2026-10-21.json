@@ -3,15 +3,16 @@
   "text": "Barge’s Mississippi investment targets both capacity and log recovery. Today’s Woods Run Digest follows that project, new housing data, a Boston sales office and current opportunities for forest businesses.",
   "due_at": "2026-10-21T22:07:27.151501Z",
   "channel_id": "6843193ed6d25b49a145ff6e",
-  "state": "accepted",
+  "state": "sent",
   "attempt_started_at": "2026-10-21T22:02:32.155211Z",
   "post_id": "6ad93679fd28672a14af69ad",
   "history_checked": 339,
   "source": "native-daily-striking",
   "email_attempted": false,
-  "provider_status": "scheduled",
+  "provider_status": "sent",
   "provider_due_at": "2026-10-21T22:07:27.151Z",
-  "external_url": null,
+  "external_url": "https://x.com/1487833905197637637/status/2113029435360260167",
   "accepted_at": "2026-10-21T22:02:34.025427Z",
-  "schedule_verified": true
+  "schedule_verified": true,
+  "verified_at": "2026-10-21T22:09:03.711788Z"
 }
