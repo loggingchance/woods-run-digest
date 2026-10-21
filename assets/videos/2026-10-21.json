@@ -1,0 +1,53 @@
+{
+  "date": "2026-10-21",
+  "format": "approved-v4",
+  "dimensions": [
+    1080,
+    1920
+  ],
+  "fps": 30,
+  "frames": 1245,
+  "duration_seconds": 41.5,
+  "segment_frames": [
+    75,
+    210,
+    210,
+    210,
+    210,
+    210,
+    120
+  ],
+  "stories": [
+    {
+      "headline": "Barge plans more than $8.3 million in new sawmill capacity",
+      "body": "Barge Forest Products is expanding its Macon, Mississippi, sawmill with an investment exceeding US$8.3 million. The October 20 state announcement describes a new building and production line with optimized edging and twin horizontal resaw\u2026",
+      "region": "SOUTH \u2014 MISSISSIPPI / OCTOBER 20 ANNOUNCEMENT",
+      "image": null
+    },
+    {
+      "headline": "September housing estimates show weaker starts and single-family permits",
+      "body": "The Census Bureau and HUD estimated September housing starts at a seasonally adjusted annual rate of 1.221 million, 5.2% below revised August. Single-family starts were estimated at 859,000, down 4.6%. These are annualized rates, not the\u2026",
+      "region": "U.S. MARKETS \u2014 OCTOBER 20 CENSUS RELEASE",
+      "image": null
+    },
+    {
+      "headline": "S\u00f6dra brings pulp and lumber sales closer to U.S. customers",
+      "body": "Sweden\u2019s S\u00f6dra is establishing a commercial sales office near Boston to serve U.S. pulp and sawn-timber customers. Its October 20 announcement also identifies a logistics partnership as part of the investment, without naming the partner or\u2026",
+      "region": "NORTHEAST \u2014 MASSACHUSETTS / OCTOBER 20 ANNOUNCEMENT",
+      "image": null
+    },
+    {
+      "headline": "Forest Service mapping-and-control contract has revised acreage and maps",
+      "body": "A site visit for the Green Mountain\u2013Finger Lakes invasive-species mapping and control solicitation is scheduled for October 22 at 9 a.m. Eastern, at the Manchester Ranger Station, 2538 Depot Street, Manchester Center, Vermont. Quotes for\u2026",
+      "region": "NORTHEAST \u2014 VERMONT / OCTOBER 22 SITE VISIT",
+      "image": null
+    },
+    {
+      "headline": "Boreal Springboard seeks forest-sector ventures for its next cohort",
+      "body": "Boreal Springboard\u2019s second accelerator intake is open through December 14, 2026, for a 12-week program beginning February 1, 2027. The program advertises C$40,000 in funding, mentoring, office space and access to labs, industry contacts and\u2026",
+      "region": "CANADA \u2014 NORTHWESTERN ONTARIO / APPLICATIONS OPEN",
+      "image": null
+    }
+  ],
+  "publication_attempted": false
+}
