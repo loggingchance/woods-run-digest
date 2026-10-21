@@ -2,8 +2,12 @@ name: Woods Run striking X post (native Buffer schedule)
 
 on:
   workflow_dispatch:
+  workflow_run:
+    workflows: ['Woods Run early media preparation']
+    types: [completed]
+    branches: [main]
   schedule:
-    # 09:40 Denver in daylight/standard time; the other slot is a no-op.
+    # Queue after preparation; cron is a duplicate-safe catch-up/outcome check.
     - cron: '40 15,16 * * *'
   push:
     branches: [main]
@@ -19,6 +23,7 @@ concurrency:
 
 jobs:
   post:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
     timeout-minutes: 30
     env:
@@ -33,10 +38,8 @@ jobs:
           python-version: '3.12'
       - name: Prepare the standing daily handoff from the verified current edition
         id: request
-        if: github.event_name == 'schedule'
         run: python scripts/prepare_striking_request.py
       - name: Persist the refreshed handoff before the provider attempt
-        if: github.event_name == 'schedule' && steps.request.outputs.should_run == 'true'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -51,9 +54,8 @@ jobs:
         run: python -m unittest discover -s tests -p test_striking_handoff.py -v
       - name: Validate native striking publisher without publishing
         run: python -m py_compile scripts/striking_queue.py scripts/buffer_queue.py scripts/post_to_buffer.py
-      - name: Queue only the current striking observation for 10 AM inside Buffer
-        if: github.event_name != 'schedule' || steps.request.outputs.should_run == 'true'
+      - name: Queue only the current striking observation inside Buffer
         run: python scripts/striking_queue.py
       - name: Verify the accepted provider ID after Buffer's scheduled time
-        if: github.event_name != 'schedule' || steps.request.outputs.should_run == 'true'
         run: python scripts/striking_queue.py --verify
+

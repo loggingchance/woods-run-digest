@@ -59,6 +59,9 @@ def load_request():
     expected = datetime.combine(datetime.fromisoformat(date).date(), clock(10, 0), DENVER).astimezone(timezone.utc)
     recovery = (date == '2026-10-19' and r.get('recovery_approval') == 'Sentinel_f7f1e1af7a24819185d763cc49817489'
                 and due == buffer.parse_time('2026-10-19T22:09:00Z'))
+    recovery = recovery or (date == '2026-10-21' and
+                r.get('recovery_approval') == 'user-2026-10-21T21:57Z' and
+                due.astimezone(DENVER).date().isoformat() == date and due > expected)
     require(due == expected or recovery, 'Striking post must be scheduled for 10:00 America/Denver')
     issue = next((i for i in json.loads((ROOT/'data/issues.json').read_text()) if i['date'] == date), None)
     require(issue and issue.get('strikingText'), 'Current canonical striking observation missing')
@@ -135,6 +138,16 @@ def verify():
     require(path.exists(), 'No striking provider receipt')
     record = json.loads(path.read_text())
     require(record.get('post_id'), 'Striking provider ID is absent')
+    if due.timestamp()+95-time.time() >= 1500:
+        # Morning preparation queues well ahead of delivery. The daily cron
+        # performs the post-due check; do not occupy a runner for hours.
+        posts, found = history(text)
+        require(found and found.get('id') == record['post_id'] and
+                found.get('status') in BLOCKING and found.get('dueAt') and
+                abs((buffer.parse_time(found['dueAt'])-due).total_seconds()) <= 2,
+                'Advance striking schedule no longer verified')
+        print('STRIKING_SCHEDULE_VERIFIED; publication pending scheduled time', flush=True)
+        return
     delay = due.timestamp()+95-time.time()
     if delay > 0:
         require(delay < 1500, 'Post-delivery verification wait exceeds bound')
@@ -162,3 +175,4 @@ if __name__ == '__main__':
     except Exception as exc:
         print('STRIKING_ERROR '+str(exc),file=sys.stderr)
         raise SystemExit(1)
+

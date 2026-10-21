@@ -1,7 +1,8 @@
 {
   "action": "schedule_striking",
-  "date": "2026-10-20",
-  "due_at": "2026-10-20T16:00:00Z",
-  "requestedAt": "2026-10-20T15:44:06.262Z",
-  "reason": "native Buffer scheduled daily striking observation"
+  "date": "2026-10-21",
+  "due_at": "2026-10-21T22:06:09.817314Z",
+  "requestedAt": "2026-10-21T22:01:09.817314+00:00",
+  "reason": "Standing daily striking handoff from verified current preparation",
+  "recovery_approval": "user-2026-10-21T21:57Z"
 }

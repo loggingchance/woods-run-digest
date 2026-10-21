@@ -3,7 +3,7 @@
 import hashlib
 import json
 import os
-from datetime import datetime, time, timezone
+from datetime import datetime, time, timedelta, timezone
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
@@ -13,9 +13,6 @@ DENVER = ZoneInfo('America/Denver')
 
 def prepare(root, now):
     local = now.astimezone(DENVER)
-    # Both UTC cron slots run year-round; only the Denver 9 AM slot hands off.
-    if local.hour != 9:
-        return False
     date = local.date().isoformat()
     issues = json.loads((root / 'data/issues.json').read_text())
     issue = next((i for i in issues if i.get('date') == date), None)
@@ -29,10 +26,30 @@ def prepare(root, now):
     if receipt.get('date') != date or not receipt.get('ready') or receipt.get('source_sha256') != source:
         raise ValueError('Current editorial source has not completed preparation')
     due = datetime.combine(local.date(), time(10), DENVER).astimezone(timezone.utc)
+    trigger = root / 'data/striking-trigger.json'
+    previous = json.loads(trigger.read_text()) if trigger.exists() else {}
+    delivery = root / 'data/striking-delivery' / (date + '.json')
+    # Never move the requested time after an attempt, including an ambiguous one.
+    if delivery.exists():
+        record = json.loads(delivery.read_text())
+        if record.get('text') != issue['strikingText'].strip():
+            raise ValueError('Current striking content differs from existing attempt')
+        if previous.get('date') != date or previous.get('due_at') != record.get('due_at'):
+            raise ValueError('Existing attempt has no matching durable handoff')
+        return True
+    # One explicit user-approved recovery, not a standing late-post permission.
+    recovery = (date == '2026-10-21' and previous.get('date') == date and
+                previous.get('recovery_approval') == 'user-2026-10-21T21:57Z')
+    if recovery:
+        due = now.astimezone(timezone.utc) + timedelta(minutes=5)
+        if due.astimezone(DENVER).date() != local.date():
+            raise ValueError('Recovery cannot cross the issue date')
     request = {'action': 'schedule_striking', 'date': date,
                'due_at': due.isoformat().replace('+00:00', 'Z'),
                'requestedAt': now.isoformat(),
                'reason': 'Standing daily striking handoff from verified current preparation'}
+    if recovery:
+        request['recovery_approval'] = previous['recovery_approval']
     (root / 'data/striking-trigger.json').write_text(json.dumps(request, indent=2) + '\n')
     return True
 
@@ -42,4 +59,5 @@ if __name__ == '__main__':
     if os.environ.get('GITHUB_OUTPUT'):
         with open(os.environ['GITHUB_OUTPUT'], 'a') as output:
             output.write('should_run=' + str(ready).lower() + '\n')
-    print('Current striking handoff prepared' if ready else 'Outside Denver handoff hour; no provider action')
+    print('Current striking handoff prepared' if ready else 'No current striking handoff')
+
