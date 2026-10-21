@@ -1,8 +1,8 @@
 {
   "action": "schedule_striking",
   "date": "2026-10-21",
-  "due_at": "2026-10-21T22:06:09.817314Z",
-  "requestedAt": "2026-10-21T22:01:09.817314+00:00",
+  "due_at": "2026-10-21T22:07:27.151501Z",
+  "requestedAt": "2026-10-21T22:02:27.151501+00:00",
   "reason": "Standing daily striking handoff from verified current preparation",
   "recovery_approval": "user-2026-10-21T21:57Z"
 }
