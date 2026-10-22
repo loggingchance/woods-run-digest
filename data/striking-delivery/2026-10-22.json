@@ -9,9 +9,10 @@
   "history_checked": 341,
   "source": "native-daily-striking",
   "email_attempted": false,
-  "provider_status": "scheduled",
+  "provider_status": "sent",
   "provider_due_at": "2026-10-22T16:00:00.000Z",
-  "external_url": null,
+  "external_url": "https://x.com/1487833905197637637/status/2113299889928982570",
   "accepted_at": "2026-10-22T08:51:16.440991Z",
-  "schedule_verified": true
+  "schedule_verified": true,
+  "verified_at": "2026-10-22T19:26:14.005316Z"
 }
