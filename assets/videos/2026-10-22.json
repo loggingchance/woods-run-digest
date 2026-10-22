@@ -1,0 +1,53 @@
+{
+  "date": "2026-10-22",
+  "format": "approved-v4",
+  "dimensions": [
+    1080,
+    1920
+  ],
+  "fps": 30,
+  "frames": 1245,
+  "duration_seconds": 41.5,
+  "segment_frames": [
+    75,
+    210,
+    210,
+    210,
+    210,
+    210,
+    120
+  ],
+  "stories": [
+    {
+      "headline": "Ponsse orders rise while sales, profit and cash flow weaken",
+      "body": "Ponsse\u2019s third-quarter order intake increased to \u20ac170.4 million from \u20ac143.4 million a year earlier, but net sales fell to \u20ac159.8 million from \u20ac172.7 million. The forest-machine manufacturer published its January\u2013September interim report on\u2026",
+      "region": "EQUIPMENT BUSINESS \u2014 OCTOBER 20 RESULTS",
+      "image": null
+    },
+    {
+      "headline": "Freight availability complicates a slower lumber market",
+      "body": "Madison\u2019s Lumber Reporter\u2019s October 21 market commentary describes transportation constraints during the week ending October 9. Seasonal cargo competed for trucks and railcars, while lumber buyers remained cautious about carrying inventory\u2026",
+      "region": "CANADA / U.S. LUMBER \u2014 OCTOBER 21 PUBLICATION",
+      "image": null
+    },
+    {
+      "headline": "Cathedral contract combines treatment work with merchantable wood",
+      "body": "The Great Basin Institute seeks proposals for the Cathedral cut-to-length project on 166.9 acres in seven Lake Tahoe Basin units. Its October 20 announcement lists thinning, biomass treatment, landing-slash removal and road maintenance and\u2026",
+      "region": "WEST \u2014 CALIFORNIA / PROPOSALS DUE NOVEMBER 20",
+      "image": null
+    },
+    {
+      "headline": "Gladwin timber offerings appear in DNR\u2019s available-sales table",
+      "body": "Michigan DNR\u2019s current available-sales listing includes Triple F, sale 73-006-24, with bids opening November 10 at 11 a.m. at the Gladwin office. The advertised price is US$161,529.20 and listed volume is 6,147 cords, with aspen and hardwood\u2026",
+      "region": "MIDWEST \u2014 MICHIGAN / NOVEMBER 10 BID OPENING",
+      "image": null
+    },
+    {
+      "headline": "Nominal-volume clarification takes effect for lumber assessments",
+      "body": "USDA\u2019s final Softwood Lumber Board rule takes effect today, October 22, following publication September 22. It makes nominal volume explicit for assessments, exemptions and reporting. The nominal assessment remains US$0.41 per thousand board\u2026",
+      "region": "UNDER THE RADAR \u2014 SOFTWOOD ASSESSMENTS / EFFECTIVE TODAY",
+      "image": null
+    }
+  ],
+  "publication_attempted": false
+}
