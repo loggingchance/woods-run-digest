@@ -44,6 +44,13 @@ def prepare(root, now):
         due = now.astimezone(timezone.utc) + timedelta(minutes=5)
         if due.astimezone(DENVER).date() != local.date():
             raise ValueError('Recovery cannot cross the issue date')
+    # A verified 09:45 handoff is authoritative. Do not rewrite its timestamp,
+    # requested action, or reason before the provider receives it.
+    if (previous.get('action') == 'schedule_striking' and
+            previous.get('date') == date and
+            previous.get('due_at') == due.isoformat().replace('+00:00', 'Z') and
+            previous.get('reason') == 'native Buffer scheduled daily striking observation'):
+        return True
     request = {'action': 'schedule_striking', 'date': date,
                'due_at': due.isoformat().replace('+00:00', 'Z'),
                'requestedAt': now.isoformat(),
