@@ -2,13 +2,6 @@ name: Woods Run striking X post (native Buffer schedule)
 
 on:
   workflow_dispatch:
-  workflow_run:
-    workflows: ['Woods Run early media preparation']
-    types: [completed]
-    branches: [main]
-  schedule:
-    # Queue after preparation; cron is a duplicate-safe catch-up/outcome check.
-    - cron: '40 15,16 * * *'
   push:
     branches: [main]
     paths:
