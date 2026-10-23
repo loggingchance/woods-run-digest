@@ -1,0 +1,53 @@
+{
+  "date": "2026-10-23",
+  "format": "approved-v4",
+  "dimensions": [
+    1080,
+    1920
+  ],
+  "fps": 30,
+  "frames": 1245,
+  "duration_seconds": 41.5,
+  "segment_frames": [
+    75,
+    210,
+    210,
+    210,
+    210,
+    210,
+    120
+  ],
+  "stories": [
+    {
+      "headline": "PCA runs mills at capacity as fibre and operating costs rise",
+      "body": "Packaging Corporation of America produced 1.489 million tons of containerboard in the third quarter, with mills operating at full capacity. Its October 21 results reported US$2.6 billion in net sales, up from US$2.3 billion a year earlier,\u2026",
+      "region": "U.S. MILLS \u2014 OCTOBER 21 RESULTS",
+      "image": null
+    },
+    {
+      "headline": "Placer authorizes up to US$6 million for proposed biochar plant",
+      "body": "Placer County\u2019s board authorized loan documents of up to US$6 million for Sierra Nevada Biochar\u2019s proposed Cabin Creek facility on October 20. The county describes a plant that would turn woody biomass and eligible organic material into\u2026",
+      "region": "WEST \u2014 CALIFORNIA / OCTOBER 20 DECISION",
+      "image": null
+    },
+    {
+      "headline": "WSIB lowers the average premium rate for 2027",
+      "body": "Ontario announced October 22 that the average Workplace Safety and Insurance Board premium will fall to C$1.18 per C$100 of insurable payroll in 2027, from C$1.23 in 2026. The new rate takes effect January 1.",
+      "region": "CANADA \u2014 ONTARIO / 2027 PAYROLL COSTS",
+      "image": null
+    },
+    {
+      "headline": "Corral G-Z stewardship tour moves to October 29",
+      "body": "The Forest Service\u2019s Corral G-Z stewardship solicitation on the Fremont-Winema National Forest lists a site visit October 29 at 10 a.m. Pacific. Amendment 001 moved it from October 22. Attendance counts are due to Will Potter at\u2026",
+      "region": "WEST \u2014 OREGON / TOUR RSVP DUE OCTOBER 26",
+      "image": null
+    },
+    {
+      "headline": "Growth Loan Fund includes forestry innovation, with equity conditions",
+      "body": "Minnesota\u2019s existing Growth Loan Fund offers loans to eligible seed and early-stage businesses planning an equity raise. Its listed fields include forestry products, processes and technology. Enrollment must precede the matching investments;\u2026",
+      "region": "MIDWEST \u2014 MINNESOTA / EXISTING FINANCING PROGRAM",
+      "image": null
+    }
+  ],
+  "publication_attempted": false
+}
