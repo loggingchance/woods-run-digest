@@ -22,6 +22,8 @@ Updated October 13, 2026. All issue dates and daily times use America/Denver.
 - Preserve these canonical destinations: Wet Woods https://www.amazon.com/dp/B0FP98Y3YN ; Timber Tempo https://www.amazon.com/dp/B0DRYY34KW ; After Wood https://www.amazon.com/dp/B0DRYZLRTF ; Continuous Improvement in Logging https://cinl.loggingchance.com/ ; Woods-Ready Safety Plan https://wrsp.lumbermen.org/.
 - Do not advertise remaining Essentials places.
 
+- For future editions, write `strikingText` from an actual substantive story farther down that day's digest, after the headline/lead story. Exclude the headline/lead story, the `By the Numbers` market tracker, navigation, and promotional footers (including `BOOKS & APPS`). Keep the observation faithful to the selected story's verified facts, context, and source; do not invent or exaggerate claims. This changes future striking story selection only: preserve editorial accuracy, visual style, the normal 10:00 AM America/Denver striking schedule, duplicate safeguards, and normal broadcasts. Do not revise existing issues or repost existing content to apply this rule.
+
 ## Daily path
 
 1. Site editorial begins 02:30. Editorial handoff checks/mirrors the same edition at03:00, writing the dated page first and data/issues.json last. Never invent a new date on old content.
