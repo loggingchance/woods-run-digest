@@ -14,7 +14,7 @@
   "provider_error_evidence": "GitHub Actions run 40108872619 job 120916190012, 2026-10-24T15:51:37Z",
   "schedule_verified": false,
   "recovery": {
-    "state": "accepted",
+    "state": "sent",
     "text": "Alberta offers C$60M for technology demonstrations, including forestry. Applicants can be based elsewhere; deployment in Alberta and private matching funds are required. Expressions of interest deadline: Dec. 16, 5 p.m. Mountain. https://woodsrun.forestenterprise.org/2026/10/24/",
     "post_id": "6adcd6e06887a2efc1c4fab5",
     "run_id": "40109791698",
@@ -25,6 +25,7 @@
     "source": "one-time-approved-late-alberta-recovery",
     "provider_status": "sent",
     "external_url": "https://twitter.com/ForestBizSchool/status/2114025055726256198",
-    "accepted_at": "2026-10-24T16:03:45.633751Z"
+    "accepted_at": "2026-10-24T16:03:45.633751Z",
+    "verified_at": "2026-10-24T16:03:49.129878Z"
   }
 }
