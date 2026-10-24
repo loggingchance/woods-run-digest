@@ -1,7 +1,6 @@
 {
   "action": "schedule_striking",
-  "date": "2026-10-23",
-  "due_at": "2026-10-23T16:00:00Z",
-  "requestedAt": "2026-10-23T08:53:42.489886+00:00",
-  "reason": "Standing daily striking handoff from verified current preparation"
+  "date": "2026-10-24",
+  "due_at": "2026-10-24T16:00:00Z",
+  "reason": "native Buffer scheduled daily striking observation"
 }
