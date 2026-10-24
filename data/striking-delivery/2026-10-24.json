@@ -3,10 +3,14 @@
   "text": "Alberta’s new C$60 million technology challenge includes forestry field demonstrations. Applicants may be based elsewhere, but deployment must be in Alberta and private matching funds are required. Expressions of interest close December 16 at 5 p.m. Mountain. Details and original sources in today’s Woods Run Digest.",
   "due_at": "2026-10-24T16:00:00Z",
   "channel_id": "6843193ed6d25b49a145ff6e",
-  "state": "attempt_started",
+  "state": "provider_rejected",
   "attempt_started_at": "2026-10-24T15:51:35.260850Z",
   "post_id": null,
   "history_checked": 347,
   "source": "native-daily-striking",
-  "email_attempted": false
+  "email_attempted": false,
+  "provider_status": "rejected",
+  "provider_error": "Invalid post: Twitter / X posts cannot exceed 280 characters.",
+  "provider_error_evidence": "GitHub Actions run 40108872619 job 120916190012, 2026-10-24T15:51:37Z",
+  "schedule_verified": false
 }
