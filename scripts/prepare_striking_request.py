@@ -18,6 +18,8 @@ def prepare(root, now):
     issue = next((i for i in issues if i.get('date') == date), None)
     if not issue or not issue.get('strikingText', '').strip():
         raise ValueError('Current-day striking observation missing or invalid')
+    if len(issue['strikingText'].strip()) > 280:
+        raise ValueError(f"Authored strikingText is {len(issue['strikingText'].strip())} characters; Buffer X maximum is 280. Correct canonical source before scheduling")
     if issue.get('url') != '/' + date.replace('-', '/') + '/':
         raise ValueError('Canonical dated issue URL mismatch')
     page = (root / date.replace('-', '/') / 'index.html').read_bytes()
