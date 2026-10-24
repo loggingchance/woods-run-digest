@@ -24,6 +24,10 @@ Updated October 13, 2026. All issue dates and daily times use America/Denver.
 
 - For future editions, write `strikingText` from an actual substantive story farther down that day's digest, after the headline/lead story. Exclude the headline/lead story, the `By the Numbers` market tracker, navigation, and promotional footers (including `BOOKS & APPS`). Keep the observation faithful to the selected story's verified facts, context, and source; do not invent or exaggerate claims. This changes future striking story selection only: preserve editorial accuracy, visual style, the normal 10:00 AM America/Denver striking schedule, duplicate safeguards, and normal broadcasts. Do not revise existing issues or repost existing content to apply this rule.
 
+## Dated editorial input — October 26, 2026 only
+
+- In the Monday, October 26, 2026 edition (America/Denver), include a concise non-lead story mentioning the new FBS podcast episode, “FBS 60 Surviving Hardwood Market Shifts”. Include both clean listening/viewing links: Spotify https://open.spotify.com/episode/36SwnUBZhKt94IPmbQlqDo and YouTube https://www.youtube.com/watch?v=WHCddRJ0Xxo. Verify any episode description or detailed claims against the episode or its authoritative metadata before using them; do not invent claims. This is a one-edition inclusion, not a recurring feature, and must not be the headline/lead story. Preserve all standing editorial rules, including the price tracker, `BOOKS & APPS` rotation, and `strikingText` selection rule. Do not apply this instruction to other dates or revise already published editions.
+
 ## Daily path
 
 1. Site editorial begins 02:30. Editorial handoff checks/mirrors the same edition at03:00, writing the dated page first and data/issues.json last. Never invent a new date on old content.
