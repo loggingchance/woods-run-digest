@@ -2,5 +2,7 @@
   "action": "schedule_striking",
   "date": "2026-10-24",
   "due_at": "2026-10-24T16:00:00Z",
-  "reason": "native Buffer scheduled daily striking observation"
+  "reason": "native Buffer scheduled daily striking observation",
+  "recovery_of_failed_run": 40108453428,
+  "recovery_reason": "Proven pre-provider length-guard failure corrected; one non-duplicating retry"
 }
