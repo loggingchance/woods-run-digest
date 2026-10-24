@@ -66,7 +66,7 @@ def load_request():
     issue = next((i for i in json.loads((ROOT/'data/issues.json').read_text()) if i['date'] == date), None)
     require(issue and issue.get('strikingText'), 'Current canonical striking observation missing')
     text = issue['strikingText'].strip()
-    require(0 < len(text) <= 25000, 'X striking text exceeds the maximum provider-supported length')
+    require(0 < len(text) <= 280, f'Authored strikingText length {len(text)} exceeds Buffer X maximum of 280 characters')
     return r, issue, text, due
 
 
