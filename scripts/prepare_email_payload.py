@@ -12,7 +12,7 @@ from bs4 import BeautifulSoup, NavigableString
 
 ROOT = Path(__file__).resolve().parents[1]
 SITE = 'https://woodsrun.forestenterprise.org'
-from book_rotation import featured_item
+from book_rotation import featured_item, resource_heading
 UNSUB = '{{{RESEND_UNSUBSCRIBE_URL}}}'
 BODY_STYLE='font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:25px;color:#333333;'
 LINK_STYLE='font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:25px;color:#1f5b3a;'
@@ -82,8 +82,11 @@ def compile_payload(page: str, issue: dict) -> dict:
     item=featured_item(issue['date']);title,link=item['title'],item['url']
     if link not in urls:
         label=('Open '+html.escape(title)) if item.get('kind')=='app' else ('Explore '+html.escape(title))
-        body.append(f'<h2 style="font-family:Georgia,Times New Roman,serif;font-size:22px;line-height:28px;color:#1f3b2b;">Books &amp; Apps: {html.escape(title)}</h2><p style="{BODY_STYLE}">{html.escape(item["description"])}</p><p style="{BODY_STYLE}"><a href="{link}" style="{LINK_STYLE}">{label}</a></p>')
-        plain.extend(['BOOKS & APPS: '+title,item['description'],link]);urls.add(link)
+        heading = resource_heading(issue['date'])
+        title_html = (f'Books &amp; Apps: {html.escape(title)}</h2>' if heading == 'BOOKS & APPS'
+                      else f'{html.escape(heading)}</h2><h3>{html.escape(title)}</h3>')
+        body.append(f'<h2 style="font-family:Georgia,Times New Roman,serif;font-size:22px;line-height:28px;color:#1f3b2b;">{title_html}<p style="{BODY_STYLE}">{html.escape(item["description"])}</p><p style="{BODY_STYLE}"><a href="{link}" style="{LINK_STYLE}">{label}</a></p>')
+        plain.extend((['BOOKS & APPS: '+title] if heading == 'BOOKS & APPS' else [heading,title])+[item['description'],link]);urls.add(link)
     page_url=SITE+issue['url'];subscribe=SITE+'/subscribe/'
     body.append(f'<p style="{BODY_STYLE}"><a href="{page_url}" style="{LINK_STYLE}">Read today’s web edition</a> · <a href="{subscribe}" style="{LINK_STYLE}">Subscribe</a></p>')
     plain.extend(['Read today’s web edition: '+page_url,'Subscribe: '+subscribe]);urls.update([page_url,subscribe])
@@ -113,3 +116,4 @@ def main():
     print(json.dumps({'email_payload_ready':str(output.relative_to(ROOT)),'date':today,'links_preserved':True,'source_paragraph_count':payload['source_paragraph_count'],'featured_item':payload['featured_item'],'featured_book':payload['featured_book'],'email_sent':False}))
 
 if __name__=='__main__':main()
+

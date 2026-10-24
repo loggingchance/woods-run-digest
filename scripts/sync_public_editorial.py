@@ -8,6 +8,7 @@ from urllib.request import Request, urlopen
 from zoneinfo import ZoneInfo
 
 from bs4 import BeautifulSoup
+from book_rotation import resource_heading
 
 ROOT = Path(__file__).resolve().parents[1]
 SITE = 'https://woodsrun.forestenterprise.org'
@@ -39,15 +40,16 @@ def validate(page, issue):
         if section.lower() not in text.lower():
             raise ValueError('Canonical edition missing ' + section)
     if day >= datetime(2026, 10, 15).date():
-        if 'books & apps' not in text.lower():
-            raise ValueError('Canonical edition missing Books & Apps rotation')
+        heading = resource_heading(day)
+        if heading.lower() not in text.lower():
+            raise ValueError('Canonical edition missing ' + heading + ' rotation')
         promo_sections = []
         for section in article.find_all('section'):
             kicker = section.select_one('.section-kicker')
-            if kicker and 'books & apps' in kicker.get_text(' ', strip=True).lower():
+            if kicker and heading.lower() == kicker.get_text(' ', strip=True).lower():
                 promo_sections.append(section)
         if len(promo_sections) != 1:
-            raise ValueError('Canonical edition must contain exactly one Books & Apps feature')
+            raise ValueError('Canonical edition must contain exactly one ' + heading + ' feature')
         numbers_section = None
         for section in article.find_all('section'):
             heading = section.find('h2')
@@ -100,3 +102,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+

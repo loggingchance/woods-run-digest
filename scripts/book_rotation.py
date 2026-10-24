@@ -49,6 +49,13 @@ LEGACY_THREE = ITEMS[:3]
 LEGACY_FOUR = ITEMS[:4]
 FOUR_BOOK_EXPANSION_DATE = datetime.date(2026, 10, 13)
 BOOKS_AND_APPS_START = datetime.date(2026, 10, 14)
+FEATURED_RESOURCES_START = datetime.date(2026, 10, 25)
+
+
+def resource_heading(day):
+    if isinstance(day, str):
+        day = datetime.date.fromisoformat(day)
+    return "Today's Featured Resources" if day >= FEATURED_RESOURCES_START else 'BOOKS & APPS'
 
 # Backward-compatible name for callers that still import BOOKS.
 BOOKS = LEGACY_FOUR
@@ -62,7 +69,17 @@ def featured_item(day):
     if day < BOOKS_AND_APPS_START:
         # October 13, 2026 remains Continuous Improvement in Logging.
         return dict(LEGACY_FOUR[((day - FOUR_BOOK_EXPANSION_DATE).days + 3) % len(LEGACY_FOUR)])
-    return dict(ITEMS[(day - BOOKS_AND_APPS_START).days % len(ITEMS)])
+    item = dict(ITEMS[(day - BOOKS_AND_APPS_START).days % len(ITEMS)])
+    if day >= FEATURED_RESOURCES_START:
+        # Keep the established, source-grounded value description and identify format.
+        item['description'] = {
+            'Wet Woods': item['description'].replace('Wet Woods follows', 'Wet Woods is a book following'),
+            'Timber Tempo': item['description'].replace('Timber Tempo applies', 'Timber Tempo is a book applying'),
+            'After Wood': item['description'].replace('retirement-planning guide', 'retirement-planning book'),
+            'Continuous Improvement in Logging': 'In this book, ' + item['description'],
+            'Woods-Ready Safety Plan': item['description'].replace('The free Woods-Ready Safety Plan helps', 'The free Woods-Ready Safety Plan browser app helps'),
+        }[item['title']]
+    return item
 
 
 # Backward-compatible function name used by existing downstream code.
@@ -74,7 +91,7 @@ def item_html(day):
     item = featured_item(day)
     verb = 'Open' if item['kind'] == 'app' else 'Explore'
     return (
-        '<section class="wet-woods-box"><p class="section-kicker">BOOKS &amp; APPS</p>'
+        '<section class="wet-woods-box"><p class="section-kicker">' + html.escape(resource_heading(day)) + '</p>'
         '<h2>' + html.escape(item['title']) + '</h2><p>' + html.escape(item['description']) +
         '</p><p><a class="book-button" href="' + html.escape(item['url'], quote=True) + '">' +
         verb + ' ' + html.escape(item['title']) + ' →</a></p></section>'
@@ -90,3 +107,4 @@ if __name__ == '__main__':
     day = sys.argv[1]
     print(json.dumps(featured_item(day), ensure_ascii=False))
     print(item_html(day))
+
