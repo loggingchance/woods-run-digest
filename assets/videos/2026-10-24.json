@@ -1,0 +1,53 @@
+{
+  "date": "2026-10-24",
+  "format": "approved-v4",
+  "dimensions": [
+    1080,
+    1920
+  ],
+  "fps": 30,
+  "frames": 1245,
+  "duration_seconds": 41.5,
+  "segment_frames": [
+    75,
+    210,
+    210,
+    210,
+    210,
+    210,
+    120
+  ],
+  "stories": [
+    {
+      "headline": "ORNL opens a new route from mill problems to pilot testing",
+      "body": "Oak Ridge National Laboratory has launched CRAFT, a national center connecting pulp, paper and packaging manufacturers with research facilities and technical expertise. Announced October 22, it is led by ORNL with the Department of Energy\u2019s\u2026",
+      "region": "SOUTH / NATIONAL \u2014 OCTOBER 22 ANNOUNCEMENT",
+      "image": null
+    },
+    {
+      "headline": "Harvard projects little growth in home renovation spending",
+      "body": "Annual U.S. homeowner improvement and repair spending is expected to remain near US$525 billion through the third quarter of 2027, according to Harvard\u2019s Joint Center for Housing Studies. Its October 22 Leading Indicator of Remodeling\u2026",
+      "region": "NORTHEAST / U.S. END MARKETS \u2014 OCTOBER 22 FORECAST",
+      "image": null
+    },
+    {
+      "headline": "C$60 million challenge includes forestry field demonstrations",
+      "body": "Emissions Reduction Alberta announced a C$60 million Agriculture, Water, and Land Challenge on October 23. Forestry, land-restoration and waste-to-value projects are among the eligible fields. Funding supports field pilots, demonstrations\u2026",
+      "region": "CANADA \u2014 ALBERTA / EXPRESSIONS OF INTEREST DUE DECEMBER 16",
+      "image": null
+    },
+    {
+      "headline": "South Highlands mastication bid requires an October 28 field tour",
+      "body": "The National Forest Foundation seeks a contractor for 126 acres of mastication and thinning on private land near the San Isabel National Forest in Chaffee County. Contractors must RSVP by October 26 to ssmith@nationalforests.org for the\u2026",
+      "region": "WEST \u2014 COLORADO / TOUR RSVP DUE OCTOBER 26",
+      "image": null
+    },
+    {
+      "headline": "Tigercat puts searchable troubleshooting inside the D7 display",
+      "body": "Tigercat\u2019s October 16 announcement introduces an onboard Help Centre for its TCi D7 harvesting-head control system. Accessed through the operator-station touchscreen, it combines the operator\u2019s manual with searchable troubleshooting,\u2026",
+      "region": "UNDER THE RADAR \u2014 EQUIPMENT SUPPORT / OCTOBER 16 RELEASE",
+      "image": null
+    }
+  ],
+  "publication_attempted": false
+}
