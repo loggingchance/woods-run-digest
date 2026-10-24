@@ -13,6 +13,7 @@ from bs4 import BeautifulSoup, NavigableString
 ROOT = Path(__file__).resolve().parents[1]
 SITE = 'https://woodsrun.forestenterprise.org'
 from book_rotation import featured_item, resource_heading
+from daily_resources import START as RESOURCE_START, validate_feature
 UNSUB = '{{{RESEND_UNSUBSCRIBE_URL}}}'
 BODY_STYLE='font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:25px;color:#333333;'
 LINK_STYLE='font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:25px;color:#1f5b3a;'
@@ -79,8 +80,10 @@ def compile_payload(page: str, issue: dict) -> dict:
     if len(source_paragraphs)<5:raise ValueError('Edition content is too short')
     expected={normalize_url(a['href']) for a in article.find_all('a',href=True)}
     if expected-urls:raise ValueError('Source link lost while compiling email')
-    item=featured_item(issue['date']);title,link=item['title'],item['url']
-    if link not in urls:
+    item = (validate_feature(article, issue) if issue['date'] >= RESOURCE_START
+            else featured_item(issue['date']))
+    title, link = (item['title'], item['url']) if item else (None, None)
+    if issue['date'] < RESOURCE_START and link not in urls:
         label=('Open '+html.escape(title)) if item.get('kind')=='app' else ('Explore '+html.escape(title))
         heading = resource_heading(issue['date'])
         title_html = (f'Books &amp; Apps: {html.escape(title)}</h2>' if heading == 'BOOKS & APPS'
@@ -101,7 +104,7 @@ def compile_payload(page: str, issue: dict) -> dict:
             'text':text+'\n\nUnsubscribe: '+UNSUB,
             'owner_test_html':wrapper+full+footer,'owner_test_text':text,
             'source_urls':sorted(expected),'all_urls':sorted(urls),'source_paragraph_count':len(source_paragraphs),
-            'featured_item':{'kind':item.get('kind'),'title':title,'url':link,'description':item['description']},'featured_book':{'title':title,'url':link},'links_preserved':True}
+            'featured_item':dict(item) if item else None, 'featured_book':{'title':title,'url':link} if item else None,'links_preserved':True}
 
 
 def main():
@@ -116,4 +119,5 @@ def main():
     print(json.dumps({'email_payload_ready':str(output.relative_to(ROOT)),'date':today,'links_preserved':True,'source_paragraph_count':payload['source_paragraph_count'],'featured_item':payload['featured_item'],'featured_book':payload['featured_book'],'email_sent':False}))
 
 if __name__=='__main__':main()
+
 

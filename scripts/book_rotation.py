@@ -64,6 +64,8 @@ BOOKS = LEGACY_FOUR
 def featured_item(day):
     if isinstance(day, str):
         day = datetime.date.fromisoformat(day)
+    if day >= FEATURED_RESOURCES_START:
+        raise ValueError('Use the canonical issue featuredResource; future resources are selected from the daily Sheet')
     if day < FOUR_BOOK_EXPANSION_DATE:
         return dict(LEGACY_THREE[(day - datetime.date(2026, 10, 3)).days % 3])
     if day < BOOKS_AND_APPS_START:
@@ -107,4 +109,5 @@ if __name__ == '__main__':
     day = sys.argv[1]
     print(json.dumps(featured_item(day), ensure_ascii=False))
     print(item_html(day))
+
 

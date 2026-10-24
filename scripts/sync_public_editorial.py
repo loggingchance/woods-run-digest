@@ -9,6 +9,7 @@ from zoneinfo import ZoneInfo
 
 from bs4 import BeautifulSoup
 from book_rotation import resource_heading
+from daily_resources import START as RESOURCE_START, validate_feature
 
 ROOT = Path(__file__).resolve().parents[1]
 SITE = 'https://woodsrun.forestenterprise.org'
@@ -61,6 +62,8 @@ def validate(page, issue):
             story_urls = {a.get('href') for story in article.select('article.story') for a in story.find_all('a', href=True)}
             if number_urls & story_urls:
                 raise ValueError('By the Numbers duplicates source material developed again in stories')
+    if issue['date'] >= RESOURCE_START:
+        validate_feature(article, issue)
     if len(article.find_all('p')) < 10 or len(article.select('article.story')) < 3:
         raise ValueError('Canonical edition is incomplete')
     return article
@@ -102,4 +105,5 @@ def main():
 
 if __name__ == '__main__':
     main()
+
 
