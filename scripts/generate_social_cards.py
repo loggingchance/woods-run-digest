@@ -82,12 +82,15 @@ def fit_wrapped_text(
     max_lines: int,
     start_size: int,
     min_size: int,
+    allow_truncation: bool = True,
 ) -> tuple[ImageFont.FreeTypeFont, list[str]]:
     for size in range(start_size, min_size - 1, -1):
         fnt = font(font_path, size)
         lines = wrap_text(draw, text, fnt, max_width)
-        if len(lines) <= max_lines:
+        if len(lines) <= max_lines and (allow_truncation or all(text_width(draw, line, fnt) <= max_width for line in lines)):
             return fnt, lines
+    if not allow_truncation:
+        raise ValueError("Card text does not fit in full; edit cardTeaser/cardSubhead while preserving names and factual qualifications")
     fnt = font(font_path, min_size)
     lines = wrap_text(draw, text, fnt, max_width)
     if len(lines) > max_lines:
@@ -127,8 +130,10 @@ def render_teaser_card(base: Image.Image, issue: dict, edition_date: date, weekd
     teaser = str(issue.get("cardTeaser", "")).strip()
     subhead = str(issue.get("cardSubhead", "")).strip()
 
+    # Future editions must fit intact; historical generation retains its old behavior.
+    allow_truncation = edition_date < date(2026, 10, 25)
     teaser_font, teaser_lines = fit_wrapped_text(
-        draw, teaser, FONT_SERIF_BOLD, 1010, 3, 52, 39
+        draw, teaser, FONT_SERIF_BOLD, 1010, 3, 52, 39, allow_truncation=allow_truncation
     )
     y = 178
     line_gap = 10
@@ -140,7 +145,7 @@ def render_teaser_card(base: Image.Image, issue: dict, edition_date: date, weekd
     if subhead:
         y += 10
         sub_font, sub_lines = fit_wrapped_text(
-            draw, subhead, FONT_SANS, 1010, 2, 27, 22
+            draw, subhead, FONT_SANS, 1010, 2, 27, 22, allow_truncation=allow_truncation
         )
         for line in sub_lines:
             draw.text((72, y), line, font=sub_font, fill=MUTED)
