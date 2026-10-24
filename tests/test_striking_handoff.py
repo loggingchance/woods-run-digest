@@ -78,6 +78,17 @@ class HandoffTests(unittest.TestCase):
                 handoff.prepare(root, datetime.fromisoformat('2026-10-20T15:40:00+00:00'))
             self.assertFalse((root / 'data/striking-trigger.json').exists())
 
+    def test_authored_striking_above_buffer_limit_fails_before_trigger(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            issue, _ = self.fixture(root, '2026-10-24')
+            issue['strikingText'] = 'Original authored observation ' * 12
+            (root / 'data/issues.json').write_text(json.dumps([issue]))
+            self.assertGreater(len(issue['strikingText']), 280)
+            with self.assertRaisesRegex(ValueError, '280'):
+                handoff.prepare(root, datetime.fromisoformat('2026-10-24T15:45:00+00:00'))
+            self.assertFalse((root / 'data/striking-trigger.json').exists())
+
     def test_stale_issue_rejected(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
