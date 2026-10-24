@@ -1,0 +1,30 @@
+name: One-time approved October 24 Alberta recovery
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/striking-recovery-20261024.yml']
+permissions:
+  contents: write
+concurrency:
+  group: woods-run-striking-20261024
+  cancel-in-progress: false
+jobs:
+  recovery:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    env:
+      BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Check complete live history and persist one-attempt guard
+        run: python scripts/recover_striking_20261024.py prepare
+      - name: Send only the approved shortened Alberta story once
+        run: python scripts/recover_striking_20261024.py send
+      - name: Verify sent status and public permalink without resubmission
+        run: python scripts/recover_striking_20261024.py verify
