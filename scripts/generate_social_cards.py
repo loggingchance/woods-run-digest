@@ -102,6 +102,24 @@ def fit_wrapped_text(
     return fnt, lines
 
 
+def check_card_text_fit(issue: dict) -> None:
+    """Explicit non-mutating editorial preflight; routine generation never calls it."""
+    if date.fromisoformat(issue["date"]) < date(2026, 10, 25):
+        return
+    draw = ImageDraw.Draw(Image.new("RGB", (WIDTH, HEIGHT)))
+    for field, path, max_lines, start_size, min_size in (
+        ("cardTeaser", FONT_SERIF_BOLD, 3, 52, 39),
+        ("cardSubhead", FONT_SANS, 2, 27, 22),
+    ):
+        text = str(issue.get(field, "")).strip()
+        if text:
+            try:
+                fit_wrapped_text(draw, text, path, 1010, max_lines, start_size, min_size,
+                                 allow_truncation=False)
+            except ValueError as error:
+                raise ValueError(f"{field}: {error}") from error
+
+
 def add_artwork(base: Image.Image, weekday: str) -> None:
     if not ART_FILE.is_file():
         raise FileNotFoundError(f'Official Woods Run artwork is required: {ART_FILE}')
@@ -130,10 +148,8 @@ def render_teaser_card(base: Image.Image, issue: dict, edition_date: date, weekd
     teaser = str(issue.get("cardTeaser", "")).strip()
     subhead = str(issue.get("cardSubhead", "")).strip()
 
-    # Future editions must fit intact; historical generation retains its old behavior.
-    allow_truncation = edition_date < date(2026, 10, 25)
     teaser_font, teaser_lines = fit_wrapped_text(
-        draw, teaser, FONT_SERIF_BOLD, 1010, 3, 52, 39, allow_truncation=allow_truncation
+        draw, teaser, FONT_SERIF_BOLD, 1010, 3, 52, 39
     )
     y = 178
     line_gap = 10
@@ -145,7 +161,7 @@ def render_teaser_card(base: Image.Image, issue: dict, edition_date: date, weekd
     if subhead:
         y += 10
         sub_font, sub_lines = fit_wrapped_text(
-            draw, subhead, FONT_SANS, 1010, 2, 27, 22, allow_truncation=allow_truncation
+            draw, subhead, FONT_SANS, 1010, 2, 27, 22
         )
         for line in sub_lines:
             draw.text((72, y), line, font=sub_font, fill=MUTED)

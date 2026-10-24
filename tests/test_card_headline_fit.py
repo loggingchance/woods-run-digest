@@ -37,15 +37,25 @@ class CardHeadlineFitTests(unittest.TestCase):
         self.assertEqual(len(rows), 3)
         self.assertTrue(rows[-1].endswith('…'))
 
-    def test_cutover_applies_to_teaser_and_subhead(self):
-        # Test routing independently of artwork, drawing and typography.
-        for day, expected in ((24, True), (25, False)):
-            with patch.object(cards, 'font'), patch.object(cards.ImageDraw, 'Draw'), \
-                 patch.object(cards, 'fit_wrapped_text', return_value=(None, [])) as fit:
-                cards.render_teaser_card(None, {'cardTeaser': 'Headline', 'cardSubhead': 'Context'},
-                                         date(2026, 10, day), 'Sunday')
-                self.assertEqual(len(fit.call_args_list), 2)
-                self.assertTrue(all(call.kwargs['allow_truncation'] == expected for call in fit.call_args_list))
+    def test_explicit_preflight_checks_both_fields_and_preserves_history(self):
+        issue = {'date': '2026-10-25', 'cardTeaser': 'Headline', 'cardSubhead': 'Context'}
+        with patch.object(cards, 'fit_wrapped_text', return_value=(None, [])) as fit:
+            cards.check_card_text_fit(issue)
+            self.assertEqual(len(fit.call_args_list), 2)
+            self.assertTrue(all(call.kwargs['allow_truncation'] is False for call in fit.call_args_list))
+            fit.reset_mock()
+            cards.check_card_text_fit(dict(issue, date='2026-10-24'))
+            fit.assert_not_called()
+
+    def test_generation_does_not_invoke_strict_preflight(self):
+        with patch.object(cards, 'font'), patch.object(cards.ImageDraw, 'Draw'), \
+             patch.object(cards, 'check_card_text_fit') as check, \
+             patch.object(cards, 'fit_wrapped_text', return_value=(None, [])) as fit:
+            cards.render_teaser_card(None, {'cardTeaser': 'Headline', 'cardSubhead': 'Context'},
+                                     date(2026, 10, 25), 'Sunday')
+            check.assert_not_called()
+            self.assertEqual(len(fit.call_args_list), 2)
+            self.assertTrue(all('allow_truncation' not in call.kwargs for call in fit.call_args_list))
 
 
 if __name__ == '__main__':
