@@ -16,7 +16,7 @@ def prepare(root, now):
     date = local.date().isoformat()
     issues = json.loads((root / 'data/issues.json').read_text())
     issue = next((i for i in issues if i.get('date') == date), None)
-    if not issue or not 0 < len(issue.get('strikingText', '').strip()) <= 280:
+    if not issue or not issue.get('strikingText', '').strip():
         raise ValueError('Current-day striking observation missing or invalid')
     if issue.get('url') != '/' + date.replace('-', '/') + '/':
         raise ValueError('Canonical dated issue URL mismatch')
