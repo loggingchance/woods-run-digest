@@ -15,7 +15,15 @@ During the existing daily canonical run:
    the authoritative dated public page and `data/issues.json`. If they match the
    saved prepared selection, validate the resource box and call
    `confirm_publication(date, public_issue, state)`. Otherwise do not mark used;
-   retry the same saved date or explicitly abandon a proven unpublished draft.
+   retry the same saved date. `prepare` blocks every new date while another date
+   is unresolved, even with an empty/exhausted pool. A temporary public read
+   failure or a missing confirmation is never proof that publication failed.
+   To release a proven-unpublished draft, call `abandon_unpublished(day, state,
+   proof=...)` and atomically persist its returned state. Proof requires `date`,
+   `outcome: "proven_unpublished"`, `checked_at`, and an `evidence` reference or
+   explanation from an independently checked canonical deployment audit. A
+   failed/404 public fetch alone is insufficient. Abandonment retains the saved
+   choice and audit evidence, consumes no URL, and prohibits reviving that date.
    Never reset history to resolve an ambiguous outcome.
 2. Read `daily!A1:B1000` (expand the range if the list grows) through the existing
    authorized Google connection. Pass rows to `refresh`; persist the returned

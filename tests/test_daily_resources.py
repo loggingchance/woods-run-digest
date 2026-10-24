@@ -137,8 +137,35 @@ class ResourceTests(unittest.TestCase):
             self.assertEqual(historical.read_text(), 'Original historical page')
             self.assertEqual((root/'2026/10/25/index.html').read_text(), page)
 
-    def test_failed_draft_can_be_skipped_without_consumption(self):
+    def test_unknown_publication_blocks_new_dates_even_with_empty_or_exhausted_pool(self):
         draft, state = r.prepare('2026-10-25', self.snapshot(), self.catalog, {})
+        before = copy.deepcopy(state)
+        for snapshot in (self.snapshot(), self.snapshot([]), self.snapshot([draft['item']['url']])):
+            with self.assertRaisesRegex(ValueError, 'Reconcile unresolved'):
+                r.prepare('2026-10-26', snapshot, self.catalog, state)
+        self.assertEqual(state, before)
+        issue = dict(date='2026-10-25', featuredResource=r.public_selection(draft))
+        state = r.confirm_publication('2026-10-25', issue, state)
+        later, _ = r.prepare('2026-10-26', self.snapshot(), self.catalog, state)
+        self.assertNotEqual(draft['item']['url'], later['item']['url'])
+
+    def test_proven_unpublished_draft_can_be_abandoned_without_consumption(self):
+        draft, state = r.prepare('2026-10-25', self.snapshot(), self.catalog, {})
+        for proof in ({}, {'date': '2026-10-25', 'outcome': 'fetch_failed'},
+                      {'date': '2026-10-25', 'outcome': 'proven_unpublished', 'checked_at': 'now'}):
+            with self.assertRaises(ValueError): r.abandon_unpublished('2026-10-25', state, proof=proof)
+        proof = dict(date='2026-10-25', outcome='proven_unpublished',
+                     checked_at='2026-10-26T08:00:00Z',
+                     evidence='Verified canonical deployment audit: draft failed before any deployment attempt')
+        released = r.abandon_unpublished('2026-10-25', state, proof=proof)
+        self.assertEqual(state['selections']['2026-10-25']['status'], 'prepared')
+        self.assertEqual(released['selections']['2026-10-25']['abandonment'], proof)
+        self.assertNotIn('used', released)
+        with self.assertRaises(ValueError): r.prepare('2026-10-25', self.snapshot(), self.catalog, released)
+        with self.assertRaises(ValueError):
+            r.confirm_publication('2026-10-25', dict(date='2026-10-25',
+                featuredResource=r.public_selection(draft)), released)
+        state = released
         later, state = self.publish('2026-10-26', self.snapshot(), state)
         self.assertEqual(draft['item'], later['item'])
         self.assertEqual(len(state['used']), 1)

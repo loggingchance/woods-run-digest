@@ -106,7 +106,13 @@ def prepare(day, snapshot, catalog, state):
     result = copy.deepcopy(state)
     selections = result.setdefault('selections', {})
     if day in selections:
+        if selections[day].get('status') == 'abandoned':
+            raise ValueError('This date was explicitly abandoned; do not revive it')
         return copy.deepcopy(selections[day]), result
+    unresolved = sorted(d for d, s in selections.items()
+                        if s.get('status') not in ('published', 'abandoned'))
+    if unresolved:
+        raise ValueError('Reconcile unresolved resource selections before a new date: ' + ', '.join(unresolved))
     if any(d > day and s.get('status') == 'published' for d, s in selections.items()):
         raise ValueError('Cannot backfill resource history')
     candidates = eligible(snapshot, catalog)
@@ -126,6 +132,26 @@ def prepare(day, snapshot, catalog, state):
     return copy.deepcopy(selection), result
 
 
+def abandon_unpublished(day, state, *, proof):
+    """Release a proven-unpublished draft without consuming its resource.
+
+    The canonical caller must establish nonpublication independently and provide
+    an auditable record. A failed/404 public fetch, missing confirmation or an
+    attempted deployment with uncertain outcome is NOT proof of nonpublication.
+    This operation never infers proof from a draft's local status or its age.
+    """
+    if (not isinstance(proof, dict) or proof.get('date') != day or
+            proof.get('outcome') != 'proven_unpublished' or
+            not proof.get('checked_at') or not proof.get('evidence')):
+        raise ValueError('Explicit dated evidence of nonpublication is required')
+    result = copy.deepcopy(state)
+    selection = result['selections'][day]
+    if selection.get('status') != 'prepared':
+        raise ValueError('Only an unresolved prepared draft can be abandoned')
+    selection.update(status='abandoned', abandonment=copy.deepcopy(proof))
+    return result
+
+
 def confirm_publication(day, published_issue, state):
     """Invoke ONLY after canonical public readback, also to reconcile uncertainty.
 
@@ -134,6 +160,8 @@ def confirm_publication(day, published_issue, state):
     """
     result = copy.deepcopy(state)
     selection = result['selections'][day]
+    if selection.get('status') not in ('prepared', 'published'):
+        raise ValueError('Cannot confirm an abandoned or invalid selection')
     if published_issue.get('date') != day or published_issue.get('featuredResource') != public_selection(selection):
         raise ValueError('Published resource does not match prepared selection')
     if selection['status'] == 'published':
