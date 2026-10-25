@@ -1,0 +1,221 @@
+{
+  "run_id": "daily-2026-10-25",
+  "date": "2026-10-25",
+  "channels": {
+    "x": {
+      "duplicate_search": {
+        "complete": true,
+        "posts_checked": 348
+      },
+      "attempt_started_at": "2026-10-25T08:55:12.963866Z",
+      "newly_created": true,
+      "post_id": "6addc3f13d5b27036bc3acc6",
+      "status": "scheduled",
+      "due_at": "2026-10-25T10:00:00.000Z",
+      "created_at": "2026-10-25T08:55:13.098Z",
+      "external_url": null,
+      "assets": [],
+      "provider_text": "Chapleau’s new heat venture plans an institutional heating market for sawmill residues. Today’s Woods Run Digest also covers Canadian tariff changes, restoration bids and timber opportunities.\n\nhttps://woodsrun.forestenterprise.org/2026/10/25/",
+      "error": null,
+      "schedule_verified": true,
+      "provider_sent": false,
+      "delivery_state": "scheduled",
+      "existing_delivery": true,
+      "public_visibility": "not_independently_verified"
+    },
+    "instagram": {
+      "duplicate_search": {
+        "complete": true,
+        "posts_checked": 289
+      },
+      "attempt_started_at": "2026-10-25T08:55:14.864120Z",
+      "newly_created": true,
+      "post_id": "6addc3f38b3d437ddcfb98a3",
+      "status": "scheduled",
+      "due_at": "2026-10-25T10:00:00.000Z",
+      "created_at": "2026-10-25T08:55:15.275Z",
+      "external_url": null,
+      "assets": [
+        {
+          "source": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/videos/2026-10-25.mp4",
+          "mimeType": "video/mp4"
+        }
+      ],
+      "provider_text": "Woods Run Digest — October 25, 2026\n\nDaily North American forestry & forest-products intelligence from The Forest Business School.\n\nRead today’s edition: https://woodsrun.forestenterprise.org/2026/10/25/",
+      "error": null,
+      "schedule_verified": true,
+      "provider_sent": false,
+      "delivery_state": "scheduled",
+      "existing_delivery": true,
+      "public_visibility": "not_independently_verified"
+    },
+    "youtube": {
+      "duplicate_search": {
+        "complete": true,
+        "posts_checked": 88
+      },
+      "attempt_started_at": "2026-10-25T08:55:16.201576Z",
+      "newly_created": true,
+      "post_id": "6addc3f46887a2efc1f7327d",
+      "status": "scheduled",
+      "due_at": "2026-10-25T10:00:00.000Z",
+      "created_at": "2026-10-25T08:55:16.548Z",
+      "external_url": null,
+      "assets": [
+        {
+          "source": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/videos/2026-10-25.mp4",
+          "mimeType": "video/mp4"
+        }
+      ],
+      "provider_text": "Woods Run Digest — October 25, 2026\n\nChapleau’s new heat venture plans to turn sawmill residues into an institutional heating business. Also: selected Canadian tariff removals, Minnesota restoration bids, Tennessee timber and Forisk’s housing outlook, with the dated price tracker and today’s Sheet-selected resource.\n\nRead the full edition: https://woodsrun.forestenterprise.org/2026/10/25/\n\nDaily forestry & forest-products intelligence from The Forest Business School.",
+      "error": null,
+      "schedule_verified": true,
+      "provider_sent": false,
+      "delivery_state": "scheduled",
+      "existing_delivery": true,
+      "public_visibility": "not_independently_verified"
+    }
+  },
+  "checked_at": "2026-10-25T08:55:08.981661Z",
+  "requested_action": "schedule_daily",
+  "requested_channels": [
+    "x",
+    "instagram",
+    "youtube"
+  ],
+  "required_daily_channels": [
+    "x",
+    "instagram",
+    "youtube"
+  ],
+  "daily_target_due_at": "2026-10-25T10:00:00Z",
+  "channel_identity": [
+    {
+      "id": "6ab14319ea19ca0bdea627e2",
+      "name": "Logging Chance",
+      "service": "youtube",
+      "serviceId": "UCq-PscVBAKjmVE39qb2NyCg",
+      "externalLink": "https://www.youtube.com/channel/UCq-PscVBAKjmVE39qb2NyCg",
+      "isDisconnected": false,
+      "isLocked": false,
+      "isQueuePaused": false,
+      "timezone": "America/Denver"
+    },
+    {
+      "id": "6844cc71d6d25b49a1de682e",
+      "name": "northeastforests",
+      "service": "instagram",
+      "serviceId": "17841412643805979",
+      "externalLink": "https://instagram.com/northeastforests",
+      "isDisconnected": false,
+      "isLocked": false,
+      "isQueuePaused": false,
+      "timezone": "America/Denver"
+    },
+    {
+      "id": "6843193ed6d25b49a145ff6e",
+      "name": "ForestBizSchool",
+      "service": "twitter",
+      "serviceId": "1487833905197637637",
+      "externalLink": "https://twitter.com/ForestBizSchool",
+      "isDisconnected": false,
+      "isLocked": false,
+      "isQueuePaused": false,
+      "timezone": "America/Denver"
+    }
+  ],
+  "due_at": "2026-10-25T10:00:00Z",
+  "preflight_by_channel": {
+    "x": {
+      "page": {
+        "url": "https://woodsrun.forestenterprise.org/2026/10/25/",
+        "final_url": "https://woodsrun.forestenterprise.org/2026/10/25/",
+        "http_status": 200,
+        "content_type": "text/html",
+        "content_verified": true
+      },
+      "link_card": {
+        "page_url": "https://woodsrun.forestenterprise.org/2026/10/25/",
+        "image_url": "https://woodsrun.forestenterprise.org/assets/cards/2026-10-25.png",
+        "card": "summary_large_image",
+        "image_bytes": 200664,
+        "metadata_verified": true
+      },
+      "card": {
+        "url": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/cards/2026-10-25.png",
+        "dimensions": [
+          1200,
+          630
+        ],
+        "bytes": 200664,
+        "public": {
+          "url": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/cards/2026-10-25.png",
+          "final_url": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/cards/2026-10-25.png",
+          "http_status": 200,
+          "content_type": "image/png",
+          "content_verified": true
+        }
+      }
+    },
+    "instagram": {
+      "page": {
+        "url": "https://woodsrun.forestenterprise.org/2026/10/25/",
+        "final_url": "https://woodsrun.forestenterprise.org/2026/10/25/",
+        "http_status": 200,
+        "content_type": "text/html",
+        "content_verified": true
+      },
+      "video": {
+        "url": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/videos/2026-10-25.mp4",
+        "dimensions": [
+          [
+            1080,
+            1920
+          ]
+        ],
+        "bytes": 2015158,
+        "public": {
+          "url": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/videos/2026-10-25.mp4",
+          "final_url": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/videos/2026-10-25.mp4",
+          "http_status": 200,
+          "content_type": "application/octet-stream",
+          "content_verified": true
+        }
+      }
+    },
+    "youtube": {
+      "page": {
+        "url": "https://woodsrun.forestenterprise.org/2026/10/25/",
+        "final_url": "https://woodsrun.forestenterprise.org/2026/10/25/",
+        "http_status": 200,
+        "content_type": "text/html",
+        "content_verified": true
+      },
+      "video": {
+        "url": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/videos/2026-10-25.mp4",
+        "dimensions": [
+          [
+            1080,
+            1920
+          ]
+        ],
+        "bytes": 2015158,
+        "public": {
+          "url": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/videos/2026-10-25.mp4",
+          "final_url": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/videos/2026-10-25.mp4",
+          "http_status": 200,
+          "content_type": "application/octet-stream",
+          "content_verified": true
+        }
+      }
+    }
+  },
+  "all_scheduled": true,
+  "daily_idempotent": true,
+  "all_provider_sent": false,
+  "all_public_verified": false,
+  "all_daily_channels_provider_sent": false,
+  "all_daily_channels_scheduled": true,
+  "email_verified": false,
+  "complete": false
+}
