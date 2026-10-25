@@ -3,15 +3,16 @@
   "text": "A Minnesota forest-restoration contract requires stoppage and remobilization costs in the bid, while payment follows inspection and acceptance. The 44.8-acre Minnetrista job closes November 2.",
   "due_at": "2026-10-25T16:00:00Z",
   "channel_id": "6843193ed6d25b49a145ff6e",
-  "state": "accepted",
+  "state": "sent",
   "attempt_started_at": "2026-10-25T15:48:45.740032Z",
   "post_id": "6ade24dfe4be8a4d86b48b5b",
   "history_checked": 349,
   "source": "native-daily-striking",
   "email_attempted": false,
-  "provider_status": "scheduled",
+  "provider_status": "sent",
   "provider_due_at": "2026-10-25T16:00:00.000Z",
-  "external_url": null,
+  "external_url": "https://x.com/1487833905197637637/status/2114386579728842965",
   "accepted_at": "2026-10-25T15:48:47.414378Z",
-  "schedule_verified": true
+  "schedule_verified": true,
+  "verified_at": "2026-10-25T16:01:36.696564Z"
 }
