@@ -1,0 +1,53 @@
+{
+  "date": "2026-10-26",
+  "format": "approved-v4",
+  "dimensions": [
+    1080,
+    1920
+  ],
+  "fps": 30,
+  "frames": 1245,
+  "duration_seconds": 41.5,
+  "segment_frames": [
+    75,
+    210,
+    210,
+    210,
+    210,
+    210,
+    120
+  ],
+  "stories": [
+    {
+      "headline": "A faster wildfire model gives planners more room to test scenarios",
+      "body": "Mila and Natural Resources Canada have developed an artificial-intelligence emulator of the BurnP3+ wildfire simulator. Mila\u2019s October 22 report says it ran 806\u20133,400 times faster, depending on hardware, using simulation maps from Canada\u2019s\u2026",
+      "region": "CANADA \u2014 FOREST RESEARCH / OCTOBER 22 REPORT",
+      "image": null
+    },
+    {
+      "headline": "Oakcrest acquisition brings two hardwood operations under new ownership",
+      "body": "Oakcrest Lumber & Flooring has acquired Oakcrest\u2019s flooring facilities and related lumber operations in Buena Vista, Georgia, and Newport, Tennessee, Woodworking Network reported October 22. The newly formed buyer shares common ownership\u2026",
+      "region": "SOUTH \u2014 GEORGIA / TENNESSEE / OCTOBER 22 REPORT",
+      "image": null
+    },
+    {
+      "headline": "Timber disaster-aid window is scheduled to begin today",
+      "body": "Vermont scheduled its agriculture and timber disaster-assistance application window to open October 26. Eligible timber landowners and contracted loggers with qualifying 2023\u20132024 weather losses may receive up to 95% of demonstrated losses,\u2026",
+      "region": "NORTHEAST \u2014 VERMONT / SCHEDULED OCTOBER 26 OPENING",
+      "image": null
+    },
+    {
+      "headline": "Fort Valley adds a second look at its thinning contract",
+      "body": "The National Forest Foundation has added a second pre-bid tour for Fort Valley Experimental Forest on October 28 at 10 a.m. Arizona time. Contractors must contact Chad Kim at ckim@nationalforests.org by October 27 for the RSVP list and\u2026",
+      "region": "WEST \u2014 ARIZONA / TOUR RSVP DUE OCTOBER 27",
+      "image": null
+    },
+    {
+      "headline": "New episode examines surviving hardwood market shifts",
+      "body": "\u201cFBS 60 Surviving Hardwood Market Shifts\u201d is available on Spotify and YouTube. The episode discusses An Overview of the Hardwood Industry in the 21st Century by Scott Bowe and Matt Bumgardner, a Forest Resources Association award-winning\u2026",
+      "region": "UNDER THE RADAR \u2014 NEW FBS PODCAST",
+      "image": null
+    }
+  ],
+  "publication_attempted": false
+}
