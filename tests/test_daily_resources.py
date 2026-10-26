@@ -8,6 +8,7 @@ from pathlib import Path
 from bs4 import BeautifulSoup
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'scripts'))
 import daily_resources as r
+from market_table import render_market_section
 from book_rotation import featured_item
 from prepare_email_payload import compile_payload
 from sync_public_editorial import validate, sync
@@ -89,6 +90,7 @@ class ResourceTests(unittest.TestCase):
             strikingText='observation',featuredResource=r.public_selection(selection))
         page = '<article class="edition-wrap"><h1>'+display+'</h1><h2>Action Detector</h2>'
         page += ''.join('<article class="story"><h3>Story</h3><p>Facts.</p><p>Context.</p><p>Source.</p></article>' for _ in range(4))
+        if day >= '2026-10-27': page += render_market_section(day, {})
         page += '<h2>Under the Radar</h2>' + r.resource_html(selection) + '</article>'
         return page, issue
 
@@ -175,3 +177,4 @@ class ResourceTests(unittest.TestCase):
 
 
 if __name__ == '__main__': unittest.main()
+

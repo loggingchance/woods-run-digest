@@ -14,6 +14,7 @@ ROOT = Path(__file__).resolve().parents[1]
 SITE = 'https://woodsrun.forestenterprise.org'
 from book_rotation import featured_item, resource_heading
 from daily_resources import START as RESOURCE_START, validate_feature
+from market_table import table_cells, table_html, DETAIL_STYLE, validate_market_table
 UNSUB = '{{{RESEND_UNSUBSCRIBE_URL}}}'
 BODY_STYLE='font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:25px;color:#333333;'
 LINK_STYLE='font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:25px;color:#1f5b3a;'
@@ -45,6 +46,8 @@ def inline(node, urls: set[str]) -> str:
         urls.add(address)
         alt=' '.join(node.get('alt','').split())
         return f'<img src="{html.escape(address,quote=True)}" alt="{html.escape(alt,quote=True)}" style="display:block;max-width:100%;height:auto;">'
+    if node.name=='span' and node.find_parent('table', id='market-table'):
+        return '<span style="'+DETAIL_STYLE+'">'+children+'</span>'
     if node.name=='br':return '<br>'
     if node.name in ('em','i'):return '<em>'+children+'</em>'
     return children
@@ -57,9 +60,23 @@ def compile_payload(page: str, issue: dict) -> dict:
     if issue['displayDate'] not in article.get_text(' ',strip=True):raise ValueError('Edition date mismatch')
     for element in article.select('nav, .edition-nav, .growth-strip'):
         element.decompose()
+    validate_market_table(article, issue['date'])
     urls=set(); body=[]; plain=[]; source_paragraphs=[]
-    for node in article.find_all(['h1','h2','h3','p','li','blockquote','figure']):
+    for node in article.find_all(['h1','h2','h3','p','li','blockquote','figure','table']):
         if any(p.name in ('p','li','blockquote','figure') for p in node.parents if p is not article):continue
+        if node.find_parent('table'):continue
+        if node.name == 'table':
+            rows = table_cells(node)
+            body.append(table_html([[inline(cell, urls) for cell in row] for row in rows]))
+            plain.append('Indicator | Latest | Change')
+            for row in rows:
+                texts = [' '.join(cell.get_text(' ', strip=True).split()) for cell in row]
+                source_paragraphs.extend(texts)
+                plain.append(' | '.join(texts))
+                for cell in row:
+                    for anchor in cell.find_all('a', href=True):
+                        plain.append(normalize_url(anchor['href']))
+            continue
         text=' '.join(node.get_text(' ',strip=True).split())
         rendered=inline(node,urls)
         if node.name=='figure':
@@ -119,5 +136,6 @@ def main():
     print(json.dumps({'email_payload_ready':str(output.relative_to(ROOT)),'date':today,'links_preserved':True,'source_paragraph_count':payload['source_paragraph_count'],'featured_item':payload['featured_item'],'featured_book':payload['featured_book'],'email_sent':False}))
 
 if __name__=='__main__':main()
+
 
 
