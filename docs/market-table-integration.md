@@ -1,9 +1,11 @@
 # Coordinated table cutover (2026-10-27)
 
-Do not activate the canonical output or mirror requirement until the independent
-live Google Apps Script formatter has been saved and read back with tested table
-preservation. Existing scheduled editions continue on their current format while
-that prerequisite is blocked. No manual mailTick, sends or test messages.
+The independent live Google Apps Script formatter prerequisite was satisfied on
+October 26: the canonical owner saved and independently read back the tested
+source, SHA256 `5ad534eb604151820b1e3c22049e8fc931744f4e23fb2105a715ce1a1cc724c7`.
+Its table support applies from October 27, with earlier output unchanged. The
+activation hold is cleared for the approved future table. Keep daily observation
+verification and the October 27 cutover. No manual mailTick, sends or test messages.
 
 Canonical source integration (not completed by this mirror patch):
 
