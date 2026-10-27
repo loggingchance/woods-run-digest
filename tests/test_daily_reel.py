@@ -21,8 +21,8 @@ class ReelTests(unittest.TestCase):
             with self.subTest(stories=count):
                 before = reel.segment_frame_counts(count)
                 after = reel.segment_frame_counts(count, has_resource=True)
-                self.assertEqual(after, before[:-1] + [210, before[-1]])
-                self.assertEqual(sum(after) / reel.FPS, 41.5 if count == 4 else 48.5)
+                self.assertEqual(after, before[:-1] + [300, before[-1]])
+                self.assertEqual(sum(after) / reel.FPS, 44.5 if count == 4 else 51.5)
 
     def test_resource_layout_with_long_title_and_description(self):
         resource = dict(title='A practical field reference for forest managers, landowners and logging businesses working across North America',

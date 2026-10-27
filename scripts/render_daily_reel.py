@@ -11,6 +11,7 @@ import os
 import shutil
 import subprocess
 import tempfile
+import qrcode
 from datetime import date as Date
 from bs4 import BeautifulSoup
 from PIL import Image, ImageDraw, ImageFont, ImageOps
@@ -25,7 +26,32 @@ GREEN = '#103a25'
 PAPER = '#eee8d5'
 GOLD = '#ad8733'
 DURATIONS = (2.5, 7, 7, 7, 7, 7, 4)
-RESOURCE_SECONDS = 7
+RESOURCE_SECONDS = 10
+QR_BOX = (300, 1100, 780, 1580)
+
+
+def resource_qr(url):
+    """Encode the exact selection locally, with integer modules and quiet zone."""
+    qr = qrcode.QRCode(error_correction=qrcode.constants.ERROR_CORRECT_M, border=4)
+    qr.add_data(url)
+    qr.make(fit=True)
+    modules = qr.modules_count + 8
+    qr.box_size = (QR_BOX[2] - QR_BOX[0]) // modules
+    if qr.box_size < 3:
+        raise ValueError('Resource URL is too dense for a readable video QR code')
+    return qr.make_image(fill_color='black', back_color='white').convert('RGB')
+
+
+def resource_display_url(url):
+    """A readable destination label, not a replacement or shortened QR target."""
+    parsed = urlsplit(url)
+    label = parsed.netloc + parsed.path.rstrip('/')
+    if parsed.query or parsed.fragment or len(label) > 48:
+        label = parsed.netloc + '/…'
+    label = label if len(label) <= 48 else label[:45] + '…'
+    while font(30, True).getlength(label) > 900:
+        label = label.rstrip('…')[:-1] + '…'
+    return label
 
 
 def font(size, bold=False, sans=False):
@@ -157,16 +183,16 @@ def resource_frame(resource):
     d = ImageDraw.Draw(im)
     block(d, HEADING, (90, 405, 990, 510), 48, True, fit_width=True)
     d.line((90, 515, 990, 515), fill=GOLD, width=3)
-    y = block(d, resource['title'], (90, 550, 990, 890), 68, True, fit_width=True)
+    y = block(d, resource['title'], (90, 550, 990, 690), 60, True, fit_width=True)
     d.line((90, y+22, 990, y+22), fill=GOLD, width=3)
-    block(d, resource['description'], (90, y+55, 990, 1390), 48, fit_width=True)
-    # Keep a readable destination on-screen; captions retain the exact full URL.
-    block(d, urlsplit(resource['url']).netloc, (90, 1430, 990, 1530), 40, True, True, fit_width=True)
+    block(d, resource['description'], (90, y+45, 990, 1075), 42, fit_width=True)
+    qr = resource_qr(resource['url'])
+    im.paste(qr, ((W-qr.width)//2, QR_BOX[1] + (480-qr.height)//2))
     d.rectangle((0, 1605, W, H), fill=GREEN)
     d.line((80, 1652, 1000, 1652), fill=GOLD, width=3)
-    center(d, 'woodsrun.forestenterprise.org', 1693, 30, True, PAPER)
-    center(d, 'Explore the resource using the link', 1755, 30, fill=PAPER)
-    center(d, 'in the description or today’s edition', 1825, 30, fill=PAPER)
+    center(d, resource_display_url(resource['url']), 1693, 30, True, PAPER)
+    center(d, 'Scan to explore today’s resource', 1755, 30, fill=PAPER)
+    center(d, 'Full link also in the description', 1825, 30, fill=PAPER)
     return im
 
 
