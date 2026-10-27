@@ -63,6 +63,7 @@ def main() -> None:
     renderer_hash = digest((ROOT / 'scripts/generate_social_cards.py').read_bytes() +
                            (ROOT / 'assets/woodsrun-header.webp').read_bytes() +
                            (ROOT / 'scripts/render_daily_reel.py').read_bytes() +
+                           (ROOT / 'scripts/video_featured_resource.py').read_bytes() +
                            (ROOT / 'scripts/video_illustration_library.py').read_bytes() +
                            (library / 'manifest.json').read_bytes() +
                            b''.join(art_parts) + b''.join(cover_parts))
@@ -100,3 +101,4 @@ def main() -> None:
 
 if __name__ == '__main__':
     main()
+

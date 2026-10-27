@@ -16,6 +16,25 @@ class ReelTests(unittest.TestCase):
         self.assertEqual(sum(reel.segment_frame_counts()) / reel.FPS, 41.5)
         self.assertEqual((reel.W,reel.H),(1080,1920))
 
+    def test_resource_is_an_extra_segment_before_closing(self):
+        for count in (4, 5):
+            with self.subTest(stories=count):
+                before = reel.segment_frame_counts(count)
+                after = reel.segment_frame_counts(count, has_resource=True)
+                self.assertEqual(after, before[:-1] + [210, before[-1]])
+                self.assertEqual(sum(after) / reel.FPS, 41.5 if count == 4 else 48.5)
+
+    def test_resource_layout_with_long_title_and_description(self):
+        resource = dict(title='A practical field reference for forest managers, landowners and logging businesses working across North America',
+                        description=('This reference app brings forestry tables and calculations together for field use, with tree scale, log scale, prism cruising and stocking-guide references. ' * 3).strip(),
+                        url='https://example.org/resources/a-long-resource-link?edition=2026-10-27')
+        frame = reel.resource_frame(resource)
+        self.assertEqual(frame.size, (1080, 1920))
+
+    def test_resource_never_silently_clips_unbroken_text(self):
+        with self.assertRaises(ValueError):
+            reel.resource_frame(dict(title='W'*100, description='Useful app.', url='https://example.org/'))
+
     def test_selection_and_missing_art_fail_closed(self):
         with tempfile.TemporaryDirectory() as td:
             root=Path(td); page=root/'2026/10/12/index.html';page.parent.mkdir(parents=True)
@@ -72,3 +91,4 @@ class ReelTests(unittest.TestCase):
                 self.assertEqual(wednesday.getpixel((5,5)), monday.getpixel((5,5)))
         finally:
             reel.BRAND = original
+
