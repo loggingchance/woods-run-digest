@@ -1,5 +1,140 @@
 [
   {
+    "date": "2026-10-27",
+    "summary": "North Carolina’s new timber report shows divergent pulpwood and sawtimber prices. Also: Canadian residue-to-materials research, Minnesota’s updated seedling inventory and an unsettled future for Bartlett forest research, with six dated market indicators and a field-reference app.",
+    "socialText": "North Carolina’s timber report shows why pulpwood and sawtimber need separate readings. Today’s Woods Run Digest also covers forest-residue research, spring seedlings and Bartlett’s future.",
+    "cardTeaser": "Sawtimber and pulpwood take different paths",
+    "cardSubhead": "North Carolina’s new report shows why product and region matter.",
+    "strikingText": "Minnesota’s spring seedling list already marks white cedar, bur oak and silver maple sold out. Reforestation plans depend on species availability as well as acreage; sales end March 12 or when stock runs out.",
+    "marketObservations": {
+      "diesel": {
+        "status": "verified",
+        "latest": "US$6.276/gal",
+        "observed": "Week of October 19, 2026; released October 20",
+        "change": [
+          "+US$0.097/gal",
+          "+1.57%"
+        ],
+        "comparison": "Versus October 12, 2026: US$6.179/gal",
+        "detail": "EIA U.S. on-highway diesel; taxes included",
+        "sources": [
+          {
+            "label": "EIA U.S. on-highway diesel; taxes included",
+            "url": "https://www.eia.gov/petroleum/gasdiesel/"
+          }
+        ]
+      },
+      "lumber_futures": {
+        "status": "last_verified",
+        "latest": "US$518.50/MBF",
+        "observed": "October 23, 2026; update unavailable October 27",
+        "change": [
+          "−US$14.00/MBF",
+          "−2.63%"
+        ],
+        "comparison": "Same November contract, October 16: US$532.50/MBF",
+        "detail": "November 2026 lumber futures; last verified close",
+        "sources": [
+          {
+            "label": "November 2026 lumber futures; last verified close",
+            "url": "https://www.investing.com/commodities/lumber-historical-data"
+          },
+          {
+            "label": "Named-contract details",
+            "url": "https://www.investing.com/commodities/lumber-contracts"
+          }
+        ]
+      },
+      "madisons": {
+        "status": "verified",
+        "latest": "US$495/MBF",
+        "observed": "Week ending October 23, 2026",
+        "change": [
+          "−US$4/MBF",
+          "−0.80% (calculated)"
+        ],
+        "comparison": "Versus week ending October 16: US$499/MBF",
+        "detail": "Madison’s weekly lumber index",
+        "sources": [
+          {
+            "label": "Madison’s weekly lumber index",
+            "url": "https://madisonsreport.com/madisons-lumber-prices-index-oct-23-2026-us495-mfbm/"
+          }
+        ]
+      },
+      "hardwood_ppi": {
+        "status": "verified",
+        "latest": "285.075 index points",
+        "observed": "September 2026; released October 15",
+        "change": [
+          "−1.290 points",
+          "−0.45%"
+        ],
+        "comparison": "Versus August 2026: 286.365",
+        "detail": "BLS WPU0812; 1982=100; not seasonally adjusted",
+        "sources": [
+          {
+            "label": "BLS WPU0812; 1982=100; not seasonally adjusted",
+            "url": "https://fred.stlouisfed.org/series/WPU0812"
+          }
+        ]
+      },
+      "housing_starts": {
+        "status": "verified",
+        "latest": "859,000 units (SAAR)",
+        "observed": "September 2026; released October 20",
+        "change": [
+          "−41,000 units (SAAR)",
+          "−4.6%"
+        ],
+        "comparison": "Versus revised August 2026: 900,000",
+        "detail": "Census U.S. single-family starts; annualized estimate",
+        "sources": [
+          {
+            "label": "Census U.S. single-family starts; annualized estimate",
+            "url": "https://www.census.gov/construction/nrc/pdf/newresconst.pdf"
+          }
+        ]
+      },
+      "cad_usd": {
+        "status": "verified",
+        "latest": "C$1.4025 per US$1",
+        "observed": "Daily average, October 26, 2026",
+        "change": [
+          "+C$0.0032 per US$1",
+          "+0.23%"
+        ],
+        "comparison": "Versus October 23, 2026: C$1.3993 per US$1",
+        "detail": "Bank of Canada; Canadian dollars per U.S. dollar",
+        "sources": [
+          {
+            "label": "Bank of Canada; Canadian dollars per U.S. dollar",
+            "url": "https://www.bankofcanada.ca/rates/exchange/daily-exchange-rates/"
+          }
+        ]
+      }
+    },
+    "marketCaveats": [
+      "EIA’s next release is scheduled for October 27; the October 19 observation remains the latest displayed at this morning’s check.",
+      "October 26 lumber historical and named-contract pages disagree (US$514.50 versus US$515.50); the update and its week-over-week change are not verified. The dated October 23/16 comparison is retained explicitly as last verified, not a current quote.",
+      "The September single-family starts monthly change has a published ±10.0-percentage-point uncertainty interval and is not statistically significant."
+    ],
+    "featuredResource": {
+      "date": "2026-10-27",
+      "source": "daily-sheet",
+      "item": {
+        "title": "Forester’s Fieldbook",
+        "kind": "app",
+        "description": "Forester’s Fieldbook is a mobile-oriented reference app for classic forestry tables and calculations. It brings tree scale, log scale, prism cruising and stocking-guide references together for field use.",
+        "source_url": "https://burl.lumbermen.org/",
+        "url": "https://burl.lumbermen.org/"
+      },
+      "cached": false
+    },
+    "displayDate": "October 27, 2026",
+    "url": "/2026/10/27/"
+  },
+  {
     "date": "2026-10-26",
     "summary": "Canadian researchers report much faster wildfire scenario modelling, with further testing ahead. Also: Oakcrest’s hardwood acquisition, Vermont’s scheduled timber-aid opening, an Arizona thinning contract and the new hardwood-market podcast, plus the dated price tracker and selected field-calculator resource.",
     "socialText": "Canadian researchers report faster wildfire scenario modelling, with important limits. Today’s Woods Run Digest also covers hardwood ownership, timber aid and contracting opportunities.",
