@@ -99,7 +99,7 @@ The independent email installation's two October 9 owner-only tests were accepte
 
 ### Featured resource in future Reels/Shorts
 
-The video renderer adds one seven-second `Today's Featured Resource` card after
+The video renderer adds one ten-second `Today's Featured Resource` card after
 the existing news stories and before the unchanged closing card. Instagram and
 YouTube descriptions include that same resource's title and full destination
 URL. `scripts/video_featured_resource.py` reads the dated edition's existing
@@ -107,6 +107,17 @@ URL. `scripts/video_featured_resource.py` reads the dated edition's existing
 that metadata key is absent may it read the dated HTML resource box; explicit
 unavailable selections remain unavailable. Display text uses `The Forester’s
 Fieldbook` and omits raw format prefixes such as `app:`.
+
+The resource card includes a local black-on-white QR code encoding that exact
+selected URL, with a four-module white quiet zone and integer-sized modules.
+A compact destination label appears below it; an ellipsis means the label is
+abbreviated, never that the QR or description URL is changed. No external QR
+service, tracking or URL shortener is used. Install pinned `requirements.txt`
+(including `qrcode`) before rendering; the preparation workflow does this.
+For encoded-video QA, install `requirements-qa.txt`, then run:
+`QR_VIDEO_QA=1 python -m unittest discover -s tests -p test_resource_qr.py -v`.
+This renders only local synthetic 4/5-story videos and decodes their actual
+H.264 frames at 1080, 540 and 360 pixels wide; no historical media is changed.
 
 News selection, seven-second news timing, opener, branding, silent audio policy,
 X captions, delivery schedules and duplicate guards are unchanged. This code

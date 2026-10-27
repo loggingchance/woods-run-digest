@@ -31,6 +31,7 @@ jobs:
       - name: Install pinned preparation dependencies
         run: |
           python -m pip install --disable-pip-version-check -r requirements.txt
+          python -c "import qrcode; from PIL import Image"
           if ! command -v ffmpeg >/dev/null 2>&1; then
             python -m pip install --disable-pip-version-check --only-binary=:all: imageio-ffmpeg==0.6.0
             mkdir -p "$RUNNER_TEMP/woodsrun-bin"
