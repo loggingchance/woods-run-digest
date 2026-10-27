@@ -15,6 +15,8 @@ from datetime import date as Date
 from bs4 import BeautifulSoup
 from PIL import Image, ImageDraw, ImageFont, ImageOps
 from video_illustration_library import topic_illustration
+from video_featured_resource import HEADING, read_featured_resource
+from urllib.parse import urlsplit
 
 ROOT = Path(__file__).resolve().parents[1]
 BRAND = ROOT / 'assets/video-brand'
@@ -23,6 +25,7 @@ GREEN = '#103a25'
 PAPER = '#eee8d5'
 GOLD = '#ad8733'
 DURATIONS = (2.5, 7, 7, 7, 7, 7, 4)
+RESOURCE_SECONDS = 7
 
 
 def font(size, bold=False, sans=False):
@@ -44,13 +47,13 @@ def lines(draw, text, ft, width):
     return result + ([line] if line else [])
 
 
-def block(draw, text, box, size, bold=False, sans=False):
+def block(draw, text, box, size, bold=False, sans=False, fit_width=False):
     x, y, right, bottom = box
     for n in range(size, 29, -1):
         ft = font(n, bold, sans)
         rows = lines(draw, text, ft, right-x)
         step = math.ceil(n * 1.22)
-        if y + step * len(rows) <= bottom:
+        if y + step * len(rows) <= bottom and (not fit_width or all(draw.textlength(row, font=ft) <= right-x for row in rows)):
             for row in rows:
                 draw.text((x, y), row, font=ft, fill=GREEN)
                 y += step
@@ -147,8 +150,29 @@ def illustration(story, source):
     return topic_illustration(story, source, (W, 480))
 
 
+def resource_frame(resource):
+    """A separate resource card, never a replacement for a news story."""
+    im = Image.new('RGB', (W, H), PAPER)
+    im.paste(Image.open(BRAND / 'masthead.webp'), (0, 0))
+    d = ImageDraw.Draw(im)
+    block(d, HEADING, (90, 405, 990, 510), 48, True, fit_width=True)
+    d.line((90, 515, 990, 515), fill=GOLD, width=3)
+    y = block(d, resource['title'], (90, 550, 990, 890), 68, True, fit_width=True)
+    d.line((90, y+22, 990, y+22), fill=GOLD, width=3)
+    block(d, resource['description'], (90, y+55, 990, 1390), 48, fit_width=True)
+    # Keep a readable destination on-screen; captions retain the exact full URL.
+    block(d, urlsplit(resource['url']).netloc, (90, 1430, 990, 1530), 40, True, True, fit_width=True)
+    d.rectangle((0, 1605, W, H), fill=GREEN)
+    d.line((80, 1652, 1000, 1652), fill=GOLD, width=3)
+    center(d, 'woodsrun.forestenterprise.org', 1693, 30, True, PAPER)
+    center(d, 'Explore the resource using the link', 1755, 30, fill=PAPER)
+    center(d, 'in the description or today’s edition', 1825, 30, fill=PAPER)
+    return im
+
+
 def render(source, date, display, output, frames_dir=None):
     stories=read_stories(source,date)
+    resource=read_featured_resource(source,date)
     output.parent.mkdir(parents=True,exist_ok=True)
     with tempfile.TemporaryDirectory(prefix='woodsrun-v4-') as td:
         folder=Path(td) if frames_dir is None else frames_dir
@@ -173,9 +197,11 @@ def render(source, date, display, output, frames_dir=None):
             d.line((90,y+18,990,y+18),fill=GOLD,width=3)
             block(d,story['body'],(90,y+45,990,1110),49)
             im.paste(illustration(story,source),(0,1125));footer(im);frames.append(im)
+        if resource:
+            frames.append(resource_frame(resource))
         frames.append(Image.open(BRAND/'closing.webp').convert('RGB'))
         # Derive every segment from seconds, preserving timing at 30 fps.
-        counts=segment_frame_counts(len(stories))
+        counts=segment_frame_counts(len(stories), bool(resource))
         ffmpeg=os.environ.get('FFMPEG') or shutil.which('ffmpeg')
         if not ffmpeg:raise RuntimeError('ffmpeg is required')
         command=[ffmpeg,'-y','-f','rawvideo','-vcodec','rawvideo','-pix_fmt','rgb24','-s',f'{W}x{H}','-r',str(FPS),'-i','-','-an','-c:v','libx264','-preset','medium','-crf','20','-pix_fmt','yuv420p','-movflags','+faststart',str(output)]
@@ -186,17 +212,17 @@ def render(source, date, display, output, frames_dir=None):
             for _ in range(count):proc.stdin.write(data)
         proc.stdin.close();err=proc.stderr.read();rc=proc.wait()
         if rc:raise RuntimeError(err.decode())
-        manifest=dict(date=date,format='approved-v4',dimensions=[W,H],fps=FPS,frames=sum(counts),duration_seconds=sum(counts)/FPS,segment_frames=counts,stories=stories,publication_attempted=False)
+        manifest=dict(date=date,format='approved-v4',dimensions=[W,H],fps=FPS,frames=sum(counts),duration_seconds=sum(counts)/FPS,segment_frames=counts,stories=stories,featuredResource=resource,publication_attempted=False)
         output.with_suffix('.json').write_text(json.dumps(manifest,indent=2)+'\n')
     return output
 
 
-def segment_frame_counts(story_count=5):
+def segment_frame_counts(story_count=5, has_resource=False):
     if FPS < 23:
         raise ValueError("Instagram Reels require at least 23 fps")
     if not 1 <= story_count <= 5:
         raise ValueError("Approved format requires one to five stories")
-    durations = (DURATIONS[0],) + (7,) * story_count + (DURATIONS[-1],)
+    durations = (DURATIONS[0],) + (7,) * story_count + ((RESOURCE_SECONDS,) if has_resource else ()) + (DURATIONS[-1],)
     return [round(seconds * FPS) for seconds in durations]
 
 
@@ -211,3 +237,4 @@ def main():
     print(render(source,issue['date'],issue['displayDate'],a.output or ROOT/'assets/videos'/f"{issue['date']}.mp4",a.frames_dir))
 
 if __name__=='__main__':main()
+

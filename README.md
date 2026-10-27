@@ -97,6 +97,21 @@ The independent email installation's two October 9 owner-only tests were accepte
 
 ## Regression checks
 
+### Featured resource in future Reels/Shorts
+
+The video renderer adds one seven-second `Today's Featured Resource` card after
+the existing news stories and before the unchanged closing card. Instagram and
+YouTube descriptions include that same resource's title and full destination
+URL. `scripts/video_featured_resource.py` reads the dated edition's existing
+`featuredResource` selection, never the Sheet or a separate rotation. Only when
+that metadata key is absent may it read the dated HTML resource box; explicit
+unavailable selections remain unavailable. Display text uses `The Forester’s
+Fieldbook` and omits raw format prefixes such as `app:`.
+
+News selection, seven-second news timing, opener, branding, silent audio policy,
+X captions, delivery schedules and duplicate guards are unchanged. This code
+change does not regenerate or repost historical media or existing queued posts.
+
 `python -m unittest discover -s tests -v`
 
 Tests cover date/DST policy, future test isolation, missed deadlines, content/source-link preservation, book rotation, private-token rejection and source/media integrity. Unit-test success does not itself establish provider delivery.
@@ -107,6 +122,7 @@ Tests cover date/DST policy, future test isolation, missed deadlines, content/so
 The Site published October9 at02:38 Mountain; the repository instead received a different edition at05:10. Preparation now mirrors the exact current published Site via sync_public_editorial.py before compilation. It preserves historical records, fails when the same-date Site is unavailable/incomplete, and records the canonical headlines and links. Do not research competing repository content. The current private Google installation Gaf40a96f5731 is PRODUCTION with both named owner-only tests accepted; preserve it and the private key.
 
 The original illustrated assets/woodsrun-header.webp is tracked and mandatory. A missing file is fatal. Renderer/artwork hashes invalidate obsolete prepared media; routine card generation changes only the latest date. Buffer receipts report requested channels and full daily coverage separately; an X-only recovery cannot establish all-three-channel readiness. A missed scheduling window with incomplete outcomes fails visibly and never falls back to immediate publication.
+
 
 
 

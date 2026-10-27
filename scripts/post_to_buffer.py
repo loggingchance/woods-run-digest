@@ -15,6 +15,8 @@ import urllib.error
 import urllib.request
 from pathlib import Path
 
+from video_featured_resource import featured_resource_caption
+
 BUFFER_API = "https://api.buffer.com"
 SITE_ROOT = "https://woodsrun.forestenterprise.org"
 MAX_X_TEXT = 280
@@ -241,7 +243,7 @@ def compose_instagram_post(issue: dict) -> str:
         f"Woods Run Digest — {issue['displayDate']}\n\n"
         "Daily North American forestry & forest-products intelligence from The Forest Business School.\n\n"
         f"Read today’s edition: {SITE_ROOT}{issue['url']}"
-    )
+    ) + featured_resource_caption(issue, Path(__file__).resolve().parents[1])
 
 
 def compose_youtube_title(issue: dict) -> str:
@@ -261,7 +263,7 @@ def compose_youtube_post(issue: dict, page_url: str) -> str:
         f"{summary}\n\n"
         f"Read the full edition: {page_url}\n\n"
         "Daily forestry & forest-products intelligence from The Forest Business School."
-    )
+    ) + featured_resource_caption(issue, Path(__file__).resolve().parents[1])
 
 
 def publish(
@@ -444,4 +446,5 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+
 
