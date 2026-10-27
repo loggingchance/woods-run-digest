@@ -3,10 +3,15 @@
   "text": "Minnesota’s spring seedling list already marks white cedar, bur oak and silver maple sold out. Reforestation plans depend on species availability as well as acreage; sales end March 12 or when stock runs out.",
   "due_at": "2026-10-27T16:00:00Z",
   "channel_id": "6843193ed6d25b49a145ff6e",
-  "state": "attempt_started",
+  "state": "accepted",
   "attempt_started_at": "2026-10-27T15:53:31.701262Z",
-  "post_id": null,
+  "post_id": "6ae0c8fd6405616d97aa8bc4",
   "history_checked": 354,
   "source": "native-daily-striking",
-  "email_attempted": false
+  "email_attempted": false,
+  "provider_status": "scheduled",
+  "provider_due_at": "2026-10-27T16:00:00.000Z",
+  "external_url": null,
+  "accepted_at": "2026-10-27T15:53:34.136085Z",
+  "schedule_verified": true
 }
