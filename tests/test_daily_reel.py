@@ -25,7 +25,12 @@ class ReelTests(unittest.TestCase):
             self.assertEqual(len(selected),5)
             with self.assertRaises(ValueError):reel.illustration(dict(selected[0],image='/assets/missing.png'),root)
             page.write_text('<section class="issue-section">'+story*4+'</section>')
-            with self.assertRaises(ValueError):reel.read_stories(root,'2026-10-12')
+            selected = reel.read_stories(root,'2026-10-12')
+            self.assertEqual(len(selected), 4)
+            self.assertEqual(reel.segment_frame_counts(len(selected)), [75,210,210,210,210,120])
+            page.write_text('<section class="issue-section"></section>')
+            with self.assertRaises(ValueError):
+                reel.read_stories(root,'2026-10-12')
 
     def test_story_subject_changes_illustration(self):
         a=reel.illustration(dict(headline='Timber sales',body='',image=None),Path('.'))
