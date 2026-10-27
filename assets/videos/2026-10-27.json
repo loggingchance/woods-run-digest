@@ -1,0 +1,46 @@
+{
+  "date": "2026-10-27",
+  "format": "approved-v4",
+  "dimensions": [
+    1080,
+    1920
+  ],
+  "fps": 30,
+  "frames": 1035,
+  "duration_seconds": 34.5,
+  "segment_frames": [
+    75,
+    210,
+    210,
+    210,
+    210,
+    120
+  ],
+  "stories": [
+    {
+      "headline": "North Carolina sawtimber prices lag as pulpwood gains diverge",
+      "body": "North Carolina\u2019s third-quarter standing-timber prices remained below year-earlier levels for most sawtimber products, North Carolina State Extension reported October 26. Statewide pine chip-n-saw fell 16%, pine sawtimber 11% and pine ply\u2026",
+      "region": "SOUTH \u2014 NORTH CAROLINA / OCTOBER 26 REPORT",
+      "image": null
+    },
+    {
+      "headline": "Forest residues get another route into higher-value materials",
+      "body": "University of British Columbia wood scientist Feng Jiang has received an Arthur B. McDonald Fellowship supporting work on renewable materials made from underused forest residues. The university\u2019s October 26 announcement describes\u2026",
+      "region": "CANADA \u2014 BRITISH COLUMBIA / OCTOBER 26 RESEARCH UPDATE",
+      "image": null
+    },
+    {
+      "headline": "Spring seedling orders remain open as some species sell out",
+      "body": "Minnesota\u2019s State Forest Nursery has updated its spring 2027 price list with several species sold out, including white cedar, bur oak and silver maple. Red pine, white pine and white spruce in the five-to-twelve-inch class remain listed\u2026",
+      "region": "MIDWEST \u2014 MINNESOTA / INVENTORY UPDATED OCTOBER 26",
+      "image": null
+    },
+    {
+      "headline": "Bartlett\u2019s forest research has support, but its future is unsettled",
+      "body": "Bartlett Experimental Forest is not among the 23 sites identified for closure in the Forest Service\u2019s latest review, but its staffing and facilities remain uncertain, the Concord Monitor reported in a story republished by New Hampshire\u2026",
+      "region": "NORTHEAST \u2014 NEW HAMPSHIRE / OCTOBER 25 REPORT",
+      "image": null
+    }
+  ],
+  "publication_attempted": false
+}
