@@ -105,7 +105,7 @@ def read_stories(source, date):
             img=art.find('img')
             region=art.select_one('.region-label')
             stories.append(dict(headline=h.get_text(' ',strip=True),body=body,region=region.get_text(' ',strip=True) if region else 'WOODS RUN', image=img.get('src') if img else None))
-    if len(stories)<5: raise ValueError('Approved format requires five stories')
+    if not stories: raise ValueError('Approved format requires at least one story')
     return stories[:5]
 
 
@@ -167,7 +167,7 @@ def render(source, date, display, output, frames_dir=None):
         for i,story in enumerate(stories,1):
             im=Image.new('RGB',(W,H),PAPER);im.paste(Image.open(BRAND/'masthead.webp'),(0,0));d=ImageDraw.Draw(im)
             block(d,story['region'].upper(),(90,405,895,510),30,True,True)
-            d.text((922,407),f'{i}/5',font=font(38,True),fill=GREEN)
+            d.text((922,407),f'{i}/{len(stories)}',font=font(38,True),fill=GREEN)
             d.line((90,515,990,515),fill=GOLD,width=3)
             y=block(d,story['headline'],(90,545,990,855),68,True)
             d.line((90,y+18,990,y+18),fill=GOLD,width=3)
@@ -175,7 +175,7 @@ def render(source, date, display, output, frames_dir=None):
             im.paste(illustration(story,source),(0,1125));footer(im);frames.append(im)
         frames.append(Image.open(BRAND/'closing.webp').convert('RGB'))
         # Derive every segment from seconds, preserving timing at 30 fps.
-        counts=segment_frame_counts()
+        counts=segment_frame_counts(len(stories))
         ffmpeg=os.environ.get('FFMPEG') or shutil.which('ffmpeg')
         if not ffmpeg:raise RuntimeError('ffmpeg is required')
         command=[ffmpeg,'-y','-f','rawvideo','-vcodec','rawvideo','-pix_fmt','rgb24','-s',f'{W}x{H}','-r',str(FPS),'-i','-','-an','-c:v','libx264','-preset','medium','-crf','20','-pix_fmt','yuv420p','-movflags','+faststart',str(output)]
@@ -191,10 +191,13 @@ def render(source, date, display, output, frames_dir=None):
     return output
 
 
-def segment_frame_counts():
+def segment_frame_counts(story_count=5):
     if FPS < 23:
         raise ValueError("Instagram Reels require at least 23 fps")
-    return [round(seconds * FPS) for seconds in DURATIONS]
+    if not 1 <= story_count <= 5:
+        raise ValueError("Approved format requires one to five stories")
+    durations = (DURATIONS[0],) + (7,) * story_count + (DURATIONS[-1],)
+    return [round(seconds * FPS) for seconds in durations]
 
 
 def main():
