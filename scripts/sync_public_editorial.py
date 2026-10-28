@@ -42,16 +42,17 @@ def validate(page, issue):
         if section.lower() not in text.lower():
             raise ValueError('Canonical edition missing ' + section)
     if day >= datetime(2026, 10, 15).date():
-        heading = resource_heading(day)
-        if heading.lower() not in text.lower():
-            raise ValueError('Canonical edition missing ' + heading + ' rotation')
-        promo_sections = []
-        for section in article.find_all('section'):
-            kicker = section.select_one('.section-kicker')
-            if kicker and heading.lower() == kicker.get_text(' ', strip=True).lower():
-                promo_sections.append(section)
-        if len(promo_sections) != 1:
-            raise ValueError('Canonical edition must contain exactly one ' + heading + ' feature')
+        # Daily Sheet resources have their own canonical validator below. It
+        # accepts both the historical kicker and the corrected h2/h3 format.
+        if issue['date'] < RESOURCE_START:
+            heading = resource_heading(day)
+            promo_sections = []
+            for section in article.find_all('section'):
+                kicker = section.select_one('.section-kicker')
+                if kicker and heading.lower() == kicker.get_text(' ', strip=True).lower():
+                    promo_sections.append(section)
+            if len(promo_sections) != 1:
+                raise ValueError('Canonical edition must contain exactly one ' + heading + ' feature')
         numbers_section = None
         for section in article.find_all('section'):
             heading = section.find('h2')
