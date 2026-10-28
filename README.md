@@ -137,3 +137,15 @@ The original illustrated assets/woodsrun-header.webp is tracked and mandatory. A
 
 
 
+
+## Permanent featured-resource presentation correction — October 28, 2026
+
+The canonical Site now renders the singular `Today's Featured Resource` as an
+`h2.resource-heading` matching the other section headings, followed by an `h3`
+resource title and the full description without a redundant `app:` or other type
+prefix. Keep `kind` in the canonical metadata. Use `The Forester’s Fieldbook`
+whenever that resource is named. This supersedes the plural-heading instructions
+above for new editions. Mirror validation accepts both historical and corrected
+markup, preserves the complete canonical description and URL, and never reselects
+the resource. Email compilation retains the heading and full substantive content.
+No change to publication triggers, provider schedules, recipients or duplicate guards.

@@ -15,6 +15,7 @@ from urllib.parse import urlsplit, urlunsplit
 
 START = '2026-10-25'
 HEADING = "Today's Featured Resources"
+RESOURCE_HEADINGS = (HEADING, "Today's Featured Resource")
 SOURCE = {'spreadsheet_id': '1xA8TQYJJh6rsBvo3JzFVSScudmvP8vqpuMw-s3u6DrU',
           'tab': 'daily', 'sheet_id': 1391345758}
 
@@ -204,8 +205,8 @@ def validate_feature(article, issue):
     if not isinstance(selection, dict) or selection.get('date') != issue['date'] or selection.get('source') != 'daily-sheet':
         raise ValueError('Missing canonical daily Sheet selection')
     boxes = [section for section in article.find_all('section')
-             if section.select_one('.section-kicker') and
-             section.select_one('.section-kicker').get_text(' ', strip=True) == HEADING]
+             if section.find(['h2', 'p'], recursive=False) and
+             section.find(['h2', 'p'], recursive=False).get_text(' ', strip=True) in RESOURCE_HEADINGS]
     if len(boxes) != 1:
         raise ValueError('Expected exactly one canonical featured resource box')
     box = boxes[0]
@@ -217,7 +218,10 @@ def validate_feature(article, issue):
             raise ValueError('Missing resource unavailable notice')
         return None
     text = ' '.join(box.get_text(' ', strip=True).split())
-    for field in ('title', 'kind', 'description'):
+    # Kind remains required metadata; it is no longer a visible type prefix.
+    if not item.get('kind'):
+        raise ValueError('Canonical resource metadata missing kind')
+    for field in ('title', 'description'):
         if not item.get(field) or ' '.join(item[field].split()) not in text:
             raise ValueError('Canonical resource metadata/page mismatch: ' + field)
     links = [identity(a['href']) for a in box.find_all('a', href=True)]
