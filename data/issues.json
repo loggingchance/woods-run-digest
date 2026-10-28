@@ -1,5 +1,139 @@
 [
   {
+    "date": "2026-10-28",
+    "summary": "Canfor’s phased Arkansas expansion combines higher lumber output with truck-to-rail access. Also: Appalachian wildfire-fuel research, Canadian workforce-retention support, Maine’s required grant workshop and an expanded beetle database, plus six dated market indicators and a forest-carbon scenario app.",
+    "socialText": "Canfor’s Arkansas expansion combines more lumber output with truck-to-rail access. Today’s Woods Run Digest also covers wildfire fuels, workforce support and forest-health tools.",
+    "cardTeaser": "More lumber, with a route to market",
+    "cardSubhead": "Canfor pairs Arkansas mill upgrades with truck-to-rail shipping.",
+    "strikingText": "Maine’s community-forestry grants are due December 17, but the mandatory workshop is October 29. A later application deadline does not mean applicants can wait to meet the entry requirement.",
+    "marketObservations": {
+      "diesel": {
+        "status": "verified",
+        "latest": "US$6.352/gal",
+        "observed": "Week of October 26, 2026; released October 27",
+        "change": [
+          "+US$0.076/gal",
+          "+1.21%"
+        ],
+        "comparison": "Versus October 19: US$6.276/gal",
+        "detail": "EIA U.S. on-highway diesel; taxes included",
+        "sources": [
+          {
+            "label": "EIA U.S. on-highway diesel; taxes included",
+            "url": "https://www.eia.gov/petroleum/gasdiesel/"
+          }
+        ]
+      },
+      "lumber_futures": {
+        "status": "verified",
+        "latest": "US$507.50/MBF",
+        "observed": "October 27, 2026 close",
+        "change": [
+          "−US$17.50/MBF",
+          "−3.33%"
+        ],
+        "comparison": "Same November contract, October 20: US$525.00/MBF",
+        "detail": "November 2026 lumber futures; nearby contract",
+        "sources": [
+          {
+            "label": "November 2026 lumber futures; nearby contract",
+            "url": "https://www.investing.com/commodities/lumber-historical-data"
+          },
+          {
+            "label": "Named November contract and settlement date",
+            "url": "https://www.investing.com/commodities/lumber-contracts"
+          }
+        ]
+      },
+      "madisons": {
+        "status": "verified",
+        "latest": "US$495/MBF",
+        "observed": "Week ending October 23, 2026",
+        "change": [
+          "−US$4/MBF",
+          "−0.80% (calculated)"
+        ],
+        "comparison": "Versus week ending October 16: US$499/MBF",
+        "detail": "Madison’s weekly lumber index",
+        "sources": [
+          {
+            "label": "Madison’s weekly lumber index",
+            "url": "https://madisonsreport.com/madisons-lumber-prices-index-oct-23-2026-us495-mfbm/"
+          }
+        ]
+      },
+      "hardwood_ppi": {
+        "status": "verified",
+        "latest": "285.075 index points",
+        "observed": "September 2026; released October 15",
+        "change": [
+          "−1.290 points",
+          "−0.45%"
+        ],
+        "comparison": "Versus August 2026: 286.365",
+        "detail": "BLS WPU0812; 1982=100; not seasonally adjusted",
+        "sources": [
+          {
+            "label": "BLS WPU0812; 1982=100; not seasonally adjusted",
+            "url": "https://fred.stlouisfed.org/series/WPU0812"
+          }
+        ]
+      },
+      "housing_starts": {
+        "status": "verified",
+        "latest": "859,000 units (SAAR)",
+        "observed": "September 2026; released October 20",
+        "change": [
+          "−41,000 units (SAAR)",
+          "−4.6%"
+        ],
+        "comparison": "Versus revised August 2026: 900,000",
+        "detail": "Census U.S. single-family starts; annualized estimate",
+        "sources": [
+          {
+            "label": "Census U.S. single-family starts; annualized estimate",
+            "url": "https://www.census.gov/construction/nrc/pdf/newresconst.pdf"
+          }
+        ]
+      },
+      "cad_usd": {
+        "status": "verified",
+        "latest": "C$1.4038 per US$1",
+        "observed": "Daily average, October 27, 2026",
+        "change": [
+          "+C$0.0013 per US$1",
+          "+0.09%"
+        ],
+        "comparison": "Versus October 26: C$1.4025 per US$1",
+        "detail": "Bank of Canada; Canadian dollars per U.S. dollar",
+        "sources": [
+          {
+            "label": "Bank of Canada; Canadian dollars per U.S. dollar",
+            "url": "https://www.bankofcanada.ca/rates/exchange/daily-exchange-rates/"
+          }
+        ]
+      }
+    },
+    "marketCaveats": [
+      "The September single-family starts monthly change has a published ±10.0-percentage-point 90% confidence interval and is not statistically significant.",
+      "The November futures contract is explicitly identified; comparisons use its own prior-week close, not another contract."
+    ],
+    "featuredResource": {
+      "date": "2026-10-28",
+      "source": "daily-sheet",
+      "item": {
+        "title": "CARBINE — Forest Carbon Scenario Explorer Powered by FVS",
+        "kind": "app",
+        "description": "CARBINE is a forest-carbon scenario app built around the USDA Forest Service’s Forest Vegetation Simulator. It helps readers explore stand conditions and management alternatives alongside carbon estimates when considering different forest-management scenarios.",
+        "source_url": "https://carbine.forestenterprise.org/",
+        "url": "https://carbine.forestenterprise.org/"
+      },
+      "cached": false
+    },
+    "displayDate": "October 28, 2026",
+    "url": "/2026/10/28/"
+  },
+  {
     "date": "2026-10-27",
     "summary": "North Carolina’s new timber report shows divergent pulpwood and sawtimber prices. Also: Canadian residue-to-materials research, Minnesota’s updated seedling inventory and an unsettled future for Bartlett forest research, with six dated market indicators and a field-reference app.",
     "socialText": "North Carolina’s timber report shows why pulpwood and sawtimber need separate readings. Today’s Woods Run Digest also covers forest-residue research, spring seedlings and Bartlett’s future.",

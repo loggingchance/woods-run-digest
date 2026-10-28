@@ -1,0 +1,60 @@
+{
+  "date": "2026-10-28",
+  "format": "approved-v4",
+  "dimensions": [
+    1080,
+    1920
+  ],
+  "fps": 30,
+  "frames": 1545,
+  "duration_seconds": 51.5,
+  "segment_frames": [
+    75,
+    210,
+    210,
+    210,
+    210,
+    210,
+    300,
+    120
+  ],
+  "stories": [
+    {
+      "headline": "Canfor\u2019s Arkansas expansion links more lumber output with rail access",
+      "body": "Canfor Southern Pine is investing approximately US$96 million in modernization and logistics at Iron Mountain in El Dorado, Arkansas. The October 27 announcement says the projects are expected to more than double annual net production to\u2026",
+      "region": "SOUTH \u2014 ARKANSAS / OCTOBER 27 ANNOUNCEMENT",
+      "image": null
+    },
+    {
+      "headline": "Study tests how storms followed by drought change wildfire fuels",
+      "body": "North Carolina State University and partners are beginning a three-year study of how rapid wet-to-dry weather shifts affect wildfire risk in the Blue Ridge region. The October 27 announcement describes field measurements of fuel loads and\u2026",
+      "region": "APPALACHIANS \u2014 FOREST RESEARCH / OCTOBER 27 REPORT",
+      "image": null
+    },
+    {
+      "headline": "Work-sharing changes give employers more scheduling flexibility",
+      "body": "Canada\u2019s Workforce Retention and Retraining Program allows eligible tariff-affected employers to distribute reduced hours more flexibly, temporarily removing the equal-sharing requirement. The October 22 federal launch also offers up to\u2026",
+      "region": "CANADA \u2014 WORKFORCE / OCTOBER 22 PROGRAM LAUNCH",
+      "image": null
+    },
+    {
+      "headline": "Maine community-forestry grants require tomorrow\u2019s workshop",
+      "body": "Maine\u2019s 2026 Project Canopy call requires prospective applicants to attend a virtual workshop October 29, from 1\u20133 p.m. The state lists December 17 at 11:59 p.m. as the application deadline and requires a 50% cash or in-kind match.",
+      "region": "NORTHEAST \u2014 MAINE / WORKSHOP OCTOBER 29",
+      "image": null
+    },
+    {
+      "headline": "Expanded beetle database separates pest identity from reputation",
+      "body": "The University of Florida Forest Entomology Lab\u2019s Bark and Ambrosia Beetles of the World database has released version 2.0. Its developers report 7,990 species, 15,778 specimen records and 32,403 images, with searches by host, taxonomy and\u2026",
+      "region": "FOREST HEALTH \u2014 IDENTIFICATION / OCTOBER 27 REPORT",
+      "image": null
+    }
+  ],
+  "featuredResource": {
+    "title": "CARBINE \u2014 Forest Carbon Scenario Explorer Powered by FVS",
+    "description": "CARBINE is a forest-carbon scenario app built around the USDA Forest Service\u2019s Forest Vegetation Simulator. It helps readers explore stand conditions and management alternatives alongside carbon estimates when considering different forest-management scenarios.",
+    "url": "https://carbine.forestenterprise.org/",
+    "kind": "app"
+  },
+  "publication_attempted": false
+}
