@@ -1,0 +1,221 @@
+{
+  "run_id": "daily-2026-10-28",
+  "date": "2026-10-28",
+  "channels": {
+    "x": {
+      "duplicate_search": {
+        "complete": true,
+        "posts_checked": 355
+      },
+      "attempt_started_at": "2026-10-28T08:52:59.817660Z",
+      "newly_created": true,
+      "post_id": "6ae1b7ebaf9616deeb9a94e0",
+      "status": "scheduled",
+      "due_at": "2026-10-28T10:00:00.000Z",
+      "created_at": "2026-10-28T08:52:59.949Z",
+      "external_url": null,
+      "assets": [],
+      "provider_text": "Canfor’s Arkansas expansion combines more lumber output with truck-to-rail access. Today’s Woods Run Digest also covers wildfire fuels, workforce support and forest-health tools.\n\nhttps://woodsrun.forestenterprise.org/2026/10/28/",
+      "error": null,
+      "schedule_verified": true,
+      "provider_sent": false,
+      "delivery_state": "scheduled",
+      "existing_delivery": true,
+      "public_visibility": "not_independently_verified"
+    },
+    "instagram": {
+      "duplicate_search": {
+        "complete": true,
+        "posts_checked": 294
+      },
+      "attempt_started_at": "2026-10-28T08:53:01.497228Z",
+      "newly_created": true,
+      "post_id": "6ae1b7eddeb69b3963bcadcb",
+      "status": "scheduled",
+      "due_at": "2026-10-28T10:00:00.000Z",
+      "created_at": "2026-10-28T08:53:01.925Z",
+      "external_url": null,
+      "assets": [
+        {
+          "source": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/videos/2026-10-28.mp4",
+          "mimeType": "video/mp4"
+        }
+      ],
+      "provider_text": "Woods Run Digest — October 28, 2026\n\nDaily North American forestry & forest-products intelligence from The Forest Business School.\n\nRead today’s edition: https://woodsrun.forestenterprise.org/2026/10/28/\n\nToday's Featured Resource\nCARBINE — Forest Carbon Scenario Explorer Powered by FVS\nhttps://carbine.forestenterprise.org/",
+      "error": null,
+      "schedule_verified": true,
+      "provider_sent": false,
+      "delivery_state": "scheduled",
+      "existing_delivery": true,
+      "public_visibility": "not_independently_verified"
+    },
+    "youtube": {
+      "duplicate_search": {
+        "complete": true,
+        "posts_checked": 91
+      },
+      "attempt_started_at": "2026-10-28T08:53:02.684846Z",
+      "newly_created": true,
+      "post_id": "6ae1b7efaf9616deeb9a95bd",
+      "status": "scheduled",
+      "due_at": "2026-10-28T10:00:00.000Z",
+      "created_at": "2026-10-28T08:53:02.997Z",
+      "external_url": null,
+      "assets": [
+        {
+          "source": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/videos/2026-10-28.mp4",
+          "mimeType": "video/mp4"
+        }
+      ],
+      "provider_text": "Woods Run Digest — October 28, 2026\n\nCanfor’s phased Arkansas expansion combines higher lumber output with truck-to-rail access. Also: Appalachian wildfire-fuel research, Canadian workforce-retention support, Maine’s required grant workshop and an expanded beetle database, plus six dated market indicators and a forest-carbon scenario app.\n\nRead the full edition: https://woodsrun.forestenterprise.org/2026/10/28/\n\nDaily forestry & forest-products intelligence from The Forest Business School.\n\nToday's Featured Resource\nCARBINE — Forest Carbon Scenario Explorer Powered by FVS\nhttps://carbine.forestenterprise.org/",
+      "error": null,
+      "schedule_verified": true,
+      "provider_sent": false,
+      "delivery_state": "scheduled",
+      "existing_delivery": true,
+      "public_visibility": "not_independently_verified"
+    }
+  },
+  "checked_at": "2026-10-28T08:52:56.433486Z",
+  "requested_action": "schedule_daily",
+  "requested_channels": [
+    "x",
+    "instagram",
+    "youtube"
+  ],
+  "required_daily_channels": [
+    "x",
+    "instagram",
+    "youtube"
+  ],
+  "daily_target_due_at": "2026-10-28T10:00:00Z",
+  "channel_identity": [
+    {
+      "id": "6ab14319ea19ca0bdea627e2",
+      "name": "Logging Chance",
+      "service": "youtube",
+      "serviceId": "UCq-PscVBAKjmVE39qb2NyCg",
+      "externalLink": "https://www.youtube.com/channel/UCq-PscVBAKjmVE39qb2NyCg",
+      "isDisconnected": false,
+      "isLocked": false,
+      "isQueuePaused": false,
+      "timezone": "America/Denver"
+    },
+    {
+      "id": "6844cc71d6d25b49a1de682e",
+      "name": "northeastforests",
+      "service": "instagram",
+      "serviceId": "17841412643805979",
+      "externalLink": "https://instagram.com/northeastforests",
+      "isDisconnected": false,
+      "isLocked": false,
+      "isQueuePaused": false,
+      "timezone": "America/Denver"
+    },
+    {
+      "id": "6843193ed6d25b49a145ff6e",
+      "name": "ForestBizSchool",
+      "service": "twitter",
+      "serviceId": "1487833905197637637",
+      "externalLink": "https://twitter.com/ForestBizSchool",
+      "isDisconnected": false,
+      "isLocked": false,
+      "isQueuePaused": false,
+      "timezone": "America/Denver"
+    }
+  ],
+  "due_at": "2026-10-28T10:00:00Z",
+  "preflight_by_channel": {
+    "x": {
+      "page": {
+        "url": "https://woodsrun.forestenterprise.org/2026/10/28/",
+        "final_url": "https://woodsrun.forestenterprise.org/2026/10/28/",
+        "http_status": 200,
+        "content_type": "text/html",
+        "content_verified": true
+      },
+      "link_card": {
+        "page_url": "https://woodsrun.forestenterprise.org/2026/10/28/",
+        "image_url": "https://woodsrun.forestenterprise.org/assets/cards/2026-10-28.png",
+        "card": "summary_large_image",
+        "image_bytes": 203433,
+        "metadata_verified": true
+      },
+      "card": {
+        "url": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/cards/2026-10-28.png",
+        "dimensions": [
+          1200,
+          630
+        ],
+        "bytes": 203433,
+        "public": {
+          "url": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/cards/2026-10-28.png",
+          "final_url": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/cards/2026-10-28.png",
+          "http_status": 200,
+          "content_type": "image/png",
+          "content_verified": true
+        }
+      }
+    },
+    "instagram": {
+      "page": {
+        "url": "https://woodsrun.forestenterprise.org/2026/10/28/",
+        "final_url": "https://woodsrun.forestenterprise.org/2026/10/28/",
+        "http_status": 200,
+        "content_type": "text/html",
+        "content_verified": true
+      },
+      "video": {
+        "url": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/videos/2026-10-28.mp4",
+        "dimensions": [
+          [
+            1080,
+            1920
+          ]
+        ],
+        "bytes": 2208547,
+        "public": {
+          "url": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/videos/2026-10-28.mp4",
+          "final_url": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/videos/2026-10-28.mp4",
+          "http_status": 200,
+          "content_type": "application/octet-stream",
+          "content_verified": true
+        }
+      }
+    },
+    "youtube": {
+      "page": {
+        "url": "https://woodsrun.forestenterprise.org/2026/10/28/",
+        "final_url": "https://woodsrun.forestenterprise.org/2026/10/28/",
+        "http_status": 200,
+        "content_type": "text/html",
+        "content_verified": true
+      },
+      "video": {
+        "url": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/videos/2026-10-28.mp4",
+        "dimensions": [
+          [
+            1080,
+            1920
+          ]
+        ],
+        "bytes": 2208547,
+        "public": {
+          "url": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/videos/2026-10-28.mp4",
+          "final_url": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/videos/2026-10-28.mp4",
+          "http_status": 200,
+          "content_type": "application/octet-stream",
+          "content_verified": true
+        }
+      }
+    }
+  },
+  "all_scheduled": true,
+  "daily_idempotent": true,
+  "all_provider_sent": false,
+  "all_public_verified": false,
+  "all_daily_channels_provider_sent": false,
+  "all_daily_channels_scheduled": true,
+  "email_verified": false,
+  "complete": false
+}
