@@ -1,6 +1,6 @@
 {
   "action": "schedule_striking",
-  "date": "2026-10-27",
-  "due_at": "2026-10-27T16:00:00Z",
+  "date": "2026-10-28",
+  "due_at": "2026-10-28T16:00:00Z",
   "reason": "native Buffer scheduled daily striking observation"
 }
