@@ -3,10 +3,15 @@
   "text": "Maine is keeping its ash-borer quarantine after more than 80 comments, nearly all urging retention. Its regulated materials include hardwood firewood of all species, not just ash.",
   "due_at": "2026-10-29T16:00:00Z",
   "channel_id": "6843193ed6d25b49a145ff6e",
-  "state": "attempt_started",
+  "state": "accepted",
   "attempt_started_at": "2026-10-29T15:49:55.560621Z",
-  "post_id": null,
+  "post_id": "6ae36b25a87e7858ef181b56",
   "history_checked": 358,
   "source": "native-daily-striking",
-  "email_attempted": false
+  "email_attempted": false,
+  "provider_status": "scheduled",
+  "provider_due_at": "2026-10-29T16:00:00.000Z",
+  "external_url": null,
+  "accepted_at": "2026-10-29T15:49:57.145724Z",
+  "schedule_verified": true
 }
