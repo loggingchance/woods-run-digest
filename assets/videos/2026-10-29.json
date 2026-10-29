@@ -1,0 +1,53 @@
+{
+  "date": "2026-10-29",
+  "format": "approved-v4",
+  "dimensions": [
+    1080,
+    1920
+  ],
+  "fps": 30,
+  "frames": 1335,
+  "duration_seconds": 44.5,
+  "segment_frames": [
+    75,
+    210,
+    210,
+    210,
+    210,
+    300,
+    120
+  ],
+  "stories": [
+    {
+      "headline": "West Fraser plans two mill curtailments as housing demand stays weak",
+      "body": "West Fraser will indefinitely curtail its Huguley oriented strand board mill in Lanett, Alabama, and its lumber mill in Leola, Arkansas. The October 28 announcement expects fourth-quarter wind-downs.",
+      "region": "SOUTH \u2014 ALABAMA / ARKANSAS / OCTOBER 28 ANNOUNCEMENT",
+      "image": null
+    },
+    {
+      "headline": "Domtar describes changes from climate-risk assessment to field practice",
+      "body": "Domtar\u2019s October 28 account describes designated skid trails, drone seeding and changes to regeneration in its Canadian forests. The company says a 2022 climate-risk assessment helped set priorities.",
+      "region": "CANADA \u2014 FOREST MANAGEMENT / OCTOBER 28 COMPANY REPORT",
+      "image": null
+    },
+    {
+      "headline": "Middle Enoree timber sale offers thinning and regeneration work",
+      "body": "South Carolina\u2019s Department of Natural Resources is seeking per-ton bids for its Middle Enoree 2026 timber sale in Sumter National Forest. Bids open November 18 at 11 a.m.; they must arrive before opening.",
+      "region": "SOUTH \u2014 SOUTH CAROLINA / BIDS DUE NOVEMBER 18",
+      "image": null
+    },
+    {
+      "headline": "Maine retains ash-borer quarantine after opposition to repeal",
+      "body": "Maine will keep its emerald ash borer quarantine after abandoning a proposed repeal, Maine Public reported October 28. State Horticulturist Gary Fish said more than 80 comments arrived, nearly all urging retention.",
+      "region": "NORTHEAST \u2014 MAINE / OCTOBER 28 REPORT",
+      "image": null
+    }
+  ],
+  "featuredResource": {
+    "title": "Continuous Improvement in Logging",
+    "description": "This book applies the Theory of Constraints to finding and managing bottlenecks in logging operations. It combines a five-step improvement process, throughput accounting and productivity references to help operators focus changes where they affect overall output.",
+    "url": "https://cinl.loggingchance.com/",
+    "kind": "book"
+  },
+  "publication_attempted": false
+}
