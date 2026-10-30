@@ -5,36 +5,43 @@
     "x": {
       "duplicate_search": {
         "complete": true,
-        "posts_checked": 359
+        "posts_checked": 360
       },
       "attempt_started_at": "2026-10-30T08:56:01.099702Z",
       "newly_created": true,
       "post_id": "6ae45ba158a62337fb763ab4",
-      "status": "scheduled",
+      "status": "sent",
       "due_at": "2026-10-30T10:00:00.000Z",
       "created_at": "2026-10-30T08:56:01.229Z",
-      "external_url": null,
+      "external_url": "https://x.com/1487833905197637637/status/2116107869338665146",
       "assets": [],
       "provider_text": "New York awards $45 million to expand forest markets and tree nurseries. Also in Woods Run: Acadian’s harvesting results, Oregon pile burning and a new forest-conversion monitor.\n\nhttps://woodsrun.forestenterprise.org/2026/10/30/",
       "error": null,
       "schedule_verified": true,
-      "provider_sent": false,
-      "delivery_state": "scheduled",
+      "provider_sent": true,
+      "delivery_state": "sent",
       "existing_delivery": true,
-      "public_visibility": "not_independently_verified"
+      "public_visibility": "verified",
+      "public_probe": {
+        "url": "https://x.com/1487833905197637637/status/2116107869338665146",
+        "final_url": "https://x.com/ForestBizSchool/status/2116107869338665146",
+        "http_status": 200,
+        "content_type": "text/html; charset=UTF-8",
+        "content_verified": true
+      }
     },
     "instagram": {
       "duplicate_search": {
         "complete": true,
-        "posts_checked": 296
+        "posts_checked": 297
       },
       "attempt_started_at": "2026-10-30T08:56:02.938389Z",
       "newly_created": true,
       "post_id": "6ae45ba338b96b6f5b9c0bd3",
-      "status": "scheduled",
+      "status": "sent",
       "due_at": "2026-10-30T10:00:00.000Z",
       "created_at": "2026-10-30T08:56:03.406Z",
-      "external_url": null,
+      "external_url": "https://www.instagram.com/reel/DfHUU-PDd1T/",
       "assets": [
         {
           "source": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/videos/2026-10-30.mp4",
@@ -44,23 +51,30 @@
       "provider_text": "Woods Run Digest — October 30, 2026\n\nDaily North American forestry & forest-products intelligence from The Forest Business School.\n\nRead today’s edition: https://woodsrun.forestenterprise.org/2026/10/30/\n\nToday's Featured Resource\nForest Carbon Online (FCO)\nhttps://fco.forestenterprise.org/",
       "error": null,
       "schedule_verified": true,
-      "provider_sent": false,
-      "delivery_state": "scheduled",
+      "provider_sent": true,
+      "delivery_state": "sent",
       "existing_delivery": true,
-      "public_visibility": "not_independently_verified"
+      "public_visibility": "verified",
+      "public_probe": {
+        "url": "https://www.instagram.com/reel/DfHUU-PDd1T/",
+        "final_url": "https://www.instagram.com/reel/DfHUU-PDd1T/",
+        "http_status": 200,
+        "content_type": "text/html; charset=\"utf-8\"",
+        "content_verified": true
+      }
     },
     "youtube": {
       "duplicate_search": {
         "complete": true,
-        "posts_checked": 93
+        "posts_checked": 94
       },
       "attempt_started_at": "2026-10-30T08:56:04.814418Z",
       "newly_created": true,
       "post_id": "6ae45ba5ceb12661efd73f1b",
-      "status": "scheduled",
+      "status": "sent",
       "due_at": "2026-10-30T10:00:00.000Z",
       "created_at": "2026-10-30T08:56:05.164Z",
-      "external_url": null,
+      "external_url": "https://www.youtube.com/watch?v=H1-XaEPzKYw",
       "assets": [
         {
           "source": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/videos/2026-10-30.mp4",
@@ -70,13 +84,20 @@
       "provider_text": "Woods Run Digest — October 30, 2026\n\nNew York awards $45 million for statewide forest markets and tree nurseries. Also: Acadian Timber’s regional harvesting results, Friday pile burning in Oregon and a new U.S. forest-conversion monitor, with six dated market indicators and Forest Carbon Online.\n\nRead the full edition: https://woodsrun.forestenterprise.org/2026/10/30/\n\nDaily forestry & forest-products intelligence from The Forest Business School.\n\nToday's Featured Resource\nForest Carbon Online (FCO)\nhttps://fco.forestenterprise.org/",
       "error": null,
       "schedule_verified": true,
-      "provider_sent": false,
-      "delivery_state": "scheduled",
+      "provider_sent": true,
+      "delivery_state": "sent",
       "existing_delivery": true,
-      "public_visibility": "not_independently_verified"
+      "public_visibility": "verified",
+      "public_probe": {
+        "url": "https://www.youtube.com/watch?v=H1-XaEPzKYw",
+        "final_url": "https://www.youtube.com/watch?v=H1-XaEPzKYw",
+        "http_status": 200,
+        "content_type": "text/html; charset=utf-8",
+        "content_verified": true
+      }
     }
   },
-  "checked_at": "2026-10-30T08:55:57.198433Z",
+  "checked_at": "2026-10-30T10:01:30.001090Z",
   "requested_action": "schedule_daily",
   "requested_channels": [
     "x",
@@ -212,9 +233,9 @@
   },
   "all_scheduled": true,
   "daily_idempotent": true,
-  "all_provider_sent": false,
-  "all_public_verified": false,
-  "all_daily_channels_provider_sent": false,
+  "all_provider_sent": true,
+  "all_public_verified": true,
+  "all_daily_channels_provider_sent": true,
   "all_daily_channels_scheduled": true,
   "email_verified": false,
   "complete": false
