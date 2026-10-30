@@ -1,0 +1,16 @@
+{
+  "slot": "2026-10-30-launch",
+  "request": {
+    "slot": "2026-10-30-launch",
+    "asset": "assets/instagram-recruitment/card01-v2.jpg",
+    "sha256": "ecbb583446881af858f3cd43390e90a813b4bef8b4d275db17d20db1468473cd",
+    "caption": "From the woods to your inbox.\n\nThe Woods Run Digest brings you daily Forestry & Wood Products news by email. Subscribe free using the link in bio, then confirm your email to start receiving it.\n\n#Forestry #WoodProducts #WoodsRunDigest",
+    "immediate": true
+  },
+  "duplicate_search": {
+    "complete": true,
+    "posts_checked": 297
+  },
+  "checked_at": "2026-10-30T20:13:05.086674+00:00",
+  "attempt_started_at": "2026-10-30T20:13:05.483802+00:00"
+}
