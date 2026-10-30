@@ -1,0 +1,29 @@
+name: WR Instagram recruitment campaign audit
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/wr-instagram-recruitment-audit.yml']
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    env:
+      BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: |
+          python - <<'PY'
+          import sys,json
+          sys.path.insert(0,'scripts')
+          import buffer_queue as b
+          org,channels=b.get_channels()
+          ch=[c for c in channels if c['id']=='6844cc71d6d25b49a1de682e']
+          assert len(ch)==1 and ch[0]['name']=='northeastforests' and ch[0]['service']=='instagram'
+          posts=b.recent(org,ch[0]['id'])
+          print('CAMPAIGN_AUDIT '+json.dumps({'channel':ch[0],'complete_history':True,'count':len(posts),'posts':posts},ensure_ascii=False))
+          PY
