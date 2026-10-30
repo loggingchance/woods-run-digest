@@ -1,0 +1,42 @@
+{
+  "action": "publish",
+  "items": [
+    {
+      "slot": "2026-10-30-launch",
+      "asset": "assets/instagram-recruitment/card01-v2.jpg",
+      "sha256": "ecbb583446881af858f3cd43390e90a813b4bef8b4d275db17d20db1468473cd",
+      "caption": "From the woods to your inbox.\n\nThe Woods Run Digest brings you daily Forestry & Wood Products news by email. Subscribe free using the link in bio, then confirm your email to start receiving it.\n\n#Forestry #WoodProducts #WoodsRunDigest",
+      "immediate": true
+    },
+    {
+      "slot": "2026-11-03",
+      "asset": "assets/instagram-recruitment/card02-v2.jpg",
+      "sha256": "416cb0611c5d4c0016698d410376126da01d72409cbd0c0945010168e92a3b7d",
+      "caption": "Keep up with the news beyond the landing.\n\nThe Woods Run Digest brings you daily Forestry & Wood Products news by email. Subscribe free using the link in bio, then confirm your email to start receiving it.\n\n#Forestry #WoodProducts #WoodsRunDigest"
+    },
+    {
+      "slot": "2026-11-05",
+      "asset": "assets/instagram-recruitment/card03-v2.jpg",
+      "sha256": "e324e80d2efa66b57dc8116a95857d8b72142984e106883aa85b07cb11665c85",
+      "caption": "From standing timber to finished products.\n\nThe Woods Run Digest brings you daily Forestry & Wood Products news by email. Subscribe free using the link in bio, then confirm your email to start receiving it.\n\n#Forestry #WoodProducts #WoodsRunDigest"
+    },
+    {
+      "slot": "2026-11-10",
+      "asset": "assets/instagram-recruitment/card04-v2.jpg",
+      "sha256": "9e10421bc5ee249f2456b9f782076d25d69ef65226cec838a5ebc1c35d69a56d",
+      "caption": "A fresh read for people who work with forests.\n\nThe Woods Run Digest brings you daily Forestry & Wood Products news by email. Subscribe free using the link in bio, then confirm your email to start receiving it.\n\n#Forestry #WoodProducts #WoodsRunDigest"
+    },
+    {
+      "slot": "2026-11-12",
+      "asset": "assets/instagram-recruitment/card05-v2.jpg",
+      "sha256": "665288e63e0f07b38124a9dacf6be5af1186c39274e272eb6b15df638748857d",
+      "caption": "Follow the news across forestry and wood products.\n\nThe Woods Run Digest brings you daily Forestry & Wood Products news by email. Subscribe free using the link in bio, then confirm your email to start receiving it.\n\n#Forestry #WoodProducts #WoodsRunDigest"
+    },
+    {
+      "slot": "2026-11-17",
+      "asset": "assets/instagram-recruitment/card06-v2.jpg",
+      "sha256": "073279bc6416c7aaaac398ee4273c426b07159fb8f749cedaf4d3255e82793cf",
+      "caption": "Start your day with a broader view of the woods.\n\nThe Woods Run Digest brings you daily Forestry & Wood Products news by email. Subscribe free using the link in bio, then confirm your email to start receiving it.\n\n#Forestry #WoodProducts #WoodsRunDigest"
+    }
+  ]
+}
