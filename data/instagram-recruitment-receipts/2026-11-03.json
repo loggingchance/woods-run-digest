@@ -11,5 +11,21 @@
     "posts_checked": 298
   },
   "checked_at": "2026-10-30T20:13:20.951003+00:00",
-  "attempt_started_at": "2026-10-30T20:13:21.523726+00:00"
+  "attempt_started_at": "2026-10-30T20:13:21.523726+00:00",
+  "post_id": "6ae4fa63406ab8a0187e4b89",
+  "provider_post": {
+    "id": "6ae4fa63406ab8a0187e4b89",
+    "text": "Keep up with the news beyond the landing.\n\nThe Woods Run Digest brings you daily Forestry & Wood Products news by email. Subscribe free using the link in bio, then confirm your email to start receiving it.\n\n#Forestry #WoodProducts #WoodsRunDigest",
+    "status": "scheduled",
+    "createdAt": "2026-10-30T20:13:23.243Z",
+    "dueAt": "2026-11-03T15:00:00.000Z",
+    "channelId": "6844cc71d6d25b49a1de682e",
+    "externalLink": null,
+    "assets": [
+      {
+        "source": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/instagram-recruitment/card02-v2.jpg",
+        "mimeType": "image/jpeg"
+      }
+    ]
+  }
 }
