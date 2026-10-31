@@ -1,0 +1,53 @@
+{
+  "date": "2026-10-31",
+  "format": "approved-v4",
+  "dimensions": [
+    1080,
+    1920
+  ],
+  "fps": 30,
+  "frames": 1335,
+  "duration_seconds": 44.5,
+  "segment_frames": [
+    75,
+    210,
+    210,
+    210,
+    210,
+    300,
+    120
+  ],
+  "stories": [
+    {
+      "headline": "Ren\u00e9 Germain wins national award for family forest education",
+      "body": "Vermont native Ren\u00e9 Germain has received the 2026 Family Forests Education Award for nearly three decades of work with the New York City Watershed Model Forest Program. Germain, the Watershed Agricultural Council and partners were recognized\u2026",
+      "region": "NEW YORK \u2014 FAMILY FOREST EDUCATION",
+      "image": null
+    },
+    {
+      "headline": "Conifex\u2019s Mackenzie upgrades target drying and production bottlenecks",
+      "body": "Canada announced C$11 million for Conifex Timber\u2019s Mackenzie operation on October 28. The package combines C$10 million in repayable support with C$1 million that does not require repayment.",
+      "region": "CANADA \u2014 BRITISH COLUMBIA / OCTOBER 28 ANNOUNCEMENT",
+      "image": null
+    },
+    {
+      "headline": "Faulkner Ridge timber bids open Tuesday in Harrisburg",
+      "body": "The Pennsylvania Game Commission\u2019s current Faulkner Ridge II sale offers an estimated 457,019 board feet of sawlogs and 1,760 tons of pulpwood across 211 acres in Scott Township, Wayne County.",
+      "region": "PENNSYLVANIA \u2014 WAYNE COUNTY / BIDS OPEN NOVEMBER 3",
+      "image": null
+    },
+    {
+      "headline": "Maine logging award recognizes instructors building job skills in prison",
+      "body": "Scott DeMoranville and Alvin Wasson of Mountain View Correctional Facility received the 2026 Certified Logging Professional Logger of the Year award in the supervisor/contractor category, News Center Maine reported October 28.",
+      "region": "MAINE \u2014 LOGGING WORKFORCE / OCTOBER 28 REPORT",
+      "image": null
+    }
+  ],
+  "featuredResource": {
+    "title": "Forest Enterprises of the Adirondacks",
+    "description": "This illustrated book profiles the loggers and small businesses working in New York\u2019s Adirondack forests. Its photographs and firsthand accounts show varied approaches to equipment, markets, family businesses and making a living in the woods.",
+    "url": "https://fea.forestenterprise.org/",
+    "kind": "book"
+  },
+  "publication_attempted": false
+}
