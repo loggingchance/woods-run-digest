@@ -1,0 +1,221 @@
+{
+  "run_id": "daily-2026-11-01",
+  "date": "2026-11-01",
+  "channels": {
+    "x": {
+      "duplicate_search": {
+        "complete": true,
+        "posts_checked": 363
+      },
+      "attempt_started_at": "2026-11-01T09:47:19.096949Z",
+      "newly_created": true,
+      "post_id": "6ae70aa7cf3a3112f3ed5572",
+      "status": "scheduled",
+      "due_at": "2026-11-01T11:00:00.000Z",
+      "created_at": "2026-11-01T09:47:19.239Z",
+      "external_url": null,
+      "assets": [],
+      "provider_text": "Georgia-Pacific invests about $150 million to modernize Palatka tissue production. Also in Woods Run: silvopasture research, Colorado aspen work and New Brunswick timberlands.\n\nhttps://woodsrun.forestenterprise.org/2026/11/01/",
+      "error": null,
+      "schedule_verified": true,
+      "provider_sent": false,
+      "delivery_state": "scheduled",
+      "existing_delivery": true,
+      "public_visibility": "not_independently_verified"
+    },
+    "instagram": {
+      "duplicate_search": {
+        "complete": true,
+        "posts_checked": 304
+      },
+      "attempt_started_at": "2026-11-01T09:47:21.510222Z",
+      "newly_created": true,
+      "post_id": "6ae70aaa37c1acd2a0f87442",
+      "status": "scheduled",
+      "due_at": "2026-11-01T11:00:00.000Z",
+      "created_at": "2026-11-01T09:47:22.029Z",
+      "external_url": null,
+      "assets": [
+        {
+          "source": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/videos/2026-11-01.mp4",
+          "mimeType": "video/mp4"
+        }
+      ],
+      "provider_text": "Woods Run Digest — November 1, 2026\n\nDaily North American forestry & forest-products intelligence from The Forest Business School.\n\nRead today’s edition: https://woodsrun.forestenterprise.org/2026/11/01/\n\nToday's Featured Resource\nHarvesting Woody Biomass: A Small Business Guide\nhttps://hwb.loggingchance.com/",
+      "error": null,
+      "schedule_verified": true,
+      "provider_sent": false,
+      "delivery_state": "scheduled",
+      "existing_delivery": true,
+      "public_visibility": "not_independently_verified"
+    },
+    "youtube": {
+      "duplicate_search": {
+        "complete": true,
+        "posts_checked": 95
+      },
+      "attempt_started_at": "2026-11-01T09:47:22.809575Z",
+      "newly_created": true,
+      "post_id": "6ae70aabab019b90874fe4ee",
+      "status": "scheduled",
+      "due_at": "2026-11-01T11:00:00.000Z",
+      "created_at": "2026-11-01T09:47:23.133Z",
+      "external_url": null,
+      "assets": [
+        {
+          "source": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/videos/2026-11-01.mp4",
+          "mimeType": "video/mp4"
+        }
+      ],
+      "provider_text": "Woods Run Digest — November 1, 2026\n\nGeorgia-Pacific invests about $150 million in Palatka tissue production. Also: New York silvopasture research, Colorado aspen-work proposals and New Brunswick’s timberland bid, with six dated market indicators and Harvesting Woody Biomass: A Small Business Guide.\n\nRead the full edition: https://woodsrun.forestenterprise.org/2026/11/01/\n\nDaily forestry & forest-products intelligence from The Forest Business School.\n\nToday's Featured Resource\nHarvesting Woody Biomass: A Small Business Guide\nhttps://hwb.loggingchance.com/",
+      "error": null,
+      "schedule_verified": true,
+      "provider_sent": false,
+      "delivery_state": "scheduled",
+      "existing_delivery": true,
+      "public_visibility": "not_independently_verified"
+    }
+  },
+  "checked_at": "2026-11-01T09:47:14.754328Z",
+  "requested_action": "schedule_daily",
+  "requested_channels": [
+    "x",
+    "instagram",
+    "youtube"
+  ],
+  "required_daily_channels": [
+    "x",
+    "instagram",
+    "youtube"
+  ],
+  "daily_target_due_at": "2026-11-01T11:00:00Z",
+  "channel_identity": [
+    {
+      "id": "6ab14319ea19ca0bdea627e2",
+      "name": "Logging Chance",
+      "service": "youtube",
+      "serviceId": "UCq-PscVBAKjmVE39qb2NyCg",
+      "externalLink": "https://www.youtube.com/channel/UCq-PscVBAKjmVE39qb2NyCg",
+      "isDisconnected": false,
+      "isLocked": false,
+      "isQueuePaused": false,
+      "timezone": "America/Denver"
+    },
+    {
+      "id": "6844cc71d6d25b49a1de682e",
+      "name": "northeastforests",
+      "service": "instagram",
+      "serviceId": "17841412643805979",
+      "externalLink": "https://instagram.com/northeastforests",
+      "isDisconnected": false,
+      "isLocked": false,
+      "isQueuePaused": false,
+      "timezone": "America/Denver"
+    },
+    {
+      "id": "6843193ed6d25b49a145ff6e",
+      "name": "ForestBizSchool",
+      "service": "twitter",
+      "serviceId": "1487833905197637637",
+      "externalLink": "https://twitter.com/ForestBizSchool",
+      "isDisconnected": false,
+      "isLocked": false,
+      "isQueuePaused": false,
+      "timezone": "America/Denver"
+    }
+  ],
+  "due_at": "2026-11-01T11:00:00Z",
+  "preflight_by_channel": {
+    "x": {
+      "page": {
+        "url": "https://woodsrun.forestenterprise.org/2026/11/01/",
+        "final_url": "https://woodsrun.forestenterprise.org/2026/11/01/",
+        "http_status": 200,
+        "content_type": "text/html",
+        "content_verified": true
+      },
+      "link_card": {
+        "page_url": "https://woodsrun.forestenterprise.org/2026/11/01/",
+        "image_url": "https://woodsrun.forestenterprise.org/assets/cards/2026-11-01.png",
+        "card": "summary_large_image",
+        "image_bytes": 207020,
+        "metadata_verified": true
+      },
+      "card": {
+        "url": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/cards/2026-11-01.png",
+        "dimensions": [
+          1200,
+          630
+        ],
+        "bytes": 207020,
+        "public": {
+          "url": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/cards/2026-11-01.png",
+          "final_url": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/cards/2026-11-01.png",
+          "http_status": 200,
+          "content_type": "image/png",
+          "content_verified": true
+        }
+      }
+    },
+    "instagram": {
+      "page": {
+        "url": "https://woodsrun.forestenterprise.org/2026/11/01/",
+        "final_url": "https://woodsrun.forestenterprise.org/2026/11/01/",
+        "http_status": 200,
+        "content_type": "text/html",
+        "content_verified": true
+      },
+      "video": {
+        "url": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/videos/2026-11-01.mp4",
+        "dimensions": [
+          [
+            1080,
+            1920
+          ]
+        ],
+        "bytes": 1897316,
+        "public": {
+          "url": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/videos/2026-11-01.mp4",
+          "final_url": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/videos/2026-11-01.mp4",
+          "http_status": 200,
+          "content_type": "application/octet-stream",
+          "content_verified": true
+        }
+      }
+    },
+    "youtube": {
+      "page": {
+        "url": "https://woodsrun.forestenterprise.org/2026/11/01/",
+        "final_url": "https://woodsrun.forestenterprise.org/2026/11/01/",
+        "http_status": 200,
+        "content_type": "text/html",
+        "content_verified": true
+      },
+      "video": {
+        "url": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/videos/2026-11-01.mp4",
+        "dimensions": [
+          [
+            1080,
+            1920
+          ]
+        ],
+        "bytes": 1897316,
+        "public": {
+          "url": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/videos/2026-11-01.mp4",
+          "final_url": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/videos/2026-11-01.mp4",
+          "http_status": 200,
+          "content_type": "application/octet-stream",
+          "content_verified": true
+        }
+      }
+    }
+  },
+  "all_scheduled": true,
+  "daily_idempotent": true,
+  "all_provider_sent": false,
+  "all_public_verified": false,
+  "all_daily_channels_provider_sent": false,
+  "all_daily_channels_scheduled": true,
+  "email_verified": false,
+  "complete": false
+}
