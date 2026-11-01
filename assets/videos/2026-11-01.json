@@ -1,0 +1,53 @@
+{
+  "date": "2026-11-01",
+  "format": "approved-v4",
+  "dimensions": [
+    1080,
+    1920
+  ],
+  "fps": 30,
+  "frames": 1335,
+  "duration_seconds": 44.5,
+  "segment_frames": [
+    75,
+    210,
+    210,
+    210,
+    210,
+    300,
+    120
+  ],
+  "stories": [
+    {
+      "headline": "Georgia-Pacific invests $150 million to modernize Palatka tissue production",
+      "body": "Georgia-Pacific has begun an approximately US$150 million rebuild of a paper machine at its Palatka, Florida, mill. The company\u2019s October 29 announcement expects completion in the second quarter of 2028.",
+      "region": "SOUTH \u2014 FLORIDA / OCTOBER 29 ANNOUNCEMENT",
+      "image": null
+    },
+    {
+      "headline": "New York farm study tests the costs and performance of planting trees in pasture",
+      "body": "A new multi-year study is testing tree planting on six working New York cattle farms. Researchers will compare three silvopasture designs, combining trees, forage and livestock, under Northeast conditions.",
+      "region": "NORTHEAST \u2014 NEW YORK / OCTOBER 30 RESEARCH LAUNCH",
+      "image": null
+    },
+    {
+      "headline": "Oil Mountain aspen work seeks proposals by Tuesday afternoon",
+      "body": "The National Forest Foundation\u2019s current Oil Mountain solicitation closes November 3 at 5 p.m. Mountain Standard Time. It seeks forestry services in the Grand Mesa, Uncompahgre and Gunnison National Forests.",
+      "region": "WEST \u2014 COLORADO / PROPOSALS DUE NOVEMBER 3",
+      "image": null
+    },
+    {
+      "headline": "New Brunswick bids for timberlands as Nackawic mill idling approaches",
+      "body": "New Brunswick has submitted a bid for private timberlands supplying the AV Nackawic pulp mill, which is scheduled to idle November 4. Natural Resources Minister John Herron said the bid aims to retain wood supply for future regional\u2026",
+      "region": "CANADA \u2014 NEW BRUNSWICK / TIMBERLAND AND MILL OPTIONS",
+      "image": null
+    }
+  ],
+  "featuredResource": {
+    "title": "Harvesting Woody Biomass: A Small Business Guide",
+    "description": "This free book helps logging businesses evaluate whether biomass production fits their operations and markets. It covers harvesting systems, financial calculations and business planning, including an example expansion plan.",
+    "url": "https://hwb.loggingchance.com/",
+    "kind": "book"
+  },
+  "publication_attempted": false
+}
