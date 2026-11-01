@@ -3,10 +3,15 @@
   "text": "New York’s six-farm silvopasture study will track planting costs alongside trees, livestock, soil and water. It tests planting trees into pasture; thinning existing woodland is outside its scope.",
   "due_at": "2026-11-01T17:00:00Z",
   "channel_id": "6843193ed6d25b49a145ff6e",
-  "state": "attempt_started",
+  "state": "accepted",
   "attempt_started_at": "2026-11-01T16:49:06.537425Z",
-  "post_id": null,
+  "post_id": "6ae76d847c4e55592665ac31",
   "history_checked": 364,
   "source": "native-daily-striking",
-  "email_attempted": false
+  "email_attempted": false,
+  "provider_status": "scheduled",
+  "provider_due_at": "2026-11-01T17:00:00.000Z",
+  "external_url": null,
+  "accepted_at": "2026-11-01T16:49:08.200881Z",
+  "schedule_verified": true
 }
