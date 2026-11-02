@@ -1,0 +1,53 @@
+{
+  "date": "2026-11-02",
+  "format": "approved-v4",
+  "dimensions": [
+    1080,
+    1920
+  ],
+  "fps": 30,
+  "frames": 1335,
+  "duration_seconds": 44.5,
+  "segment_frames": [
+    75,
+    210,
+    210,
+    210,
+    210,
+    300,
+    120
+  ],
+  "stories": [
+    {
+      "headline": "Forest Service changes leasing rules for potential workforce housing",
+      "body": "A Forest Service rule published November 2 removes administrative-site leases from the agency\u2019s special-use regulations. Effective December 2, the change is intended to make redevelopment partnerships with municipalities and private\u2026",
+      "region": "U.S. \u2014 FOREST SERVICE / FINAL RULE PUBLISHED NOVEMBER 2",
+      "image": null
+    },
+    {
+      "headline": "Stora Enso sets a timetable for separating its Swedish forest business",
+      "body": "Stora Enso\u2019s board approved a plan October 30 to separate its Swedish forest business into Bergslagets Skogar, a proposed listed company with more than 1.2 million hectares of forest land. Management will present the business at a November 3\u2026",
+      "region": "INTERNATIONAL \u2014 SWEDEN / OCTOBER 30 DEMERGER PLAN",
+      "image": null
+    },
+    {
+      "headline": "British Columbia forest-policy seminar examines what can change",
+      "body": "The University of British Columbia will host an open, in-person forest-policy seminar November 24, from noon to 1 p.m., in CAWP 2916, the Caseroom. The October 29 notice lists no online participation option.",
+      "region": "CANADA \u2014 BRITISH COLUMBIA / NOVEMBER 24, IN PERSON",
+      "image": null
+    },
+    {
+      "headline": "Poor ocean conditions keep forest-nesting murrelet chicks exposed longer",
+      "body": "Oregon State University research links ocean feeding conditions to the time marbled murrelet chicks spend in forest nests. Published October 20 in Ornithology, the study found chicks took an average of eight additional days to fledge during\u2026",
+      "region": "WEST \u2014 OREGON / OCTOBER 20 STUDY",
+      "image": null
+    }
+  ],
+  "featuredResource": {
+    "title": "EROI of Woody Biomass Heating Fuels in New York State",
+    "description": "This one-page PDF infographic compares energy returned from wood heating with energy used to produce and deliver the fuel. It shows how feedstock, processing, transport distance and boiler efficiency influence wood-chip and pellet heating energy returns.",
+    "url": "https://img1.wsimg.com/blobby/go/b0235e40-160d-409a-a1fd-75965dacd99f/EROI%20of%20Woody%20Biomass%20Heating%20Fuels%20in%20NYS.pdf",
+    "kind": "infographic"
+  },
+  "publication_attempted": false
+}

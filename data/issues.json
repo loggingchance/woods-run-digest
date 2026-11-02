@@ -1,5 +1,140 @@
 [
   {
+    "date": "2026-11-02",
+    "summary": "A Forest Service leasing rule aims to ease financing for eligible administrative-site redevelopment. Also: Stora Enso’s forest-business separation, a British Columbia policy seminar and Oregon murrelet research, with six dated market indicators and a wood-heating energy-return infographic.",
+    "socialText": "The Forest Service changes administrative-site leasing rules to ease redevelopment financing, including potential workforce housing. The final rule takes effect December 2.",
+    "cardTeaser": "Forest Service changes administrative-site leasing rules",
+    "cardSubhead": "Potential workforce housing; final rule takes effect December 2.",
+    "strikingText": "Marbled murrelets feed at sea but nest in forests. In an Oregon study, poor ocean conditions kept chicks in nests eight days longer, extending predator exposure despite parents bringing larger, richer fish.",
+    "marketObservations": {
+      "diesel": {
+        "status": "verified",
+        "latest": "US$6.352/gal",
+        "observed": "Week of October 26, 2026; released October 27",
+        "change": [
+          "+US$0.076/gal",
+          "+1.21%"
+        ],
+        "comparison": "Versus October 19: US$6.276/gal",
+        "detail": "EIA U.S. on-highway diesel; taxes included",
+        "sources": [
+          {
+            "label": "EIA U.S. on-highway diesel; taxes included",
+            "url": "https://www.eia.gov/petroleum/gasdiesel/"
+          }
+        ]
+      },
+      "lumber_futures": {
+        "status": "verified",
+        "latest": "US$521.50/MBF",
+        "observed": "October 30, 2026 close",
+        "change": [
+          "+US$3.00/MBF",
+          "+0.58%"
+        ],
+        "comparison": "Same November contract, October 23: US$518.50/MBF",
+        "detail": "November 2026 lumber futures; nearby contract",
+        "sources": [
+          {
+            "label": "November 2026 lumber futures; nearby contract",
+            "url": "https://www.investing.com/commodities/lumber-historical-data"
+          },
+          {
+            "label": "Named November contract and settlement date",
+            "url": "https://www.investing.com/commodities/lumber-contracts"
+          }
+        ]
+      },
+      "madisons": {
+        "status": "verified",
+        "latest": "US$459/MBF",
+        "observed": "Week ending October 30, 2026",
+        "change": [
+          "−US$36/MBF",
+          "−7.27% (calculated)"
+        ],
+        "comparison": "Versus week ending October 23: US$495/MBF",
+        "detail": "Madison’s weekly lumber index",
+        "sources": [
+          {
+            "label": "Madison’s dated weekly index",
+            "url": "https://madisonsreport.com/madisons-lumber-prices-index-oct-30-2026-us459-mfbm/"
+          }
+        ]
+      },
+      "hardwood_ppi": {
+        "status": "verified",
+        "latest": "285.075 index points",
+        "observed": "September 2026; released October 15",
+        "change": [
+          "−1.290 points",
+          "−0.45%"
+        ],
+        "comparison": "Versus August 2026: 286.365",
+        "detail": "BLS WPU0812; 1982=100; not seasonally adjusted",
+        "sources": [
+          {
+            "label": "BLS WPU0812; 1982=100; not seasonally adjusted",
+            "url": "https://fred.stlouisfed.org/series/WPU0812"
+          }
+        ]
+      },
+      "housing_starts": {
+        "status": "verified",
+        "latest": "859,000 units (SAAR)",
+        "observed": "September 2026; released October 20",
+        "change": [
+          "−41,000 units (SAAR)",
+          "−4.6%"
+        ],
+        "comparison": "Versus revised August 2026: 900,000",
+        "detail": "Census U.S. single-family starts; annualized estimate",
+        "sources": [
+          {
+            "label": "Census U.S. single-family starts; annualized estimate",
+            "url": "https://www.census.gov/construction/nrc/pdf/newresconst.pdf"
+          }
+        ]
+      },
+      "cad_usd": {
+        "status": "verified",
+        "latest": "C$1.3960 per US$1",
+        "observed": "Daily average, October 30, 2026",
+        "change": [
+          "−C$0.0025 per US$1",
+          "−0.18%"
+        ],
+        "comparison": "Versus October 29: C$1.3985 per US$1",
+        "detail": "Bank of Canada; Canadian dollars per U.S. dollar",
+        "sources": [
+          {
+            "label": "Bank of Canada; Canadian dollars per U.S. dollar",
+            "url": "https://www.bankofcanada.ca/rates/exchange/daily-exchange-rates/"
+          }
+        ]
+      }
+    },
+    "marketCaveats": [
+      "The September single-family starts monthly change has a published ±10.0-percentage-point 90% confidence interval and is not statistically significant.",
+      "Early Monday check: October 30 remains the latest completed lumber close and Canadian-dollar daily average; weekly and monthly indicators retain their dated latest releases.",
+      "Display rounding follows the approved format. Changes are calculated from unrounded observations, so rounded currency levels may look unchanged even when a small movement occurred."
+    ],
+    "featuredResource": {
+      "date": "2026-11-02",
+      "source": "daily-sheet",
+      "item": {
+        "title": "EROI of Woody Biomass Heating Fuels in New York State",
+        "kind": "infographic",
+        "description": "This one-page PDF infographic compares energy returned from wood heating with energy used to produce and deliver the fuel. It shows how feedstock, processing, transport distance and boiler efficiency influence wood-chip and pellet heating energy returns.",
+        "source_url": "https://img1.wsimg.com/blobby/go/b0235e40-160d-409a-a1fd-75965dacd99f/EROI%20of%20Woody%20Biomass%20Heating%20Fuels%20in%20NYS.pdf",
+        "url": "https://img1.wsimg.com/blobby/go/b0235e40-160d-409a-a1fd-75965dacd99f/EROI%20of%20Woody%20Biomass%20Heating%20Fuels%20in%20NYS.pdf"
+      },
+      "cached": false
+    },
+    "displayDate": "November 2, 2026",
+    "url": "/2026/11/02/"
+  },
+  {
     "date": "2026-11-01",
     "summary": "Georgia-Pacific invests about $150 million in Palatka tissue production. Also: New York silvopasture research, Colorado aspen-work proposals and New Brunswick’s timberland bid, with six dated market indicators and Harvesting Woody Biomass: A Small Business Guide.",
     "socialText": "Georgia-Pacific invests about $150 million to modernize Palatka tissue production. Also in Woods Run: silvopasture research, Colorado aspen work and New Brunswick timberlands.",
