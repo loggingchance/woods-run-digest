@@ -4,6 +4,7 @@ Observations are verified by the daily editor, never inferred by this renderer.
 Missing observations render unavailable; monthly dates and contracts are inputs.
 """
 import html
+import datetime
 from urllib.parse import urlsplit
 
 START = '2026-10-27'
@@ -105,6 +106,10 @@ def table_cells(table):
 
 def validate_market_table(article, day):
     if day < START: return
+    if day >= '2026-11-03' and datetime.date.fromisoformat(day).weekday() >= 5:
+        if article.select('table#market-table, section.price-tracker, section.by-the-numbers'):
+            raise ValueError('By the Numbers is omitted on weekends')
+        return
     tables = article.select('table#market-table')
     if len(tables) != 1: raise ValueError('Expected exactly one By the Numbers table')
     cells = table_cells(tables[0])
