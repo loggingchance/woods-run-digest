@@ -149,3 +149,34 @@ above for new editions. Mirror validation accepts both historical and corrected
 markup, preserves the complete canonical description and URL, and never reselects
 the resource. Email compilation retains the heading and full substantive content.
 No change to publication triggers, provider schedules, recipients or duplicate guards.
+
+
+## Weekday watches and approved weekend features — November 3, 2026 onward
+
+The canonical Site's writer and current README own the following future editorial
+schedule. Mirror complete canonical content; never research a competing edition.
+This supersedes the daily By the Numbers requirement only on weekends.
+
+- Monday/Thursday: Curtailment Watch, including reductions, closures and restarts.
+- Tuesday/Friday: Trade Policy Watch. No required Wednesday Watch.
+- Each Watch is 1–3 verified, source-linked new items, roughly 60–100 words; omit
+  when nothing material changed. Major news is not delayed for a scheduled day.
+- Saturday: no By the Numbers; an approved forestry/wood-products person profile.
+- Sunday: no By the Numbers; an approved human-interest story. The optional
+  feature replaces the table after the lead, without dropping ordinary news.
+- Steve reviews proposed weekend topics by text Thursday. Only explicit approval
+  of the specific topic/date permits inclusion. Unapproved or unavailable features
+  are omitted, never fabricated; ordinary news continues without a weekend table.
+- Keep private proposal/approval records in canonical source only, never here.
+  Public issue metadata contains the approved feature content, not private messages.
+- Weekend striking posts use the same approved feature. Canonical metadata sets
+  strikingSource=weekend_feature and strikingText equal to weekendFeature.striking_text.
+  Without an approved feature, strikingSkip=true suppresses that weekend handoff.
+  The existing 10:00 America/Denver X schedule, account and duplicate guards remain.
+  Weekday striking continues to use a substantive non-lead story.
+
+The shared market validator accepts the intentional weekend omission and rejects
+an unexpected weekend table. Both source mirroring and complete email compilation
+use it. Striking preparation/queue validate the approved feature metadata before
+scheduling; no extra broadcast, repost, subscriber or clock change is authorized.
+All already published issues and media remain unchanged.
