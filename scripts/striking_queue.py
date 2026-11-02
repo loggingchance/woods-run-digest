@@ -65,6 +65,13 @@ def load_request():
     require(due == expected or recovery, 'Striking post must be scheduled for 10:00 America/Denver')
     issue = next((i for i in json.loads((ROOT/'data/issues.json').read_text()) if i['date'] == date), None)
     require(issue and issue.get('strikingText'), 'Current canonical striking observation missing')
+    if date >= '2026-11-03' and datetime.fromisoformat(date).weekday() >= 5:
+        feature = issue.get('weekendFeature') or {}
+        require(issue.get('strikingSkip') is not True and issue.get('weekendFeatureStatus') == 'approved'
+                and issue.get('strikingSource') == 'weekend_feature'
+                and issue.get('strikingText') == feature.get('striking_text')
+                and feature.get('kind') == ('profile' if datetime.fromisoformat(date).weekday() == 5 else 'human_interest'),
+                'Weekend striking requires the approved canonical feature')
     text = issue['strikingText'].strip()
     require(0 < len(text) <= 280, f'Authored strikingText length {len(text)} exceeds Buffer X maximum of 280 characters')
     return r, issue, text, due
