@@ -16,6 +16,15 @@ def prepare(root, now):
     date = local.date().isoformat()
     issues = json.loads((root / 'data/issues.json').read_text())
     issue = next((i for i in issues if i.get('date') == date), None)
+    weekend_feature_day = date >= '2026-11-03' and local.weekday() >= 5
+    if issue and weekend_feature_day:
+        if issue.get('strikingSkip') is True:
+            return False
+        feature = issue.get('weekendFeature') or {}
+        if (issue.get('weekendFeatureStatus') != 'approved' or issue.get('strikingSource') != 'weekend_feature'
+                or feature.get('kind') != ('profile' if local.weekday() == 5 else 'human_interest')
+                or issue.get('strikingText') != feature.get('striking_text')):
+            raise ValueError('Weekend striking post must match the approved canonical feature')
     if not issue or not issue.get('strikingText', '').strip():
         raise ValueError('Current-day striking observation missing or invalid')
     if len(issue['strikingText'].strip()) > 280:
