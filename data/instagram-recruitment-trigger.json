@@ -1,13 +1,6 @@
 {
-  "action": "publish",
+  "action": "audit",
   "items": [
-    {
-      "slot": "2026-10-30-launch",
-      "asset": "assets/instagram-recruitment/card01-v2.jpg",
-      "sha256": "ecbb583446881af858f3cd43390e90a813b4bef8b4d275db17d20db1468473cd",
-      "caption": "From the woods to your inbox.\n\nThe Woods Run Digest brings you daily Forestry & Wood Products news by email. Subscribe free using the link in bio, then confirm your email to start receiving it.\n\n#Forestry #WoodProducts #WoodsRunDigest",
-      "immediate": true
-    },
     {
       "slot": "2026-11-03",
       "asset": "assets/instagram-recruitment/card02-v2.jpg",
@@ -38,5 +31,6 @@
       "sha256": "073279bc6416c7aaaac398ee4273c426b07159fb8f749cedaf4d3255e82793cf",
       "caption": "Start your day with a broader view of the woods.\n\nThe Woods Run Digest brings you daily Forestry & Wood Products news by email. Subscribe free using the link in bio, then confirm your email to start receiving it.\n\n#Forestry #WoodProducts #WoodsRunDigest"
     }
-  ]
+  ],
+  "audit_id": "refill-check-2026-11-03T1601Z"
 }
