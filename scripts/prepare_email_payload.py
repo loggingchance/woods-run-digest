@@ -17,6 +17,7 @@ from daily_resources import START as RESOURCE_START, validate_feature
 from market_table import table_cells, table_html, DETAIL_STYLE, validate_market_table
 UNSUB = '{{{RESEND_UNSUBSCRIBE_URL}}}'
 BODY_STYLE='font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:25px;color:#333333;'
+SUPPORT_STYLE='display:block;box-sizing:border-box;width:100%;padding:16px 20px;border:2px solid #b49757;border-radius:6px;background-color:#244631;color:#ffffff;font-family:Arial,Helvetica,sans-serif;font-size:18px;font-weight:700;line-height:26px;text-align:center;text-decoration:none;'
 LINK_STYLE='font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:25px;color:#1f5b3a;'
 
 
@@ -40,7 +41,8 @@ def inline(node, urls: set[str]) -> str:
     if node.name=='a':
         address=normalize_url(node.get('href',''))
         urls.add(address)
-        return f'<a href="{html.escape(address,quote=True)}" style="{LINK_STYLE}">{children}</a>'
+        style = SUPPORT_STYLE if "support-cta" in node.get("class", []) else LINK_STYLE
+        return f'<a href="{html.escape(address,quote=True)}" style="{style}">{children}</a>'
     if node.name=='img':
         address=normalize_url(node.get('src',''))
         urls.add(address)
