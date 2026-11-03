@@ -1,0 +1,53 @@
+{
+  "date": "2026-11-03",
+  "format": "approved-v4",
+  "dimensions": [
+    1080,
+    1920
+  ],
+  "fps": 30,
+  "frames": 1335,
+  "duration_seconds": 44.5,
+  "segment_frames": [
+    75,
+    210,
+    210,
+    210,
+    210,
+    300,
+    120
+  ],
+  "stories": [
+    {
+      "headline": "Searsmont welcomes Lily Robbins home after months of recovery",
+      "body": "Lily Robbins returned to Searsmont, Maine, on October 30 after five and a half months at Massachusetts General Hospital. First responders escorted her home, where family, friends and neighbors gathered at the fire station to welcome her.",
+      "region": "WOODS RUN",
+      "image": null
+    },
+    {
+      "headline": "Gillfor completes its purchase of Teal-Jones coastal operations",
+      "body": "Gillfor Manufacturing has completed its acquisition of Teal-Jones\u2019 Surrey, Sumas and Tree Farm Licence 46 operations. The October 30 company statement confirms that Gillfor is now the sole owner, following a September 18 British Columbia\u2026",
+      "region": "CANADA \u2014 BRITISH COLUMBIA / OCTOBER 30 CLOSING",
+      "image": null
+    },
+    {
+      "headline": "Communities get until November 30 to seek wildfire-planning support",
+      "body": "Newfoundland and Labrador has extended applications for its Community Wildfire Prevention and Mitigation Program to November 30. Forestry, Agriculture and Lands Minister Pleaman Forsey confirmed the extension in a November 2 statement to the\u2026",
+      "region": "CANADA \u2014 NEWFOUNDLAND AND LABRADOR / APPLICATIONS EXTENDED",
+      "image": null
+    },
+    {
+      "headline": "Open drone workflow brings individual tree crowns into focus",
+      "body": "A research team led by Universit\u00e9 de Montr\u00e9al and Mila professor \u00c9tienne Lalibert\u00e9 is sharing an open-source workflow for close-up canopy photography. Mila\u2019s October 28 account describes Harpia, a Python library that automates drone missions\u2026",
+      "region": "CANADA \u2014 QUEBEC / TROPICAL FOREST RESEARCH",
+      "image": null
+    }
+  ],
+  "featuredResource": {
+    "title": "Seasonal Climate Change in Vermont: County-level Monthly Temperature and Precipitation Data Compilation for the Forest Products Supply Chain, 1970\u20132019",
+    "description": "This PDF report compiles historical monthly temperature and precipitation patterns for Vermont counties using NOAA data. Its tables and comparisons provide context for harvest scheduling, road and trail work, and wood procurement\u2014not a current weather forecast.",
+    "url": "https://img1.wsimg.com/blobby/go/b0235e40-160d-409a-a1fd-75965dacd99f/Seasonal%20Climate%20Change%20in%20Vermont.pdf",
+    "kind": "report"
+  },
+  "publication_attempted": false
+}

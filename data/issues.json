@@ -1,5 +1,139 @@
 [
   {
+    "date": "2026-11-03",
+    "summary": "Searsmont welcomes Lily Robbins home after months of recovery following the Robbins Lumber explosion.",
+    "socialText": "Lily Robbins is home in Searsmont after months of recovery. Read her story and find the recovery fundraiser in today’s Woods Run Digest.",
+    "cardTeaser": "Searsmont welcomes Lily Robbins home",
+    "cardSubhead": "A community reunion after months of recovery",
+    "strikingText": "Lily Robbins is home after five and a half months in the hospital following the Robbins Lumber explosion. Her recovery fundraiser: https://www.gofundme.com/f/support-lily-robbins-recovery",
+    "marketObservations": {
+      "diesel": {
+        "status": "verified",
+        "latest": "US$6.352/gal",
+        "observed": "Week of October 26, 2026; released October 27",
+        "change": [
+          "+US$0.076/gal",
+          "+1.21%"
+        ],
+        "comparison": "Versus October 19: US$6.276/gal",
+        "detail": "EIA U.S. on-highway diesel; taxes included",
+        "sources": [
+          {
+            "label": "EIA U.S. on-highway diesel; taxes included",
+            "url": "https://www.eia.gov/petroleum/gasdiesel/"
+          }
+        ]
+      },
+      "lumber_futures": {
+        "status": "verified",
+        "latest": "US$524.50/MBF",
+        "observed": "November 2, 2026 close",
+        "change": [
+          "Prior-week change unavailable"
+        ],
+        "comparison": "Same January contract prior-week close not verified on November 3",
+        "detail": "January 2027 lumber futures; current continuous-series contract",
+        "sources": [
+          {
+            "label": "Lumber continuous series; current January 2027 close",
+            "url": "https://www.investing.com/commodities/lumber-historical-data"
+          },
+          {
+            "label": "Named January contract and settlement date",
+            "url": "https://www.investing.com/commodities/lumber-contracts"
+          }
+        ]
+      },
+      "madisons": {
+        "status": "verified",
+        "latest": "US$459/MBF",
+        "observed": "Week ending October 30, 2026",
+        "change": [
+          "−US$36/MBF",
+          "−7.27% (calculated)"
+        ],
+        "comparison": "Versus week ending October 23: US$495/MBF",
+        "detail": "Madison’s weekly lumber index",
+        "sources": [
+          {
+            "label": "Madison’s dated weekly index",
+            "url": "https://madisonsreport.com/madisons-lumber-prices-index-oct-30-2026-us459-mfbm/"
+          }
+        ]
+      },
+      "hardwood_ppi": {
+        "status": "verified",
+        "latest": "285.075 index points",
+        "observed": "September 2026; released October 15",
+        "change": [
+          "−1.290 points",
+          "−0.45%"
+        ],
+        "comparison": "Versus August 2026: 286.365",
+        "detail": "BLS WPU0812; 1982=100; not seasonally adjusted",
+        "sources": [
+          {
+            "label": "BLS WPU0812; 1982=100; not seasonally adjusted",
+            "url": "https://fred.stlouisfed.org/series/WPU0812"
+          }
+        ]
+      },
+      "housing_starts": {
+        "status": "verified",
+        "latest": "859,000 units (SAAR)",
+        "observed": "September 2026; released October 20",
+        "change": [
+          "−41,000 units (SAAR)",
+          "−4.6%"
+        ],
+        "comparison": "Versus revised August 2026: 900,000",
+        "detail": "Census U.S. single-family starts; annualized estimate",
+        "sources": [
+          {
+            "label": "Census U.S. single-family starts; annualized estimate",
+            "url": "https://www.census.gov/construction/nrc/pdf/newresconst.pdf"
+          }
+        ]
+      },
+      "cad_usd": {
+        "status": "verified",
+        "latest": "C$1.3978 per US$1",
+        "observed": "Daily average, November 2, 2026",
+        "change": [
+          "+C$0.0018 per US$1",
+          "+0.13%"
+        ],
+        "comparison": "Versus October 30: C$1.3960 per US$1",
+        "detail": "Bank of Canada; Canadian dollars per U.S. dollar",
+        "sources": [
+          {
+            "label": "Bank of Canada; Canadian dollars per U.S. dollar",
+            "url": "https://www.bankofcanada.ca/rates/exchange/daily-exchange-rates/"
+          }
+        ]
+      }
+    },
+    "marketCaveats": [
+      "The September single-family starts monthly change has a published ±10.0-percentage-point 90% confidence interval and is not statistically significant.",
+      "The continuous lumber series now matches January 2027. Its earlier observations may reflect a different contract, so no prior-week change is reported without a verified January-contract comparison. The latest diesel release remains October 27; the next release is due November 3.",
+      "Display rounding follows the approved format. Changes are calculated from unrounded observations, so rounded currency levels may look unchanged even when a small movement occurred."
+    ],
+    "featuredResource": {
+      "date": "2026-11-03",
+      "source": "daily-sheet",
+      "item": {
+        "title": "Seasonal Climate Change in Vermont: County-level Monthly Temperature and Precipitation Data Compilation for the Forest Products Supply Chain, 1970–2019",
+        "kind": "report",
+        "description": "This PDF report compiles historical monthly temperature and precipitation patterns for Vermont counties using NOAA data. Its tables and comparisons provide context for harvest scheduling, road and trail work, and wood procurement—not a current weather forecast.",
+        "source_url": "https://img1.wsimg.com/blobby/go/b0235e40-160d-409a-a1fd-75965dacd99f/Seasonal%20Climate%20Change%20in%20Vermont.pdf",
+        "url": "https://img1.wsimg.com/blobby/go/b0235e40-160d-409a-a1fd-75965dacd99f/Seasonal%20Climate%20Change%20in%20Vermont.pdf"
+      },
+      "cached": false
+    },
+    "displayDate": "November 3, 2026",
+    "url": "/2026/11/03/"
+  },
+  {
     "date": "2026-11-02",
     "summary": "A Forest Service leasing rule aims to ease financing for eligible administrative-site redevelopment. Also: Stora Enso’s forest-business separation, a British Columbia policy seminar and Oregon murrelet research, with six dated market indicators and a wood-heating energy-return infographic.",
     "socialText": "The Forest Service changes administrative-site leasing rules to ease redevelopment financing, including potential workforce housing. The final rule takes effect December 2.",
