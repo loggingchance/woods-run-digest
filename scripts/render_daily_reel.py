@@ -183,7 +183,12 @@ def resource_frame(resource):
     d = ImageDraw.Draw(im)
     block(d, HEADING, (90, 405, 990, 510), 48, True, fit_width=True)
     d.line((90, 515, 990, 515), fill=GOLD, width=3)
-    y = block(d, resource['title'], (90, 550, 990, 690), 60, True, fit_width=True)
+    try:
+        y = block(d, resource['title'], (90, 550, 990, 690), 60, True, fit_width=True)
+    except ValueError:
+        # Long verified report titles can use more of the shared text area.
+        # Keep the full title, description and QR destination intact.
+        y = block(d, resource['title'], (90, 550, 990, 790), 60, True, fit_width=True)
     d.line((90, y+22, 990, y+22), fill=GOLD, width=3)
     block(d, resource['description'], (90, y+45, 990, 1075), 42, fit_width=True)
     qr = resource_qr(resource['url'])
