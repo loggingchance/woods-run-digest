@@ -15,6 +15,14 @@ URLS = ['https://burl.lumbermen.org/',
         'https://example.org/resources/' + 'field-reference-' * 14 + '?edition=2026-10-28&format=app#tables']
 
 class ResourceQRTests(unittest.TestCase):
+    def test_full_report_title_fits_resource_card(self):
+        resource = dict(
+            title='Seasonal Climate Change in Vermont: County-level Monthly Temperature and Precipitation Data Compilation for the Forest Products Supply Chain, 1970–2019',
+            description='This PDF report compiles historical monthly temperature and precipitation patterns for Vermont counties using NOAA data. Its tables and comparisons provide context for harvest scheduling, road and trail work, and wood procurement—not a current weather forecast.',
+            url=URLS[0])
+        frame = reel.resource_frame(resource)
+        self.assertEqual(frame.size, (1080, 1920))
+
     def test_black_white_quiet_zone_and_integer_modules(self):
         for url in URLS:
             qr = reel.resource_qr(url)
