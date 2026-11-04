@@ -1,0 +1,60 @@
+{
+  "date": "2026-11-04",
+  "format": "approved-v4",
+  "dimensions": [
+    1080,
+    1920
+  ],
+  "fps": 30,
+  "frames": 1545,
+  "duration_seconds": 51.5,
+  "segment_frames": [
+    75,
+    210,
+    210,
+    210,
+    210,
+    210,
+    300,
+    120
+  ],
+  "stories": [
+    {
+      "headline": "Michigan tests biochar markets for storm-damaged timber",
+      "body": "Michigan State University researcher Emily Silver will examine whether storm-damaged timber and other low-value wood can find buyers as biochar. A US$300,000 U.S. Department of Agriculture grant supports the work, described in a November 3\u2026",
+      "region": "MIDWEST \u2014 MICHIGAN / NOVEMBER 3 RESEARCH REPORT",
+      "image": null
+    },
+    {
+      "headline": "Hawaii\u2019s Arbor Day brings native trees and hands-on care to five islands",
+      "body": "Hawaii will celebrate Arbor Day on November 6, with tree giveaways, community plantings and tree-care events throughout the month. The state\u2019s Kaulunani Urban and Community Forestry Program announced activities on Hawaii Island, Maui,\u2026",
+      "region": "WOODS RUN",
+      "image": null
+    },
+    {
+      "headline": "Could winter firewood demand rival a pulp mill?",
+      "body": "Eric Kingsley argues that expensive heating oil could push households in Maine, New Hampshire and Vermont to burn more firewood. In a November 2 analysis, he estimates that one additional cord per wood-using household would represent roughly\u2026",
+      "region": "WOODS RUN",
+      "image": null
+    },
+    {
+      "headline": "Boise Cascade\u2019s plywood prices rise as shipments fall",
+      "body": "Boise Cascade\u2019s third-quarter results show why revenue growth alone does not describe mill activity. Plywood selling prices rose 31% from a year earlier, while plywood sales volumes fell 7%.",
+      "region": "U.S. \u2014 WOOD PRODUCTS / NOVEMBER 2 RESULTS",
+      "image": null
+    },
+    {
+      "headline": "Forest pest forum registration closes November 13",
+      "body": "Registration for the 69th National Forest Pest Management Forum remains open through November 13. Natural Resources Canada organizes the November 17\u201319 meeting, with attendance in Ottawa or virtually through the Canadian Institute of Forestry.",
+      "region": "CANADA \u2014 ONTARIO / IN PERSON AND ONLINE",
+      "image": null
+    }
+  ],
+  "featuredResource": {
+    "title": "The Hardwood Log Desktop Reference Book",
+    "description": "This PDF reference book brings together hardwood log-volume tables, log-rule conversions, defect deductions and grading and bucking guidance. It helps loggers, foresters and buyers compare measurements and estimate log value using consistent reference tables.",
+    "url": "https://img1.wsimg.com/blobby/go/b0235e40-160d-409a-a1fd-75965dacd99f/The%20Hardwood%20Log%20Desktop%20Reference%20Book-0001.pdf",
+    "kind": "book"
+  },
+  "publication_attempted": false
+}
