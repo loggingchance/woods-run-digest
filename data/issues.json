@@ -1,5 +1,140 @@
 [
   {
+    "date": "2026-11-05",
+    "summary": "Tla’amin Nation completes the Stillwater forest acquisition with a continuing fibre-supply agreement. Also: Montana’s Marks Lumber nears its November 6 sawing cutoff, Mercer proposes a recapitalization, new plantation-fire research and Oregon’s Elliott comment period, plus six dated market indicators and a Vermont forestry climate-adaptation course.",
+    "socialText": "Tla’amin Nation has completed its Stillwater forestry acquisition, with a long-term fibre agreement supporting Western Forest Products’ coastal mills. Today’s Woods Run Digest:",
+    "strikingText": "A mill’s last day of sawing and its last day of business can be months apart. Montana’s Marks Lumber plans to stop sawing November 6 while selling existing inventory into 2027.",
+    "cardTeaser": "Tla’amin Nation completes Stillwater forestry acquisition",
+    "cardSubhead": "New ownership, with a continuing coastal fibre-supply agreement.",
+    "marketObservations": {
+      "diesel": {
+        "status": "verified",
+        "latest": "US$6.292/gal",
+        "observed": "Week of November 2, 2026; released November 3",
+        "change": [
+          "−US$0.060/gal",
+          "−0.94%"
+        ],
+        "comparison": "Versus October 26: US$6.352/gal",
+        "detail": "EIA U.S. on-highway diesel; taxes included",
+        "sources": [
+          {
+            "label": "EIA U.S. on-highway diesel; taxes included",
+            "url": "https://www.eia.gov/petroleum/gasdiesel/"
+          }
+        ]
+      },
+      "lumber_futures": {
+        "status": "verified",
+        "latest": "US$522.00/MBF",
+        "observed": "November 4, 2026 close",
+        "change": [
+          "+US$6.50/MBF",
+          "+1.26%"
+        ],
+        "comparison": "Same November contract, October 28: US$515.50/MBF",
+        "detail": "November 2026 lumber futures; nearby delivery contract",
+        "sources": [
+          {
+            "label": "November contract historical closes",
+            "url": "https://www.investing.com/commodities/lumber-historical-data"
+          },
+          {
+            "label": "Named November contract and settlement date",
+            "url": "https://www.investing.com/commodities/lumber-contracts"
+          }
+        ]
+      },
+      "madisons": {
+        "status": "verified",
+        "latest": "US$459/MBF",
+        "observed": "Week ending October 30, 2026",
+        "change": [
+          "−US$36/MBF",
+          "−7.27% (calculated)"
+        ],
+        "comparison": "Versus week ending October 23: US$495/MBF",
+        "detail": "Madison’s weekly lumber index",
+        "sources": [
+          {
+            "label": "Madison’s dated weekly index",
+            "url": "https://madisonsreport.com/madisons-lumber-prices-index-oct-30-2026-us459-mfbm/"
+          }
+        ]
+      },
+      "hardwood_ppi": {
+        "status": "verified",
+        "latest": "285.075 index points",
+        "observed": "September 2026; released October 15",
+        "change": [
+          "−1.290 points",
+          "−0.45%"
+        ],
+        "comparison": "Versus August 2026: 286.365",
+        "detail": "BLS WPU0812; 1982=100; not seasonally adjusted",
+        "sources": [
+          {
+            "label": "BLS WPU0812; 1982=100; not seasonally adjusted",
+            "url": "https://fred.stlouisfed.org/series/WPU0812"
+          }
+        ]
+      },
+      "housing_starts": {
+        "status": "verified",
+        "latest": "859,000 units (SAAR)",
+        "observed": "September 2026; released October 20",
+        "change": [
+          "−41,000 units (SAAR)",
+          "−4.6%"
+        ],
+        "comparison": "Versus revised August 2026: 900,000",
+        "detail": "Census U.S. single-family starts; annualized estimate",
+        "sources": [
+          {
+            "label": "Census U.S. single-family starts; annualized estimate",
+            "url": "https://www.census.gov/construction/nrc/pdf/newresconst.pdf"
+          }
+        ]
+      },
+      "cad_usd": {
+        "status": "verified",
+        "latest": "C$1.3961 per US$1",
+        "observed": "Daily average, November 4, 2026",
+        "change": [
+          "−C$0.0033 per US$1",
+          "−0.24%"
+        ],
+        "comparison": "Versus November 3: C$1.3994 per US$1",
+        "detail": "Bank of Canada; Canadian dollars per U.S. dollar",
+        "sources": [
+          {
+            "label": "Bank of Canada; Canadian dollars per U.S. dollar",
+            "url": "https://www.bankofcanada.ca/rates/exchange/daily-exchange-rates/"
+          }
+        ]
+      }
+    },
+    "marketCaveats": [
+      "The September single-family starts monthly change has a published ±10.0-percentage-point 90% confidence interval and is not statistically significant.",
+      "The named November 2026 lumber contract settled at US$522.00 on November 4. Its comparison is the same contract’s October 28 close. January 2027 is a separate contract.",
+      "Display rounding follows the approved format. Changes are calculated from unrounded observations, so rounded currency levels may look unchanged even when a small movement occurred."
+    ],
+    "featuredResource": {
+      "date": "2026-11-05",
+      "source": "daily-sheet",
+      "item": {
+        "title": "14-day VT Forestry Climate Adaptation Challenge",
+        "kind": "email course",
+        "description": "This free 14-day email course delivers daily units with podcast links about Vermont forestry climate adaptation. The sequence offers a structured way to work through the subject over two weeks.",
+        "source_url": "https://fbs44.gumroad.com/l/VTForestry-Climate",
+        "url": "https://fbs44.gumroad.com/l/VTForestry-Climate"
+      },
+      "cached": false
+    },
+    "displayDate": "November 5, 2026",
+    "url": "/2026/11/05/"
+  },
+  {
     "date": "2026-11-04",
     "summary": "Michigan research tests biochar markets for storm-damaged timber. Also: Hawaii’s Arbor Day events, Eric Kingsley’s conditional firewood-demand analysis, Boise Cascade’s price-volume split and Canada’s forest pest forum, with six dated market indicators and The Hardwood Log Desktop Reference Book.",
     "socialText": "Michigan researchers are testing biochar markets for storm-damaged timber, examining both processing barriers and end buyers. Read today’s Woods Run Digest.",

@@ -1,0 +1,60 @@
+{
+  "date": "2026-11-05",
+  "format": "approved-v4",
+  "dimensions": [
+    1080,
+    1920
+  ],
+  "fps": 30,
+  "frames": 1545,
+  "duration_seconds": 51.5,
+  "segment_frames": [
+    75,
+    210,
+    210,
+    210,
+    210,
+    210,
+    300,
+    120
+  ],
+  "stories": [
+    {
+      "headline": "Tla\u2019amin Nation completes Stillwater forestry acquisition",
+      "body": "Tla\u2019amin Nation\u2019s forestry partnership has completed its acquisition of Western Forest Products\u2019 Stillwater Forest Operation near Powell River, British Columbia. The November 3 announcement confirms the closing of the previously announced\u2026",
+      "region": "CANADA \u2014 BRITISH COLUMBIA / NOVEMBER 3 CLOSING",
+      "image": null
+    },
+    {
+      "headline": "Montana\u2019s Marks Lumber plans to stop sawing November 6",
+      "body": "Marks Lumber in Clancy, Montana, plans to end sawing operations on November 6 as the family business winds down toward a 2027 closure. Its October 5 announcement attributes the decision to retirement and sets out a phased shutdown, with the\u2026",
+      "region": "WOODS RUN",
+      "image": null
+    },
+    {
+      "headline": "Mercer reaches recapitalization agreement; mills continue operating",
+      "body": "Mercer International has reached restructuring support agreements with holders of more than 87% of its senior notes and a majority of its common shares. Its November 2 announcement sets out a proposed recapitalization addressing US$1.275\u2026",
+      "region": "U.S. / CANADA / GERMANY \u2014 NOVEMBER 2 AGREEMENT",
+      "image": null
+    },
+    {
+      "headline": "New plantations show sharply different fire outcomes across landscapes",
+      "body": "A new study of 67,248 areas converted from nonforest land into planted forests finds that fire outcomes vary substantially by ecological setting. Researchers used satellite records from 2001\u20132023 and accounted for climate, accessibility and\u2026",
+      "region": "FOREST RESEARCH \u2014 NOVEMBER 2 PAPER / NOVEMBER 3 UNIVERSITY REPORT",
+      "image": null
+    },
+    {
+      "headline": "Elliott forest operations plan comments remain open through November 30",
+      "body": "Oregon is seeking comments on the Elliott State Research Forest\u2019s draft 2027\u20132029 Biennial Operations Plan. Written submissions are due November 30 at 5 p.m. Pacific; a further virtual information and listening session is scheduled for\u2026",
+      "region": "U.S. \u2014 OREGON / OPEN COMMENT PERIOD",
+      "image": null
+    }
+  ],
+  "featuredResource": {
+    "title": "14-day VT Forestry Climate Adaptation Challenge",
+    "description": "This free 14-day email course delivers daily units with podcast links about Vermont forestry climate adaptation. The sequence offers a structured way to work through the subject over two weeks.",
+    "url": "https://fbs44.gumroad.com/l/VTForestry-Climate",
+    "kind": "email course"
+  },
+  "publication_attempted": false
+}
