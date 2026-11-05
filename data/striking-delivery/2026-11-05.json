@@ -1,0 +1,12 @@
+{
+  "date": "2026-11-05",
+  "text": "A mill’s last day of sawing and its last day of business can be months apart. Montana’s Marks Lumber plans to stop sawing November 6 while selling existing inventory into 2027.",
+  "due_at": "2026-11-05T17:00:00Z",
+  "channel_id": "6843193ed6d25b49a145ff6e",
+  "state": "attempt_started",
+  "attempt_started_at": "2026-11-05T16:45:49.099790Z",
+  "post_id": null,
+  "history_checked": 373,
+  "source": "native-daily-striking",
+  "email_attempted": false
+}
