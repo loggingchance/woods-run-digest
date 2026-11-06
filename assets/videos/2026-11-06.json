@@ -1,0 +1,53 @@
+{
+  "date": "2026-11-06",
+  "format": "approved-v4",
+  "dimensions": [
+    1080,
+    1920
+  ],
+  "fps": 30,
+  "frames": 1335,
+  "duration_seconds": 44.5,
+  "segment_frames": [
+    75,
+    210,
+    210,
+    210,
+    210,
+    300,
+    120
+  ],
+  "stories": [
+    {
+      "headline": "Arizona restoration work pairs timber supply with fuel reduction",
+      "body": "Arizona\u2019s Brentwood restoration project is scheduled to begin this month, with a 1,300-acre timber sale expected to supply nearly 40,000 tons of timber to the state\u2019s forest industry. Nearly 400 additional acres of hand thinning are intended\u2026",
+      "region": "U.S. \u2014 ARIZONA / NOVEMBER 5 OPERATIONS ADVISORY",
+      "image": null
+    },
+    {
+      "headline": "Canadian sawmill output rises in August while shipments fall",
+      "body": "Canadian sawmills produced 3.674 million cubic metres of lumber in August, up 4.0% from July but down 3.8% from a year earlier, Statistics Canada reported November 4.",
+      "region": "CANADA \u2014 NOVEMBER 4 STATISTICS RELEASE",
+      "image": null
+    },
+    {
+      "headline": "Flying-squirrel study puts mature trees and canopy under scrutiny",
+      "body": "University of Nebraska\u2013Lincoln researchers are examining which trees southern flying squirrels use on East Campus. Forester Lord Ameyaw and graduate researcher Cameron Lyons will assess tree age, species, canopy cover and cavities, the\u2026",
+      "region": "U.S. \u2014 NEBRASKA / NOVEMBER 5 RESEARCH REPORT",
+      "image": null
+    },
+    {
+      "headline": "Allegheny stewardship timber bids go through a partner solicitation",
+      "body": "Bids for the Lamentation Run timber sale on Pennsylvania\u2019s Allegheny National Forest are due November 20 at 10 a.m. Eastern. The sale is advertised through a stewardship agreement with the National Deer Association, which handles\u2026",
+      "region": "U.S. \u2014 PENNSYLVANIA / BIDS DUE NOVEMBER 20",
+      "image": null
+    }
+  ],
+  "featuredResource": {
+    "title": "Timber Harvesting Systems in the Northeastern US / Northeastern Logging Productivity Spectrum",
+    "description": "This two-page PDF infographic presents northeastern timber-harvesting systems and the factors that influence logging productivity. It highlights how timber size, harvest intensity, terrain, extraction distance and operator skill affect the balance between felling and wood extraction.",
+    "url": "https://img1.wsimg.com/blobby/go/b0235e40-160d-409a-a1fd-75965dacd99f/Timber%20Harvesting%20Systems%20and%20Harvesting%20Produ.pdf",
+    "kind": "infographic"
+  },
+  "publication_attempted": false
+}

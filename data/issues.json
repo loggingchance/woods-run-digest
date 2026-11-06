@@ -1,5 +1,159 @@
 [
   {
+    "date": "2026-11-06",
+    "summary": "Arizona restoration work pairs projected timber supply with fuel reduction. Also: Canadian sawmill production and shipments diverge, Nebraska research examines mature-tree habitat, Allegheny stewardship bids close November 20 and new Chinese wooden-fence trade investigations, with six dated market indicators and northeastern harvesting infographics.",
+    "socialText": "Arizona’s Brentwood restoration project is scheduled to begin this month, with a timber sale projected to supply nearly 40,000 tons. Read today’s Woods Run Digest:",
+    "strikingText": "Federal timber does not always go through a federal bid desk. Allegheny’s Lamentation Run sale uses a National Deer Association stewardship solicitation, with mailed or emailed bids due November 20.",
+    "cardTeaser": "Arizona restoration work pairs timber supply with fuel reduction",
+    "cardSubhead": "Brentwood’s November start includes a projected 40,000 tons of timber.",
+    "marketObservations": {
+      "diesel": {
+        "status": "verified",
+        "latest": "US$6.292/gal",
+        "observed": "Week of November 2, 2026; released November 3",
+        "change": [
+          "−US$0.060/gal",
+          "−0.94%"
+        ],
+        "comparison": "Versus October 26: US$6.352/gal",
+        "detail": "EIA U.S. on-highway diesel; taxes included",
+        "sources": [
+          {
+            "label": "EIA U.S. on-highway diesel; taxes included",
+            "url": "https://www.eia.gov/petroleum/gasdiesel/"
+          }
+        ]
+      },
+      "lumber_futures": {
+        "status": "verified",
+        "latest": "US$519.50/MBF",
+        "observed": "November 5, 2026 close",
+        "change": [
+          "+US$1.50/MBF",
+          "+0.29%"
+        ],
+        "comparison": "Same November contract, October 29: US$518.00/MBF",
+        "detail": "November 2026 lumber futures; nearby delivery contract",
+        "sources": [
+          {
+            "label": "November contract historical closes",
+            "url": "https://www.investing.com/commodities/lumber-historical-data"
+          },
+          {
+            "label": "Named November contract and settlement date",
+            "url": "https://www.investing.com/commodities/lumber-contracts"
+          }
+        ]
+      },
+      "madisons": {
+        "status": "verified",
+        "latest": "US$459/MBF",
+        "observed": "Week ending October 30, 2026",
+        "change": [
+          "−US$36/MBF",
+          "−7.27% (calculated)"
+        ],
+        "comparison": "Versus week ending October 23: US$495/MBF",
+        "detail": "Madison’s weekly lumber index",
+        "sources": [
+          {
+            "label": "Madison’s dated weekly index",
+            "url": "https://madisonsreport.com/madisons-lumber-prices-index-oct-30-2026-us459-mfbm/"
+          }
+        ]
+      },
+      "hardwood_ppi": {
+        "status": "verified",
+        "latest": "285.075 index points",
+        "observed": "September 2026; released October 15",
+        "change": [
+          "−1.290 points",
+          "−0.45%"
+        ],
+        "comparison": "Versus August 2026: 286.365",
+        "detail": "BLS WPU0812; 1982=100; not seasonally adjusted",
+        "sources": [
+          {
+            "label": "BLS WPU0812; 1982=100; not seasonally adjusted",
+            "url": "https://fred.stlouisfed.org/series/WPU0812"
+          }
+        ]
+      },
+      "housing_starts": {
+        "status": "verified",
+        "latest": "859,000 units (SAAR)",
+        "observed": "September 2026; released October 20",
+        "change": [
+          "−41,000 units (SAAR)",
+          "−4.6%"
+        ],
+        "comparison": "Versus revised August 2026: 900,000",
+        "detail": "Census U.S. single-family starts; annualized estimate",
+        "sources": [
+          {
+            "label": "Census U.S. single-family starts; annualized estimate",
+            "url": "https://www.census.gov/construction/nrc/pdf/newresconst.pdf"
+          }
+        ]
+      },
+      "cad_usd": {
+        "status": "verified",
+        "latest": "C$1.3989 per US$1",
+        "observed": "Daily average, November 5, 2026",
+        "change": [
+          "+C$0.0028 per US$1",
+          "+0.20%"
+        ],
+        "comparison": "Versus November 4: C$1.3961 per US$1",
+        "detail": "Bank of Canada; Canadian dollars per U.S. dollar",
+        "sources": [
+          {
+            "label": "Bank of Canada; Canadian dollars per U.S. dollar",
+            "url": "https://www.bankofcanada.ca/rates/exchange/daily-exchange-rates/"
+          }
+        ]
+      }
+    },
+    "marketCaveats": [
+      "The September single-family starts monthly change has a published ±10.0-percentage-point 90% confidence interval and is not statistically significant.",
+      "The named November 2026 lumber contract settled at US$519.50 on November 5. The comparison is the same contract’s October 29 close; January 2027 is a separate contract.",
+      "Display rounding follows the approved format. Changes are calculated from unrounded observations, so rounded currency levels may look unchanged even when a small movement occurred."
+    ],
+    "featuredResource": {
+      "date": "2026-11-06",
+      "source": "daily-sheet",
+      "item": {
+        "title": "Timber Harvesting Systems in the Northeastern US / Northeastern Logging Productivity Spectrum",
+        "kind": "infographic",
+        "description": "This two-page PDF infographic presents northeastern timber-harvesting systems and the factors that influence logging productivity. It highlights how timber size, harvest intensity, terrain, extraction distance and operator skill affect the balance between felling and wood extraction.",
+        "source_url": "https://img1.wsimg.com/blobby/go/b0235e40-160d-409a-a1fd-75965dacd99f/Timber%20Harvesting%20Systems%20and%20Harvesting%20Produ.pdf",
+        "url": "https://img1.wsimg.com/blobby/go/b0235e40-160d-409a-a1fd-75965dacd99f/Timber%20Harvesting%20Systems%20and%20Harvesting%20Produ.pdf"
+      },
+      "cached": false
+    },
+    "editorialWatch": {
+      "kind": "trade_policy",
+      "items": [
+        {
+          "text": "Commerce announced November 4 that it has opened antidumping and countervailing-duty investigations into certain wooden fence components from China. This is an investigation, not a final duty order. Alta Forest Products, Sierra Pacific Industries and Mendocino Forest Products are the petitioning coalition. The International Trade Commission’s current calendar lists a November 20 preliminary injury vote; Commerce’s fact sheet gives later conditional dates for its own preliminary findings. The agencies’ respective decisions and deadlines should not be conflated.",
+          "sources": [
+            {
+              "label": "Commerce initiation, scope and parties",
+              "url": "https://www.trade.gov/initiation-ad-cvd-investigations-certain-wooden-fence-components-peoples-republic-china"
+            },
+            {
+              "label": "International Trade Commission’s current vote calendar",
+              "url": "https://www.usitc.gov/calendarpad/events/usitc_vote_notational_wooden_fence_pickets_china_112026.htm"
+            }
+          ],
+          "verified_on": "2026-11-06"
+        }
+      ]
+    },
+    "displayDate": "November 6, 2026",
+    "url": "/2026/11/06/"
+  },
+  {
     "date": "2026-11-05",
     "summary": "Tla’amin Nation completes the Stillwater forest acquisition with a continuing fibre-supply agreement. Also: Montana’s Marks Lumber nears its November 6 sawing cutoff, Mercer proposes a recapitalization, new plantation-fire research and Oregon’s Elliott comment period, plus six dated market indicators and a Vermont forestry climate-adaptation course.",
     "socialText": "Tla’amin Nation has completed its Stillwater forestry acquisition, with a long-term fibre agreement supporting Western Forest Products’ coastal mills. Today’s Woods Run Digest:",
