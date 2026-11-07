@@ -1,0 +1,53 @@
+{
+  "date": "2026-11-07",
+  "format": "approved-v4",
+  "dimensions": [
+    1080,
+    1920
+  ],
+  "fps": 30,
+  "frames": 1335,
+  "duration_seconds": 44.5,
+  "segment_frames": [
+    75,
+    210,
+    210,
+    210,
+    210,
+    300,
+    120
+  ],
+  "stories": [
+    {
+      "headline": "Canada\u2019s budget proposes C$6.5 billion to retool forestry",
+      "body": "Canada\u2019s November 5 federal budget proposes C$6.5 billion in forest-sector support over six years beginning in 2027\u201328. The largest piece is C$4 billion on a cash basis through Export Development Canada\u2019s Canada Account for a new Forestry\u2026",
+      "region": "CANADA \u2014 NOVEMBER 5 FEDERAL BUDGET",
+      "image": null
+    },
+    {
+      "headline": "Maine honors logging brothers for stewardship of working forests",
+      "body": "Will and Don Cole of Sidney, who operate the family logging business Trees Ltd., received Maine\u2019s 2026 Austin H. Wilkins Forest Stewardship Award. The state\u2019s November 6 announcement highlighted their work on public and private woodlands\u2026",
+      "region": "U.S. \u2014 MAINE / NOVEMBER 6 AWARD",
+      "image": null
+    },
+    {
+      "headline": "Low snow helped some winter logging jobs and limited others",
+      "body": "A new Forest Service summary of the 2026 western snow drought describes a split in winter operations. Staff reported easier access to some logging and management sites, while other jobs were limited because they needed frozen ground or more\u2026",
+      "region": "U.S. WEST \u2014 NOVEMBER 6 FOREST SERVICE REPORT",
+      "image": null
+    },
+    {
+      "headline": "Cle Elum Ridge opens its draft community forest plan to feedback",
+      "body": "The Nature Conservancy announced that it acquired about 2,600 acres in Kittitas County and established the Cle Elum Ridge Community Forest. The conservation group describes the site as a working forest that will remain protected from\u2026",
+      "region": "U.S. \u2014 WASHINGTON / NOVEMBER 17 PUBLIC FORUM",
+      "image": null
+    }
+  ],
+  "featuredResource": {
+    "title": "PATH 4.0 \u2014 Planning & Analysis in Timber Harvesting",
+    "description": "PATH is a logging-business profitability app that brings overhead, equipment, labor, fuel and production into one analysis. Enter business and product figures to examine profit or loss for a selected operating period or job.",
+    "url": "https://path.lumbermen.org/",
+    "kind": "app"
+  },
+  "publication_attempted": false
+}

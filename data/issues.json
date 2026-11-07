@@ -1,5 +1,47 @@
 [
   {
+    "date": "2026-11-07",
+    "summary": "Canada proposes C$6.5 billion for forest-sector modernization and fibre supply. Also: the Saturday profile of Ken Breon and the Lumber Capital family, Maine’s logging stewardship award, snow drought’s uneven effects on winter work, and the Cle Elum Ridge public forum.",
+    "socialText": "Canada’s budget proposes C$6.5 billion for forest-sector investment starting in 2027–28. Saturday’s digest also profiles Ken Breon and the Lumber Capital family:",
+    "strikingText": "Ken Breon’s Pennsylvania tree-removal work led to firewood, logging and milling. Today he runs the logging business while Teri and their daughters operate the family’s lumber yard. https://woodsrun.forestenterprise.org/2026/11/07/",
+    "cardTeaser": "Canada’s budget proposes C$6.5 billion to retool forestry",
+    "cardSubhead": "The six-year proposal would start in 2027–28.",
+    "featuredResource": {
+      "date": "2026-11-07",
+      "source": "daily-sheet",
+      "item": {
+        "title": "PATH 4.0 — Planning & Analysis in Timber Harvesting",
+        "kind": "app",
+        "description": "PATH is a logging-business profitability app that brings overhead, equipment, labor, fuel and production into one analysis. Enter business and product figures to examine profit or loss for a selected operating period or job.",
+        "source_url": "https://path.lumbermen.org/",
+        "url": "https://path.lumbermen.org/"
+      },
+      "cached": false
+    },
+    "strikingSkip": false,
+    "strikingSource": "weekend_feature",
+    "weekendFeature": {
+      "kind": "profile",
+      "topic_id": "ken-breon-lumber-capital-2026-11-07",
+      "title": "Ken Breon and the Lumber Capital family",
+      "summary": "Ken Breon started in residential tree removal in Pennsylvania. Finding uses for the wood led him into firewood, then into logging and milling. In Wood-Mizer’s April 2026 Wood Life interview, Ken and daughters Emerald and Jade describe how that work grew into a yard with milling, kiln drying and retail sales. The family now divides the work between two businesses: Ken runs Ironwood Acres Timber Harvest, while Teri and their daughters operate Lumber Capital Log Yard in Cogan Station. The daughters took on mill work and developed the family’s YouTube channel, showing how the wood is cut and processed. The businesses grew from a practical question: what else could they make from the trees Ken was already taking down?",
+      "sources": [
+        {
+          "label": "Wood Life interview with Ken, Emerald and Jade",
+          "url": "https://woodmizer.com/us/articles/wood-life-podcast-ep-8"
+        },
+        {
+          "label": "Lumber Capital Log Yard’s company history",
+          "url": "https://www.lumbercapital.com/history"
+        }
+      ],
+      "striking_text": "Ken Breon’s Pennsylvania tree-removal work led to firewood, logging and milling. Today he runs the logging business while Teri and their daughters operate the family’s lumber yard. https://woodsrun.forestenterprise.org/2026/11/07/"
+    },
+    "weekendFeatureStatus": "approved",
+    "displayDate": "November 7, 2026",
+    "url": "/2026/11/07/"
+  },
+  {
     "date": "2026-11-06",
     "summary": "Arizona restoration work pairs projected timber supply with fuel reduction. Also: Canadian sawmill production and shipments diverge, Nebraska research examines mature-tree habitat, Allegheny stewardship bids close November 20 and new Chinese wooden-fence trade investigations, with six dated market indicators and northeastern harvesting infographics.",
     "socialText": "Arizona’s Brentwood restoration project is scheduled to begin this month, with a timber sale projected to supply nearly 40,000 tons. Read today’s Woods Run Digest:",
