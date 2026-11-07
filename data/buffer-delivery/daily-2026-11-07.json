@@ -1,0 +1,221 @@
+{
+  "run_id": "daily-2026-11-07",
+  "date": "2026-11-07",
+  "channels": {
+    "x": {
+      "duplicate_search": {
+        "complete": true,
+        "posts_checked": 376
+      },
+      "attempt_started_at": "2026-11-07T09:53:16.428884Z",
+      "newly_created": true,
+      "post_id": "6aeef50c9214322f68e21d6a",
+      "status": "scheduled",
+      "due_at": "2026-11-07T11:00:00.000Z",
+      "created_at": "2026-11-07T09:53:16.572Z",
+      "external_url": null,
+      "assets": [],
+      "provider_text": "Canada’s budget proposes C$6.5 billion for forest-sector investment starting in 2027–28. Saturday’s digest also profiles Ken Breon and the Lumber Capital family:\n\nhttps://woodsrun.forestenterprise.org/2026/11/07/",
+      "error": null,
+      "schedule_verified": true,
+      "provider_sent": false,
+      "delivery_state": "scheduled",
+      "existing_delivery": true,
+      "public_visibility": "not_independently_verified"
+    },
+    "instagram": {
+      "duplicate_search": {
+        "complete": true,
+        "posts_checked": 311
+      },
+      "attempt_started_at": "2026-11-07T09:53:18.509450Z",
+      "newly_created": true,
+      "post_id": "6aeef50ed6bbae6fa17a6c76",
+      "status": "scheduled",
+      "due_at": "2026-11-07T11:00:00.000Z",
+      "created_at": "2026-11-07T09:53:18.876Z",
+      "external_url": null,
+      "assets": [
+        {
+          "source": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/videos/2026-11-07.mp4",
+          "mimeType": "video/mp4"
+        }
+      ],
+      "provider_text": "Woods Run Digest — November 7, 2026\n\nDaily North American forestry & forest-products intelligence from The Forest Business School.\n\nRead today’s edition: https://woodsrun.forestenterprise.org/2026/11/07/\n\nToday's Featured Resource\nPATH 4.0 — Planning & Analysis in Timber Harvesting\nhttps://path.lumbermen.org/",
+      "error": null,
+      "schedule_verified": true,
+      "provider_sent": false,
+      "delivery_state": "scheduled",
+      "existing_delivery": true,
+      "public_visibility": "not_independently_verified"
+    },
+    "youtube": {
+      "duplicate_search": {
+        "complete": true,
+        "posts_checked": 101
+      },
+      "attempt_started_at": "2026-11-07T09:53:19.919562Z",
+      "newly_created": true,
+      "post_id": "6aeef5109214322f68e21e24",
+      "status": "scheduled",
+      "due_at": "2026-11-07T11:00:00.000Z",
+      "created_at": "2026-11-07T09:53:20.309Z",
+      "external_url": null,
+      "assets": [
+        {
+          "source": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/videos/2026-11-07.mp4",
+          "mimeType": "video/mp4"
+        }
+      ],
+      "provider_text": "Woods Run Digest — November 7, 2026\n\nCanada proposes C$6.5 billion for forest-sector modernization and fibre supply. Also: the Saturday profile of Ken Breon and the Lumber Capital family, Maine’s logging stewardship award, snow drought’s uneven effects on winter work, and the Cle Elum Ridge public forum.\n\nRead the full edition: https://woodsrun.forestenterprise.org/2026/11/07/\n\nDaily forestry & forest-products intelligence from The Forest Business School.\n\nToday's Featured Resource\nPATH 4.0 — Planning & Analysis in Timber Harvesting\nhttps://path.lumbermen.org/",
+      "error": null,
+      "schedule_verified": true,
+      "provider_sent": false,
+      "delivery_state": "scheduled",
+      "existing_delivery": true,
+      "public_visibility": "not_independently_verified"
+    }
+  },
+  "checked_at": "2026-11-07T09:53:12.289607Z",
+  "requested_action": "schedule_daily",
+  "requested_channels": [
+    "x",
+    "instagram",
+    "youtube"
+  ],
+  "required_daily_channels": [
+    "x",
+    "instagram",
+    "youtube"
+  ],
+  "daily_target_due_at": "2026-11-07T11:00:00Z",
+  "channel_identity": [
+    {
+      "id": "6ab14319ea19ca0bdea627e2",
+      "name": "Logging Chance",
+      "service": "youtube",
+      "serviceId": "UCq-PscVBAKjmVE39qb2NyCg",
+      "externalLink": "https://www.youtube.com/channel/UCq-PscVBAKjmVE39qb2NyCg",
+      "isDisconnected": false,
+      "isLocked": false,
+      "isQueuePaused": false,
+      "timezone": "America/Denver"
+    },
+    {
+      "id": "6844cc71d6d25b49a1de682e",
+      "name": "northeastforests",
+      "service": "instagram",
+      "serviceId": "17841412643805979",
+      "externalLink": "https://instagram.com/northeastforests",
+      "isDisconnected": false,
+      "isLocked": false,
+      "isQueuePaused": false,
+      "timezone": "America/Denver"
+    },
+    {
+      "id": "6843193ed6d25b49a145ff6e",
+      "name": "ForestBizSchool",
+      "service": "twitter",
+      "serviceId": "1487833905197637637",
+      "externalLink": "https://twitter.com/ForestBizSchool",
+      "isDisconnected": false,
+      "isLocked": false,
+      "isQueuePaused": false,
+      "timezone": "America/Denver"
+    }
+  ],
+  "due_at": "2026-11-07T11:00:00Z",
+  "preflight_by_channel": {
+    "x": {
+      "page": {
+        "url": "https://woodsrun.forestenterprise.org/2026/11/07/",
+        "final_url": "https://woodsrun.forestenterprise.org/2026/11/07/",
+        "http_status": 200,
+        "content_type": "text/html",
+        "content_verified": true
+      },
+      "link_card": {
+        "page_url": "https://woodsrun.forestenterprise.org/2026/11/07/",
+        "image_url": "https://woodsrun.forestenterprise.org/assets/cards/2026-11-07.png",
+        "card": "summary_large_image",
+        "image_bytes": 207959,
+        "metadata_verified": true
+      },
+      "card": {
+        "url": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/cards/2026-11-07.png",
+        "dimensions": [
+          1200,
+          630
+        ],
+        "bytes": 207959,
+        "public": {
+          "url": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/cards/2026-11-07.png",
+          "final_url": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/cards/2026-11-07.png",
+          "http_status": 200,
+          "content_type": "image/png",
+          "content_verified": true
+        }
+      }
+    },
+    "instagram": {
+      "page": {
+        "url": "https://woodsrun.forestenterprise.org/2026/11/07/",
+        "final_url": "https://woodsrun.forestenterprise.org/2026/11/07/",
+        "http_status": 200,
+        "content_type": "text/html",
+        "content_verified": true
+      },
+      "video": {
+        "url": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/videos/2026-11-07.mp4",
+        "dimensions": [
+          [
+            1080,
+            1920
+          ]
+        ],
+        "bytes": 1847564,
+        "public": {
+          "url": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/videos/2026-11-07.mp4",
+          "final_url": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/videos/2026-11-07.mp4",
+          "http_status": 200,
+          "content_type": "application/octet-stream",
+          "content_verified": true
+        }
+      }
+    },
+    "youtube": {
+      "page": {
+        "url": "https://woodsrun.forestenterprise.org/2026/11/07/",
+        "final_url": "https://woodsrun.forestenterprise.org/2026/11/07/",
+        "http_status": 200,
+        "content_type": "text/html",
+        "content_verified": true
+      },
+      "video": {
+        "url": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/videos/2026-11-07.mp4",
+        "dimensions": [
+          [
+            1080,
+            1920
+          ]
+        ],
+        "bytes": 1847564,
+        "public": {
+          "url": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/videos/2026-11-07.mp4",
+          "final_url": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/videos/2026-11-07.mp4",
+          "http_status": 200,
+          "content_type": "application/octet-stream",
+          "content_verified": true
+        }
+      }
+    }
+  },
+  "all_scheduled": true,
+  "daily_idempotent": true,
+  "all_provider_sent": false,
+  "all_public_verified": false,
+  "all_daily_channels_provider_sent": false,
+  "all_daily_channels_scheduled": true,
+  "email_verified": false,
+  "complete": false
+}
