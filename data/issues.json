@@ -1,5 +1,43 @@
 [
   {
+    "date": "2026-11-08",
+    "summary": "A U.S. injury finding ends the Brazil and Norway high-purity dissolving pulp duty case. Also: Danette Polzin’s family logging story, Canfor’s quarterly results, Colorado forest and fuels work, and a B.C. rural funding deadline.",
+    "socialText": "The U.S. International Trade Commission’s final injury finding means no new orders in the Brazil and Norway high-purity dissolving pulp case. Read Sunday’s digest:",
+    "strikingText": "The Polzins bought a sawmill for part-time work in 1998. A layoff made it a full-time livelihood; community forest logging later took the family into road and bridge work. Danette Polzin tells the story in Sunday’s Digest: https://woodsrun.forestenterprise.org/2026/11/08/",
+    "cardTeaser": "U.S. rules out duties in Brazil and Norway dissolving-pulp case",
+    "cardSubhead": "The November 6 final injury finding ends this high-purity pulp case.",
+    "featuredResource": {
+      "date": "2026-11-08",
+      "source": "daily-sheet",
+      "item": {
+        "title": "Business and Market Responses to the Loss of Low-Grade Wood Markets in the United States",
+        "kind": "report",
+        "description": "This online research report examines business and market responses when outlets for low-grade wood disappear. Its comparisons of processors, cooperative approaches, institutional demand and residual markets help readers assess replacement-market options and their operating constraints.",
+        "source_url": "https://pivot.vtfbs.com/",
+        "url": "https://pivot.vtfbs.com/"
+      },
+      "cached": false
+    },
+    "strikingSkip": false,
+    "strikingSource": "weekend_feature",
+    "weekendFeature": {
+      "kind": "human_interest",
+      "topic_id": "danette-polzin-forest-family-2026-11-08",
+      "title": "A Forest and A Family: Danette Polzin looks back",
+      "summary": "Danette Polzin’s September 2025 essay opens at the family shop in southeastern British Columbia, where her brothers are fixing hoses and welding buckets. That setting takes her back to 1998, when her parents brought home a small sawmill they intended to run part-time. Her father Rick lost his job soon afterward, and the mill became his full-time work. Small-scale salvage provided early opportunities to cut and sell wood. Later, logging for the Creston Community Forest led to road building and maintenance, and the family added road and bridge work for BC Timber Sales. Polzin tells the story from a daughter’s vantage point: her mother Carleen ran the office, her brothers took to the woods, and she became the one who wrote down how the family made its living.",
+      "sources": [
+        {
+          "label": "Danette Polzin’s original essay in The Trench Magazine",
+          "url": "https://www.thetrenchmag.com/stories/forestry-family"
+        }
+      ],
+      "striking_text": "The Polzins bought a sawmill for part-time work in 1998. A layoff made it a full-time livelihood; community forest logging later took the family into road and bridge work. Danette Polzin tells the story in Sunday’s Digest: https://woodsrun.forestenterprise.org/2026/11/08/"
+    },
+    "weekendFeatureStatus": "approved",
+    "displayDate": "November 8, 2026",
+    "url": "/2026/11/08/"
+  },
+  {
     "date": "2026-11-07",
     "summary": "Canada proposes C$6.5 billion for forest-sector modernization and fibre supply. Also: the Saturday profile of Ken Breon and the Lumber Capital family, Maine’s logging stewardship award, snow drought’s uneven effects on winter work, and the Cle Elum Ridge public forum.",
     "socialText": "Canada’s budget proposes C$6.5 billion for forest-sector investment starting in 2027–28. Saturday’s digest also profiles Ken Breon and the Lumber Capital family:",

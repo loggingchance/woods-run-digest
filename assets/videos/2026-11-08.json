@@ -1,0 +1,53 @@
+{
+  "date": "2026-11-08",
+  "format": "approved-v4",
+  "dimensions": [
+    1080,
+    1920
+  ],
+  "fps": 30,
+  "frames": 1335,
+  "duration_seconds": 44.5,
+  "segment_frames": [
+    75,
+    210,
+    210,
+    210,
+    210,
+    300,
+    120
+  ],
+  "stories": [
+    {
+      "headline": "U.S. rules out duties in Brazil and Norway dissolving-pulp case",
+      "body": "The U.S. International Trade Commission ruled November 6 that imports of high-purity dissolving pulp from Brazil and Norway did not materially injure or threaten material injury to the U.S. industry. Five commissioners voted in the negative;\u2026",
+      "region": "U.S. TRADE \u2014 NOVEMBER 6 FINAL DETERMINATION",
+      "image": null
+    },
+    {
+      "headline": "Canfor reports a third-quarter operating loss as pulp results improve",
+      "body": "Canfor reported a C$77 million third-quarter operating loss and a C$88 million net loss attributable to shareholders. Adjusted earnings before interest, taxes, depreciation and amortization fell to C$98 million from C$120 million in the\u2026",
+      "region": "CANADA \u2014 NOVEMBER 4 QUARTERLY RESULTS",
+      "image": null
+    },
+    {
+      "headline": "South Uncompahgre forest and fuels work gets federal approval",
+      "body": "The Forest Service completed its environmental assessment and approved the South Uncompahgre forest health project in western Colorado. The decision covers portions of the Uncompahgre Plateau and Naturita Division across Montrose, Ouray and\u2026",
+      "region": "U.S. \u2014 COLORADO / NOVEMBER 6 PROJECT DECISION",
+      "image": null
+    },
+    {
+      "headline": "B.C. rural diversification funding remains open through November 20",
+      "body": "British Columbia\u2019s fifth Rural Economic Diversification and Infrastructure Program intake closes November 20. Rural and remote communities, First Nations and eligible nonprofits can apply for work that strengthens local economies.",
+      "region": "CANADA \u2014 BRITISH COLUMBIA / APPLICATIONS CLOSE NOVEMBER 20",
+      "image": null
+    }
+  ],
+  "featuredResource": {
+    "title": "Business and Market Responses to the Loss of Low-Grade Wood Markets in the United States",
+    "description": "This online research report examines business and market responses when outlets for low-grade wood disappear. Its comparisons of processors, cooperative approaches, institutional demand and residual markets help readers assess replacement-market options and their operating constraints.",
+    "url": "https://pivot.vtfbs.com/",
+    "kind": "report"
+  },
+  "publication_attempted": false
+}
