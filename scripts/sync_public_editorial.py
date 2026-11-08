@@ -11,6 +11,7 @@ from bs4 import BeautifulSoup
 from book_rotation import resource_heading
 from daily_resources import START as RESOURCE_START, validate_feature
 from market_table import validate_market_table
+from brandx_sponsor import validate_sponsor
 
 ROOT = Path(__file__).resolve().parents[1]
 SITE = 'https://woodsrun.forestenterprise.org'
@@ -65,6 +66,7 @@ def validate(page, issue):
             if number_urls & story_urls:
                 raise ValueError('By the Numbers duplicates source material developed again in stories')
     validate_market_table(article, issue['date'])
+    validate_sponsor(article, issue['date'])
     if issue['date'] >= RESOURCE_START:
         validate_feature(article, issue)
     if len(article.find_all('p')) < 10 or len(article.select('article.story')) < 3:
@@ -108,6 +110,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
-
-

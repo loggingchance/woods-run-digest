@@ -15,6 +15,7 @@ SITE = 'https://woodsrun.forestenterprise.org'
 from book_rotation import featured_item, resource_heading
 from daily_resources import START as RESOURCE_START, validate_feature
 from market_table import table_cells, table_html, DETAIL_STYLE, validate_market_table
+from brandx_sponsor import validate_sponsor, sponsor_plain
 UNSUB = '{{{RESEND_UNSUBSCRIBE_URL}}}'
 BODY_STYLE='font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:25px;color:#333333;'
 SUPPORT_STYLE='display:block;box-sizing:border-box;width:100%;padding:16px 20px;border:2px solid #b49757;border-radius:6px;background-color:#244631;color:#ffffff;font-family:Arial,Helvetica,sans-serif;font-size:18px;font-weight:700;line-height:26px;text-align:center;text-decoration:none;'
@@ -60,11 +61,24 @@ def compile_payload(page: str, issue: dict) -> dict:
     article=soup.select_one('article.edition-wrap')
     if article is None:raise ValueError('Complete edition article not found')
     if issue['displayDate'] not in article.get_text(' ',strip=True):raise ValueError('Edition date mismatch')
-    for element in article.select('nav, .edition-nav, .growth-strip'):
+    sponsor = validate_sponsor(article, issue['date'])
+    # Sponsor Mondays retain the sharing section immediately after the card.
+    for element in article.select('nav, .edition-nav' if sponsor else 'nav, .edition-nav, .growth-strip'):
         element.decompose()
     validate_market_table(article, issue['date'])
     urls=set(); body=[]; plain=[]; source_paragraphs=[]
-    for node in article.find_all(['h1','h2','h3','p','li','blockquote','figure','table']):
+    for node in article.find_all(['section','div','h1','h2','h3','p','li','blockquote','figure','table']):
+        if node is sponsor:
+            body.append(str(sponsor))
+            texts = sponsor_plain(sponsor)
+            plain.extend(texts); source_paragraphs.extend(texts)
+            urls.update(a['href'] for a in sponsor.find_all('a', href=True))
+            urls.update(i['src'] for i in sponsor.find_all('img', src=True))
+            continue
+        if node.name == 'section' or node.find_parent('section', class_='brandx-sponsor'):
+            continue
+        if node.name == 'div' and not (sponsor and 'growth-actions' in node.get('class', [])):
+            continue
         if any(p.name in ('p','li','blockquote','figure') for p in node.parents if p is not article):continue
         if node.find_parent('table'):continue
         if node.name == 'table':
@@ -138,6 +152,3 @@ def main():
     print(json.dumps({'email_payload_ready':str(output.relative_to(ROOT)),'date':today,'links_preserved':True,'source_paragraph_count':payload['source_paragraph_count'],'featured_item':payload['featured_item'],'featured_book':payload['featured_book'],'email_sent':False}))
 
 if __name__=='__main__':main()
-
-
-

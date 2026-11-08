@@ -180,3 +180,20 @@ an unexpected weekend table. Both source mirroring and complete email compilatio
 use it. Striking preparation/queue validate the approved feature metadata before
 scheduling; no extra broadcast, repost, subscriber or clock change is authorized.
 All already published issues and media remain unchanged.
+
+
+## Monday Brand X sponsorship — November 9, 2026 onward
+
+Mirror the canonical approved Brand X panel on Monday issue dates (America/Denver)
+until Steve changes this instruction. The canonical writer owns the selection;
+never add a separate sponsor to a non-Monday issue or rewrite historical issues.
+The single section.brandx-sponsor immediately precedes section.growth-strip
+(“Useful enough to pass along?”), and uses the approved real logo/photo, copy,
+red card design and https://www.brandxsawmills.com/ link.
+
+The mirror validator and email compiler compare the panel with the retained
+approved template, preserve its tables/images/styles intact, and reject missing,
+duplicate, altered or wrong-date panels. Sponsor Mondays retain the sharing
+section after the panel in compiled email. Other dates retain existing behavior.
+This compiler sends nothing; the existing private Apps Script is the sole sender.
+No schedule, recipient, provider credential or trigger changes are included.
