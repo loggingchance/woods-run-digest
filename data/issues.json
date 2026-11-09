@@ -1,5 +1,155 @@
 [
   {
+    "date": "2026-11-09",
+    "summary": "Rayonier reports its first full quarter with PotlatchDeltic. Also: Mercer’s pulp mill watch, a Kansas woodland field-day recap, what low snow meant for logging access, and Central Platte’s spring tree orders.",
+    "socialText": "Rayonier’s first full quarter with PotlatchDeltic shows how the merger changed harvest volumes in the South and Northwest. Read today’s Woods Run Digest:",
+    "strikingText": "The Forest Service’s 2026 snow-drought review found a split for winter logging: less snow opened access in some Western forests, while crews elsewhere lost the frozen ground or snow cover they needed to work.",
+    "cardTeaser": "Rayonier’s first full quarter after merger shows a bigger harvest",
+    "cardSubhead": "Former PotlatchDeltic lands added harvest volume in the South and Northwest.",
+    "marketObservations": {
+      "diesel": {
+        "status": "verified",
+        "latest": "US$6.292/gal",
+        "observed": "Week of November 2, 2026; released November 3",
+        "change": [
+          "−US$0.060/gal",
+          "−0.94%"
+        ],
+        "comparison": "Versus October 26: US$6.352/gal",
+        "detail": "EIA U.S. on-highway diesel; taxes included",
+        "sources": [
+          {
+            "label": "EIA U.S. on-highway diesel; taxes included",
+            "url": "https://www.eia.gov/petroleum/gasdiesel/"
+          }
+        ]
+      },
+      "lumber_futures": {
+        "status": "verified",
+        "latest": "US$504.00/MBF",
+        "observed": "November 6, 2026 close",
+        "change": [
+          "−US$17.50/MBF",
+          "−3.36%"
+        ],
+        "comparison": "Same November contract, October 30: US$521.50/MBF",
+        "detail": "November 2026 lumber futures; nearby delivery contract",
+        "sources": [
+          {
+            "label": "November contract historical closes",
+            "url": "https://www.investing.com/commodities/lumber-historical-data"
+          },
+          {
+            "label": "Named November contract and settlement date",
+            "url": "https://www.investing.com/commodities/lumber-contracts"
+          }
+        ]
+      },
+      "madisons": {
+        "status": "verified",
+        "latest": "US$449/MBF",
+        "observed": "Week ending November 6, 2026",
+        "change": [
+          "−US$10/MBF",
+          "−2.18% (calculated)"
+        ],
+        "comparison": "Versus week ending October 30: US$459/MBF",
+        "detail": "Madison’s weekly lumber index",
+        "sources": [
+          {
+            "label": "Madison’s November 6 index and prior-week comparison",
+            "url": "https://madisonsreport.com/madisons-lumber-prices-index-nov-06-2026-us449-mfbm/"
+          }
+        ]
+      },
+      "hardwood_ppi": {
+        "status": "verified",
+        "latest": "285.075 index points",
+        "observed": "September 2026; released October 15",
+        "change": [
+          "−1.290 points",
+          "−0.45%"
+        ],
+        "comparison": "Versus August 2026: 286.365",
+        "detail": "BLS WPU0812; 1982=100; not seasonally adjusted",
+        "sources": [
+          {
+            "label": "BLS WPU0812; 1982=100; not seasonally adjusted",
+            "url": "https://fred.stlouisfed.org/series/WPU0812"
+          }
+        ]
+      },
+      "housing_starts": {
+        "status": "verified",
+        "latest": "859,000 units (SAAR)",
+        "observed": "September 2026; released October 20",
+        "change": [
+          "−41,000 units (SAAR)",
+          "−4.6%"
+        ],
+        "comparison": "Versus revised August 2026: 900,000",
+        "detail": "Census U.S. single-family starts; annualized estimate",
+        "sources": [
+          {
+            "label": "Census U.S. single-family starts; annualized estimate",
+            "url": "https://www.census.gov/construction/nrc/pdf/newresconst.pdf"
+          }
+        ]
+      },
+      "cad_usd": {
+        "status": "verified",
+        "latest": "C$1.4113 per US$1",
+        "observed": "Daily average, November 6, 2026",
+        "change": [
+          "+C$0.0124 per US$1",
+          "+0.89%"
+        ],
+        "comparison": "Versus November 5: C$1.3989 per US$1",
+        "detail": "Bank of Canada; Canadian dollars per U.S. dollar",
+        "sources": [
+          {
+            "label": "Bank of Canada; Canadian dollars per U.S. dollar",
+            "url": "https://www.bankofcanada.ca/rates/exchange/daily-exchange-rates/"
+          }
+        ]
+      }
+    },
+    "marketCaveats": [
+      "The September single-family starts monthly change has a published ±10.0-percentage-point 90% confidence interval and is not statistically significant.",
+      "The named November 2026 lumber contract settled at US$504.00 on November 6. The comparison is the same contract’s October 30 close; January 2027 is a separate contract.",
+      "Display rounding follows the approved format. Changes are calculated from unrounded observations, so rounded currency levels may look unchanged even when a small movement occurred."
+    ],
+    "featuredResource": {
+      "date": "2026-11-09",
+      "source": "daily-sheet",
+      "item": {
+        "title": "SumBuck",
+        "kind": "app",
+        "description": "SumBuck is a hardwood log-bucking and grading training app. Practice placing cuts on virtual stems, set market specifications and prices, and compare your pattern with the highest-value solution.",
+        "source_url": "https://sumbuck.lumbermen.org/",
+        "url": "https://sumbuck.lumbermen.org/"
+      },
+      "cached": false
+    },
+    "editorialWatch": {
+      "kind": "curtailment",
+      "items": [
+        {
+          "text": "Mercer’s November 5 results disclosed that its Rosenthal softwood pulp mill in Germany restarted after 24 days of unplanned fourth-quarter downtime. Wastewater treatment issues interrupted its restart after planned maintenance. Separately, Mercer expects 18 days of planned fourth-quarter maintenance downtime at its Celgar pulp mill in Castlegar, British Columbia. It expects lower per-unit fiber costs at its Canadian pulp mills after renegotiating Celgar’s supply contracts and seeing improved supply. The release did not give exact Celgar outage dates or site-specific tonnage effects for either mill.",
+          "sources": [
+            {
+              "label": "Mercer’s November 5 results, maintenance and fiber disclosures",
+              "url": "https://mercerint.com/wp-content/uploads/GLB-MI-Press-Release-Q3-2026-Earnings-20261105.pdf"
+            }
+          ],
+          "verified_on": "2026-11-09"
+        }
+      ]
+    },
+    "displayDate": "November 9, 2026",
+    "url": "/2026/11/09/"
+  },
+  {
     "date": "2026-11-08",
     "summary": "A U.S. injury finding ends the Brazil and Norway high-purity dissolving pulp duty case. Also: Danette Polzin’s family logging story, Canfor’s quarterly results, Colorado forest and fuels work, and a B.C. rural funding deadline.",
     "socialText": "The U.S. International Trade Commission’s final injury finding means no new orders in the Brazil and Norway high-purity dissolving pulp case. Read Sunday’s digest:",

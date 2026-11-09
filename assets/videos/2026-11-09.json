@@ -1,0 +1,53 @@
+{
+  "date": "2026-11-09",
+  "format": "approved-v4",
+  "dimensions": [
+    1080,
+    1920
+  ],
+  "fps": 30,
+  "frames": 1335,
+  "duration_seconds": 44.5,
+  "segment_frames": [
+    75,
+    210,
+    210,
+    210,
+    210,
+    300,
+    120
+  ],
+  "stories": [
+    {
+      "headline": "Rayonier\u2019s first full quarter after merger shows a bigger harvest",
+      "body": "Rayonier reported its first full quarter with PotlatchDeltic\u2019s operations on November 4. Its Southern harvest reached 3.02 million tons in the third quarter, up from 1.94 million a year earlier. Former PotlatchDeltic timberlands contributed\u2026",
+      "region": "U.S. \u2014 SOUTH AND NORTHWEST / NOVEMBER 4 RESULTS",
+      "image": null
+    },
+    {
+      "headline": "Kansas field day links woodland care with small-scale milling",
+      "body": "A November 2 KCLY report revisits the Kansas Forestry Association's October 22 field day at Woodland Ranch near Courtland. Landowners saw sawmill and post-peeler demonstrations alongside sessions on oak management, young tree plantations,\u2026",
+      "region": "WOODS RUN",
+      "image": null
+    },
+    {
+      "headline": "Low snow improved some logging access and cut it elsewhere",
+      "body": "A Forest Service research summary published November 6 describes how the West\u2019s 2026 snow drought changed field operations. Managers in a survey and focus groups generally reported easier access to project sites. In places where winter\u2026",
+      "region": "U.S. \u2014 WEST / NOVEMBER 6 RESEARCH SUMMARY",
+      "image": null
+    },
+    {
+      "headline": "Nebraska's Central Platte opens spring conservation-tree orders",
+      "body": "Central Platte Natural Resources District is accepting conservation-tree and shrub orders for spring 2027. Seedlings cost US$31.25 per bundle of 25. Orders placed by December 31 receive a 10% discount on trees, weed barrier and planting\u2026",
+      "region": "WOODS RUN",
+      "image": null
+    }
+  ],
+  "featuredResource": {
+    "title": "SumBuck",
+    "description": "SumBuck is a hardwood log-bucking and grading training app. Practice placing cuts on virtual stems, set market specifications and prices, and compare your pattern with the highest-value solution.",
+    "url": "https://sumbuck.lumbermen.org/",
+    "kind": "app"
+  },
+  "publication_attempted": false
+}
