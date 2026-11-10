@@ -3,10 +3,15 @@
   "text": "Tribal forest restoration applicants can get an optional Forest Service review of their draft narrative and budget by submitting them to a regional contact by December 11. The final application is due January 26.",
   "due_at": "2026-11-10T17:00:00Z",
   "channel_id": "6843193ed6d25b49a145ff6e",
-  "state": "attempt_started",
+  "state": "accepted",
   "attempt_started_at": "2026-11-10T16:44:05.112250Z",
-  "post_id": null,
+  "post_id": "6af349d8825741bba8469c4f",
   "history_checked": 385,
   "source": "native-daily-striking",
-  "email_attempted": false
+  "email_attempted": false,
+  "provider_status": "scheduled",
+  "provider_due_at": "2026-11-10T17:00:00.000Z",
+  "external_url": null,
+  "accepted_at": "2026-11-10T16:44:09.130281Z",
+  "schedule_verified": true
 }
