@@ -17,12 +17,22 @@ def check_item(item):
     assert re.fullmatch('[a-f0-9]{64}',item['sha256']), 'Invalid asset digest'
     text=item['caption']
     assert 'The Woods Run Digest' in text and 'link in bio' in text.lower() and 20<len(text)<2200, 'Invalid caption'
+    campaign=item.get('campaign','subscription')
+    assert campaign in ('subscription','facts'), 'Unknown campaign'
+    if campaign=='facts':
+        assert not item.get('immediate'), 'Fact campaign uses scheduled slots only'
+        assert re.fullmatch(r'https://woodsrun\.forestenterprise\.org/\d{4}/\d{2}/\d{2}/',item.get('source_issue','')), 'Missing dated Digest source'
+        assert item.get('source_url','').startswith('https://'), 'Missing original source'
+        assert isinstance(item.get('fact'),str) and 10<len(item['fact'])<500 and item['fact'] in text, 'Missing exact sourced fact in caption'
     if item.get('immediate'):
         assert (item['slot'], datetime.now(DENVER).date().isoformat()) in (('2026-10-30-launch','2026-10-30'),('2026-11-10-tax-fact','2026-11-10')), 'Immediate exception expired'
         due=None
     else:
         due=datetime.fromisoformat(item['slot']).replace(hour=8,tzinfo=DENVER)
-        assert due.weekday() in (1,3), 'Not a Tuesday/Thursday slot'
+        if campaign=='facts':
+            assert due.weekday() in (2,4), 'Fact cards require Wednesday/Friday slots'
+        else:
+            assert due.weekday() in (1,3), 'Not a Tuesday/Thursday slot'
     return due
 
 def checkpoint(path,record):
