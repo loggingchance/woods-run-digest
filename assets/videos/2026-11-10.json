@@ -1,0 +1,60 @@
+{
+  "date": "2026-11-10",
+  "format": "approved-v4",
+  "dimensions": [
+    1080,
+    1920
+  ],
+  "fps": 30,
+  "frames": 1545,
+  "duration_seconds": 51.5,
+  "segment_frames": [
+    75,
+    210,
+    210,
+    210,
+    210,
+    210,
+    300,
+    120
+  ],
+  "stories": [
+    {
+      "headline": "Millar Western idles Quesnel River Pulp indefinitely",
+      "body": "Millar Western has decided to idle its Quesnel River Pulp mill in British Columbia indefinitely, extending a temporary shutdown that began September 4. In a November 9 letter to employees obtained by the Quesnel Cariboo Observer, the company\u2026",
+      "region": "CANADA \u2014 BRITISH COLUMBIA / NOVEMBER 9 DECISION",
+      "image": null
+    },
+    {
+      "headline": "ForestryWorks adds a partner for three Northwest states",
+      "body": "The Western Forestry & Conservation Association has joined the ForestryWorks network for Washington, Oregon and Idaho. In their November 9 announcement, the association and the Forest Workforce Training Institute said the partnership will\u2026",
+      "region": "U.S. \u2014 PACIFIC NORTHWEST / NOVEMBER 9 ANNOUNCEMENT",
+      "image": null
+    },
+    {
+      "headline": "CAL FIRE releases the first chapters of its forest assessment",
+      "body": "CAL FIRE announced the first public release of its 2025 Forest and Rangeland Assessment on November 9. The initial chapters cover forest resilience, rangelands, wildfire and risks to communities. The assessment tracks more than 50\u2026",
+      "region": "U.S. \u2014 CALIFORNIA / NOVEMBER 9 RELEASE",
+      "image": null
+    },
+    {
+      "headline": "Tribal forest restoration grants offer a December draft review",
+      "body": "The U.S. Forest Service\u2019s Landscape Scale Restoration competition for Tribes lists grants of US$100,000 to US$300,000, with a match required. Eligible applicants include federally recognized Tribes and qualifying Tribal organizations that\u2026",
+      "region": "U.S. \u2014 TRIBAL FORESTRY / JANUARY 26 DEADLINE",
+      "image": null
+    },
+    {
+      "headline": "New FBS Podcast episode explains what goes into the Digest",
+      "body": "The FBS Podcast released \u201cFBS 61 The Woods Run Digest\u201d on November 9. The episode introduces the daily briefing for timberland owners, loggers, mill operators and wood-products managers in the United States and Canada.",
+      "region": "THE FBS PODCAST / NOVEMBER 9 RELEASE",
+      "image": null
+    }
+  ],
+  "featuredResource": {
+    "title": "National Forest Products Tax Credit Sourcebook",
+    "description": "This searchable website and downloadable sourcebook help forest-products businesses screen federal and state tax-credit opportunities. Browse by state or activity and follow official sources to check eligibility and timing; it is a screening guide, not tax advice.",
+    "url": "https://tax.lumbermen.org/",
+    "kind": "website"
+  },
+  "publication_attempted": false
+}

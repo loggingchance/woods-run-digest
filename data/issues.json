@@ -1,5 +1,159 @@
 [
   {
+    "date": "2026-11-10",
+    "summary": "Millar Western idles Quesnel River Pulp indefinitely. Also: a Northwest forestry recruiting partnership, California’s forest assessment, tribal restoration grants and the latest FBS Podcast episode.",
+    "socialText": "Millar Western has made the shutdown of Quesnel River Pulp indefinite, citing market conditions and uncertainty about fiber costs. Read today’s Woods Run Digest:",
+    "strikingText": "Tribal forest restoration applicants can get an optional Forest Service review of their draft narrative and budget by submitting them to a regional contact by December 11. The final application is due January 26.",
+    "cardTeaser": "Millar Western idles Quesnel River Pulp indefinitely",
+    "cardSubhead": "The B.C. pulp mill’s September shutdown has no restart date.",
+    "marketObservations": {
+      "diesel": {
+        "status": "verified",
+        "latest": "US$6.292/gal",
+        "observed": "Week of November 2, 2026; released November 3",
+        "change": [
+          "−US$0.060/gal",
+          "−0.94%"
+        ],
+        "comparison": "Versus October 26: US$6.352/gal",
+        "detail": "EIA U.S. on-highway diesel; taxes included",
+        "sources": [
+          {
+            "label": "EIA U.S. on-highway diesel; taxes included",
+            "url": "https://www.eia.gov/petroleum/gasdiesel/"
+          }
+        ]
+      },
+      "lumber_futures": {
+        "status": "verified",
+        "latest": "US$511.50/MBF",
+        "observed": "November 9, 2026 close",
+        "change": [
+          "−US$14.00/MBF",
+          "−2.66%"
+        ],
+        "comparison": "Same November contract, November 2: US$525.50/MBF",
+        "detail": "November 2026 lumber futures; nearby delivery contract",
+        "sources": [
+          {
+            "label": "November contract historical closes",
+            "url": "https://www.investing.com/commodities/lumber-historical-data"
+          },
+          {
+            "label": "Named November contract and settlement date",
+            "url": "https://www.investing.com/commodities/lumber-contracts"
+          }
+        ]
+      },
+      "madisons": {
+        "status": "verified",
+        "latest": "US$449/MBF",
+        "observed": "Week ending November 6, 2026",
+        "change": [
+          "−US$10/MBF",
+          "−2.18% (calculated)"
+        ],
+        "comparison": "Versus week ending October 30: US$459/MBF",
+        "detail": "Madison’s weekly lumber index",
+        "sources": [
+          {
+            "label": "Madison’s November 6 index and prior-week comparison",
+            "url": "https://madisonsreport.com/madisons-lumber-prices-index-nov-06-2026-us449-mfbm/"
+          }
+        ]
+      },
+      "hardwood_ppi": {
+        "status": "verified",
+        "latest": "285.075 index points",
+        "observed": "September 2026; released October 15",
+        "change": [
+          "−1.290 points",
+          "−0.45%"
+        ],
+        "comparison": "Versus August 2026: 286.365",
+        "detail": "BLS WPU0812; 1982=100; not seasonally adjusted",
+        "sources": [
+          {
+            "label": "BLS WPU0812; 1982=100; not seasonally adjusted",
+            "url": "https://fred.stlouisfed.org/series/WPU0812"
+          }
+        ]
+      },
+      "housing_starts": {
+        "status": "verified",
+        "latest": "859,000 units (SAAR)",
+        "observed": "September 2026; released October 20",
+        "change": [
+          "−41,000 units (SAAR)",
+          "−4.6%"
+        ],
+        "comparison": "Versus revised August 2026: 900,000",
+        "detail": "Census U.S. single-family starts; annualized estimate",
+        "sources": [
+          {
+            "label": "Census U.S. single-family starts; annualized estimate",
+            "url": "https://www.census.gov/construction/nrc/pdf/newresconst.pdf"
+          }
+        ]
+      },
+      "cad_usd": {
+        "status": "verified",
+        "latest": "C$1.4123 per US$1",
+        "observed": "Daily average, November 9, 2026",
+        "change": [
+          "+C$0.0010 per US$1",
+          "+0.07%"
+        ],
+        "comparison": "Versus November 6: C$1.4113 per US$1",
+        "detail": "Bank of Canada; Canadian dollars per U.S. dollar",
+        "sources": [
+          {
+            "label": "Bank of Canada; Canadian dollars per U.S. dollar",
+            "url": "https://www.bankofcanada.ca/rates/exchange/daily-exchange-rates/"
+          }
+        ]
+      }
+    },
+    "marketCaveats": [
+      "The September single-family starts monthly change has a published ±10.0-percentage-point 90% confidence interval and is not statistically significant.",
+      "The named November 2026 lumber contract settled at US$511.50 on November 9. The comparison is the same contract’s November 2 close; January 2027 is a separate contract.",
+      "Display rounding follows the approved format. Changes are calculated from unrounded observations, so rounded currency levels may look unchanged even when a small movement occurred."
+    ],
+    "featuredResource": {
+      "date": "2026-11-10",
+      "source": "daily-sheet",
+      "item": {
+        "title": "National Forest Products Tax Credit Sourcebook",
+        "kind": "website",
+        "description": "This searchable website and downloadable sourcebook help forest-products businesses screen federal and state tax-credit opportunities. Browse by state or activity and follow official sources to check eligibility and timing; it is a screening guide, not tax advice.",
+        "source_url": "https://tax.lumbermen.org/",
+        "url": "https://tax.lumbermen.org/"
+      },
+      "cached": false
+    },
+    "editorialWatch": {
+      "kind": "trade_policy",
+      "items": [
+        {
+          "text": "A NAFTA Chapter 19 panel on November 6 affirmed the U.S. Commerce Department’s second remand determination in Canada’s challenge to the original U.S. antidumping determination on Canadian softwood lumber. Global Affairs Canada says the ruling effectively ends that challenge. This proceeding concerns the underlying determination, separate from the seventh administrative review that set company-specific deposit rates in October. The November 6 panel decision is not itself a new seventh-review rate announcement.",
+          "sources": [
+            {
+              "label": "Global Affairs Canada’s November 6 update",
+              "url": "https://www.international.gc.ca/controls-controles/softwood-bois_oeuvre/index.aspx?lang=eng"
+            },
+            {
+              "label": "Official case register: original antidumping determination",
+              "url": "https://www.international.gc.ca/trade-commerce/trade-agreements-accords-commerciaux/agr-acc/cusma-aceum/settlement-reviews-reglement-examens.aspx?lang=eng"
+            }
+          ],
+          "verified_on": "2026-11-10"
+        }
+      ]
+    },
+    "displayDate": "November 10, 2026",
+    "url": "/2026/11/10/"
+  },
+  {
     "date": "2026-11-09",
     "summary": "Rayonier reports its first full quarter with PotlatchDeltic. Also: Mercer’s pulp mill watch, a Kansas woodland field-day recap, what low snow meant for logging access, and Central Platte’s spring tree orders.",
     "socialText": "Rayonier’s first full quarter with PotlatchDeltic shows how the merger changed harvest volumes in the South and Northwest. Read today’s Woods Run Digest:",
