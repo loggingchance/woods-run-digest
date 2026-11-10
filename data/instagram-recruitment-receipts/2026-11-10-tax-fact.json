@@ -1,0 +1,16 @@
+{
+  "slot": "2026-11-10-tax-fact",
+  "request": {
+    "slot": "2026-11-10-tax-fact",
+    "asset": "assets/instagram-recruitment/2026-11-10-tax-guide-fact.jpg",
+    "sha256": "f4e6e2d65bb072a11abb8fffc346e47c59280ead7b7d91440cd8a6f83ecaa195",
+    "caption": "A searchable sourcebook helps forest-products businesses find federal and state tax-credit opportunities.\n\nWoods Run Digest subscribers already knew that.\n\nFrom the November 10, 2026 edition of The Woods Run Digest. Subscribe free using the link in bio, then confirm your email.\n\n#Forestry #WoodProducts #WoodsRunDigest",
+    "immediate": true
+  },
+  "duplicate_search": {
+    "complete": true,
+    "posts_checked": 315
+  },
+  "checked_at": "2026-11-10T21:22:21.465790+00:00",
+  "attempt_started_at": "2026-11-10T21:22:21.654290+00:00"
+}
