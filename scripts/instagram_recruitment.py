@@ -12,13 +12,13 @@ RAW='https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/'
 DENVER=ZoneInfo('America/Denver')
 
 def check_item(item):
-    assert re.fullmatch(r'\d{4}-\d{2}-\d{2}(?:-launch)?',item['slot']), 'Invalid slot'
+    assert re.fullmatch(r'\d{4}-\d{2}-\d{2}(?:-launch|-tax-fact)?',item['slot']), 'Invalid slot'
     assert item['asset'].startswith(PREFIX) and '..' not in item['asset'] and item['asset'].endswith('.jpg'), 'Invalid asset path'
     assert re.fullmatch('[a-f0-9]{64}',item['sha256']), 'Invalid asset digest'
     text=item['caption']
     assert 'The Woods Run Digest' in text and 'link in bio' in text.lower() and 20<len(text)<2200, 'Invalid caption'
     if item.get('immediate'):
-        assert item['slot']=='2026-10-30-launch' and datetime.now(DENVER).date().isoformat()=='2026-10-30', 'Immediate exception expired'
+        assert (item['slot'], datetime.now(DENVER).date().isoformat()) in (('2026-10-30-launch','2026-10-30'),('2026-11-10-tax-fact','2026-11-10')), 'Immediate exception expired'
         due=None
     else:
         due=datetime.fromisoformat(item['slot']).replace(hour=8,tzinfo=DENVER)
