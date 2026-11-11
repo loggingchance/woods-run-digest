@@ -22,6 +22,48 @@ SUPPORT_STYLE='display:block;box-sizing:border-box;width:100%;padding:16px 20px;
 LINK_STYLE='font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:25px;color:#1f5b3a;'
 
 
+SOCIAL_FOLLOW_START = '2026-11-11'
+SOCIAL_FOLLOW_LINKS = (
+    ('X', 'https://x.com/ForestBizSchool'),
+    ('Instagram', 'https://www.instagram.com/northeastforests/'),
+    ('LinkedIn', 'https://www.linkedin.com/in/steve-bick-loggingchance/'),
+    ('YouTube', 'https://www.youtube.com/channel/UCq-PscVBAKjmVE39qb2NyCg'),
+)
+
+
+def validate_social_follow(soup):
+    """Validate supplied navigation, then consume it once in the email footer."""
+    panels = soup.select('.social-follow')
+    if len(panels) > 1:
+        raise ValueError('Duplicate social-follow navigation')
+    for panel in panels:
+        links = [(a.get_text(' ', strip=True), a.get('href'))
+                 for a in panel.find_all('a')]
+        if (panel.name != 'nav' or len(links) != len(SOCIAL_FOLLOW_LINKS)
+                or set(links) != set(SOCIAL_FOLLOW_LINKS)):
+            raise ValueError('Social-follow navigation must contain the four approved profiles')
+        panel.decompose()
+
+
+def social_follow_html():
+    """Two fixed-width columns with readable text, no icon or CSS dependency."""
+    style = ('display:block;padding:12px 4px;border:1px solid #1f5b3a;'
+             'border-radius:4px;background-color:#1f3b2b;color:#ffffff;'
+             'font-family:Arial,Helvetica,sans-serif;font-size:16px;'
+             'font-weight:bold;line-height:22px;text-align:center;text-decoration:none;')
+    rows = []
+    for offset in (0, 2):
+        cells = ''.join(
+            f'<td width="50%" style="width:50%;padding:4px;">'
+            f'<a href="{url}" aria-label="Follow on {name}" style="{style}">{name}</a></td>'
+            for name, url in SOCIAL_FOLLOW_LINKS[offset:offset + 2])
+        rows.append('<tr>' + cells + '</tr>')
+    return (f'<p style="{BODY_STYLE}">Follow along</p>'
+            '<table class="social-follow" width="100%" cellpadding="0" cellspacing="0" '
+            'border="0" role="presentation" style="width:100%;table-layout:fixed;">'
+            + ''.join(rows) + '</table>')
+
+
 def normalize_url(value: str) -> str:
     value=urljoin(SITE+'/', value.strip())
     parsed=urlsplit(value)
@@ -61,6 +103,8 @@ def compile_payload(page: str, issue: dict) -> dict:
     article=soup.select_one('article.edition-wrap')
     if article is None:raise ValueError('Complete edition article not found')
     if issue['displayDate'] not in article.get_text(' ',strip=True):raise ValueError('Edition date mismatch')
+    if issue['date'] >= SOCIAL_FOLLOW_START:
+        validate_social_follow(soup)
     sponsor = validate_sponsor(article, issue['date'])
     # Sponsor Mondays retain the sharing section immediately after the card.
     for element in article.select('nav, .edition-nav' if sponsor else 'nav, .edition-nav, .growth-strip'):
@@ -126,6 +170,10 @@ def compile_payload(page: str, issue: dict) -> dict:
     page_url=SITE+issue['url'];subscribe=SITE+'/subscribe/'
     body.append(f'<p style="{BODY_STYLE}"><a href="{page_url}" style="{LINK_STYLE}">Read today’s web edition</a> · <a href="{subscribe}" style="{LINK_STYLE}">Subscribe</a></p>')
     plain.extend(['Read today’s web edition: '+page_url,'Subscribe: '+subscribe]);urls.update([page_url,subscribe])
+    if issue['date'] >= SOCIAL_FOLLOW_START:
+        body.append(social_follow_html())
+        plain.extend(['Follow along'] + [f'{name}: {url}' for name, url in SOCIAL_FOLLOW_LINKS])
+        urls.update(url for _, url in SOCIAL_FOLLOW_LINKS)
     marker='<!-- OWNER_TEST_BANNER -->'
     wrapper='<!DOCTYPE html><html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta http-equiv="X-UA-Compatible" content="IE=edge"></head><body style="margin-top:0;margin-right:0;margin-bottom:0;margin-left:0;background-color:#f2eee5;"><table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation"><tr><td bgcolor="#f2eee5" align="center" style="background-color:#f2eee5;padding-top:24px;padding-bottom:24px;"><table width="600" cellpadding="0" cellspacing="0" border="0" role="presentation" style="max-width:600px;width:100%;"><tr><td bgcolor="#fffdf8" style="background-color:#fffdf8;padding-top:28px;padding-right:30px;padding-bottom:28px;padding-left:30px;">'+marker+'<h1 style="font-family:Georgia,Times New Roman,serif;font-size:28px;line-height:34px;color:#1f3b2b;">WOODS RUN DIGEST</h1>'
     footer='</td></tr></table></td></tr></table></body></html>'
@@ -152,3 +200,4 @@ def main():
     print(json.dumps({'email_payload_ready':str(output.relative_to(ROOT)),'date':today,'links_preserved':True,'source_paragraph_count':payload['source_paragraph_count'],'featured_item':payload['featured_item'],'featured_book':payload['featured_book'],'email_sent':False}))
 
 if __name__=='__main__':main()
+
