@@ -1,0 +1,60 @@
+{
+  "date": "2026-11-11",
+  "format": "approved-v4",
+  "dimensions": [
+    1080,
+    1920
+  ],
+  "fps": 30,
+  "frames": 1545,
+  "duration_seconds": 51.5,
+  "segment_frames": [
+    75,
+    210,
+    210,
+    210,
+    210,
+    210,
+    300,
+    120
+  ],
+  "stories": [
+    {
+      "headline": "Free Rural Entrepreneurship Short Course starts November 30",
+      "body": "A business idea needs time and attention before it can become a useful new service or a workable enterprise. The Forest Business School\u2019s free Rural Entrepreneurship Short Course offers four live, remote discussions to help participants\u2026",
+      "region": "THE FOREST BUSINESS SCHOOL",
+      "image": null
+    },
+    {
+      "headline": "Mercer files its prepackaged Chapter 11 plan",
+      "body": "On November 9, Mercer International and one non-operating subsidiary filed voluntary Chapter 11 petitions in the Southern District of Texas and submitted a prepackaged reorganization plan. The filing moves the recapitalization announced\u2026",
+      "region": "U.S. / CANADA \u2014 NOVEMBER 9 COURT FILINGS",
+      "image": null
+    },
+    {
+      "headline": "Sexton pauses log buying and harvesting after mill fire",
+      "body": "Sexton Lumber has suspended sawmill operations, log purchasing and timber harvesting while it assesses damage from an October 29 fire at its Bloomfield facility. CBC reported November 9, citing the Newfoundland and Labrador Forestry Industry\u2026",
+      "region": "CANADA \u2014 NEWFOUNDLAND AND LABRADOR / NOVEMBER 9 REPORT",
+      "image": null
+    },
+    {
+      "headline": "BLM approves ponderosa pine thinning near Adin",
+      "body": "The Bureau of Land Management approved thinning and fuels work on about 304 acres of public land southwest of Adin, California. The Letterbox project aims to restore a more open ponderosa pine forest and reduce the vegetation that can carry\u2026",
+      "region": "U.S. \u2014 NORTHEASTERN CALIFORNIA / NOVEMBER 10 DECISION",
+      "image": null
+    },
+    {
+      "headline": "Allen Mountain offers a pine and hardwood timber sale",
+      "body": "The Georgia Forestry Commission is accepting bids for the Allen Mountain timber sale, No. 11656, on 141.3 acres of U.S. Forest Service land southwest of Toccoa in Stephens County. The November 10 packet designates 127 acres for\u2026",
+      "region": "U.S. \u2014 GEORGIA / BIDS DUE DECEMBER 9",
+      "image": null
+    }
+  ],
+  "featuredResource": {
+    "title": "Timber Tempo: Project Flow in Forestry",
+    "description": "This book introduces Critical Chain Project Management through forestry and forest-products examples. Its discussion of task dependencies, buffers, competing projects and resource coordination helps readers examine delays in timber procurement, sawmills and land-management work.",
+    "url": "https://tempo.wetwoods.xyz/",
+    "kind": "book"
+  },
+  "publication_attempted": false
+}

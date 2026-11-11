@@ -1,5 +1,141 @@
 [
   {
+    "date": "2026-11-11",
+    "summary": "The free Rural Entrepreneurship Short Course starts November 30. Also: Mercer’s court filing, the pause in Sexton Lumber’s log buying, a California thinning decision and Georgia timber bids.",
+    "socialText": "The Forest Business School’s free Rural Entrepreneurship Short Course starts November 30 in partnership with The Northeastern Loggers’ Association. Details in today’s Woods Run Digest:",
+    "strikingText": "The October 29 fire at Sexton Lumber has interrupted more than sawing: the Bloomfield mill has also paused log purchases and harvesting while it assesses damage. No restart date has been announced.",
+    "cardTeaser": "Free Rural Entrepreneurship Short Course starts November 30",
+    "cardSubhead": "Four live online discussions for eligible U.S. rural residents.",
+    "marketObservations": {
+      "diesel": {
+        "status": "verified",
+        "latest": "US$6.127/gal",
+        "observed": "Week of November 9, 2026; released November 10",
+        "change": [
+          "−US$0.165/gal",
+          "−2.62%"
+        ],
+        "comparison": "Versus November 2: US$6.292/gal",
+        "detail": "EIA U.S. on-highway diesel; taxes included",
+        "sources": [
+          {
+            "label": "EIA U.S. on-highway diesel; taxes included",
+            "url": "https://www.eia.gov/petroleum/gasdiesel/"
+          }
+        ]
+      },
+      "lumber_futures": {
+        "status": "verified",
+        "latest": "US$511.00/MBF",
+        "observed": "November 10, 2026 close",
+        "change": [
+          "−US$14.50/MBF",
+          "−2.76%"
+        ],
+        "comparison": "Same November contract, November 3: US$525.50/MBF",
+        "detail": "November 2026 lumber futures; nearby delivery contract",
+        "sources": [
+          {
+            "label": "November contract historical closes",
+            "url": "https://www.investing.com/commodities/lumber-historical-data"
+          },
+          {
+            "label": "Named November contract and settlement date",
+            "url": "https://www.investing.com/commodities/lumber-contracts"
+          }
+        ]
+      },
+      "madisons": {
+        "status": "verified",
+        "latest": "US$449/MBF",
+        "observed": "Week ending November 6, 2026",
+        "change": [
+          "−US$10/MBF",
+          "−2.18% (calculated)"
+        ],
+        "comparison": "Versus week ending October 30: US$459/MBF",
+        "detail": "Madison’s weekly lumber index",
+        "sources": [
+          {
+            "label": "Madison’s November 6 index and prior-week comparison",
+            "url": "https://madisonsreport.com/madisons-lumber-prices-index-nov-06-2026-us449-mfbm/"
+          }
+        ]
+      },
+      "hardwood_ppi": {
+        "status": "verified",
+        "latest": "285.075 index points",
+        "observed": "September 2026; released October 15",
+        "change": [
+          "−1.290 points",
+          "−0.45%"
+        ],
+        "comparison": "Versus August 2026: 286.365",
+        "detail": "BLS WPU0812; 1982=100; not seasonally adjusted",
+        "sources": [
+          {
+            "label": "BLS WPU0812; 1982=100; not seasonally adjusted",
+            "url": "https://fred.stlouisfed.org/series/WPU0812"
+          }
+        ]
+      },
+      "housing_starts": {
+        "status": "verified",
+        "latest": "859,000 units (SAAR)",
+        "observed": "September 2026; released October 20",
+        "change": [
+          "−41,000 units (SAAR)",
+          "−4.6%"
+        ],
+        "comparison": "Versus revised August 2026: 900,000",
+        "detail": "Census U.S. single-family starts; annualized estimate",
+        "sources": [
+          {
+            "label": "Census U.S. single-family starts; annualized estimate",
+            "url": "https://www.census.gov/construction/nrc/pdf/newresconst.pdf"
+          }
+        ]
+      },
+      "cad_usd": {
+        "status": "verified",
+        "latest": "C$1.4181 per US$1",
+        "observed": "Daily average, November 10, 2026",
+        "change": [
+          "+C$0.0058 per US$1",
+          "+0.41%"
+        ],
+        "comparison": "Versus November 9: C$1.4123 per US$1",
+        "detail": "Bank of Canada; Canadian dollars per U.S. dollar",
+        "sources": [
+          {
+            "label": "Bank of Canada; Canadian dollars per U.S. dollar",
+            "url": "https://www.bankofcanada.ca/rates/exchange/daily-exchange-rates/"
+          }
+        ]
+      }
+    },
+    "marketCaveats": [
+      "The September single-family starts monthly change has a published ±10.0-percentage-point 90% confidence interval and is not statistically significant.",
+      "The named November 2026 lumber contract settled at US$511.00 on November 10. The comparison uses the November 3 close for that same contract.",
+      "Display rounding follows the approved format. Changes are calculated from unrounded observations, so rounded currency levels may look unchanged even when a small movement occurred."
+    ],
+    "featuredResource": {
+      "date": "2026-11-11",
+      "source": "daily-sheet",
+      "item": {
+        "title": "Timber Tempo: Project Flow in Forestry",
+        "kind": "book",
+        "description": "This book introduces Critical Chain Project Management through forestry and forest-products examples. Its discussion of task dependencies, buffers, competing projects and resource coordination helps readers examine delays in timber procurement, sawmills and land-management work.",
+        "source_url": "https://tempo.wetwoods.xyz/",
+        "url": "https://tempo.wetwoods.xyz/"
+      },
+      "cached": false
+    },
+    "podcastFeatureStatus": "awaiting_user_first_episode",
+    "displayDate": "November 11, 2026",
+    "url": "/2026/11/11/"
+  },
+  {
     "date": "2026-11-10",
     "summary": "Millar Western idles Quesnel River Pulp indefinitely. Also: a Northwest forestry recruiting partnership, California’s forest assessment, tribal restoration grants and the latest FBS Podcast episode.",
     "socialText": "Millar Western has made the shutdown of Quesnel River Pulp indefinite, citing market conditions and uncertainty about fiber costs. Read today’s Woods Run Digest:",
