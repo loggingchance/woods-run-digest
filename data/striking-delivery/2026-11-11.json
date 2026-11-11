@@ -3,15 +3,16 @@
   "text": "The October 29 fire at Sexton Lumber has interrupted more than sawing: the Bloomfield mill has also paused log purchases and harvesting while it assesses damage. No restart date has been announced.",
   "due_at": "2026-11-11T17:00:00Z",
   "channel_id": "6843193ed6d25b49a145ff6e",
-  "state": "accepted",
+  "state": "sent",
   "attempt_started_at": "2026-11-11T16:52:04.168597Z",
   "post_id": "6af49d35afe96d2e4a0b66b5",
   "history_checked": 388,
   "source": "native-daily-striking",
   "email_attempted": false,
-  "provider_status": "scheduled",
+  "provider_status": "sent",
   "provider_due_at": "2026-11-11T17:00:00.000Z",
-  "external_url": null,
+  "external_url": "https://x.com/1487833905197637637/status/2120562332480762052",
   "accepted_at": "2026-11-11T16:52:05.821080Z",
-  "schedule_verified": true
+  "schedule_verified": true,
+  "verified_at": "2026-11-11T17:01:36.473400Z"
 }
