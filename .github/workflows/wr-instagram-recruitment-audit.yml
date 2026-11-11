@@ -27,3 +27,4 @@ jobs:
           posts=b.recent(org,ch[0]['id'])
           print('CAMPAIGN_AUDIT '+json.dumps({'channel':ch[0],'complete_history':True,'count':len(posts),'posts':posts},ensure_ascii=False))
           PY
+# Instagram-only fact-card queue reconciliation: 2026-11-11.
