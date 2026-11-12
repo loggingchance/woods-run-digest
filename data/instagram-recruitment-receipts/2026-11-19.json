@@ -11,5 +11,21 @@
     "posts_checked": 319
   },
   "checked_at": "2026-11-12T17:08:39.615989+00:00",
-  "attempt_started_at": "2026-11-12T17:08:39.804918+00:00"
+  "attempt_started_at": "2026-11-12T17:08:39.804918+00:00",
+  "post_id": "6af5f2993e88d8443f46e5fc",
+  "provider_post": {
+    "id": "6af5f2993e88d8443f46e5fc",
+    "text": "Good work starts with good material. Stay connected to the world of wood.\n\nThe Woods Run Digest brings you Forestry & Wood Products news. Subscribe free using the link in bio, then confirm your email.\n\n#Forestry #WoodProducts #WoodsRunDigest",
+    "status": "scheduled",
+    "createdAt": "2026-11-12T17:08:41.715Z",
+    "dueAt": "2026-11-19T15:00:00.000Z",
+    "channelId": "6844cc71d6d25b49a1de682e",
+    "externalLink": null,
+    "assets": [
+      {
+        "source": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/instagram-recruitment/2026-11-19-cooperage.jpg",
+        "mimeType": "image/jpeg"
+      }
+    ]
+  }
 }
