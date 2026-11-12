@@ -57,6 +57,10 @@ class SocialFollowEmailTests(unittest.TestCase):
             p = self.payload(nav=navigation(), inside=inside)
             self.assertEqual(p, baseline)
 
+    def test_icon_only_label_is_accepted(self):
+        nav = navigation().replace('>X</a>', '><img alt="X" src="/assets/social/x.png"></a>')
+        self.assertEqual(self.payload(nav=nav), self.payload())
+
     def test_bad_names_urls_missing_extra_or_duplicate_rejected(self):
         nav = navigation()
         for bad in (nav+nav, nav.replace('>X<', '>Twitter<'),
