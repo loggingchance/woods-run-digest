@@ -11,5 +11,21 @@
     "posts_checked": 322
   },
   "checked_at": "2026-11-12T17:08:58.054838+00:00",
-  "attempt_started_at": "2026-11-12T17:08:58.280607+00:00"
+  "attempt_started_at": "2026-11-12T17:08:58.280607+00:00",
+  "post_id": "6af5f2ac225faf55250b390e",
+  "provider_post": {
+    "id": "6af5f2ac225faf55250b390e",
+    "text": "Follow forestry from the next generation of trees onward.\n\nThe Woods Run Digest brings you Forestry & Wood Products news. Subscribe free using the link in bio, then confirm your email.\n\n#Forestry #WoodProducts #WoodsRunDigest",
+    "status": "scheduled",
+    "createdAt": "2026-11-12T17:09:00.601Z",
+    "dueAt": "2026-12-01T15:00:00.000Z",
+    "channelId": "6844cc71d6d25b49a1de682e",
+    "externalLink": null,
+    "assets": [
+      {
+        "source": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/instagram-recruitment/2026-12-01-nursery.jpg",
+        "mimeType": "image/jpeg"
+      }
+    ]
+  }
 }
