@@ -1,0 +1,221 @@
+{
+  "run_id": "daily-2026-11-12",
+  "date": "2026-11-12",
+  "channels": {
+    "x": {
+      "duplicate_search": {
+        "complete": true,
+        "posts_checked": 389
+      },
+      "attempt_started_at": "2026-11-12T10:01:05.032933Z",
+      "newly_created": true,
+      "post_id": "6af58e61041a9377d7ded544",
+      "status": "scheduled",
+      "due_at": "2026-11-12T11:00:00.000Z",
+      "created_at": "2026-11-12T10:01:05.263Z",
+      "external_url": null,
+      "assets": [],
+      "provider_text": "A Bridger-Teton district ranger expects an initial timber sale from the La Barge area in summer 2027. Read today’s Woods Run Digest:\n\nhttps://woodsrun.forestenterprise.org/2026/11/12/",
+      "error": null,
+      "schedule_verified": true,
+      "provider_sent": false,
+      "delivery_state": "scheduled",
+      "existing_delivery": true,
+      "public_visibility": "not_independently_verified"
+    },
+    "instagram": {
+      "duplicate_search": {
+        "complete": true,
+        "posts_checked": 318
+      },
+      "attempt_started_at": "2026-11-12T10:01:07.342806Z",
+      "newly_created": true,
+      "post_id": "6af58e63f662733b84a6912e",
+      "status": "scheduled",
+      "due_at": "2026-11-12T11:00:00.000Z",
+      "created_at": "2026-11-12T10:01:07.645Z",
+      "external_url": null,
+      "assets": [
+        {
+          "source": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/videos/2026-11-12.mp4",
+          "mimeType": "video/mp4"
+        }
+      ],
+      "provider_text": "Woods Run Digest — November 12, 2026\n\nDaily North American forestry & forest-products intelligence from The Forest Business School.\n\nRead today’s edition: https://woodsrun.forestenterprise.org/2026/11/12/\n\nToday's Featured Resource\nWet Woods: Flux, Flex & Change in Our Forestry\nhttps://wetwoods.xyz/",
+      "error": null,
+      "schedule_verified": true,
+      "provider_sent": false,
+      "delivery_state": "scheduled",
+      "existing_delivery": true,
+      "public_visibility": "not_independently_verified"
+    },
+    "youtube": {
+      "duplicate_search": {
+        "complete": true,
+        "posts_checked": 107
+      },
+      "attempt_started_at": "2026-11-12T10:01:08.629876Z",
+      "newly_created": true,
+      "post_id": "6af58e6549bcfed3aa7402c9",
+      "status": "scheduled",
+      "due_at": "2026-11-12T11:00:00.000Z",
+      "created_at": "2026-11-12T10:01:09.010Z",
+      "external_url": null,
+      "assets": [
+        {
+          "source": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/videos/2026-11-12.mp4",
+          "mimeType": "video/mp4"
+        }
+      ],
+      "provider_text": "Woods Run Digest — November 12, 2026\n\nBridger-Teton eyes a La Barge-area timber sale for summer 2027. Also: Conifex’s Mackenzie restart update, North Dakota’s November 13 cutoff, Oregon logging awards and South Dakota’s temporary bridge program.\n\nRead the full edition: https://woodsrun.forestenterprise.org/2026/11/12/\n\nDaily forestry & forest-products intelligence from The Forest Business School.\n\nToday's Featured Resource\nWet Woods: Flux, Flex & Change in Our Forestry\nhttps://wetwoods.xyz/",
+      "error": null,
+      "schedule_verified": true,
+      "provider_sent": false,
+      "delivery_state": "scheduled",
+      "existing_delivery": true,
+      "public_visibility": "not_independently_verified"
+    }
+  },
+  "checked_at": "2026-11-12T10:01:00.979035Z",
+  "requested_action": "schedule_daily",
+  "requested_channels": [
+    "x",
+    "instagram",
+    "youtube"
+  ],
+  "required_daily_channels": [
+    "x",
+    "instagram",
+    "youtube"
+  ],
+  "daily_target_due_at": "2026-11-12T11:00:00Z",
+  "channel_identity": [
+    {
+      "id": "6ab14319ea19ca0bdea627e2",
+      "name": "Logging Chance",
+      "service": "youtube",
+      "serviceId": "UCq-PscVBAKjmVE39qb2NyCg",
+      "externalLink": "https://www.youtube.com/channel/UCq-PscVBAKjmVE39qb2NyCg",
+      "isDisconnected": false,
+      "isLocked": false,
+      "isQueuePaused": false,
+      "timezone": "America/Denver"
+    },
+    {
+      "id": "6844cc71d6d25b49a1de682e",
+      "name": "northeastforests",
+      "service": "instagram",
+      "serviceId": "17841412643805979",
+      "externalLink": "https://instagram.com/northeastforests",
+      "isDisconnected": false,
+      "isLocked": false,
+      "isQueuePaused": false,
+      "timezone": "America/Denver"
+    },
+    {
+      "id": "6843193ed6d25b49a145ff6e",
+      "name": "ForestBizSchool",
+      "service": "twitter",
+      "serviceId": "1487833905197637637",
+      "externalLink": "https://twitter.com/ForestBizSchool",
+      "isDisconnected": false,
+      "isLocked": false,
+      "isQueuePaused": false,
+      "timezone": "America/Denver"
+    }
+  ],
+  "due_at": "2026-11-12T11:00:00Z",
+  "preflight_by_channel": {
+    "x": {
+      "page": {
+        "url": "https://woodsrun.forestenterprise.org/2026/11/12/",
+        "final_url": "https://woodsrun.forestenterprise.org/2026/11/12/",
+        "http_status": 200,
+        "content_type": "text/html",
+        "content_verified": true
+      },
+      "link_card": {
+        "page_url": "https://woodsrun.forestenterprise.org/2026/11/12/",
+        "image_url": "https://woodsrun.forestenterprise.org/assets/cards/2026-11-12.png",
+        "card": "summary_large_image",
+        "image_bytes": 208273,
+        "metadata_verified": true
+      },
+      "card": {
+        "url": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/cards/2026-11-12.png",
+        "dimensions": [
+          1200,
+          630
+        ],
+        "bytes": 208273,
+        "public": {
+          "url": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/cards/2026-11-12.png",
+          "final_url": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/cards/2026-11-12.png",
+          "http_status": 200,
+          "content_type": "image/png",
+          "content_verified": true
+        }
+      }
+    },
+    "instagram": {
+      "page": {
+        "url": "https://woodsrun.forestenterprise.org/2026/11/12/",
+        "final_url": "https://woodsrun.forestenterprise.org/2026/11/12/",
+        "http_status": 200,
+        "content_type": "text/html",
+        "content_verified": true
+      },
+      "video": {
+        "url": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/videos/2026-11-12.mp4",
+        "dimensions": [
+          [
+            1080,
+            1920
+          ]
+        ],
+        "bytes": 1798536,
+        "public": {
+          "url": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/videos/2026-11-12.mp4",
+          "final_url": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/videos/2026-11-12.mp4",
+          "http_status": 200,
+          "content_type": "application/octet-stream",
+          "content_verified": true
+        }
+      }
+    },
+    "youtube": {
+      "page": {
+        "url": "https://woodsrun.forestenterprise.org/2026/11/12/",
+        "final_url": "https://woodsrun.forestenterprise.org/2026/11/12/",
+        "http_status": 200,
+        "content_type": "text/html",
+        "content_verified": true
+      },
+      "video": {
+        "url": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/videos/2026-11-12.mp4",
+        "dimensions": [
+          [
+            1080,
+            1920
+          ]
+        ],
+        "bytes": 1798536,
+        "public": {
+          "url": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/videos/2026-11-12.mp4",
+          "final_url": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/videos/2026-11-12.mp4",
+          "http_status": 200,
+          "content_type": "application/octet-stream",
+          "content_verified": true
+        }
+      }
+    }
+  },
+  "all_scheduled": true,
+  "daily_idempotent": true,
+  "all_provider_sent": false,
+  "all_public_verified": false,
+  "all_daily_channels_provider_sent": false,
+  "all_daily_channels_scheduled": true,
+  "email_verified": false,
+  "complete": false
+}
