@@ -11,5 +11,21 @@
     "posts_checked": 320
   },
   "checked_at": "2026-11-12T17:08:45.600000+00:00",
-  "attempt_started_at": "2026-11-12T17:08:45.884207+00:00"
+  "attempt_started_at": "2026-11-12T17:08:45.884207+00:00",
+  "post_id": "6af5f29f225faf55250b3665",
+  "provider_post": {
+    "id": "6af5f29f225faf55250b3665",
+    "text": "Keep up with the industry beyond your own log yard.\n\nThe Woods Run Digest brings you Forestry & Wood Products news. Subscribe free using the link in bio, then confirm your email.\n\n#Forestry #WoodProducts #WoodsRunDigest",
+    "status": "scheduled",
+    "createdAt": "2026-11-12T17:08:47.503Z",
+    "dueAt": "2026-11-24T15:00:00.000Z",
+    "channelId": "6844cc71d6d25b49a1de682e",
+    "externalLink": null,
+    "assets": [
+      {
+        "source": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/instagram-recruitment/2026-11-24-winter-log-yard.jpg",
+        "mimeType": "image/jpeg"
+      }
+    ]
+  }
 }
