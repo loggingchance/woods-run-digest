@@ -37,8 +37,13 @@ def validate_social_follow(soup):
     if len(panels) > 1:
         raise ValueError('Duplicate social-follow navigation')
     for panel in panels:
-        links = [(a.get_text(' ', strip=True), a.get('href'))
-                 for a in panel.find_all('a')]
+        links = []
+        for anchor in panel.find_all('a'):
+            label = anchor.get_text(' ', strip=True)
+            if not label:
+                image = anchor.find('img')
+                label = ' '.join((image.get('alt') if image else '').split())
+            links.append((label, anchor.get('href')))
         if (panel.name != 'nav' or len(links) != len(SOCIAL_FOLLOW_LINKS)
                 or set(links) != set(SOCIAL_FOLLOW_LINKS)):
             raise ValueError('Social-follow navigation must contain the four approved profiles')
