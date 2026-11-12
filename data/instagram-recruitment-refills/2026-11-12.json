@@ -1,0 +1,47 @@
+{
+  "batch_id": "refill-2026-11-12",
+  "status": "prepared",
+  "created_at": "2026-11-12T16:10:00Z",
+  "channel_id": "6844cc71d6d25b49a1de682e",
+  "timezone": "America/Denver",
+  "audit": {
+    "run_id": 42949852449,
+    "job_id": 131309664714,
+    "posts_checked": 319,
+    "remaining": 1,
+    "existing_post_id": "6ae4fa791891472093961a46"
+  },
+  "items": [
+    {
+      "slot": "2026-11-19",
+      "asset": "assets/instagram-recruitment/2026-11-19-cooperage.jpg",
+      "sha256": "ac56f099afb9f5b7ee020f94e7669a56c9fbec9f0ddc202b361c9c9a316d8e19",
+      "caption": "Good work starts with good material. Stay connected to the world of wood.\n\nThe Woods Run Digest brings you Forestry & Wood Products news. Subscribe free using the link in bio, then confirm your email.\n\n#Forestry #WoodProducts #WoodsRunDigest"
+    },
+    {
+      "slot": "2026-11-24",
+      "asset": "assets/instagram-recruitment/2026-11-24-winter-log-yard.jpg",
+      "sha256": "8f7d926c0a84b0a8edf5b34d90677a9c4e979224990ba97054e54351931623b5",
+      "caption": "Keep up with the industry beyond your own log yard.\n\nThe Woods Run Digest brings you Forestry & Wood Products news. Subscribe free using the link in bio, then confirm your email.\n\n#Forestry #WoodProducts #WoodsRunDigest"
+    },
+    {
+      "slot": "2026-11-26",
+      "asset": "assets/instagram-recruitment/2026-11-26-boatbuilding.jpg",
+      "sha256": "52bfd8982d59b7fb5796eb7e48b70e98a1aefd570db292cf401b04c1a53a09b4",
+      "caption": "From forests to the things we build with wood, there is always more to learn.\n\nThe Woods Run Digest brings you Forestry & Wood Products news. Subscribe free using the link in bio, then confirm your email.\n\n#Forestry #WoodProducts #WoodsRunDigest"
+    },
+    {
+      "slot": "2026-12-01",
+      "asset": "assets/instagram-recruitment/2026-12-01-nursery.jpg",
+      "sha256": "4679fa1c510f2b4e5a3848900ad3a82e386887020f6d5ef2301308b444a882ac",
+      "caption": "Follow forestry from the next generation of trees onward.\n\nThe Woods Run Digest brings you Forestry & Wood Products news. Subscribe free using the link in bio, then confirm your email.\n\n#Forestry #WoodProducts #WoodsRunDigest"
+    }
+  ],
+  "visual_review": "All four original built-in generated images inspected; 1536x1024; exact wording confirmed.",
+  "prompts": [
+    "Create an original Instagram recruitment poster for a forestry newsletter. Landscape 3:2 1536x1024. Collectible Golden Age American painted illustration inspired by N.C. Wyeth and Philip R. Goodwin, visibly hand painted, confident composition. Integrate beautifully legible exact typography with generous margins: 'The Woods Run Digest' (large title); 'Forestry & Wood Products news'; 'Subscribe free • Link in bio'. No other text, logos, QR codes or watermarks. Scene: close, warm amber cooperage workshop, craftsperson fitting curved oak staves to a barrel on a low bench, oak shavings and hand tools, quiet daylight across textured wood, indigo apron, no suspenders. Fresh composition unlike a sawmill, strong diagonal barrel, title in calm upper area, cream footer.",
+    "Create an original Instagram recruitment poster for a forestry newsletter. Landscape 3:2 1536x1024. Collectible Golden Age American painted illustration inspired by N.C. Wyeth and Philip R. Goodwin, visibly hand painted, confident composition. Integrate beautifully legible exact typography with generous margins: 'The Woods Run Digest' (large title); 'Forestry & Wood Products news'; 'Subscribe free • Link in bio'. No other text, logos, QR codes or watermarks. Scene: winter hardwood log yard viewed from above at an oblique angle, a yellow articulated wheel loader moving a bundled stack of logs, snow and long cobalt shadows, red-brown bark, no mountains or pine forest. Dynamic industrial wood-products illustration, typography in a cream horizontal panel.",
+    "Create an original Instagram recruitment poster for a forestry newsletter. Landscape 3:2 1536x1024. Collectible Golden Age American painted illustration inspired by N.C. Wyeth and Philip R. Goodwin, visibly hand painted, confident composition. Integrate beautifully legible exact typography with generous margins: 'The Woods Run Digest' (large title); 'Forestry & Wood Products news'; 'Subscribe free • Link in bio'. No other text, logos, QR codes or watermarks. Scene: coastal wooden boatbuilding shed, sweeping ribs of a small unfinished wooden hull dominate foreground, two craftspeople measuring a curved plank in warm afternoon light, muted teal sea glimpse through open door, elegant copper and navy palette. No forest or mountains. Title above, call to action below.",
+    "Create an original Instagram recruitment poster for a forestry newsletter. Landscape 3:2 1536x1024. Collectible Golden Age American painted illustration inspired by N.C. Wyeth and Philip R. Goodwin, visibly hand painted, confident composition. Integrate beautifully legible exact typography with generous margins: 'The Woods Run Digest' (large title); 'Forestry & Wood Products news'; 'Subscribe free • Link in bio'. No other text, logos, QR codes or watermarks. Scene: spring forest nursery, rows of young broadleaf seedlings and a worker kneeling to lift bare-root planting stock into a wooden crate, broad sunhat, rolling farmland beyond, fresh emerald, coral and cream palette. Eye-level intimate perspective, lush detailed brushwork, not pine trees or mountains. Typography integrated into pale open sky and narrow cream lower band."
+  ]
+}
