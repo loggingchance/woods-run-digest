@@ -3,10 +3,15 @@
   "text": "South Dakota’s temporary-bridge cost-share program is open to primary and secondary forest-products operators for portable skidder bridges and bridge mats that minimize streambed disturbance. https://woodsrun.forestenterprise.org/2026/11/12/",
   "due_at": "2026-11-12T17:00:00Z",
   "channel_id": "6843193ed6d25b49a145ff6e",
-  "state": "attempt_started",
+  "state": "accepted",
   "attempt_started_at": "2026-11-12T15:07:24.647372Z",
-  "post_id": null,
+  "post_id": "6af5d62e3b34f225ead849b3",
   "history_checked": 390,
   "source": "native-daily-striking",
-  "email_attempted": false
+  "email_attempted": false,
+  "provider_status": "scheduled",
+  "provider_due_at": "2026-11-12T17:00:00.000Z",
+  "external_url": null,
+  "accepted_at": "2026-11-12T15:07:26.627583Z",
+  "schedule_verified": true
 }
