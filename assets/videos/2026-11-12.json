@@ -1,0 +1,53 @@
+{
+  "date": "2026-11-12",
+  "format": "approved-v4",
+  "dimensions": [
+    1080,
+    1920
+  ],
+  "fps": 30,
+  "frames": 1335,
+  "duration_seconds": 44.5,
+  "segment_frames": [
+    75,
+    210,
+    210,
+    210,
+    210,
+    300,
+    120
+  ],
+  "stories": [
+    {
+      "headline": "Bridger-Teton eyes a La Barge timber sale for summer 2027",
+      "body": "The Bridger-Teton National Forest\u2019s Kemmerer and Greys River districts are working with the Wyoming State Forestry Division on small timber projects under Good Neighbor Authority. In a November 6 SVI News interview, Kemmerer District Ranger\u2026",
+      "region": "U.S. \u2014 WYOMING / NOVEMBER 6 REPORT",
+      "image": null
+    },
+    {
+      "headline": "North Dakota adds windbreak and tree planting options to pilot",
+      "body": "Friday, November 13, is the cutoff for North Dakota producers seeking FY2027 funding under the USDA Natural Resources Conservation Service\u2019s Regenerative Pilot Program. Applications are accepted year-round, but producers seeking funding in\u2026",
+      "region": "U.S. \u2014 NORTH DAKOTA / FY2027 FUNDING CUTOFF NOVEMBER 13",
+      "image": null
+    },
+    {
+      "headline": "Oregon recognizes operators for protecting streams and stands",
+      "body": "The Oregon Department of Forestry announced three regional Operators of the Year on November 10: Wood River Timber of Klamath Falls, Iron Horse Logging of Mapleton, and Lone Rock Logging of Roseburg. The eastern Oregon award cited Wood\u2026",
+      "region": "U.S. \u2014 OREGON / NOVEMBER 10 ANNOUNCEMENT",
+      "image": null
+    },
+    {
+      "headline": "South Dakota lists cost-share for temporary forestry crossings",
+      "body": "South Dakota\u2019s Department of Agriculture and Natural Resources lists a standing Temporary Bridge Cost-Share Program for portable skidder bridges, bridge mats and other temporary crossing structures intended to limit streambed disturbance.\u2026",
+      "region": "U.S. \u2014 SOUTH DAKOTA / STANDING RESOURCE",
+      "image": null
+    }
+  ],
+  "featuredResource": {
+    "title": "Wet Woods: Flux, Flex & Change in Our Forestry",
+    "description": "This book follows northeastern loggers, foresters and mill operators adapting to changing weather, labor and markets. Their accounts give readers an on-the-ground view of seasonal uncertainty, equipment decisions and the practical costs of keeping wood moving while protecting land and water.",
+    "url": "https://wetwoods.xyz/",
+    "kind": "book"
+  },
+  "publication_attempted": false
+}
