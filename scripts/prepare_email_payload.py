@@ -38,7 +38,7 @@ def validate_social_follow(soup):
         raise ValueError('Duplicate social-follow navigation')
     for panel in panels:
         links = []
-        for anchor in panel.find_all('a'):
+        for anchor in panel.find_all('a', recursive=False):
             label = anchor.get_text(' ', strip=True)
             if not label:
                 image = anchor.find('img')
