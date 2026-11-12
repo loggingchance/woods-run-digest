@@ -61,6 +61,12 @@ class SocialFollowEmailTests(unittest.TestCase):
         nav = navigation().replace('>X</a>', '><img alt="X" src="/assets/social/x.png"></a>')
         self.assertEqual(self.payload(nav=nav), self.payload())
 
+    def test_nested_artwork_attribution_link_is_not_a_profile(self):
+        nav = navigation().replace(
+            '</nav>',
+            '<small>Artwork by <a href="https://icons8.com/">Icons8</a></small></nav>')
+        self.assertEqual(self.payload(nav=nav), self.payload())
+
     def test_bad_names_urls_missing_extra_or_duplicate_rejected(self):
         nav = navigation()
         for bad in (nav+nav, nav.replace('>X<', '>Twitter<'),
