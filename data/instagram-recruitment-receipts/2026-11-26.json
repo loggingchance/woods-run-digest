@@ -11,5 +11,21 @@
     "posts_checked": 321
   },
   "checked_at": "2026-11-12T17:08:50.841600+00:00",
-  "attempt_started_at": "2026-11-12T17:08:50.997041+00:00"
+  "attempt_started_at": "2026-11-12T17:08:50.997041+00:00",
+  "post_id": "6af5f2a551cc3cd5827213cf",
+  "provider_post": {
+    "id": "6af5f2a551cc3cd5827213cf",
+    "text": "From forests to the things we build with wood, there is always more to learn.\n\nThe Woods Run Digest brings you Forestry & Wood Products news. Subscribe free using the link in bio, then confirm your email.\n\n#Forestry #WoodProducts #WoodsRunDigest",
+    "status": "scheduled",
+    "createdAt": "2026-11-12T17:08:53.666Z",
+    "dueAt": "2026-11-26T15:00:00.000Z",
+    "channelId": "6844cc71d6d25b49a1de682e",
+    "externalLink": null,
+    "assets": [
+      {
+        "source": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/instagram-recruitment/2026-11-26-boatbuilding.jpg",
+        "mimeType": "image/jpeg"
+      }
+    ]
+  }
 }
