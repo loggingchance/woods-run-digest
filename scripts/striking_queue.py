@@ -8,6 +8,7 @@ committed before any provider mutation; ambiguous attempts are never retried.
 from __future__ import annotations
 import argparse
 import json
+import hashlib
 import subprocess
 import sys
 import time
@@ -15,6 +16,7 @@ from datetime import datetime, time as clock, timedelta, timezone
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
+import striking_visual
 import buffer_queue as buffer
 import post_to_buffer as adapter
 
@@ -112,13 +114,20 @@ def schedule():
     require(due > buffer.now()+timedelta(seconds=90), 'Striking schedule deadline missed; never post immediately')
     require(adapter.fetch_public(adapter.SITE_ROOT + issue['url'])[0] == 200,
             'Canonical dated issue not publicly reachable')
+    visual = None
+    if request['date'] >= striking_visual.POLICY_START:
+        visual = striking_visual.describe(issue, ROOT)
+        status, body, _ = adapter.fetch_public(visual['url'])
+        require(status == 200 and hashlib.sha256(body).hexdigest() == visual['sha256'],
+                'Exact distinct striking image is not public; do not substitute the morning card')
     record = {'date':request['date'],'text':text,'due_at':buffer.iso(due),
               'channel_id':CHANNEL_ID,'state':'attempt_started',
               'attempt_started_at':buffer.iso(buffer.now()),
               'post_id':None,'history_checked':len(posts),'source':'native-daily-striking',
-              'email_attempted':False}
+              'email_attempted':False, 'visual':visual}
     persist(path, record)
-    payload = {'channelId':CHANNEL_ID, 'text':text, 'assets':[],
+    payload = {'channelId':CHANNEL_ID, 'text':text,
+               'assets':[{'image': {'url':visual['url']}}] if visual else [],
                'mode':'customScheduled', 'schedulingType':'automatic',
                'dueAt':buffer.iso(due), 'source':'woods-run-striking-daily',
                'saveToDraft':False, 'needsApproval':False}
@@ -137,6 +146,8 @@ def schedule():
     persist(path, record)
     print('STRIKING_SCHEDULE_RESULT '+json.dumps(record, ensure_ascii=False), flush=True)
     require(record['schedule_verified'], 'Buffer has not verified the exact 10 AM scheduled time')
+    if visual:
+        striking_visual.validate_provider_asset(post, visual)
 
 
 def verify():
@@ -153,6 +164,8 @@ def verify():
                 found.get('status') in BLOCKING and found.get('dueAt') and
                 abs((buffer.parse_time(found['dueAt'])-due).total_seconds()) <= 2,
                 'Advance striking schedule no longer verified')
+        if record.get('visual'):
+            striking_visual.validate_provider_asset(found, record['visual'])
         print('STRIKING_SCHEDULE_VERIFIED; publication pending scheduled time', flush=True)
         return
     delay = due.timestamp()+95-time.time()
@@ -161,6 +174,8 @@ def verify():
         time.sleep(delay)
     posts, found = history(text)
     require(found and found.get('id') == record['post_id'], 'Buffer returned a different striking post')
+    if record.get('visual'):
+        striking_visual.validate_provider_asset(found, record['visual'])
     record.update(verified_at=buffer.iso(buffer.now()),provider_status=found.get('status'),
                   external_url=found.get('externalLink'),
                   state='sent' if found.get('status') == 'sent' and found.get('externalLink') else 'unverified')

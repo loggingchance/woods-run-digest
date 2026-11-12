@@ -1,0 +1,42 @@
+name: Verify distinct striking presentation and read existing X queue
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/striking-visual-audit.yml'
+      - 'scripts/striking_visual.py'
+      - 'tests/test_striking_visual.py'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -r requirements.txt
+      - name: Regression tests without credentials or sends
+        run: python -m unittest discover -s tests -v
+      - name: Read full X queue and recent striking receipts only
+        env:
+          BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
+        run: |
+          python - <<'PY'
+          import json,sys
+          from pathlib import Path
+          sys.path.insert(0,'scripts')
+          import buffer_queue as b
+          org,channels=b.get_channels()
+          target=[c for c in channels if c['id']=='6843193ed6d25b49a145ff6e' and c['name']=='ForestBizSchool' and c['service']=='twitter']
+          assert len(target)==1,'X channel mismatch'
+          posts=b.recent(org,target[0]['id'])
+          receipts=[json.loads(p.read_text()) for p in sorted(Path('data/striking-delivery').glob('*.json'))[-7:]]
+          ids={r.get('post_id') for r in receipts}
+          queued=[p for p in posts if p.get('status') in {'scheduled','buffer','pending','sending','processing'}]
+          recent=[p for p in posts if p['id'] in ids]
+          print('STRIKING_VISUAL_READ_ONLY '+json.dumps({'checked_at':b.iso(b.now()),'history_count':len(posts),'channel':target[0],'upcoming_queue':queued,'recent_striking_posts':recent,'mutations':0},ensure_ascii=False))
+          PY

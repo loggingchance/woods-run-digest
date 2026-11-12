@@ -197,3 +197,22 @@ duplicate, altered or wrong-date panels. Sponsor Mondays retain the sharing
 section after the panel in compiled email. Other dates retain existing behavior.
 This compiler sends nothing; the existing private Apps Script is the sole sender.
 No schedule, recipient, provider credential or trigger changes are included.
+
+## Distinct striking-post visual — November 12, 2026 onward
+
+Steve directed that the later striking post must not display the morning WRD
+card. Empty Buffer assets do not achieve this: X crawls the dated issue URL
+and renders its morning `summary_large_image` card automatically. New striking
+handoffs therefore prepare a separate native image in `assets/striking/`, showing
+the exact non-lead observation (URLs remain in the caption), not the lead or
+morning artwork. The dark-green observation layout is intentionally distinct.
+The native photo replaces the automatic URL preview; the dated issue link stays
+clickable in the unchanged caption. This is not a new post or delivery clock.
+
+`striking_visual.py` preserves the full observation without truncation, hashes the
+PNG, and verifies the public bytes before submission. The queue records and
+checks that exact image in Buffer readback. Never fall back to `assets/cards/`
+or empty assets for a new striking post. Existing accepted, uncertain and sent
+posts remain immutable; do not resubmit to apply this presentation correction.
+The morning card, regular reels, Instagram subscription cards, wording, weekend
+approval rules, 10 a.m. Denver schedule and duplicate guards are unchanged.

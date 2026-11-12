@@ -348,6 +348,8 @@ def striking_post_exists(organization_id: str, channel_id: str, text: str) -> bo
 
 
 def publish_striking(issue: dict, organization_id: str, channel: dict) -> None:
+    if issue.get("date", "") >= "2026-11-12":
+        fail("Use the native striking_queue handoff with its distinct verified image, not legacy shareNow")
     text = (issue.get("strikingText") or "").strip()
     if not text:
         fail("Latest issue has no strikingText")
