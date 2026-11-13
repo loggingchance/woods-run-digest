@@ -3,9 +3,9 @@
   "text": "Two demonstration cabins in British Columbia give lower-grade boards a job in finished walls. Their builders laminated three board grades into panels that fit between posts and beams.",
   "due_at": "2026-11-13T17:00:00Z",
   "channel_id": "6843193ed6d25b49a145ff6e",
-  "state": "attempt_started",
+  "state": "accepted",
   "attempt_started_at": "2026-11-13T16:48:19.483893Z",
-  "post_id": null,
+  "post_id": "6af73f550234d2352e202cbb",
   "history_checked": 392,
   "source": "native-daily-striking",
   "email_attempted": false,
@@ -14,5 +14,10 @@
     "sha256": "9e305cf0e85074f475c66805fbacf8473d012ff7fa2361b3a12449162e72666f",
     "url": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/striking/2026-11-13.png",
     "policy": "distinct-native-striking-image-v1"
-  }
+  },
+  "provider_status": "scheduled",
+  "provider_due_at": "2026-11-13T17:00:00.000Z",
+  "external_url": null,
+  "accepted_at": "2026-11-13T16:48:21.374103Z",
+  "schedule_verified": true
 }
