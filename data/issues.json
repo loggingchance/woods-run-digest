@@ -1,5 +1,159 @@
 [
   {
+    "date": "2026-11-13",
+    "summary": "ThirdGen Timber Group adds U.S. log and timber brands. Also: new U.S. millwork duty results, Wisconsin timber sales, Indiana grade-sawing training and a British Columbia test of lower-grade lumber in wall panels.",
+    "socialText": "ThirdGen Timber Group’s purchase of four brands adds Idaho and Michigan operations to its Canadian timber building business. Read Friday’s Woods Run Digest.",
+    "strikingText": "Two demonstration cabins in British Columbia give lower-grade boards a job in finished walls. Their builders laminated three board grades into panels that fit between posts and beams.",
+    "cardTeaser": "ThirdGen adds U.S. log and timber brands",
+    "cardSubhead": "Four acquired brands add operations in Idaho and Michigan.",
+    "marketObservations": {
+      "diesel": {
+        "status": "verified",
+        "latest": "US$6.127/gal",
+        "observed": "Week of November 9, 2026; released November 10",
+        "change": [
+          "−US$0.165/gal",
+          "−2.62%"
+        ],
+        "comparison": "Versus November 2: US$6.292/gal",
+        "detail": "EIA U.S. on-highway diesel; taxes included",
+        "sources": [
+          {
+            "label": "EIA U.S. on-highway diesel; taxes included",
+            "url": "https://www.eia.gov/dnav/pet/hist/LeafHandler.ashx?f=W&n=PET&s=EMD_EPD2D_PTE_NUS_DPG"
+          }
+        ]
+      },
+      "lumber_futures": {
+        "status": "verified",
+        "latest": "US$491.50/MBF",
+        "observed": "November 12, 2026 settlement",
+        "change": [
+          "−US$28.00/MBF",
+          "−5.39%"
+        ],
+        "comparison": "Same November contract, November 5: US$519.50/MBF",
+        "detail": "November 2026 lumber futures; nearby delivery contract",
+        "sources": [
+          {
+            "label": "November contract historical closes",
+            "url": "https://www.investing.com/commodities/lumber-historical-data"
+          },
+          {
+            "label": "Named November contract and settlement date",
+            "url": "https://www.investing.com/commodities/lumber-contracts"
+          }
+        ]
+      },
+      "madisons": {
+        "status": "verified",
+        "latest": "US$449/MBF",
+        "observed": "Week ending November 6, 2026",
+        "change": [
+          "−US$10/MBF",
+          "−2.18% (calculated)"
+        ],
+        "comparison": "Versus week ending October 30: US$459/MBF",
+        "detail": "Madison’s weekly lumber index",
+        "sources": [
+          {
+            "label": "Madison’s November 6 index and prior-week comparison",
+            "url": "https://madisonsreport.com/madisons-lumber-prices-index-nov-06-2026-us449-mfbm/"
+          }
+        ]
+      },
+      "hardwood_ppi": {
+        "status": "verified",
+        "latest": "285.075 index points",
+        "observed": "September 2026; released October 15",
+        "change": [
+          "−1.290 points",
+          "−0.45%"
+        ],
+        "comparison": "Versus August 2026: 286.365",
+        "detail": "BLS WPU0812; 1982=100; not seasonally adjusted",
+        "sources": [
+          {
+            "label": "BLS WPU0812; 1982=100; not seasonally adjusted",
+            "url": "https://fred.stlouisfed.org/series/WPU0812"
+          }
+        ]
+      },
+      "housing_starts": {
+        "status": "verified",
+        "latest": "859,000 units (SAAR)",
+        "observed": "September 2026; released October 20",
+        "change": [
+          "−41,000 units (SAAR)",
+          "−4.6%"
+        ],
+        "comparison": "Versus revised August 2026: 900,000",
+        "detail": "Census U.S. single-family starts; annualized estimate",
+        "sources": [
+          {
+            "label": "Census U.S. single-family starts; annualized estimate",
+            "url": "https://www.census.gov/construction/nrc/pdf/newresconst.pdf"
+          }
+        ]
+      },
+      "cad_usd": {
+        "status": "verified",
+        "latest": "C$1.4255 per US$1",
+        "observed": "Daily average, November 12, 2026",
+        "change": [
+          "+C$0.0074 per US$1",
+          "+0.52%"
+        ],
+        "comparison": "Versus November 10: C$1.4181 per US$1",
+        "detail": "Bank of Canada; Canadian dollars per U.S. dollar",
+        "sources": [
+          {
+            "label": "Bank of Canada; Canadian dollars per U.S. dollar",
+            "url": "https://www.bankofcanada.ca/rates/exchange/daily-exchange-rates/"
+          },
+          {
+            "label": "Bank of Canada: November 11 holiday",
+            "url": "https://www.bankofcanada.ca/2026/11/remembrance-day-3/"
+          }
+        ]
+      }
+    },
+    "marketCaveats": [
+      "The September single-family starts monthly change has a published ±10.0-percentage-point 90% confidence interval and is not statistically significant.",
+      "November 12 was the next Bank of Canada observation after the November 11 holiday.",
+      "Display rounding follows the approved format. Changes are calculated from unrounded observations, so rounded currency levels may look unchanged even when a small movement occurred."
+    ],
+    "featuredResource": {
+      "date": "2026-11-13",
+      "source": "daily-sheet",
+      "item": {
+        "title": "After Wood: Routes to Retirement",
+        "kind": "book",
+        "description": "This book addresses retirement planning for loggers, foresters, sawmill operators and forest-products business owners. Its examples account for seasonal income and equipment-heavy businesses when considering savings and the transition out of work.",
+        "source_url": "https://www.afterwood.loggingchance.com/",
+        "url": "https://www.afterwood.loggingchance.com/"
+      },
+      "cached": false
+    },
+    "editorialWatch": {
+      "kind": "trade_policy",
+      "items": [
+        {
+          "text": "The U.S. Commerce Department published final subsidy review results November 12 for certain wood mouldings and millwork from China. The 2024 review set rates of 147.88% for three named producers or exporters and 21.39% for non-selected companies in the review. Commerce says it will instruct Customs to use those rates for estimated subsidy-duty deposits on covered entries from November 12; firms outside this review keep their existing applicable rates.",
+          "sources": [
+            {
+              "label": "Commerce final results, 91 FR 72849",
+              "url": "https://www.federalregister.gov/documents/2026/11/12/2026-22950/wood-mouldings-and-millwork-products-from-the-peoples-republic-of-china-final-results-of"
+            }
+          ],
+          "verified_on": "2026-11-13"
+        }
+      ]
+    },
+    "displayDate": "November 13, 2026",
+    "url": "/2026/11/13/"
+  },
+  {
     "date": "2026-11-12",
     "summary": "Bridger-Teton eyes a La Barge-area timber sale for summer 2027. Also: Conifex’s Mackenzie restart update, North Dakota’s November 13 cutoff, Oregon logging awards and South Dakota’s temporary bridge program.",
     "socialText": "A Bridger-Teton district ranger expects an initial timber sale from the La Barge area in summer 2027. Read today’s Woods Run Digest:",

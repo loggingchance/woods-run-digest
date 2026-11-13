@@ -1,0 +1,53 @@
+{
+  "date": "2026-11-13",
+  "format": "approved-v4",
+  "dimensions": [
+    1080,
+    1920
+  ],
+  "fps": 30,
+  "frames": 1335,
+  "duration_seconds": 44.5,
+  "segment_frames": [
+    75,
+    210,
+    210,
+    210,
+    210,
+    300,
+    120
+  ],
+  "stories": [
+    {
+      "headline": "ThirdGen adds U.S. log and timber brands in cross-border deal",
+      "body": "Calgary-based ThirdGen Timber Group said November 12 that it acquired PrecisionCraft Log & Timber Homes, Riverbend Timber Framing, M.T.N Design and TimberScape from The Riverside Company. The acquired business has design, manufacturing and\u2026",
+      "region": "U.S. & CANADA \u2014 WOOD PRODUCTS",
+      "image": null
+    },
+    {
+      "headline": "Fort McCoy awards two timber contracts as next year\u2019s harvest plan goes to review",
+      "body": "The Army reported November 12 that foresters at Wisconsin\u2019s Fort McCoy awarded two new timber-sale contracts in October while managing three active sales. In September, three of four advertised tracts sold for a combined $96,357.",
+      "region": "GREAT LAKES \u2014 WORKING FORESTS",
+      "image": null
+    },
+    {
+      "headline": "Indiana class follows hardwood grade from the log to the trimmer",
+      "body": "The Indiana Hardwood Lumbermen\u2019s Association lists a November 18 grade-sawing class at Pike Lumber in Akron, Indiana. Participants will inspect logs, watch them run through a portable sawmill and trace how decisions at the head saw, resaw,\u2026",
+      "region": "MIDWEST \u2014 MILL TRAINING / NOVEMBER 18",
+      "image": null
+    },
+    {
+      "headline": "British Columbia cabins put lower-grade boards to work in wall panels",
+      "body": "FPInnovations reported November 3 that two demonstration cabins at the University of British Columbia\u2019s Alex Fraser Research Forest use mechanically laminated panels made from three grades of boards. The panels fill the spaces between the\u2026",
+      "region": "WESTERN CANADA \u2014 WOOD PRODUCTS RESEARCH",
+      "image": null
+    }
+  ],
+  "featuredResource": {
+    "title": "After Wood: Routes to Retirement",
+    "description": "This book addresses retirement planning for loggers, foresters, sawmill operators and forest-products business owners. Its examples account for seasonal income and equipment-heavy businesses when considering savings and the transition out of work.",
+    "url": "https://www.afterwood.loggingchance.com/",
+    "kind": "book"
+  },
+  "publication_attempted": false
+}
