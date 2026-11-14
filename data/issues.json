@@ -1,5 +1,43 @@
 [
   {
+    "date": "2026-11-14",
+    "summary": "Lenzing plans a US$31 million investment in wood-based fibre in Alabama. Also: a profile of sawmill owner Eric Fritch, a British Columbia forestry forum, South Carolina timber bids and an Oregon forest decision.",
+    "socialText": "Lenzing is investing US$31 million in specialty wood-based fibre production in Mobile, Alabama. Saturday’s edition also profiles Washington sawmill owner Eric Fritch.",
+    "strikingText": "Eric Fritch described an unusual inventory strategy in 2024: his Washington sawmill stocked logs so it could commit to custom orders, but kept little finished lumber because its output was already sold. https://woodsrun.forestenterprise.org/2026/11/14/",
+    "cardTeaser": "Lenzing invests $31 million in Mobile fibre plant",
+    "cardSubhead": "The Alabama investment expands short-cut wood fibre capabilities for nonwovens.",
+    "featuredResource": {
+      "date": "2026-11-14",
+      "source": "daily-sheet",
+      "item": {
+        "title": "Bolt Planner",
+        "kind": "app",
+        "description": "Bolt Planner is a business-planning app for logging operations. The author’s resource directory presents it as a tool for building and evaluating business plans using forestry-specific financial models.",
+        "source_url": "https://www.loggingchance.com/",
+        "url": "https://www.boltplanner.com/"
+      },
+      "cached": false
+    },
+    "strikingSkip": false,
+    "strikingSource": "weekend_feature",
+    "weekendFeature": {
+      "kind": "profile",
+      "topic_id": "eric-fritch-sawmill-2026-11-14",
+      "title": "Eric Fritch found room for a mill that cuts to order",
+      "summary": "Eric Fritch grew up working at his family’s Washington sawmill, driving a log truck, making deliveries and learning the mill floor. After a 1996 fire, he returned to a business that still had a working planer and was doing custom work. In a September 2024 interview with equipment supplier Wood-Mizer, Fritch recalled rebuilding around jobs that called for unusual dimensions or tight turnaround. He said the mill held a substantial log inventory so he knew what orders he could promise, while keeping little finished lumber on hand because the output was already sold. When independent distributors had trouble getting fencing during the pandemic, the mill adapted its equipment to cut cedar fencing as well as the larger pieces it normally made.",
+      "sources": [
+        {
+          "label": "Eric Fritch’s September 2024 Wood-Mizer interview",
+          "url": "https://woodmizer.com/us/articles/do-what-you-love-the-secret-of-fritch-sawmill-success"
+        }
+      ],
+      "striking_text": "Eric Fritch described an unusual inventory strategy in 2024: his Washington sawmill stocked logs so it could commit to custom orders, but kept little finished lumber because its output was already sold. https://woodsrun.forestenterprise.org/2026/11/14/"
+    },
+    "weekendFeatureStatus": "approved",
+    "displayDate": "November 14, 2026",
+    "url": "/2026/11/14/"
+  },
+  {
     "date": "2026-11-13",
     "summary": "ThirdGen Timber Group adds U.S. log and timber brands. Also: new U.S. millwork duty results, Wisconsin timber sales, Indiana grade-sawing training and a British Columbia test of lower-grade lumber in wall panels.",
     "socialText": "ThirdGen Timber Group’s purchase of four brands adds Idaho and Michigan operations to its Canadian timber building business. Read Friday’s Woods Run Digest.",
