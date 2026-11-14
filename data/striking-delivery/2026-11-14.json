@@ -3,9 +3,9 @@
   "text": "Eric Fritch described an unusual inventory strategy in 2024: his Washington sawmill stocked logs so it could commit to custom orders, but kept little finished lumber because its output was already sold. https://woodsrun.forestenterprise.org/2026/11/14/",
   "due_at": "2026-11-14T17:00:00Z",
   "channel_id": "6843193ed6d25b49a145ff6e",
-  "state": "attempt_started",
+  "state": "accepted",
   "attempt_started_at": "2026-11-14T16:47:06.572037Z",
-  "post_id": null,
+  "post_id": "6af8908c76c23bf1c72a1c94",
   "history_checked": 395,
   "source": "native-daily-striking",
   "email_attempted": false,
@@ -14,5 +14,10 @@
     "sha256": "6f2d4ee54c0dd8320c9683cce8c4a7e4a592ebe98eaa35e1bbdea206369d774f",
     "url": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/striking/2026-11-14.png",
     "policy": "distinct-native-striking-image-v1"
-  }
+  },
+  "provider_status": "scheduled",
+  "provider_due_at": "2026-11-14T17:00:00.000Z",
+  "external_url": null,
+  "accepted_at": "2026-11-14T16:47:08.500648Z",
+  "schedule_verified": true
 }
