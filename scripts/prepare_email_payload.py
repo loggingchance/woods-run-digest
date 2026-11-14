@@ -110,6 +110,18 @@ def compile_payload(page: str, issue: dict) -> dict:
     if issue['displayDate'] not in article.get_text(' ',strip=True):raise ValueError('Edition date mismatch')
     if issue['date'] >= SOCIAL_FOLLOW_START:
         validate_social_follow(soup)
+    service_footers = soup.select('p.newsletter-service-footer')
+    if len(service_footers) > 1:
+        raise ValueError('Duplicate newsletter-service footer')
+    service_footer = service_footers[0] if service_footers else None
+    service_text = 'Click here to setup a weekly custom email newsletter for your organization.'
+    service_url = 'https://news.forestenterprise.org/'
+    if service_footer:
+        anchors = service_footer.find_all('a')
+        if (len(anchors) != 1 or anchors[0].get('href') != service_url
+                or service_footer.get_text(' ', strip=True) != service_text):
+            raise ValueError('Invalid newsletter-service footer')
+        service_footer.decompose()
     sponsor = validate_sponsor(article, issue['date'])
     # Sponsor Mondays retain the sharing section immediately after the card.
     for element in article.select('nav, .edition-nav' if sponsor else 'nav, .edition-nav, .growth-strip'):
@@ -179,6 +191,10 @@ def compile_payload(page: str, issue: dict) -> dict:
         body.append(social_follow_html())
         plain.extend(['Follow along'] + [f'{name}: {url}' for name, url in SOCIAL_FOLLOW_LINKS])
         urls.update(url for _, url in SOCIAL_FOLLOW_LINKS)
+    if service_footer is not None:
+        body.append(f'<p class="newsletter-service-footer" style="margin:20px 0 0;font-family:Arial,Helvetica,sans-serif;font-size:13px;line-height:20px;"><a href="{service_url}" style="font-size:13px;color:#365644;text-decoration:underline;">{service_text}</a></p>')
+        plain.append(service_text + ' ' + service_url)
+        urls.add(service_url)
     marker='<!-- OWNER_TEST_BANNER -->'
     wrapper='<!DOCTYPE html><html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta http-equiv="X-UA-Compatible" content="IE=edge"></head><body style="margin-top:0;margin-right:0;margin-bottom:0;margin-left:0;background-color:#f2eee5;"><table width="100%" cellpadding="0" cellspacing="0" border="0" role="presentation"><tr><td bgcolor="#f2eee5" align="center" style="background-color:#f2eee5;padding-top:24px;padding-bottom:24px;"><table width="600" cellpadding="0" cellspacing="0" border="0" role="presentation" style="max-width:600px;width:100%;"><tr><td bgcolor="#fffdf8" style="background-color:#fffdf8;padding-top:28px;padding-right:30px;padding-bottom:28px;padding-left:30px;">'+marker+'<h1 style="font-family:Georgia,Times New Roman,serif;font-size:28px;line-height:34px;color:#1f3b2b;">WOODS RUN DIGEST</h1>'
     footer='</td></tr></table></td></tr></table></body></html>'
