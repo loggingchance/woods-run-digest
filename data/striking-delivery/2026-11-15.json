@@ -1,0 +1,18 @@
+{
+  "date": "2026-11-15",
+  "text": "For Atlanta Wood Foundation’s Kelly and Ali Syed, finding fallen trees was easier than finding people to use the wood. Their nonprofit sawmill turns local logs into lumber for makers and offers classes. https://woodsrun.forestenterprise.org/2026/11/15/",
+  "due_at": "2026-11-15T17:00:00Z",
+  "channel_id": "6843193ed6d25b49a145ff6e",
+  "state": "attempt_started",
+  "attempt_started_at": "2026-11-15T16:47:02.115646Z",
+  "post_id": null,
+  "history_checked": 397,
+  "source": "native-daily-striking",
+  "email_attempted": false,
+  "visual": {
+    "path": "assets/striking/2026-11-15.png",
+    "sha256": "63bbe6982bc902fa4c3538d4ea5402a5c50422b5dc1e47292a5d59e373ac1528",
+    "url": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/striking/2026-11-15.png",
+    "policy": "distinct-native-striking-image-v1"
+  }
+}
