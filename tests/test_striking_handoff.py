@@ -149,6 +149,24 @@ class HandoffTests(unittest.TestCase):
                     persist.assert_not_called()
                     mutation.assert_not_called()
 
+    def test_new_no_image_policy_holds_before_provider_mutation(self):
+        with tempfile.TemporaryDirectory() as directory:
+            due = datetime(2026, 11, 16, 17, tzinfo=timezone.utc)
+            text = 'Observation. https://woodsrun.forestenterprise.org/2026/11/16/'
+            with patch.object(publisher, 'ROOT', Path(directory)), patch.object(publisher, 'load_request', return_value=({'date': '2026-11-16'}, {}, text, due)), patch.object(publisher, 'history', return_value=([], None)), patch.object(publisher, 'persist') as persist, patch.object(publisher.buffer, 'gql') as mutation:
+                with self.assertRaisesRegex(ValueError, 'STRIKING_NO_IMAGE_HOLD'):
+                    publisher.schedule()
+                mutation.assert_not_called()
+                persist.assert_not_called()
+
+    def test_future_handoff_preserves_text_without_rendering_image(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            self.fixture(root, '2026-11-16')
+            self.assertTrue(handoff.prepare(root, datetime.fromisoformat('2026-11-16T16:00:00+00:00')))
+            self.assertFalse((root / 'assets/striking').exists())
+            self.assertTrue((root / 'data/striking-trigger.json').exists())
+
     def check_publisher(self, found=None, record=False, error=None):
         with tempfile.TemporaryDirectory() as directory:
             path = Path(directory) / 'receipt.json'
@@ -167,4 +185,5 @@ class HandoffTests(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
+
 

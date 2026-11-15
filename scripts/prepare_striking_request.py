@@ -6,7 +6,6 @@ import os
 from datetime import datetime, time, timedelta, timezone
 from pathlib import Path
 from zoneinfo import ZoneInfo
-import striking_visual
 
 ROOT = Path(__file__).resolve().parents[1]
 DENVER = ZoneInfo('America/Denver')
@@ -49,10 +48,7 @@ def prepare(root, now):
         if previous.get('date') != date or previous.get('due_at') != record.get('due_at'):
             raise ValueError('Existing attempt has no matching durable handoff')
         return True
-    # New, unattempted striking posts get their own native image. Existing attempts
-    # are immutable and must never be recreated to apply a presentation change.
-    if date >= striking_visual.POLICY_START:
-        striking_visual.render(issue, root)
+    # No new striking images: preserve the authored caption and link for review.
     # One explicit user-approved recovery, not a standing late-post permission.
     recovery = (date == '2026-10-21' and previous.get('date') == date and
                 previous.get('recovery_approval') == 'user-2026-10-21T21:57Z')
@@ -83,4 +79,5 @@ if __name__ == '__main__':
         with open(os.environ['GITHUB_OUTPUT'], 'a') as output:
             output.write('should_run=' + str(ready).lower() + '\n')
     print('Current striking handoff prepared' if ready else 'No current striking handoff')
+
 

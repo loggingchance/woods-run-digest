@@ -111,6 +111,14 @@ def schedule():
         print('STRIKING_EXISTING '+json.dumps(record, ensure_ascii=False), flush=True)
         return
     require(not record, 'An earlier striking provider attempt is unresolved; never automatically resubmit')
+    # Steve requires no image at all. The canonical issue advertises an X card,
+    # and Buffer exposes no X card-suppression control. Preserve the caption/link
+    # and do not publish a replacement morning-card preview or remove the link.
+    # Existing accepted/ambiguous attempts above remain immutable.
+    if request['date'] >= '2026-11-15':
+        raise ValueError('STRIKING_NO_IMAGE_HOLD: native images disabled; canonical link can '
+                         'generate an X image preview. No safe no-preview link verified. '
+                         'Caption and link preserved; no provider mutation.')
     require(due > buffer.now()+timedelta(seconds=90), 'Striking schedule deadline missed; never post immediately')
     require(adapter.fetch_public(adapter.SITE_ROOT + issue['url'])[0] == 200,
             'Canonical dated issue not publicly reachable')
@@ -197,4 +205,5 @@ if __name__ == '__main__':
     except Exception as exc:
         print('STRIKING_ERROR '+str(exc),file=sys.stderr)
         raise SystemExit(1)
+
 

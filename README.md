@@ -216,3 +216,21 @@ or empty assets for a new striking post. Existing accepted, uncertain and sent
 posts remain immutable; do not resubmit to apply this presentation correction.
 The morning card, regular reels, Instagram subscription cards, wording, weekend
 approval rules, 10 a.m. Denver schedule and duplicate guards are unchanged.
+
+
+
+## No images on later X striking posts — November 15, 2026 correction
+
+Steve explicitly requires no card and no image at all. This supersedes the
+November 12 distinct-native-image policy for new striking posts only.
+Preparation no longer generates striking artwork. Existing historical images,
+receipts and accepted/ambiguous/sent posts remain unchanged.
+
+The canonical issue URL still advertises the morning X image card, and Buffer
+does not expose an X preview-suppression control. Therefore the new-striking
+publisher stops before any provider mutation with STRIKING_NO_IMAGE_HOLD while
+preserving the authored observation and link. Do not silently remove the link,
+substitute another image, or claim that empty assets guarantee no preview.
+Resume only after a verified no-image solution or a further explicit owner
+decision. This targeted safety hold does not change morning X posts, Instagram,
+YouTube, email, editorial preparation, or their schedules.
