@@ -1,5 +1,47 @@
 [
   {
+    "date": "2026-11-15",
+    "summary": "Canada pledges up to C$560 million for tropical forest conservation. Also: Atlanta’s urban sawmill, a Washington, D.C. mass timber design program, Montana timber bids and a Vancouver tree inventory.",
+    "socialText": "Canada is pledging up to C$560 million over four years to help launch a Brazil-led tropical forest fund. Read Sunday’s Woods Run Digest.",
+    "strikingText": "For Atlanta Wood Foundation’s Kelly and Ali Syed, finding fallen trees was easier than finding people to use the wood. Their nonprofit sawmill turns local logs into lumber for makers and offers classes. https://woodsrun.forestenterprise.org/2026/11/15/",
+    "cardTeaser": "Canada pledges up to C$560 million for tropical forests",
+    "cardSubhead": "The four-year commitment would help a Brazil-led conservation fund start operations.",
+    "featuredResource": {
+      "date": "2026-11-15",
+      "source": "daily-sheet",
+      "item": {
+        "title": "Logging Chance",
+        "kind": "website",
+        "description": "Logging Chance is a website collecting forestry books, apps, technical publications and training resources from Steven Bick. It gives loggers, foresters and forest-products businesses a central place to find tools and reading on operations, measurement, markets and business management.",
+        "source_url": "https://www.loggingchance.com/",
+        "url": "https://www.loggingchance.com/"
+      },
+      "cached": false
+    },
+    "strikingSkip": false,
+    "strikingSource": "weekend_feature",
+    "weekendFeature": {
+      "kind": "human_interest",
+      "topic_id": "atlanta-wood-foundation-2026-11-15",
+      "title": "The couple giving Atlanta’s fallen trees a second life",
+      "summary": "Kelly Syed came to woodworking from ceramics, painting and jewelry, taking a bowl-turning class at Decatur Makers. She and her husband Ali were making furniture and ornaments when wood prices climbed. Georgia Public Broadcasting reported in August that, at a friend’s suggestion, they turned to donated fallen trees. Their nonprofit, Atlanta Wood Foundation, runs a sawmill and makes salvaged lumber available to local artists and woodworkers. Kelly told GPB that finding trees was easier than getting people through the door. The foundation also offers classes, giving more people a way to work with the wood it saves.",
+      "sources": [
+        {
+          "label": "Georgia Public Broadcasting’s August 13 interview",
+          "url": "https://www.gpb.org/blogs/hullingers-musings/2026/08/13/working-in-the-atlanta-wood-foundation"
+        },
+        {
+          "label": "Atlanta Wood Foundation",
+          "url": "https://www.atlantawoodfoundation.org/"
+        }
+      ],
+      "striking_text": "For Atlanta Wood Foundation’s Kelly and Ali Syed, finding fallen trees was easier than finding people to use the wood. Their nonprofit sawmill turns local logs into lumber for makers and offers classes. https://woodsrun.forestenterprise.org/2026/11/15/"
+    },
+    "weekendFeatureStatus": "approved",
+    "displayDate": "November 15, 2026",
+    "url": "/2026/11/15/"
+  },
+  {
     "date": "2026-11-14",
     "summary": "Lenzing plans a US$31 million investment in wood-based fibre in Alabama. Also: a profile of sawmill owner Eric Fritch, a British Columbia forestry forum, South Carolina timber bids and an Oregon forest decision.",
     "socialText": "Lenzing is investing US$31 million in specialty wood-based fibre production in Mobile, Alabama. Saturday’s edition also profiles Washington sawmill owner Eric Fritch.",

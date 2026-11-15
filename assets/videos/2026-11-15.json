@@ -1,0 +1,53 @@
+{
+  "date": "2026-11-15",
+  "format": "approved-v4",
+  "dimensions": [
+    1080,
+    1920
+  ],
+  "fps": 30,
+  "frames": 1335,
+  "duration_seconds": 44.5,
+  "segment_frames": [
+    75,
+    210,
+    210,
+    210,
+    210,
+    300,
+    120
+  ],
+  "stories": [
+    {
+      "headline": "Canada pledges up to C$560 million for tropical forests",
+      "body": "Prime Minister Mark Carney announced on November 15 that Canada would contribute up to C$560 million over four years to the Brazil-led Tropical Forests Forever Facility. He made the announcement after meeting Brazilian President Luiz In\u00e1cio\u2026",
+      "region": "CANADA \u2014 FOREST CONSERVATION",
+      "image": null
+    },
+    {
+      "headline": "Washington, D.C. helps developers test mass timber before they build",
+      "body": "The Washington Architectural Foundation\u2019s new accelerator has US$160,000 to support early design and feasibility work on active projects in the District. Teams can study costs, construction schedules and building performance, with technical\u2026",
+      "region": "MID-ATLANTIC \u2014 MASS TIMBER MARKETS",
+      "image": null
+    },
+    {
+      "headline": "Montana\u2019s Mount Johns timber sale includes 12 miles of road maintenance",
+      "body": "Montana\u2019s Department of Natural Resources and Conservation opens bids at 2 p.m. Mountain on November 19 in Missoula for the Mount Johns sale near Lakeside. The prospectus lists seven ground-based units, about 12 miles of road maintenance and\u2026",
+      "region": "ROCKIES \u2014 BIDS OPEN NOVEMBER 19",
+      "image": null
+    },
+    {
+      "headline": "Vancouver campus tree count becomes a long-term field record",
+      "body": "The University of British Columbia reported November 13 that students recorded 6,737 trees and fully measured 6,098 on the core academic grounds of its Vancouver campus. Seven student cohorts built the inventory, using mapped locations and\u2026",
+      "region": "WESTERN CANADA \u2014 URBAN FORESTRY",
+      "image": null
+    }
+  ],
+  "featuredResource": {
+    "title": "Logging Chance",
+    "description": "Logging Chance is a website collecting forestry books, apps, technical publications and training resources from Steven Bick. It gives loggers, foresters and forest-products businesses a central place to find tools and reading on operations, measurement, markets and business management.",
+    "url": "https://www.loggingchance.com/",
+    "kind": "website"
+  },
+  "publication_attempted": false
+}
