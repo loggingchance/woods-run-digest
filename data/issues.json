@@ -1,5 +1,158 @@
 [
   {
+    "date": "2026-11-16",
+    "summary": "A US$2.1 million commitment backs forest restoration crews in Idaho and Wyoming. Also: a paper-machine trial in Maine, Canadian biomass site assessments and Delaware school tree planting.",
+    "socialText": "Forest Service and Nature Conservancy agreements will add crews for thinning, burn preparation and monitoring in four Idaho and Wyoming national forests.",
+    "strikingText": "Canada’s forest biomass challenge asks regions to document at least 50,000 tonnes of surplus wood a year within a 120 km drive of a named industrial site. The award is a site and supply assessment, not a plant construction grant.",
+    "cardTeaser": "New funding adds forest restoration crews in Idaho and Wyoming",
+    "cardSubhead": "US$2.1 million supports thinning, prescribed fire and monitoring.",
+    "marketObservations": {
+      "diesel": {
+        "status": "verified",
+        "latest": "US$6.127/gal",
+        "observed": "Week of November 9, 2026; released November 10",
+        "change": [
+          "−US$0.165/gal",
+          "−2.62%"
+        ],
+        "comparison": "Versus November 2: US$6.292/gal",
+        "detail": "EIA U.S. on-highway diesel; taxes included",
+        "sources": [
+          {
+            "label": "EIA U.S. on-highway diesel; taxes included",
+            "url": "https://www.eia.gov/dnav/pet/hist/LeafHandler.ashx?f=W&n=PET&s=EMD_EPD2D_PTE_NUS_DPG"
+          }
+        ]
+      },
+      "lumber_futures": {
+        "status": "verified",
+        "latest": "US$520.00/MBF",
+        "observed": "November 13, 2026 settlement",
+        "change": [
+          "Unavailable"
+        ],
+        "comparison": "November 6 January settlement not independently verified",
+        "detail": "January 2027 lumber futures (CME LBRF27)",
+        "sources": [
+          {
+            "label": "January contract settlement",
+            "url": "https://www.investing.com/commodities/lumber-contracts"
+          },
+          {
+            "label": "CME delivery calendar",
+            "url": "https://www.cmegroup.com/markets/agriculture/lumber-and-softs/lumber/calendar"
+          }
+        ]
+      },
+      "madisons": {
+        "status": "verified",
+        "latest": "US$444/MBF",
+        "observed": "Week ending November 13, 2026",
+        "change": [
+          "−US$5/MBF",
+          "−1.11% (calculated)"
+        ],
+        "comparison": "Versus week ending November 6: US$449/MBF",
+        "detail": "Madison’s weekly lumber index",
+        "sources": [
+          {
+            "label": "Madison’s November 13 index",
+            "url": "https://madisonsreport.com/madisons-lumber-prices-index-nov-13-2026-us444-mfbm/"
+          }
+        ]
+      },
+      "hardwood_ppi": {
+        "status": "verified",
+        "latest": "284.331 index points",
+        "observed": "October 2026; released November 13",
+        "change": [
+          "−1.251 points",
+          "−0.44%"
+        ],
+        "comparison": "Versus revised September 2026: 285.582",
+        "detail": "BLS WPU0812; 1982=100; not seasonally adjusted",
+        "sources": [
+          {
+            "label": "BLS WPU0812; 1982=100; not seasonally adjusted",
+            "url": "https://fred.stlouisfed.org/series/WPU0812"
+          }
+        ]
+      },
+      "housing_starts": {
+        "status": "verified",
+        "latest": "859,000 units (SAAR)",
+        "observed": "September 2026; released October 20",
+        "change": [
+          "−41,000 units (SAAR)",
+          "−4.6%"
+        ],
+        "comparison": "Versus revised August 2026: 900,000",
+        "detail": "Census U.S. single-family starts; annualized estimate",
+        "sources": [
+          {
+            "label": "Census U.S. single-family starts; annualized estimate",
+            "url": "https://www.census.gov/construction/nrc/pdf/newresconst.pdf"
+          }
+        ]
+      },
+      "cad_usd": {
+        "status": "verified",
+        "latest": "C$1.4257 per US$1",
+        "observed": "Daily average, November 13, 2026",
+        "change": [
+          "+C$0.0002 per US$1",
+          "+0.014%"
+        ],
+        "comparison": "Versus November 12: C$1.4255 per US$1",
+        "detail": "Bank of Canada; Canadian dollars per U.S. dollar",
+        "sources": [
+          {
+            "label": "Bank of Canada; Canadian dollars per U.S. dollar",
+            "url": "https://www.bankofcanada.ca/rates/exchange/daily-exchange-rates/"
+          }
+        ]
+      }
+    },
+    "marketCaveats": [
+      "The September single-family starts monthly change has a published ±10.0-percentage-point 90% confidence interval and is not statistically significant.",
+      "November lumber expired November 13. The table uses the January contract; the prior-week change is unavailable because the same-contract November 6 settlement could not be independently verified.",
+      "Display rounding follows the approved format. Changes are calculated from unrounded observations, so rounded currency levels may look unchanged even when a small movement occurred."
+    ],
+    "featuredResource": {
+      "date": "2026-11-16",
+      "source": "daily-sheet",
+      "item": {
+        "title": "Frictionless Forestry: Field-Level Research & Resource Needs",
+        "kind": "report",
+        "description": "This PDF report examines what forestry practitioners say makes research, tools and institutional support useful in everyday work. Its findings help researchers, agencies and business advisers consider how resources can reduce effort and fit real field workflows.",
+        "source_url": "https://www.loggingchance.com/Frictionless-Forestry.pdf",
+        "url": "https://www.loggingchance.com/Frictionless-Forestry.pdf"
+      },
+      "cached": false
+    },
+    "editorialWatch": {
+      "kind": "curtailment",
+      "items": [
+        {
+          "text": "ND Paper produced a trial roll on November 5 from its R12 paper machine in Rumford, Maine, after weeks of testing, according to trade reporting that cites the company. The machine had been idle since 2024. The trial shows the machine can make paper again, but the company has not disclosed the grade or announced a date for regular production. There is no confirmed change to pulp purchases or sustained output.",
+          "sources": [
+            {
+              "label": "PaperAge report on the company’s trial",
+              "url": "https://www.paperage.com/2026news/11-11-2026nd-paper-successfully-produces-first-roll-of-paper-on-r12-machine-at-rumford-mill.html"
+            },
+            {
+              "label": "ND Paper’s Rumford mill profile",
+              "url": "https://us.ndpaper.com/rumford/"
+            }
+          ],
+          "verified_on": "2026-11-16"
+        }
+      ]
+    },
+    "displayDate": "November 16, 2026",
+    "url": "/2026/11/16/"
+  },
+  {
     "date": "2026-11-15",
     "summary": "Canada pledges up to C$560 million for tropical forest conservation. Also: Atlanta’s urban sawmill, a Washington, D.C. mass timber design program, Montana timber bids and a Vancouver tree inventory.",
     "socialText": "Canada is pledging up to C$560 million over four years to help launch a Brazil-led tropical forest fund. Read Sunday’s Woods Run Digest.",
