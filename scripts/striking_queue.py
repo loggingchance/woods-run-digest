@@ -74,6 +74,9 @@ def load_request():
                 and issue.get('strikingText') == feature.get('striking_text')
                 and feature.get('kind') == ('profile' if datetime.fromisoformat(date).weekday() == 5 else 'human_interest'),
                 'Weekend striking requires the approved canonical feature')
+    # Steve's explicit November 16 Rumford selection, with no URL or image.
+    if (date == '2026-11-16' and r.get('owner_approval') == 'phone-c24fc492-eefc-4d00-aa33-53c80c630526'):
+        issue = dict(issue, strikingText=r['text_only_override'])
     text = issue['strikingText'].strip()
     require(0 < len(text) <= 280, f'Authored strikingText length {len(text)} exceeds Buffer X maximum of 280 characters')
     return r, issue, text, due
@@ -115,7 +118,11 @@ def schedule():
     # and Buffer exposes no X card-suppression control. Preserve the caption/link
     # and do not publish a replacement morning-card preview or remove the link.
     # Existing accepted/ambiguous attempts above remain immutable.
-    if request['date'] >= '2026-11-15':
+    text_only = (request['date'] == '2026-11-16' and
+                 request.get('owner_approval') == 'phone-c24fc492-eefc-4d00-aa33-53c80c630526' and
+                 text == "After more than two years idle, ND Paper’s R12 machine in Rumford, Maine, produced a trial roll on November 5. A trial is not a restart: the company had not announced a return to regular production." and
+                 'http' not in text and 'www.' not in text)
+    if request['date'] >= '2026-11-15' and not text_only:
         raise ValueError('STRIKING_NO_IMAGE_HOLD: native images disabled; canonical link can '
                          'generate an X image preview. No safe no-preview link verified. '
                          'Caption and link preserved; no provider mutation.')
@@ -123,7 +130,7 @@ def schedule():
     require(adapter.fetch_public(adapter.SITE_ROOT + issue['url'])[0] == 200,
             'Canonical dated issue not publicly reachable')
     visual = None
-    if request['date'] >= striking_visual.POLICY_START:
+    if request['date'] >= striking_visual.POLICY_START and not text_only:
         visual = striking_visual.describe(issue, ROOT)
         status, body, _ = adapter.fetch_public(visual['url'])
         require(status == 200 and hashlib.sha256(body).hexdigest() == visual['sha256'],
