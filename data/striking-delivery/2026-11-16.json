@@ -3,11 +3,16 @@
   "text": "After more than two years idle, ND Paper’s R12 machine in Rumford, Maine, produced a trial roll on November 5. A trial is not a restart: the company had not announced a return to regular production.",
   "due_at": "2026-11-16T17:00:00Z",
   "channel_id": "6843193ed6d25b49a145ff6e",
-  "state": "attempt_started",
+  "state": "accepted",
   "attempt_started_at": "2026-11-16T15:11:33.413008Z",
-  "post_id": null,
+  "post_id": "6afb1d261a0e9d01e78940b2",
   "history_checked": 399,
   "source": "native-daily-striking",
   "email_attempted": false,
-  "visual": null
+  "visual": null,
+  "provider_status": "scheduled",
+  "provider_due_at": "2026-11-16T17:00:00.000Z",
+  "external_url": null,
+  "accepted_at": "2026-11-16T15:11:35.074730Z",
+  "schedule_verified": true
 }
