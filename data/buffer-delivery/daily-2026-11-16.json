@@ -1,0 +1,221 @@
+{
+  "run_id": "daily-2026-11-16",
+  "date": "2026-11-16",
+  "channels": {
+    "x": {
+      "duplicate_search": {
+        "complete": true,
+        "posts_checked": 398
+      },
+      "attempt_started_at": "2026-11-16T10:36:04.458979Z",
+      "newly_created": true,
+      "post_id": "6afadc940c2af02527d482c3",
+      "status": "scheduled",
+      "due_at": "2026-11-16T11:00:00.000Z",
+      "created_at": "2026-11-16T10:36:04.711Z",
+      "external_url": null,
+      "assets": [],
+      "provider_text": "Forest Service and Nature Conservancy agreements will add crews for thinning, burn preparation and monitoring in four Idaho and Wyoming national forests.\n\nhttps://woodsrun.forestenterprise.org/2026/11/16/",
+      "error": null,
+      "schedule_verified": true,
+      "provider_sent": false,
+      "delivery_state": "scheduled",
+      "existing_delivery": true,
+      "public_visibility": "not_independently_verified"
+    },
+    "instagram": {
+      "duplicate_search": {
+        "complete": true,
+        "posts_checked": 327
+      },
+      "attempt_started_at": "2026-11-16T10:36:06.946693Z",
+      "newly_created": true,
+      "post_id": "6afadc970c2af02527d48391",
+      "status": "scheduled",
+      "due_at": "2026-11-16T11:00:00.000Z",
+      "created_at": "2026-11-16T10:36:07.420Z",
+      "external_url": null,
+      "assets": [
+        {
+          "source": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/videos/2026-11-16.mp4",
+          "mimeType": "video/mp4"
+        }
+      ],
+      "provider_text": "Woods Run Digest — November 16, 2026\n\nDaily North American forestry & forest-products intelligence from The Forest Business School.\n\nRead today’s edition: https://woodsrun.forestenterprise.org/2026/11/16/\n\nToday's Featured Resource\nFrictionless Forestry: Field-Level Research & Resource Needs\nhttps://www.loggingchance.com/Frictionless-Forestry.pdf",
+      "error": null,
+      "schedule_verified": true,
+      "provider_sent": false,
+      "delivery_state": "scheduled",
+      "existing_delivery": true,
+      "public_visibility": "not_independently_verified"
+    },
+    "youtube": {
+      "duplicate_search": {
+        "complete": true,
+        "posts_checked": 111
+      },
+      "attempt_started_at": "2026-11-16T10:36:08.227693Z",
+      "newly_created": true,
+      "post_id": "6afadc98d2a6b9d4fcac0dd8",
+      "status": "scheduled",
+      "due_at": "2026-11-16T11:00:00.000Z",
+      "created_at": "2026-11-16T10:36:08.541Z",
+      "external_url": null,
+      "assets": [
+        {
+          "source": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/videos/2026-11-16.mp4",
+          "mimeType": "video/mp4"
+        }
+      ],
+      "provider_text": "Woods Run Digest — November 16, 2026\n\nA US$2.1 million commitment backs forest restoration crews in Idaho and Wyoming. Also: a paper-machine trial in Maine, Canadian biomass site assessments and Delaware school tree planting.\n\nRead the full edition: https://woodsrun.forestenterprise.org/2026/11/16/\n\nDaily forestry & forest-products intelligence from The Forest Business School.\n\nToday's Featured Resource\nFrictionless Forestry: Field-Level Research & Resource Needs\nhttps://www.loggingchance.com/Frictionless-Forestry.pdf",
+      "error": null,
+      "schedule_verified": true,
+      "provider_sent": false,
+      "delivery_state": "scheduled",
+      "existing_delivery": true,
+      "public_visibility": "not_independently_verified"
+    }
+  },
+  "checked_at": "2026-11-16T10:36:01.534823Z",
+  "requested_action": "schedule_daily",
+  "requested_channels": [
+    "x",
+    "instagram",
+    "youtube"
+  ],
+  "required_daily_channels": [
+    "x",
+    "instagram",
+    "youtube"
+  ],
+  "daily_target_due_at": "2026-11-16T11:00:00Z",
+  "channel_identity": [
+    {
+      "id": "6ab14319ea19ca0bdea627e2",
+      "name": "Logging Chance",
+      "service": "youtube",
+      "serviceId": "UCq-PscVBAKjmVE39qb2NyCg",
+      "externalLink": "https://www.youtube.com/channel/UCq-PscVBAKjmVE39qb2NyCg",
+      "isDisconnected": false,
+      "isLocked": false,
+      "isQueuePaused": false,
+      "timezone": "America/Denver"
+    },
+    {
+      "id": "6844cc71d6d25b49a1de682e",
+      "name": "northeastforests",
+      "service": "instagram",
+      "serviceId": "17841412643805979",
+      "externalLink": "https://instagram.com/northeastforests",
+      "isDisconnected": false,
+      "isLocked": false,
+      "isQueuePaused": false,
+      "timezone": "America/Denver"
+    },
+    {
+      "id": "6843193ed6d25b49a145ff6e",
+      "name": "ForestBizSchool",
+      "service": "twitter",
+      "serviceId": "1487833905197637637",
+      "externalLink": "https://twitter.com/ForestBizSchool",
+      "isDisconnected": false,
+      "isLocked": false,
+      "isQueuePaused": false,
+      "timezone": "America/Denver"
+    }
+  ],
+  "due_at": "2026-11-16T11:00:00Z",
+  "preflight_by_channel": {
+    "x": {
+      "page": {
+        "url": "https://woodsrun.forestenterprise.org/2026/11/16/",
+        "final_url": "https://woodsrun.forestenterprise.org/2026/11/16/",
+        "http_status": 200,
+        "content_type": "text/html",
+        "content_verified": true
+      },
+      "link_card": {
+        "page_url": "https://woodsrun.forestenterprise.org/2026/11/16/",
+        "image_url": "https://woodsrun.forestenterprise.org/assets/cards/2026-11-16.png",
+        "card": "summary_large_image",
+        "image_bytes": 211953,
+        "metadata_verified": true
+      },
+      "card": {
+        "url": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/cards/2026-11-16.png",
+        "dimensions": [
+          1200,
+          630
+        ],
+        "bytes": 211953,
+        "public": {
+          "url": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/cards/2026-11-16.png",
+          "final_url": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/cards/2026-11-16.png",
+          "http_status": 200,
+          "content_type": "image/png",
+          "content_verified": true
+        }
+      }
+    },
+    "instagram": {
+      "page": {
+        "url": "https://woodsrun.forestenterprise.org/2026/11/16/",
+        "final_url": "https://woodsrun.forestenterprise.org/2026/11/16/",
+        "http_status": 200,
+        "content_type": "text/html",
+        "content_verified": true
+      },
+      "video": {
+        "url": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/videos/2026-11-16.mp4",
+        "dimensions": [
+          [
+            1080,
+            1920
+          ]
+        ],
+        "bytes": 1540944,
+        "public": {
+          "url": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/videos/2026-11-16.mp4",
+          "final_url": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/videos/2026-11-16.mp4",
+          "http_status": 200,
+          "content_type": "application/octet-stream",
+          "content_verified": true
+        }
+      }
+    },
+    "youtube": {
+      "page": {
+        "url": "https://woodsrun.forestenterprise.org/2026/11/16/",
+        "final_url": "https://woodsrun.forestenterprise.org/2026/11/16/",
+        "http_status": 200,
+        "content_type": "text/html",
+        "content_verified": true
+      },
+      "video": {
+        "url": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/videos/2026-11-16.mp4",
+        "dimensions": [
+          [
+            1080,
+            1920
+          ]
+        ],
+        "bytes": 1540944,
+        "public": {
+          "url": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/videos/2026-11-16.mp4",
+          "final_url": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/videos/2026-11-16.mp4",
+          "http_status": 200,
+          "content_type": "application/octet-stream",
+          "content_verified": true
+        }
+      }
+    }
+  },
+  "all_scheduled": true,
+  "daily_idempotent": true,
+  "all_provider_sent": false,
+  "all_public_verified": false,
+  "all_daily_channels_provider_sent": false,
+  "all_daily_channels_scheduled": true,
+  "email_verified": false,
+  "complete": false
+}
