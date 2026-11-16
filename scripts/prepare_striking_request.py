@@ -14,6 +14,12 @@ DENVER = ZoneInfo('America/Denver')
 def prepare(root, now):
     local = now.astimezone(DENVER)
     date = local.date().isoformat()
+    trigger = root / 'data/striking-trigger.json'
+    approved = json.loads(trigger.read_text()) if trigger.exists() else {}
+    if (date == '2026-11-16' and approved.get('date') == date and
+            approved.get('owner_approval') == 'phone-c24fc492-eefc-4d00-aa33-53c80c630526' and
+            approved.get('text_only_override') == "After more than two years idle, ND Paper’s R12 machine in Rumford, Maine, produced a trial roll on November 5. A trial is not a restart: the company had not announced a return to regular production."):
+        return True
     issues = json.loads((root / 'data/issues.json').read_text())
     issue = next((i for i in issues if i.get('date') == date), None)
     weekend_feature_day = date >= '2026-11-03' and local.weekday() >= 5
