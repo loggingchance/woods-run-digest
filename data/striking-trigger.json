@@ -1,8 +1,6 @@
 {
   "action": "schedule_striking",
-  "date": "2026-11-16",
-  "due_at": "2026-11-16T17:00:00Z",
-  "reason": "Owner-selected Rumford fact with no card or image",
-  "owner_approval": "phone-c24fc492-eefc-4d00-aa33-53c80c630526",
-  "text_only_override": "After more than two years idle, ND Paper’s R12 machine in Rumford, Maine, produced a trial roll on November 5. A trial is not a restart: the company had not announced a return to regular production."
+  "date": "2026-11-17",
+  "due_at": "2026-11-17T17:00:00Z",
+  "reason": "native Buffer scheduled daily striking observation"
 }
