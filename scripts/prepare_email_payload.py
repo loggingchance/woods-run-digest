@@ -4,6 +4,7 @@ from __future__ import annotations
 import hashlib
 import html
 import json
+import re
 from datetime import date, datetime
 from pathlib import Path
 from urllib.parse import urljoin, urlsplit
@@ -103,6 +104,40 @@ def inline(node, urls: set[str]) -> str:
     return children
 
 
+def newsletter_service_panel(article, day):
+    """Recognize the canonical service ad without treating its layout as market data."""
+    panels = article.select('section.newsletter-service-ad')
+    if not panels:
+        return None
+    panel = panels[0]
+    heading = panel.select_one('h2')
+    link = panel.select('a[href]')
+    expected_link = 'mailto:steve@northeastforests.com?subject=Weekly%20newsletter%20service'
+    sharing = panel.find_next_sibling()
+    top = panel.find_all(recursive=False)
+    if (len(panels) != 1 or day < '2026-11-17'
+            or date.fromisoformat(day).weekday() not in (1, 4)
+            or panel.attrs != {'class': ['newsletter-service-ad'], 'data-service': 'newsletter',
+                               'data-service-date': day}
+            or not heading or heading.get_text(' ', strip=True) != 'Your news. Your audience. No extra work.'
+            or len(link) != 1 or link[0]['href'] != expected_link
+            or not sharing or 'growth-strip' not in sharing.get('class', [])
+            or len(top) != 1 or top[0].name != 'table' or top[0].get('id') != 'newsletter-service-panel'):
+        raise ValueError('Invalid canonical newsletter-service panel')
+    # Preserve its authored markup, but permit only the inert elements and
+    # attributes of the approved presentation table.
+    allowed = {
+        'table': {'cellpadding', 'cellspacing', 'id', 'role', 'style', 'width'},
+        'tr': set(), 'td': {'bgcolor', 'style'}, 'p': {'style'},
+        'h2': {'style'}, 'a': {'href', 'style'},
+    }
+    for node in panel.find_all():
+        if (node.name not in allowed or node.attrs.keys() - allowed[node.name]
+                or re.search(r'url\s*\(|expression\s*\(|@|\\', node.get('style', ''), re.I)):
+            raise ValueError('Unsupported markup in canonical newsletter-service panel')
+    return panel
+
+
 def compile_payload(page: str, issue: dict) -> dict:
     soup=BeautifulSoup(page,'html.parser')
     article=soup.select_one('article.edition-wrap')
@@ -123,8 +158,9 @@ def compile_payload(page: str, issue: dict) -> dict:
             raise ValueError('Invalid newsletter-service footer')
         service_footer.decompose()
     sponsor = validate_sponsor(article, issue['date'])
-    # Sponsor Mondays retain the sharing section immediately after the card.
-    for element in article.select('nav, .edition-nav' if sponsor else 'nav, .edition-nav, .growth-strip'):
+    service_panel = newsletter_service_panel(article, issue['date'])
+    # Approved cards retain the sharing section immediately after the card.
+    for element in article.select('nav, .edition-nav' if sponsor or service_panel else 'nav, .edition-nav, .growth-strip'):
         element.decompose()
     validate_market_table(article, issue['date'])
     urls=set(); body=[]; plain=[]; source_paragraphs=[]
@@ -136,9 +172,17 @@ def compile_payload(page: str, issue: dict) -> dict:
             urls.update(a['href'] for a in sponsor.find_all('a', href=True))
             urls.update(i['src'] for i in sponsor.find_all('img', src=True))
             continue
-        if node.name == 'section' or node.find_parent('section', class_='brandx-sponsor'):
+        if node is service_panel:
+            body.append(str(service_panel))
+            lines = [part.get_text(' ', strip=True) for part in service_panel.select('p,h2,a[href]')]
+            links = [normalize_url(a['href']) for a in service_panel.find_all('a', href=True)]
+            plain.extend(lines + links)
+            source_paragraphs.extend(lines)
+            urls.update(links)
             continue
-        if node.name == 'div' and not (sponsor and 'growth-actions' in node.get('class', [])):
+        if node.name == 'section' or node.find_parent('section', class_=('brandx-sponsor', 'newsletter-service-ad')):
+            continue
+        if node.name == 'div' and not ((sponsor or service_panel) and 'growth-actions' in node.get('class', [])):
             continue
         if any(p.name in ('p','li','blockquote','figure') for p in node.parents if p is not article):continue
         if node.find_parent('table'):continue
@@ -221,4 +265,5 @@ def main():
     print(json.dumps({'email_payload_ready':str(output.relative_to(ROOT)),'date':today,'links_preserved':True,'source_paragraph_count':payload['source_paragraph_count'],'featured_item':payload['featured_item'],'featured_book':payload['featured_book'],'email_sent':False}))
 
 if __name__=='__main__':main()
+
 
