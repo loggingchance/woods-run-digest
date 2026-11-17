@@ -1,0 +1,53 @@
+{
+  "date": "2026-11-17",
+  "format": "approved-v4",
+  "dimensions": [
+    1080,
+    1920
+  ],
+  "fps": 30,
+  "frames": 1335,
+  "duration_seconds": 44.5,
+  "segment_frames": [
+    75,
+    210,
+    210,
+    210,
+    210,
+    300,
+    120
+  ],
+  "stories": [
+    {
+      "headline": "Domtar to halt sawing at its Baie-Comeau mill November 20",
+      "body": "Domtar told Quebec media that Scierie des Outardes will stop sawing on November 20 for an indefinite period. The company cited uncertainty over fibre supply and harvest planning, high fibre and freight costs, U.S. duties and weak lumber prices.",
+      "region": "CANADA \u2014 QUEBEC / SAWMILL OPERATIONS",
+      "image": null
+    },
+    {
+      "headline": "Northern Idaho plans pile burns through December",
+      "body": "The Bureau of Land Management lists prescribed pile burning near Pinehurst and across several sites in its Cottonwood field office area through December. At Happy Trails in Adams County, the plan covers roughly 257 acres of hand piles and\u2026",
+      "region": "U.S. WEST \u2014 NORTHERN IDAHO / FUELS WORK",
+      "image": null
+    },
+    {
+      "headline": "Forest Service seeks comments on targeted grazing permits",
+      "body": "A November 12 Forest Service proposal would let the agency use temporary grazing or livestock permits for stewardship work, including targeted grazing. It also proposes a framework for changing grazing in response to drought or wildfire.\u2026",
+      "region": "U.S. \u2014 NATIONAL FORESTS / COMMENTS DUE DECEMBER 14",
+      "image": null
+    },
+    {
+      "headline": "New FBS episode explains what state business assistance can cover",
+      "body": "In \u201cFBS 62 Forest Business Assistance from State Agencies,\u201d Steve Bick walks through help forest businesses can explore before committing to equipment or an expansion. Examples include South Carolina\u2019s timber supply and market analyses and\u2026",
+      "region": "THE FBS PODCAST / NOVEMBER 16 RELEASE",
+      "image": null
+    }
+  ],
+  "featuredResource": {
+    "title": "LiVT \u2014 Log in Vermont",
+    "description": "LiVT is a browser app for evaluating logging-business financial results. Enter overhead, equipment, labor, production and revenue to examine profit or loss for a week or job.",
+    "url": "https://www.loginvt.com/",
+    "kind": "app"
+  },
+  "publication_attempted": false
+}

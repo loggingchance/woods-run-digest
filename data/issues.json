@@ -1,5 +1,159 @@
 [
   {
+    "date": "2026-11-17",
+    "summary": "Domtar plans to stop sawing indefinitely at Scierie des Outardes in Quebec on November 20. Also in this edition: northern Idaho pile burns, a federal grazing proposal and a new FBS Podcast episode on state business assistance.",
+    "socialText": "Domtar plans to halt sawing at its Baie-Comeau mill November 20, with no restart date. Today’s Woods Run also covers northern Idaho pile burns and proposed federal grazing rules.",
+    "strikingText": "One Idaho burn plan includes two kinds of piles. At Happy Trails in Adams County, the Bureau of Land Management lists roughly 257 acres of hand piles and 338 acres of machine piles, with timing dependent on field conditions.",
+    "cardTeaser": "Domtar to halt sawing at its Baie-Comeau mill",
+    "cardSubhead": "The Quebec sawmill plans to stop production November 20, with no restart date set.",
+    "marketObservations": {
+      "diesel": {
+        "status": "verified",
+        "latest": "US$6.127/gal",
+        "observed": "Week of November 9, 2026; released November 10",
+        "change": [
+          "−US$0.165/gal",
+          "−2.62%"
+        ],
+        "comparison": "Versus November 2: US$6.292/gal",
+        "detail": "EIA U.S. on-highway diesel; taxes included",
+        "sources": [
+          {
+            "label": "EIA U.S. on-highway diesel; taxes included",
+            "url": "https://www.eia.gov/dnav/pet/hist/LeafHandler.ashx?f=W&n=PET&s=EMD_EPD2D_PTE_NUS_DPG"
+          }
+        ]
+      },
+      "lumber_futures": {
+        "status": "verified",
+        "latest": "US$510.00/MBF",
+        "observed": "November 16, 2026 settlement",
+        "change": [
+          "Unavailable"
+        ],
+        "comparison": "November 9 January settlement not independently verified",
+        "detail": "January 2027 lumber futures (CME LBRF27)",
+        "sources": [
+          {
+            "label": "Investing.com January contract settlement",
+            "url": "https://www.investing.com/commodities/lumber-contracts"
+          },
+          {
+            "label": "CME delivery calendar",
+            "url": "https://www.cmegroup.com/markets/agriculture/lumber-and-softs/lumber/calendar"
+          }
+        ]
+      },
+      "madisons": {
+        "status": "verified",
+        "latest": "US$444/MBF",
+        "observed": "Week ending November 13, 2026",
+        "change": [
+          "−US$5/MBF",
+          "−1.11% (calculated)"
+        ],
+        "comparison": "Versus week ending November 6: US$449/MBF",
+        "detail": "Madison’s weekly lumber index",
+        "sources": [
+          {
+            "label": "Madison’s November 13 index",
+            "url": "https://madisonsreport.com/madisons-lumber-prices-index-nov-13-2026-us444-mfbm/"
+          }
+        ]
+      },
+      "hardwood_ppi": {
+        "status": "verified",
+        "latest": "284.331 index points",
+        "observed": "October 2026; released November 13",
+        "change": [
+          "−1.251 points",
+          "−0.44%"
+        ],
+        "comparison": "Versus revised September 2026: 285.582",
+        "detail": "BLS WPU0812; 1982=100; not seasonally adjusted",
+        "sources": [
+          {
+            "label": "BLS hardwood lumber PPI via FRED",
+            "url": "https://fred.stlouisfed.org/data/WPU0812"
+          }
+        ]
+      },
+      "housing_starts": {
+        "status": "verified",
+        "latest": "859,000 units (SAAR)",
+        "observed": "September 2026; released October 20",
+        "change": [
+          "−41,000 units (SAAR)",
+          "−4.6%"
+        ],
+        "comparison": "Versus revised August 2026: 900,000",
+        "detail": "Census U.S. single-family starts; annualized estimate",
+        "sources": [
+          {
+            "label": "Census U.S. single-family starts; annualized estimate",
+            "url": "https://www.census.gov/construction/nrc/pdf/newresconst.pdf"
+          }
+        ]
+      },
+      "cad_usd": {
+        "status": "verified",
+        "latest": "C$1.4298 per US$1",
+        "observed": "Daily average, November 16, 2026",
+        "change": [
+          "+C$0.0041 per US$1",
+          "+0.29%"
+        ],
+        "comparison": "Versus November 13: C$1.4257 per US$1",
+        "detail": "Bank of Canada; Canadian dollars per U.S. dollar",
+        "sources": [
+          {
+            "label": "Bank of Canada daily averages",
+            "url": "https://www.bankofcanada.ca/valet/observations/FXUSDCAD/json?start_date=2026-11-13&end_date=2026-11-16"
+          }
+        ]
+      }
+    },
+    "marketCaveats": [
+      "The September single-family starts monthly change has a published ±10.0-percentage-point 90% confidence interval and is not statistically significant.",
+      "EIA’s next weekly diesel release is due November 17; the latest observation available at publication is November 9.",
+      "The January lumber settlement is verified for November 16; the November 9 same-contract settlement could not be independently confirmed.",
+      "Display rounding follows the approved format. Changes are calculated from unrounded observations, so rounded currency levels may look unchanged even when a small movement occurred."
+    ],
+    "featuredResource": {
+      "date": "2026-11-17",
+      "source": "daily-sheet",
+      "item": {
+        "title": "LiVT — Log in Vermont",
+        "kind": "app",
+        "description": "LiVT is a browser app for evaluating logging-business financial results. Enter overhead, equipment, labor, production and revenue to examine profit or loss for a week or job.",
+        "source_url": "https://www.loginvt.com/",
+        "url": "https://www.loginvt.com/"
+      },
+      "cached": false
+    },
+    "editorialWatch": {
+      "kind": "trade_policy",
+      "items": [
+        {
+          "text": "U.S. Commerce’s final antidumping and countervailing duty orders on hardwood and decorative plywood from China, Indonesia and Vietnam are scheduled for Federal Register publication November 17. The orders give importers producer- and exporter-specific cash deposit tables. They also distinguish covered panels from qualifying stamped structural softwood plywood and certain panels that failed structural certification, for which Commerce directs refunds of specified deposits. The notices explain which entry dates and scope rules apply.",
+          "sources": [
+            {
+              "label": "Antidumping order and deposit tables",
+              "url": "https://public-inspection.federalregister.gov/2026-23386.pdf"
+            },
+            {
+              "label": "Countervailing duty order and scope",
+              "url": "https://public-inspection.federalregister.gov/2026-23393.pdf"
+            }
+          ],
+          "verified_on": "2026-11-17"
+        }
+      ]
+    },
+    "displayDate": "November 17, 2026",
+    "url": "/2026/11/17/"
+  },
+  {
     "date": "2026-11-16",
     "summary": "A US$2.1 million commitment backs forest restoration crews in Idaho and Wyoming. Also: a paper-machine trial in Maine, Canadian biomass site assessments and Delaware school tree planting.",
     "socialText": "Forest Service and Nature Conservancy agreements will add crews for thinning, burn preparation and monitoring in four Idaho and Wyoming national forests.",
