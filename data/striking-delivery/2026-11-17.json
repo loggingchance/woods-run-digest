@@ -3,11 +3,16 @@
   "text": "One Idaho burn plan includes two kinds of piles. At Happy Trails in Adams County, the Bureau of Land Management lists roughly 257 acres of hand piles and 338 acres of machine piles, with timing dependent on field conditions.",
   "due_at": "2026-11-17T17:00:00Z",
   "channel_id": "6843193ed6d25b49a145ff6e",
-  "state": "attempt_started",
+  "state": "accepted",
   "attempt_started_at": "2026-11-17T16:44:15.086425Z",
-  "post_id": null,
+  "post_id": "6afc8460a166de7b3ec138af",
   "history_checked": 401,
   "source": "native-daily-striking",
   "email_attempted": false,
-  "visual": null
+  "visual": null,
+  "provider_status": "scheduled",
+  "provider_due_at": "2026-11-17T17:00:00.000Z",
+  "external_url": null,
+  "accepted_at": "2026-11-17T16:44:16.920629Z",
+  "schedule_verified": true
 }
