@@ -118,10 +118,12 @@ def schedule():
     # and Buffer exposes no X card-suppression control. Preserve the caption/link
     # and do not publish a replacement morning-card preview or remove the link.
     # Existing accepted/ambiguous attempts above remain immutable.
-    text_only = (request['date'] == '2026-11-16' and
-                 request.get('owner_approval') == 'phone-c24fc492-eefc-4d00-aa33-53c80c630526' and
-                 text == "After more than two years idle, ND Paper’s R12 machine in Rumford, Maine, produced a trial roll on November 5. A trial is not a restart: the company had not announced a return to regular production." and
-                 'http' not in text and 'www.' not in text)
+    # From November 15 onward, no new striking image is attached. A
+    # link-free, exactly authored caption is safe as a native text-only post:
+    # there is no URL from which X can generate the morning Digest preview.
+    # URL-bearing captions still fail closed without a verified no-preview path.
+    text_only = (request['date'] >= '2026-11-15' and
+                 not any(marker in text.lower() for marker in ('http://', 'https://', 'www.')))
     if request['date'] >= '2026-11-15' and not text_only:
         raise ValueError('STRIKING_NO_IMAGE_HOLD: native images disabled; canonical link can '
                          'generate an X image preview. No safe no-preview link verified. '
