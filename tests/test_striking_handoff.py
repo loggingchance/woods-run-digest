@@ -159,6 +159,37 @@ class HandoffTests(unittest.TestCase):
                 mutation.assert_not_called()
                 persist.assert_not_called()
 
+    def test_link_free_current_caption_uses_native_text_only(self):
+        # A canonical caption without a URL cannot generate the Digest card
+        # preview; allow it without creating a new striking image.
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            due = datetime.fromisoformat('2026-11-17T17:00:00+00:00')
+            issue = {'date': '2026-11-17', 'url': '/2026/11/17/',
+                     'strikingText': 'An exactly authored forestry observation without a link.'}
+            post = {'id': 'accepted-native-post', 'status': 'scheduled',
+                    'dueAt': publisher.buffer.iso(due), 'assets': []}
+            with (patch.object(publisher, 'ROOT', root),
+                  patch.object(publisher, 'load_request',
+                               return_value=({'date': issue['date']}, issue, issue['strikingText'], due)),
+                  patch.object(publisher, 'history', return_value=([], None)),
+                  patch.object(publisher, 'persist') as persist,
+                  patch.object(publisher.buffer, 'now',
+                               return_value=datetime.fromisoformat('2026-11-17T16:40:00+00:00')),
+                  patch.object(publisher.adapter, 'fetch_public',
+                               return_value=(200, b'published edition', 'text/html')),
+                  patch.object(publisher.striking_visual, 'describe') as visual,
+                  patch.object(publisher.buffer, 'gql',
+                               return_value={'createPost': {'post': post}}) as mutation):
+                publisher.schedule()
+                payload = mutation.call_args.args[1]['input']
+                self.assertEqual(payload['text'], issue['strikingText'])
+                self.assertEqual(payload['assets'], [])
+                self.assertEqual(payload['mode'], 'customScheduled')
+                self.assertEqual(payload['dueAt'], '2026-11-17T17:00:00Z')
+                visual.assert_not_called()
+                self.assertEqual(persist.call_args.args[1]['post_id'], 'accepted-native-post')
+
     def test_future_handoff_preserves_text_without_rendering_image(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
