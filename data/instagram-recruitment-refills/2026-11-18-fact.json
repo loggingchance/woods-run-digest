@@ -1,0 +1,24 @@
+{
+  "prepared_at": "2026-11-18",
+  "request": {
+    "slot": "2026-11-18",
+    "campaign": "facts",
+    "asset": "assets/instagram-recruitment/2026-11-18-flying-squirrel-fact.jpg",
+    "sha256": "328cab8320b979833a53b820a3fabeca263df044853f10170e5ce53cd88c778a",
+    "caption": "Nebraska researchers are studying which trees southern flying squirrels call home.\n\nWoods Run Digest subscribers already knew that.\n\nFrom the November 6, 2026 edition of The Woods Run Digest. University of Nebraska–Lincoln researchers are examining tree age, species, canopy cover and cavities on East Campus; the study is ongoing.\n\nSubscribe free • Link in bio\n\n#Forestry #WoodProducts #WoodsRunDigest",
+    "fact": "Nebraska researchers are studying which trees southern flying squirrels call home.",
+    "source_issue": "https://woodsrun.forestenterprise.org/2026/11/06/",
+    "source_url": "https://ianrnews.unl.edu/article/new-research-project-aims-to-help-flying-squirrel-habitats"
+  },
+  "sample": "November 10 approved sample 2-squirrel.png",
+  "source_verified": "University original November 5 report and published November 6 Digest; ongoing tree habitat-preference research, not completed results.",
+  "visual_review": "All six samples inspected; selected unused squirrel card, exact branding, CTA, sourced sentence and issue date checked; 1536x1024 landscape.",
+  "queue_audit": {
+    "run_id": 44223378295,
+    "posts_checked": 329,
+    "complete": true,
+    "slot_unoccupied": true,
+    "prior_fact_card": "tax only; do not repeat"
+  },
+  "status": "prepared"
+}
