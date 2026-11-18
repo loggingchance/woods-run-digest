@@ -1,5 +1,149 @@
 [
   {
+    "date": "2026-11-18",
+    "summary": "Shawnee National Forest reports timber output alongside stand improvements, invasive-plant work and prescribed fire. Also: Montana community-forestry grants, remote truck positioning and a Wednesday podcast on lumber buying decisions.",
+    "socialText": "Shawnee National Forest’s annual report connects timber output with stand improvement and habitat work. Today’s Woods Run also covers Montana grants and remote truck positioning.",
+    "strikingText": "Montana’s community-forestry grants reimburse costs after recipients have paid them. An award can support contracted forestry services, but it does not eliminate the need to carry project expenses before reimbursement.",
+    "cardTeaser": "Shawnee links timber output with forest improvement",
+    "cardSubhead": "The Illinois national forest reports 7.3 million board feet alongside stand and habitat work.",
+    "marketObservations": {
+      "diesel": {
+        "status": "verified",
+        "latest": "US$5.937/gal",
+        "observed": "Week of November 16, 2026; released November 17",
+        "change": [
+          "−US$0.190/gal",
+          "−3.10%"
+        ],
+        "comparison": "Versus November 9: US$6.127/gal",
+        "detail": "EIA U.S. on-highway diesel; taxes included",
+        "sources": [
+          {
+            "label": "EIA U.S. on-highway diesel; taxes included",
+            "url": "https://www.eia.gov/dnav/pet/hist/LeafHandler.ashx?f=W&n=PET&s=EMD_EPD2D_PTE_NUS_DPG"
+          }
+        ]
+      },
+      "lumber_futures": {
+        "status": "verified",
+        "latest": "US$527.50/MBF",
+        "observed": "November 17, 2026 settlement",
+        "change": [
+          "Unavailable"
+        ],
+        "comparison": "November 10 January settlement not independently verified",
+        "detail": "January 2027 lumber futures (CME LBRF27)",
+        "sources": [
+          {
+            "label": "Investing.com January contract settlement",
+            "url": "https://www.investing.com/commodities/lumber-contracts"
+          },
+          {
+            "label": "CME delivery calendar",
+            "url": "https://www.cmegroup.com/markets/agriculture/lumber-and-softs/lumber/calendar"
+          }
+        ]
+      },
+      "madisons": {
+        "status": "verified",
+        "latest": "US$444/MBF",
+        "observed": "Week ending November 13, 2026",
+        "change": [
+          "−US$5/MBF",
+          "−1.11% (calculated)"
+        ],
+        "comparison": "Versus week ending November 6: US$449/MBF",
+        "detail": "Madison’s weekly lumber index",
+        "sources": [
+          {
+            "label": "Madison’s November 13 index",
+            "url": "https://madisonsreport.com/madisons-lumber-prices-index-nov-13-2026-us444-mfbm/"
+          }
+        ]
+      },
+      "hardwood_ppi": {
+        "status": "verified",
+        "latest": "284.331 index points",
+        "observed": "October 2026; released November 13",
+        "change": [
+          "−1.251 points",
+          "−0.44%"
+        ],
+        "comparison": "Versus revised September 2026: 285.582",
+        "detail": "BLS WPU0812; 1982=100; not seasonally adjusted",
+        "sources": [
+          {
+            "label": "BLS hardwood lumber PPI via FRED",
+            "url": "https://fred.stlouisfed.org/data/WPU0812"
+          }
+        ]
+      },
+      "housing_starts": {
+        "status": "verified",
+        "latest": "859,000 units (SAAR)",
+        "observed": "September 2026; released October 20",
+        "change": [
+          "−41,000 units (SAAR)",
+          "−4.6%"
+        ],
+        "comparison": "Versus revised August 2026: 900,000",
+        "detail": "Census U.S. single-family starts; annualized estimate",
+        "sources": [
+          {
+            "label": "Census U.S. single-family starts; annualized estimate",
+            "url": "https://www.census.gov/construction/nrc/pdf/newresconst.pdf"
+          }
+        ]
+      },
+      "cad_usd": {
+        "status": "verified",
+        "latest": "C$1.4291 per US$1",
+        "observed": "Daily average, November 17, 2026",
+        "change": [
+          "−C$0.0007 per US$1",
+          "−0.049%"
+        ],
+        "comparison": "Versus November 16: C$1.4298 per US$1",
+        "detail": "Bank of Canada; Canadian dollars per U.S. dollar",
+        "sources": [
+          {
+            "label": "Bank of Canada daily averages",
+            "url": "https://www.bankofcanada.ca/valet/observations/FXUSDCAD/json?start_date=2026-11-16&end_date=2026-11-17"
+          }
+        ]
+      }
+    },
+    "marketCaveats": [
+      "The September single-family starts monthly change has a published ±10.0-percentage-point 90% confidence interval and is not statistically significant.",
+      "October housing starts are scheduled for release later November 18; September remains the latest available at publication.",
+      "The January lumber settlement is verified for November 17; the November 10 same-contract settlement could not be independently confirmed.",
+      "Display rounding follows the approved format. Changes are calculated from unrounded observations, so rounded currency levels may look unchanged even when a small movement occurred."
+    ],
+    "featuredResource": {
+      "date": "2026-11-18",
+      "source": "daily-sheet",
+      "item": {
+        "title": "The Northern Logger App",
+        "kind": "app",
+        "description": "This field-calculator app collects wood-measurement, forestry, road-work, productivity and financial tools in one place. Use its species and volume conversions, sampling calculations and operating-cost tools as convenient references alongside professional judgment.",
+        "source_url": "https://www.northernloggerapp.com/",
+        "url": "https://www.northernloggerapp.com/"
+      },
+      "cached": false
+    },
+    "podcastFeature": {
+      "show": "The Lumber Word",
+      "title": "EP 189: Buy, Buy, Buy? The Lumber Market’s Next Big Trade",
+      "summary": "In this October 29 episode, Ashley Boeckholt, Gregg Riley and Matt Beymer debate buying in a falling lumber market, holding cash, inventory commitments and freight. Their disagreement gives buyers and mill sales teams several ways to examine a purchasing decision. It is a dated market discussion, not a current price report or a trading recommendation.",
+      "url": "https://thelumberword.podbean.com/e/buy-buy-buy-the-lumber-market-s-next-big-trade/",
+      "source_url": "https://thelumberword.podbean.com/e/buy-buy-buy-the-lumber-market-s-next-big-trade/",
+      "verified_on": "2026-11-18"
+    },
+    "podcastFeatureStatus": "verified",
+    "displayDate": "November 18, 2026",
+    "url": "/2026/11/18/"
+  },
+  {
     "date": "2026-11-17",
     "summary": "Domtar plans to stop sawing indefinitely at Scierie des Outardes in Quebec on November 20. Also in this edition: northern Idaho pile burns, a federal grazing proposal and a new FBS Podcast episode on state business assistance.",
     "socialText": "Domtar plans to halt sawing at its Baie-Comeau mill November 20, with no restart date. Today’s Woods Run also covers northern Idaho pile burns and proposed federal grazing rules.",

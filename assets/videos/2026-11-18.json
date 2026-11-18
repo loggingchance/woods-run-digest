@@ -1,0 +1,46 @@
+{
+  "date": "2026-11-18",
+  "format": "approved-v4",
+  "dimensions": [
+    1080,
+    1920
+  ],
+  "fps": 30,
+  "frames": 1125,
+  "duration_seconds": 37.5,
+  "segment_frames": [
+    75,
+    210,
+    210,
+    210,
+    300,
+    120
+  ],
+  "stories": [
+    {
+      "headline": "Shawnee links timber output with forest improvement",
+      "body": "Shawnee National Forest reports about 7.3 million board feet of timber generated during fiscal 2026, alongside stand improvement on more than 440 acres and invasive-plant treatment on more than 1,400 acres. Its November 17 account describes\u2026",
+      "region": "MIDWEST \u2014 SOUTHERN ILLINOIS / NOVEMBER 17 REPORT",
+      "image": null
+    },
+    {
+      "headline": "Montana forestry grants reimburse community tree work",
+      "body": "Montana\u2019s Urban and Community Forestry Program Development grants accept applications through December 4. Requests range from US$5,000 to US$20,000, with a match requirement. Eligible applicants include local governments, community\u2026",
+      "region": "ROCKIES \u2014 MONTANA / APPLICATIONS DUE DECEMBER 4",
+      "image": null
+    },
+    {
+      "headline": "Volvo\u2019s remote steering moves the driver outside the cab",
+      "body": "Volvo\u2019s VNX vocational truck can be equipped with Remote Steer, letting the driver position it with a handheld controller at up to 5 mph. Volvo included the feature in its October truck unveiling; November 17 reporting explains the\u2026",
+      "region": "NORTH AMERICA \u2014 TRUCK EQUIPMENT / LOW-SPEED POSITIONING",
+      "image": null
+    }
+  ],
+  "featuredResource": {
+    "title": "The Northern Logger App",
+    "description": "This field-calculator app collects wood-measurement, forestry, road-work, productivity and financial tools in one place. Use its species and volume conversions, sampling calculations and operating-cost tools as convenient references alongside professional judgment.",
+    "url": "https://www.northernloggerapp.com/",
+    "kind": "app"
+  },
+  "publication_attempted": false
+}
