@@ -5,23 +5,30 @@
     "x": {
       "duplicate_search": {
         "complete": true,
-        "posts_checked": 403
+        "posts_checked": 404
       },
       "attempt_started_at": "2026-11-18T09:50:09.880849Z",
       "newly_created": true,
       "post_id": "6afd74d1b5a163e6f53a93a7",
-      "status": "scheduled",
+      "status": "sent",
       "due_at": "2026-11-18T11:00:00.000Z",
       "created_at": "2026-11-18T09:50:09.977Z",
-      "external_url": null,
+      "external_url": "https://x.com/1487833905197637637/status/2123008340775027036",
       "assets": [],
       "provider_text": "Shawnee National Forest’s annual report connects timber output with stand improvement and habitat work. Today’s Woods Run also covers Montana grants and remote truck positioning.\n\nhttps://woodsrun.forestenterprise.org/2026/11/18/",
       "error": null,
       "schedule_verified": true,
-      "provider_sent": false,
-      "delivery_state": "scheduled",
+      "provider_sent": true,
+      "delivery_state": "sent",
       "existing_delivery": true,
-      "public_visibility": "not_independently_verified"
+      "public_visibility": "verified",
+      "public_probe": {
+        "url": "https://x.com/1487833905197637637/status/2123008340775027036",
+        "final_url": "https://x.com/ForestBizSchool/status/2123008340775027036",
+        "http_status": 200,
+        "content_type": "text/html; charset=UTF-8",
+        "content_verified": true
+      }
     },
     "instagram": {
       "duplicate_search": {
@@ -50,15 +57,15 @@
     "youtube": {
       "duplicate_search": {
         "complete": true,
-        "posts_checked": 114
+        "posts_checked": 115
       },
       "attempt_started_at": "2026-11-18T09:50:12.204437Z",
       "newly_created": true,
       "post_id": "6afd74d480767a5d60c81bcb",
-      "status": "scheduled",
+      "status": "sent",
       "due_at": "2026-11-18T11:00:00.000Z",
       "created_at": "2026-11-18T09:50:12.590Z",
-      "external_url": null,
+      "external_url": "https://www.youtube.com/shorts/8ZRU35D0G-o",
       "assets": [
         {
           "source": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/videos/2026-11-18.mp4",
@@ -68,13 +75,20 @@
       "provider_text": "Woods Run Digest — November 18, 2026\n\nShawnee National Forest reports timber output alongside stand improvements, invasive-plant work and prescribed fire. Also: Montana community-forestry grants, remote truck positioning and a Wednesday podcast on lumber buying decisions.\n\nRead the full edition: https://woodsrun.forestenterprise.org/2026/11/18/\n\nDaily forestry & forest-products intelligence from The Forest Business School.\n\nToday's Featured Resource\nThe Northern Logger App\nhttps://www.northernloggerapp.com/",
       "error": null,
       "schedule_verified": true,
-      "provider_sent": false,
-      "delivery_state": "scheduled",
+      "provider_sent": true,
+      "delivery_state": "sent",
       "existing_delivery": true,
-      "public_visibility": "not_independently_verified"
+      "public_visibility": "verified",
+      "public_probe": {
+        "url": "https://www.youtube.com/shorts/8ZRU35D0G-o",
+        "final_url": "https://www.youtube.com/shorts/8ZRU35D0G-o",
+        "http_status": 200,
+        "content_type": "text/html; charset=utf-8",
+        "content_verified": true
+      }
     }
   },
-  "checked_at": "2026-11-18T09:50:07.079125Z",
+  "checked_at": "2026-11-18T11:04:00.001494Z",
   "requested_action": "schedule_daily",
   "requested_channels": [
     "x",
