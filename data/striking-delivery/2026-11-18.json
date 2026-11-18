@@ -3,16 +3,17 @@
   "text": "Montana’s community-forestry grants reimburse costs after recipients have paid them. An award can support contracted forestry services, but it does not eliminate the need to carry project expenses before reimbursement.",
   "due_at": "2026-11-18T17:00:00Z",
   "channel_id": "6843193ed6d25b49a145ff6e",
-  "state": "accepted",
+  "state": "sent",
   "attempt_started_at": "2026-11-18T16:52:03.217089Z",
   "post_id": "6afdd7b41ac79ffc3fc1e720",
   "history_checked": 404,
   "source": "native-daily-striking",
   "email_attempted": false,
   "visual": null,
-  "provider_status": "scheduled",
+  "provider_status": "sent",
   "provider_due_at": "2026-11-18T17:00:00.000Z",
-  "external_url": null,
+  "external_url": "https://x.com/1487833905197637637/status/2123098997464166556",
   "accepted_at": "2026-11-18T16:52:05.750993Z",
-  "schedule_verified": true
+  "schedule_verified": true,
+  "verified_at": "2026-11-18T17:01:36.112802Z"
 }
