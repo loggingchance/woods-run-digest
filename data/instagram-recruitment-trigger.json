@@ -1,29 +1,15 @@
 {
-  "action": "audit",
+  "action": "publish",
   "items": [
     {
-      "slot": "2026-11-19",
-      "asset": "assets/instagram-recruitment/2026-11-19-cooperage.jpg",
-      "sha256": "ac56f099afb9f5b7ee020f94e7669a56c9fbec9f0ddc202b361c9c9a316d8e19",
-      "caption": "Good work starts with good material. Stay connected to the world of wood.\n\nThe Woods Run Digest brings you Forestry & Wood Products news. Subscribe free using the link in bio, then confirm your email.\n\n#Forestry #WoodProducts #WoodsRunDigest"
-    },
-    {
-      "slot": "2026-11-24",
-      "asset": "assets/instagram-recruitment/2026-11-24-winter-log-yard.jpg",
-      "sha256": "8f7d926c0a84b0a8edf5b34d90677a9c4e979224990ba97054e54351931623b5",
-      "caption": "Keep up with the industry beyond your own log yard.\n\nThe Woods Run Digest brings you Forestry & Wood Products news. Subscribe free using the link in bio, then confirm your email.\n\n#Forestry #WoodProducts #WoodsRunDigest"
-    },
-    {
-      "slot": "2026-11-26",
-      "asset": "assets/instagram-recruitment/2026-11-26-boatbuilding.jpg",
-      "sha256": "52bfd8982d59b7fb5796eb7e48b70e98a1aefd570db292cf401b04c1a53a09b4",
-      "caption": "From forests to the things we build with wood, there is always more to learn.\n\nThe Woods Run Digest brings you Forestry & Wood Products news. Subscribe free using the link in bio, then confirm your email.\n\n#Forestry #WoodProducts #WoodsRunDigest"
-    },
-    {
-      "slot": "2026-12-01",
-      "asset": "assets/instagram-recruitment/2026-12-01-nursery.jpg",
-      "sha256": "4679fa1c510f2b4e5a3848900ad3a82e386887020f6d5ef2301308b444a882ac",
-      "caption": "Follow forestry from the next generation of trees onward.\n\nThe Woods Run Digest brings you Forestry & Wood Products news. Subscribe free using the link in bio, then confirm your email.\n\n#Forestry #WoodProducts #WoodsRunDigest"
+      "slot": "2026-11-18",
+      "campaign": "facts",
+      "asset": "assets/instagram-recruitment/2026-11-18-flying-squirrel-fact.jpg",
+      "sha256": "328cab8320b979833a53b820a3fabeca263df044853f10170e5ce53cd88c778a",
+      "caption": "Nebraska researchers are studying which trees southern flying squirrels call home.\n\nWoods Run Digest subscribers already knew that.\n\nFrom the November 6, 2026 edition of The Woods Run Digest. University of Nebraska–Lincoln researchers are examining tree age, species, canopy cover and cavities on East Campus; the study is ongoing.\n\nSubscribe free • Link in bio\n\n#Forestry #WoodProducts #WoodsRunDigest",
+      "fact": "Nebraska researchers are studying which trees southern flying squirrels call home.",
+      "source_issue": "https://woodsrun.forestenterprise.org/2026/11/06/",
+      "source_url": "https://ianrnews.unl.edu/article/new-research-project-aims-to-help-flying-squirrel-habitats"
     }
   ]
 }
