@@ -1,5 +1,158 @@
 [
   {
+    "date": "2026-11-19",
+    "summary": "Sierra Pacific plans a 2027 restart for Burney’s biomass plant. Also: Quebec windthrow-salvage comments, Canadian wood manufacturers’ housing agenda, a Brompton energy shutdown and lessons from California forestry training.",
+    "socialText": "Sierra Pacific plans to refurbish and restart Burney’s biomass plant in 2027. Today’s Woods Run also covers Quebec windthrow planning and practical forestry-workforce lessons.",
+    "strikingText": "A forestry training seat does not solve the trip to class or the cost of boots. Berkeley’s California case study identifies transportation, equipment and employer relationships as practical parts of making training accessible.",
+    "cardTeaser": "Sierra Pacific plans Burney biomass restart",
+    "cardSubhead": "The acquired plant uses sawmill residuals and low-value forest wood; restart is planned for 2027.",
+    "marketObservations": {
+      "diesel": {
+        "status": "verified",
+        "latest": "US$5.937/gal",
+        "observed": "Week of November 16, 2026; released November 17",
+        "change": [
+          "−US$0.190/gal",
+          "−3.10%"
+        ],
+        "comparison": "Versus November 9: US$6.127/gal",
+        "detail": "EIA U.S. on-highway diesel; taxes included",
+        "sources": [
+          {
+            "label": "EIA U.S. on-highway diesel; taxes included",
+            "url": "https://www.eia.gov/dnav/pet/hist/LeafHandler.ashx?f=W&n=PET&s=EMD_EPD2D_PTE_NUS_DPG"
+          }
+        ]
+      },
+      "lumber_futures": {
+        "status": "verified",
+        "latest": "US$537.00/MBF",
+        "observed": "November 18, 2026 settlement",
+        "change": [
+          "Unavailable"
+        ],
+        "comparison": "November 11 January settlement not independently verified",
+        "detail": "January 2027 lumber futures (CME LBRF27)",
+        "sources": [
+          {
+            "label": "Investing.com January contract settlement",
+            "url": "https://www.investing.com/commodities/lumber-contracts"
+          },
+          {
+            "label": "CME delivery calendar",
+            "url": "https://www.cmegroup.com/markets/agriculture/lumber-and-softs/lumber/calendar"
+          }
+        ]
+      },
+      "madisons": {
+        "status": "verified",
+        "latest": "US$444/MBF",
+        "observed": "Week ending November 13, 2026",
+        "change": [
+          "−US$5/MBF",
+          "−1.11% (calculated)"
+        ],
+        "comparison": "Versus week ending November 6: US$449/MBF",
+        "detail": "Madison’s weekly lumber index",
+        "sources": [
+          {
+            "label": "Madison’s November 13 index",
+            "url": "https://madisonsreport.com/madisons-lumber-prices-index-nov-13-2026-us444-mfbm/"
+          }
+        ]
+      },
+      "hardwood_ppi": {
+        "status": "verified",
+        "latest": "284.331 index points",
+        "observed": "October 2026; released November 13",
+        "change": [
+          "−1.251 points",
+          "−0.44%"
+        ],
+        "comparison": "Versus revised September 2026: 285.582",
+        "detail": "BLS WPU0812; 1982=100; not seasonally adjusted",
+        "sources": [
+          {
+            "label": "BLS hardwood lumber PPI via FRED",
+            "url": "https://fred.stlouisfed.org/data/WPU0812"
+          }
+        ]
+      },
+      "housing_starts": {
+        "status": "verified",
+        "latest": "864,000 units (SAAR)",
+        "observed": "October 2026; released November 18",
+        "change": [
+          "+33,000 units (SAAR)",
+          "+4.0%"
+        ],
+        "comparison": "Versus revised September 2026: 831,000",
+        "detail": "Census U.S. single-family starts; annualized estimate",
+        "sources": [
+          {
+            "label": "Census U.S. single-family starts; annualized estimate",
+            "url": "https://www.census.gov/construction/nrc/pdf/newresconst.pdf"
+          }
+        ]
+      },
+      "cad_usd": {
+        "status": "verified",
+        "latest": "C$1.4326 per US$1",
+        "observed": "Daily average, November 18, 2026",
+        "change": [
+          "+C$0.0035 per US$1",
+          "+0.245%"
+        ],
+        "comparison": "Versus November 17: C$1.4291 per US$1",
+        "detail": "Bank of Canada; Canadian dollars per U.S. dollar",
+        "sources": [
+          {
+            "label": "Bank of Canada daily averages",
+            "url": "https://www.bankofcanada.ca/valet/observations/FXUSDCAD/json?start_date=2026-11-17&end_date=2026-11-18"
+          }
+        ]
+      }
+    },
+    "marketCaveats": [
+      "The October single-family starts monthly change has a published ±9.0-percentage-point 90% confidence interval and is not statistically significant.",
+      "The named January settlement is from the contract table, which differs from continuous-series historical prices. The November 11 same-contract settlement could not be independently confirmed.",
+      "Display rounding follows the approved format. Changes are calculated from unrounded observations, so rounded currency levels may look unchanged even when a small movement occurred."
+    ],
+    "featuredResource": {
+      "date": "2026-11-19",
+      "source": "daily-sheet",
+      "item": {
+        "title": "Northeastern Forest Products Supply Chain Climate Adaptation Toolkit",
+        "kind": "toolkit",
+        "description": "This online toolkit organizes climate-adaptation options for northeastern landowners, foresters, loggers and mills. It connects operating challenges with practical actions in harvest scheduling, roads, water-quality practices, wood procurement and related areas.",
+        "source_url": "https://adapt.loggingchance.com/",
+        "url": "https://adapt.loggingchance.com/"
+      },
+      "cached": false
+    },
+    "editorialWatch": {
+      "kind": "curtailment",
+      "items": [
+        {
+          "text": "Kruger suspended its Brompton biomass cogeneration plant in Sherbrooke, Quebec, indefinitely on November 12, citing economic and operational constraints. Biomass Magazine’s November 18 report reproduces the company’s statement and says approximately 20 employees are affected. The suspension applies to the biomass facility; the statement does not announce a shutdown of the separate Sherbrooke tissue mill. No restart date or quantified change in wood purchases was disclosed.",
+          "sources": [
+            {
+              "label": "Company statement reproduced by Biomass Magazine",
+              "url": "https://biomassmagazine.com/articles/kruger-idles-23-mw-biomass-cogeneration-plant-in-quebec"
+            },
+            {
+              "label": "107.7 Estrie’s reporting of the company communiqué",
+              "url": "https://www.fm1077.ca/audio/815502/kruger-suspend-les-activites-a-son-usine-de-cogeneration-de-brompton"
+            }
+          ],
+          "verified_on": "2026-11-19"
+        }
+      ]
+    },
+    "displayDate": "November 19, 2026",
+    "url": "/2026/11/19/"
+  },
+  {
     "date": "2026-11-18",
     "summary": "Shawnee National Forest reports timber output alongside stand improvements, invasive-plant work and prescribed fire. Also: Montana community-forestry grants, remote truck positioning and a Wednesday podcast on lumber buying decisions.",
     "socialText": "Shawnee National Forest’s annual report connects timber output with stand improvement and habitat work. Today’s Woods Run also covers Montana grants and remote truck positioning.",

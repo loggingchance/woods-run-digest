@@ -1,0 +1,53 @@
+{
+  "date": "2026-11-19",
+  "format": "approved-v4",
+  "dimensions": [
+    1080,
+    1920
+  ],
+  "fps": 30,
+  "frames": 1335,
+  "duration_seconds": 44.5,
+  "segment_frames": [
+    75,
+    210,
+    210,
+    210,
+    210,
+    300,
+    120
+  ],
+  "stories": [
+    {
+      "headline": "Sierra Pacific plans to restart Burney\u2019s biomass plant",
+      "body": "Sierra Pacific Industries has acquired the Burney Forest Products biomass power plant assets in California and plans to refurbish the facility for a 2027 restart. The company says it will integrate the plant into its existing Burney\u2026",
+      "region": "U.S. WEST \u2014 CALIFORNIA / NOVEMBER 17 ACQUISITION",
+      "image": null
+    },
+    {
+      "headline": "Canadian wood groups join a push to remove housing barriers",
+      "body": "The Forest Products Association of Canada and Canadian Wood Council have joined the Homes and Growth Coalition, which is developing proposals to get more housing built. Their November 9 announcement, posted November 10, connects domestic\u2026",
+      "region": "CANADA \u2014 DOMESTIC WOOD MARKETS / INDUSTRY ADVOCACY",
+      "image": null
+    },
+    {
+      "headline": "Mauricie opens windthrow salvage plans to public comment",
+      "body": "Quebec is consulting on recovery of trees blown down or damaged by summer 2026 winds in four Mauricie public-forest management units: 041-51, 042-51, 043-51 and 043-52. The proposed plan maps possible harvest areas and regeneration work\u2026",
+      "region": "CANADA \u2014 QUEBEC / COMMENTS THROUGH DECEMBER 15",
+      "image": null
+    },
+    {
+      "headline": "Forestry training support reaches beyond the classroom",
+      "body": "A November Berkeley case study of California\u2019s Resilient Careers in Forestry program identifies transportation, equipment and employer connections as important supports for trainees. The program helps rural participants with travel costs and\u2026",
+      "region": "U.S. WEST \u2014 CALIFORNIA / NOVEMBER CASE STUDY",
+      "image": null
+    }
+  ],
+  "featuredResource": {
+    "title": "Northeastern Forest Products Supply Chain Climate Adaptation Toolkit",
+    "description": "This online toolkit organizes climate-adaptation options for northeastern landowners, foresters, loggers and mills. It connects operating challenges with practical actions in harvest scheduling, roads, water-quality practices, wood procurement and related areas.",
+    "url": "https://adapt.loggingchance.com/",
+    "kind": "toolkit"
+  },
+  "publication_attempted": false
+}
