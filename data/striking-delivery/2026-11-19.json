@@ -3,11 +3,16 @@
   "text": "A forestry training seat does not solve the trip to class or the cost of boots. Berkeley’s California case study identifies transportation, equipment and employer relationships as practical parts of making training accessible.",
   "due_at": "2026-11-19T17:00:00Z",
   "channel_id": "6843193ed6d25b49a145ff6e",
-  "state": "attempt_started",
+  "state": "accepted",
   "attempt_started_at": "2026-11-19T16:44:12.792325Z",
-  "post_id": null,
+  "post_id": "6aff275ee261b2bb57a1e295",
   "history_checked": 407,
   "source": "native-daily-striking",
   "email_attempted": false,
-  "visual": null
+  "visual": null,
+  "provider_status": "scheduled",
+  "provider_due_at": "2026-11-19T17:00:00.000Z",
+  "external_url": null,
+  "accepted_at": "2026-11-19T16:44:14.942946Z",
+  "schedule_verified": true
 }
