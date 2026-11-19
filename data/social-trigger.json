@@ -1,11 +1,11 @@
 {
   "action": "schedule_daily",
-  "date": "2026-10-09",
-  "due_at": "2026-10-09T17:05:00Z",
+  "date": "2026-11-19",
+  "due_at": "2026-11-19T18:13:00Z",
   "channels": [
     "instagram"
   ],
-  "verify_only": true,
-  "triggered_at": "2026-10-09T19:15:00Z",
-  "reason": "Owner reports Reel missing despite provider sent; fresh read-only Buffer verification, no new post"
+  "replace_mismatched_instagram_post_id": "6af5f2993e88d8443f46e5fc",
+  "triggered_at": "2026-11-19T18:09:09.463Z",
+  "reason": "Owner-authorized November 19 Instagram-only recovery following exact reel identity fix. Full Buffer history check before one canonical daily reel. No effect on recruitment, X, YouTube, or email."
 }
