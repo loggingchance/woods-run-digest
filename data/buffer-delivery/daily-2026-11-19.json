@@ -35,24 +35,48 @@
         "complete": true,
         "posts_checked": 332
       },
-      "post_id": "6af5f2993e88d8443f46e5fc",
+      "post_id": "6aff3b5be3b77fad3b46340a",
       "status": "scheduled",
-      "due_at": "2026-11-19T15:00:00.000Z",
-      "created_at": "2026-11-12T17:08:41.715Z",
+      "due_at": "2026-11-19T18:13:00.000Z",
+      "created_at": "2026-11-19T18:09:31.152Z",
       "external_url": null,
       "assets": [
         {
-          "source": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/instagram-recruitment/2026-11-19-cooperage.jpg",
-          "mimeType": "image/jpeg"
+          "source": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/videos/2026-11-19.mp4",
+          "mimeType": "video/mp4"
         }
       ],
-      "provider_text": "Good work starts with good material. Stay connected to the world of wood.\n\nThe Woods Run Digest brings you Forestry & Wood Products news. Subscribe free using the link in bio, then confirm your email.\n\n#Forestry #WoodProducts #WoodsRunDigest",
+      "provider_text": "Woods Run Digest — November 19, 2026\n\nDaily North American forestry & forest-products intelligence from The Forest Business School.\n\nRead today’s edition: https://woodsrun.forestenterprise.org/2026/11/19/\n\nToday's Featured Resource\nNortheastern Forest Products Supply Chain Climate Adaptation Toolkit\nhttps://adapt.loggingchance.com/",
       "error": null,
-      "schedule_verified": false,
+      "schedule_verified": true,
       "provider_sent": false,
       "delivery_state": "scheduled",
       "existing_delivery": true,
-      "public_visibility": "not_independently_verified"
+      "public_visibility": "not_independently_verified",
+      "rejected_identity_evidence": [
+        {
+          "post_id": "6af5f2993e88d8443f46e5fc",
+          "provider_post": {
+            "id": "6af5f2993e88d8443f46e5fc",
+            "text": "Good work starts with good material. Stay connected to the world of wood.\n\nThe Woods Run Digest brings you Forestry & Wood Products news. Subscribe free using the link in bio, then confirm your email.\n\n#Forestry #WoodProducts #WoodsRunDigest",
+            "status": "sent",
+            "createdAt": "2026-11-12T17:08:41.715Z",
+            "dueAt": "2026-11-19T15:00:00.000Z",
+            "channelId": "6844cc71d6d25b49a1de682e",
+            "externalLink": "https://www.instagram.com/p/Df7Xacalh_B/",
+            "assets": [
+              {
+                "source": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/instagram-recruitment/2026-11-19-cooperage.jpg",
+                "mimeType": "image/jpeg"
+              }
+            ]
+          },
+          "reason": "not the canonical daily Instagram reel",
+          "checked_at": "2026-11-19T18:09:29.958736Z"
+        }
+      ],
+      "attempt_started_at": "2026-11-19T18:09:30.636410Z",
+      "newly_created": true
     },
     "youtube": {
       "duplicate_search": {
@@ -88,12 +112,10 @@
       }
     }
   },
-  "checked_at": "2026-11-19T11:04:00.001758Z",
+  "checked_at": "2026-11-19T18:09:28.143043Z",
   "requested_action": "schedule_daily",
   "requested_channels": [
-    "x",
-    "instagram",
-    "youtube"
+    "instagram"
   ],
   "required_daily_channels": [
     "x",
@@ -136,7 +158,7 @@
       "timezone": "America/Denver"
     }
   ],
-  "due_at": "2026-11-19T11:00:00Z",
+  "due_at": "2026-11-19T18:13:00Z",
   "preflight_by_channel": {
     "x": {
       "page": {
@@ -194,9 +216,35 @@
           "content_verified": true
         }
       }
+    },
+    "instagram": {
+      "page": {
+        "url": "https://woodsrun.forestenterprise.org/2026/11/19/",
+        "final_url": "https://woodsrun.forestenterprise.org/2026/11/19/",
+        "http_status": 200,
+        "content_type": "text/html",
+        "content_verified": true
+      },
+      "video": {
+        "url": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/videos/2026-11-19.mp4",
+        "dimensions": [
+          [
+            1080,
+            1920
+          ]
+        ],
+        "bytes": 2023315,
+        "public": {
+          "url": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/videos/2026-11-19.mp4",
+          "final_url": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/videos/2026-11-19.mp4",
+          "http_status": 200,
+          "content_type": "application/octet-stream",
+          "content_verified": true
+        }
+      }
     }
   },
-  "all_scheduled": false,
+  "all_scheduled": true,
   "daily_idempotent": true,
   "all_provider_sent": false,
   "all_public_verified": false,
