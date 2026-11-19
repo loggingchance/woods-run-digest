@@ -42,6 +42,7 @@ jobs:
           python -m py_compile scripts/buffer_queue.py scripts/delivery_policy.py scripts/delivery_after_prepare.py
           python -m unittest discover -s tests -p test_delivery_policy.py -v
           python -m unittest discover -s tests -p test_buffer_pagination.py -v
+          python -m unittest discover -s tests -p test_buffer_identity.py -v
           if [ -z "$BUFFER_API_KEY" ]; then
             echo "::error::BUFFER_API_KEY is missing"
             exit 1
@@ -100,3 +101,4 @@ jobs:
             echo "::error::Native Buffer handoff or delivery verification failed; inspect exact channel receipts"
             exit 1
           fi
+

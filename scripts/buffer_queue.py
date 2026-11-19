@@ -149,13 +149,50 @@ def recent(organization, channel):
         seen_cursors.add(after)
     raise ValueError('Buffer history exceeds bounded pagination; duplicate search is incomplete')
 
-def matches(post, issue, marker, saved_id=None):
+def instagram_daily_identity(post, issue):
+    """A daily reel is its canonical video, never a date-shaped image name."""
+    sources = {
+        f'https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/videos/{issue["date"]}.mp4',
+        f'{adapter.SITE_ROOT}/assets/videos/{issue["date"]}.mp4',
+    }
+    return (post.get('channelId') == TARGETS['instagram'][2]
+            and '[WR TEST ' not in (post.get('text') or '')
+            and any(a.get('source') in sources and a.get('mimeType') == 'video/mp4'
+                    for a in (post.get('assets') or [])))
+
+def matches(post, issue, marker, saved_id=None, key=None):
+    if key == 'instagram' and not marker:
+        return instagram_daily_identity(post, issue)
     if saved_id: return post.get('id') == saved_id
     text = post.get('text') or ''
     if marker: return marker in text
     if '[WR TEST ' in text: return False
     if issue['url'] in text or ('Woods Run Digest' in text and issue['displayDate'] in text): return True
     return any(issue['date'] in (a.get('source') or '') for a in post.get('assets', []))
+
+def instagram_candidates(posts, issue, result, request, selected, action, test):
+    """Validate persisted identity; explicit recovery never clears an uncertain send."""
+    saved_id = result.get('post_id')
+    replacement = request.get('replace_mismatched_instagram_post_id')
+    saved = next((p for p in posts if p.get('id') == saved_id), None) if saved_id else None
+    if replacement and (test or action != 'schedule_daily' or selected != ['instagram']):
+        raise ValueError('Instagram identity recovery requires Instagram-only production schedule_daily')
+    # A verified recovery receipt can be read again with its original request.
+    if (replacement and saved and instagram_daily_identity(saved, issue)
+            and any(e.get('post_id') == replacement for e in result.get('rejected_identity_evidence', []))):
+        replacement = None
+    if replacement and (replacement != saved_id or result.get('attempt_started_at')):
+        raise ValueError('Instagram identity recovery ID mismatch or prior submission outcome unresolved')
+    if replacement and (not saved or instagram_daily_identity(saved, issue)):
+        raise ValueError('Instagram recovery requires a present, demonstrably mismatched saved post')
+    if saved_id and (not saved or not instagram_daily_identity(saved, issue)):
+        if not replacement:
+            raise ValueError('Stored Instagram post identity does not match the daily reel; explicit recovery required')
+        evidence = result.setdefault('rejected_identity_evidence', [])
+        if not any(e.get('post_id') == saved_id for e in evidence):
+            evidence.append({'post_id': saved_id, 'provider_post': saved,
+                             'reason': 'not the canonical daily Instagram reel', 'checked_at': iso(now())})
+    return [p for p in posts if instagram_daily_identity(p, issue)]
 
 def make_input(key, channel, issue, assets, due, marker):
     if key == 'x':
@@ -199,6 +236,8 @@ def run(request, verify=False):
     if not run_id or not re.fullmatch(r'[a-zA-Z0-9_-]{1,80}', run_id): raise ValueError('Invalid delivery ID')
     selected = request.get('channels', ['x', 'instagram', 'youtube'])
     if not selected or any(k not in TARGETS for k in selected): raise ValueError('Invalid channels')
+    if request.get('replace_mismatched_instagram_post_id') and (test or action != 'schedule_daily' or selected != ['instagram']):
+        raise ValueError('Instagram identity recovery requires Instagram-only production schedule_daily')
     marker = '[WR TEST ' + run_id + ']' if test else None
     issue = load_issue(date)
     path = ROOT / 'data/buffer-delivery' / (run_id + '.json')
@@ -224,6 +263,10 @@ def run(request, verify=False):
     assets = {}
     for key in selected:
         result = record['channels'].setdefault(key, {})
+        if key == 'instagram' and not test:
+            result.update({'schedule_verified': False, 'provider_sent': False,
+                           'existing_delivery': False, 'public_visibility': 'not_independently_verified',
+                           'delivery_state': 'unverified'})
         try:
             service, name, channel_id = TARGETS[key]
             channel = next((c for c in channels if c['id'] == channel_id), None)
@@ -231,7 +274,10 @@ def run(request, verify=False):
                 raise ValueError('Configured account identity mismatch')
             posts = recent(organization, channel_id)
             result['duplicate_search'] = {'complete': True, 'posts_checked': len(posts)}
-            found = [p for p in posts if matches(p, issue, marker, result.get('post_id'))]
+            if key == 'instagram' and not test:
+                found = instagram_candidates(posts, issue, result, request, selected, action, test)
+            else:
+                found = [p for p in posts if matches(p, issue, marker, result.get('post_id'), key)]
             if len(found) > 1:
                 result['matching_posts'] = found
                 raise ValueError('Multiple matching items; refusing another submission')
@@ -259,6 +305,10 @@ def run(request, verify=False):
                 post = response.get('post')
                 if not post or not post.get('id'): raise ValueError('No Buffer receipt returned')
                 result['newly_created'] = True
+                if key == 'instagram' and not test and not instagram_daily_identity(post, issue):
+                    result['unresolved_provider_post_id'] = post['id']
+                    result['unverified_create_response'] = post
+                    raise ValueError('Buffer create receipt does not verify the canonical Instagram reel; submission outcome unresolved')
             result.update({'post_id': post['id'], 'status': post.get('status'), 'due_at': post.get('dueAt'),
                            'created_at': post.get('createdAt'), 'external_url': post.get('externalLink'),
                            'assets': post.get('assets', []), 'provider_text': post.get('text'), 'error': None})
@@ -307,4 +357,5 @@ if __name__ == '__main__':
     except Exception as exc:
         print('BUFFER_ERROR ' + str(exc), file=sys.stderr)
         raise SystemExit(1)
+
 
