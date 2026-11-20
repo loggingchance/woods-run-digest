@@ -15,5 +15,21 @@
     "posts_checked": 333
   },
   "checked_at": "2026-11-20T02:32:08.382493+00:00",
-  "attempt_started_at": "2026-11-20T02:32:08.572102+00:00"
+  "attempt_started_at": "2026-11-20T02:32:08.572102+00:00",
+  "post_id": "6affb12b738ce4635f7d2636",
+  "provider_post": {
+    "id": "6affb12b738ce4635f7d2636",
+    "text": "Sierra Pacific plans to restart Burney’s wood-fired power plant in 2027.\n\nWoods Run Digest subscribers already knew that.\n\nFrom the November 19, 2026 edition of The Woods Run Digest. Sierra Pacific Industries says the California facility can use sawmill residues and low-value forest wood to generate electricity and steam for lumber drying. The 2027 restart is a plan announced by the company.\n\nSubscribe free • Link in bio\n\n#Forestry #WoodProducts #WoodsRunDigest",
+    "status": "scheduled",
+    "createdAt": "2026-11-20T02:32:11.104Z",
+    "dueAt": "2026-11-20T15:00:00.000Z",
+    "channelId": "6844cc71d6d25b49a1de682e",
+    "externalLink": null,
+    "assets": [
+      {
+        "source": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/instagram-recruitment/2026-11-20-burney-biomass-fact.jpg",
+        "mimeType": "image/jpeg"
+      }
+    ]
+  }
 }
