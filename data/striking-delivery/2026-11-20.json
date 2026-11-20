@@ -3,11 +3,16 @@
   "text": "A cheap log can still consume costly mill time. An Ontario yield study tested five logs to connect lumber recovery and grade with handling, processing costs and the capacity each log occupies. Useful diagnosis, not an industry benchmark.",
   "due_at": "2026-11-20T17:00:00Z",
   "channel_id": "6843193ed6d25b49a145ff6e",
-  "state": "attempt_started",
+  "state": "accepted",
   "attempt_started_at": "2026-11-20T16:43:49.641598Z",
-  "post_id": null,
+  "post_id": "6b0078c7fcc25b8656481ada",
   "history_checked": 410,
   "source": "native-daily-striking",
   "email_attempted": false,
-  "visual": null
+  "visual": null,
+  "provider_status": "scheduled",
+  "provider_due_at": "2026-11-20T17:00:00.000Z",
+  "external_url": null,
+  "accepted_at": "2026-11-20T16:43:51.405100Z",
+  "schedule_verified": true
 }
