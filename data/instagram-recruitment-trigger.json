@@ -1,15 +1,15 @@
 {
-  "action": "audit",
+  "action": "publish",
   "items": [
     {
-      "slot": "2026-11-18",
+      "slot": "2026-11-20",
       "campaign": "facts",
-      "asset": "assets/instagram-recruitment/2026-11-18-flying-squirrel-fact.jpg",
-      "sha256": "328cab8320b979833a53b820a3fabeca263df044853f10170e5ce53cd88c778a",
-      "caption": "Nebraska researchers are studying which trees southern flying squirrels call home.\n\nWoods Run Digest subscribers already knew that.\n\nFrom the November 6, 2026 edition of The Woods Run Digest. University of Nebraska–Lincoln researchers are examining tree age, species, canopy cover and cavities on East Campus; the study is ongoing.\n\nSubscribe free • Link in bio\n\n#Forestry #WoodProducts #WoodsRunDigest",
-      "fact": "Nebraska researchers are studying which trees southern flying squirrels call home.",
-      "source_issue": "https://woodsrun.forestenterprise.org/2026/11/06/",
-      "source_url": "https://ianrnews.unl.edu/article/new-research-project-aims-to-help-flying-squirrel-habitats"
+      "asset": "assets/instagram-recruitment/2026-11-20-burney-biomass-fact.jpg",
+      "sha256": "bd9d02e189f65627a6ec64834b849c4075af412307b949de69465325dc8a6225",
+      "caption": "Sierra Pacific plans to restart Burney’s wood-fired power plant in 2027.\n\nWoods Run Digest subscribers already knew that.\n\nFrom the November 19, 2026 edition of The Woods Run Digest. Sierra Pacific Industries says the California facility can use sawmill residues and low-value forest wood to generate electricity and steam for lumber drying. The 2027 restart is a plan announced by the company.\n\nSubscribe free • Link in bio\n\n#Forestry #WoodProducts #WoodsRunDigest",
+      "fact": "Sierra Pacific plans to restart Burney’s wood-fired power plant in 2027.",
+      "source_issue": "https://woodsrun.forestenterprise.org/2026/11/19/",
+      "source_url": "https://www.spi-ind.com/Home/PressRelease?Name=Press_Release_11172026"
     }
   ]
 }
