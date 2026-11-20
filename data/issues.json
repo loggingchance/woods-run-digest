@@ -1,5 +1,154 @@
 [
   {
+    "date": "2026-11-20",
+    "summary": "A House bill targets markets for underused wood. Also: Canada’s carbon-removal purchasing route, corrected lumber subsidy rates, Calgary winter-burning guidance and an Ontario mill’s five-log yield study.",
+    "socialText": "A new House bill would connect forest research with markets for underused wood. Also: Canadian carbon-removal purchasing, winter burning and mill recovery.",
+    "strikingText": "A cheap log can still consume costly mill time. An Ontario yield study tested five logs to connect lumber recovery and grade with handling, processing costs and the capacity each log occupies. Useful diagnosis, not an industry benchmark.",
+    "cardTeaser": "New markets for underused wood?",
+    "cardSubhead": "House bioeconomy bill would link forest research with manufacturers",
+    "marketObservations": {
+      "diesel": {
+        "status": "verified",
+        "latest": "US$5.937/gal",
+        "observed": "Week of November 16, 2026; released November 17",
+        "change": [
+          "−US$0.190/gal",
+          "−3.10%"
+        ],
+        "comparison": "Versus November 9: US$6.127/gal",
+        "detail": "EIA U.S. on-highway diesel; taxes included",
+        "sources": [
+          {
+            "label": "EIA U.S. on-highway diesel; taxes included",
+            "url": "https://www.eia.gov/dnav/pet/hist/LeafHandler.ashx?f=W&n=PET&s=EMD_EPD2D_PTE_NUS_DPG"
+          }
+        ]
+      },
+      "lumber_futures": {
+        "status": "verified",
+        "latest": "US$533.00/MBF",
+        "observed": "November 19, 2026 settlement",
+        "change": [
+          "Unavailable"
+        ],
+        "comparison": "November 12 January settlement not independently verified",
+        "detail": "January 2027 lumber futures (CME LBRF27)",
+        "sources": [
+          {
+            "label": "Investing.com January contract settlement",
+            "url": "https://www.investing.com/commodities/lumber-contracts"
+          },
+          {
+            "label": "CME delivery calendar",
+            "url": "https://www.cmegroup.com/markets/agriculture/lumber-and-softs/lumber/calendar"
+          }
+        ]
+      },
+      "madisons": {
+        "status": "verified",
+        "latest": "US$444/MBF",
+        "observed": "Week ending November 13, 2026",
+        "change": [
+          "−US$5/MBF",
+          "−1.11% (calculated)"
+        ],
+        "comparison": "Versus week ending November 6: US$449/MBF",
+        "detail": "Madison’s weekly lumber index",
+        "sources": [
+          {
+            "label": "Madison’s November 13 index",
+            "url": "https://madisonsreport.com/madisons-lumber-prices-index-nov-13-2026-us444-mfbm/"
+          }
+        ]
+      },
+      "hardwood_ppi": {
+        "status": "verified",
+        "latest": "284.331 index points",
+        "observed": "October 2026; released November 13",
+        "change": [
+          "−1.251 points",
+          "−0.44%"
+        ],
+        "comparison": "Versus revised September 2026: 285.582",
+        "detail": "BLS WPU0812; 1982=100; not seasonally adjusted",
+        "sources": [
+          {
+            "label": "BLS hardwood lumber PPI via FRED",
+            "url": "https://fred.stlouisfed.org/data/WPU0812"
+          }
+        ]
+      },
+      "housing_starts": {
+        "status": "verified",
+        "latest": "864,000 units (SAAR)",
+        "observed": "October 2026; released November 18",
+        "change": [
+          "+33,000 units (SAAR)",
+          "+4.0%"
+        ],
+        "comparison": "Versus revised September 2026: 831,000",
+        "detail": "Census U.S. single-family starts; annualized estimate",
+        "sources": [
+          {
+            "label": "Census U.S. single-family starts; annualized estimate",
+            "url": "https://www.census.gov/construction/nrc/pdf/newresconst.pdf"
+          }
+        ]
+      },
+      "cad_usd": {
+        "status": "verified",
+        "latest": "C$1.4317 per US$1",
+        "observed": "Daily average, November 19, 2026",
+        "change": [
+          "−C$0.0009 per US$1",
+          "−0.063%"
+        ],
+        "comparison": "Versus November 18: C$1.4326 per US$1",
+        "detail": "Bank of Canada; Canadian dollars per U.S. dollar",
+        "sources": [
+          {
+            "label": "Bank of Canada daily averages",
+            "url": "https://www.bankofcanada.ca/valet/observations/FXUSDCAD/json?start_date=2026-11-18&end_date=2026-11-19"
+          }
+        ]
+      }
+    },
+    "marketCaveats": [
+      "The October single-family starts monthly change has a published ±9.0-percentage-point 90% confidence interval and is not statistically significant.",
+      "The named January settlement is from the contract table, which differs from continuous-series historical prices. The November 12 same-contract settlement could not be independently confirmed.",
+      "Display rounding follows the approved format. Changes are calculated from unrounded observations, so rounded currency levels may look unchanged even when a small movement occurred."
+    ],
+    "featuredResource": {
+      "date": "2026-11-20",
+      "source": "daily-sheet",
+      "item": {
+        "title": "BARK — Bick’s App for Resource Know-How",
+        "kind": "app",
+        "description": "BARK is a browser-based field-calculator app for tree and stand measurements. Its tools cover timber volume, biomass, basal area, sampling dimensions and related estimates, with formulas and references shown.",
+        "source_url": "https://bicksapp.com/",
+        "url": "https://bicksapp.com/"
+      },
+      "cached": false
+    },
+    "editorialWatch": {
+      "kind": "trade_policy",
+      "items": [
+        {
+          "text": "U.S. Commerce’s November 19 notice corrects a calculation error in the 2024 Canadian softwood-lumber subsidy review. Resolute’s rate falls from 12.42% to 12.35%; the reviewed non-selected companies’ rate falls from 14.11% to 14.08%. West Fraser’s 15.31% is unchanged. The notice sets amended cash-deposit requirements for covered entries from October 19. These are countervailing-duty rates, not the combined burden of all lumber duties; producer/exporter combinations and the appendix determine applicability.",
+          "sources": [
+            {
+              "label": "Commerce: corrected rates and deposit instructions",
+              "url": "https://www.federalregister.gov/documents/2026/11/19/2026-23520/certain-softwood-lumber-products-from-canada-amended-final-results-of-countervailing-duty"
+            }
+          ],
+          "verified_on": "2026-11-20"
+        }
+      ]
+    },
+    "displayDate": "November 20, 2026",
+    "url": "/2026/11/20/"
+  },
+  {
     "date": "2026-11-19",
     "summary": "Sierra Pacific plans a 2027 restart for Burney’s biomass plant. Also: Quebec windthrow-salvage comments, Canadian wood manufacturers’ housing agenda, a Brompton energy shutdown and lessons from California forestry training.",
     "socialText": "Sierra Pacific plans to refurbish and restart Burney’s biomass plant in 2027. Today’s Woods Run also covers Quebec windthrow planning and practical forestry-workforce lessons.",

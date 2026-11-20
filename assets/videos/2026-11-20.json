@@ -1,0 +1,53 @@
+{
+  "date": "2026-11-20",
+  "format": "approved-v4",
+  "dimensions": [
+    1080,
+    1920
+  ],
+  "fps": 30,
+  "frames": 1335,
+  "duration_seconds": 44.5,
+  "segment_frames": [
+    75,
+    210,
+    210,
+    210,
+    210,
+    300,
+    120
+  ],
+  "stories": [
+    {
+      "headline": "House bill seeks stronger markets for underused wood",
+      "body": "Representatives Kim Schrier and GT Thompson introduced the Forest Bioeconomy Act, H.R. 11072, on November 18 to connect Forest Service research more closely with manufacturers and develop uses for wood that has little commercial value. The\u2026",
+      "region": "U.S. \u2014 FOREST PRODUCTS / NOVEMBER 18 LEGISLATION",
+      "image": null
+    },
+    {
+      "headline": "Canada opens a purchasing route for wood-based carbon removal",
+      "body": "Canada\u2019s Treasury Board announced 19 competitively established carbon-removal standing offers on November 19. Designated federal departments, agencies and Crown corporations can use them through March 31, 2029, with an extension option.",
+      "region": "CANADA \u2014 BIOMASS MARKETS / NOVEMBER 19 ANNOUNCEMENT",
+      "image": null
+    },
+    {
+      "headline": "Calgary winter-burning guidance calls for checks below the surface",
+      "body": "Alberta\u2019s November 18 Calgary Forest Area bulletin says recent snow lowered wildfire danger, but some winter burning projects may still lack suitable conditions. Its guidance calls for at least 15 centimetres of snow cover where winter burns\u2026",
+      "region": "CANADA \u2014 ALBERTA / SEASONAL FIELD GUIDANCE",
+      "image": null
+    },
+    {
+      "headline": "Five-log study connects purchasing decisions with mill recovery",
+      "body": "A November 11 National Hardwood Lumber Association account describes a yield study at Haliburton Forest and Wildlife Reserve in Ontario. Inspectors tested five logs spanning grades and diameters to compare what the mill recovered from\u2026",
+      "region": "CANADA \u2014 ONTARIO / HARDWOOD MILL RECOVERY",
+      "image": null
+    }
+  ],
+  "featuredResource": {
+    "title": "BARK \u2014 Bick\u2019s App for Resource Know-How",
+    "description": "BARK is a browser-based field-calculator app for tree and stand measurements. Its tools cover timber volume, biomass, basal area, sampling dimensions and related estimates, with formulas and references shown.",
+    "url": "https://bicksapp.com/",
+    "kind": "app"
+  },
+  "publication_attempted": false
+}
