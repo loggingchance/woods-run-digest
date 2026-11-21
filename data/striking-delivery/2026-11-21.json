@@ -3,16 +3,17 @@
   "text": "Succession at Frank and Angie Bonner’s Louisiana logging business includes lessons in basal area, thinning rows and streamside protection. Their daughter Jade is learning stand decisions as well as equipment operation.",
   "due_at": "2026-11-21T17:00:00Z",
   "channel_id": "6843193ed6d25b49a145ff6e",
-  "state": "accepted",
+  "state": "sent",
   "attempt_started_at": "2026-11-21T16:48:22.401898Z",
   "post_id": "6b01cb588bd84d5966032e4d",
   "history_checked": 412,
   "source": "native-daily-striking",
   "email_attempted": false,
   "visual": null,
-  "provider_status": "scheduled",
+  "provider_status": "sent",
   "provider_due_at": "2026-11-21T17:00:00.000Z",
-  "external_url": null,
+  "external_url": "https://x.com/1487833905197637637/status/2124186158091456938",
   "accepted_at": "2026-11-21T16:48:24.094547Z",
-  "schedule_verified": true
+  "schedule_verified": true,
+  "verified_at": "2026-11-21T17:01:36.365812Z"
 }
