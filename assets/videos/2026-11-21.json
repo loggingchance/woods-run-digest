@@ -1,0 +1,46 @@
+{
+  "date": "2026-11-21",
+  "format": "approved-v4",
+  "dimensions": [
+    1080,
+    1920
+  ],
+  "fps": 30,
+  "frames": 1125,
+  "duration_seconds": 37.5,
+  "segment_frames": [
+    75,
+    210,
+    210,
+    210,
+    300,
+    120
+  ],
+  "stories": [
+    {
+      "headline": "Arbec talks open another route for Nackawic\u2019s future",
+      "body": "New Brunswick has entered a non-disclosure agreement with Arbec Forest Products to explore opportunities for the idled Nackawic mill, Unifor reported November 20. The union welcomed the discussions while emphasizing that workers\u2019 livelihoods\u2026",
+      "region": "CANADA \u2014 NEW BRUNSWICK / NOVEMBER 20 DEVELOPMENT",
+      "image": null
+    },
+    {
+      "headline": "Fresh Wood welcomes student instruments and digital fabrication",
+      "body": "The Association of Woodworking & Furnishings Suppliers is accepting free entries for its 2027 Fresh Wood student competition through April 15. The rules require eligible students to be at least 16 and younger than 35 by July 13, 2027, with\u2026",
+      "region": "U.S. \u2014 WOODWORKING EDUCATION / STANDING OPEN OPPORTUNITY",
+      "image": null
+    },
+    {
+      "headline": "Tree-planting interest runs ahead of confidence with a shovel",
+      "body": "The Arbor Day Foundation\u2019s 2026 Canopy Report finds that 58% of U.S. adults say they lack the knowledge to plant a tree alone. Eight in ten say they would plant one tomorrow if someone provided a tree and showed them how; four in five report\u2026",
+      "region": "U.S. \u2014 TREE PLANTING / NOVEMBER 18 SURVEY",
+      "image": null
+    }
+  ],
+  "featuredResource": {
+    "title": "The Forester\u2019s Fieldbook",
+    "description": "The Forester\u2019s Fieldbook is a mobile-oriented reference app for classic forestry tables and calculations. It brings tree scale, log scale, prism cruising and stocking-guide references together for field use.",
+    "url": "https://burl.lumbermen.org/",
+    "kind": "app"
+  },
+  "publication_attempted": false
+}

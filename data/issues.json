@@ -1,5 +1,43 @@
 [
   {
+    "date": "2026-11-21",
+    "summary": "Arbec and New Brunswick explore opportunities for the idled Nackawic mill. Also: Angie and Frank Bonner’s Louisiana logging business, a student woodworking competition and the gap between tree-planting interest and know-how.",
+    "socialText": "Arbec talks open another route for Nackawic’s future. Also: the Bonners’ Louisiana logging profile, student woodworking and tree-planting know-how.",
+    "strikingText": "Succession at Frank and Angie Bonner’s Louisiana logging business includes lessons in basal area, thinning rows and streamside protection. Their daughter Jade is learning stand decisions as well as equipment operation.",
+    "cardTeaser": "Another route for Nackawic?",
+    "cardSubhead": "Arbec and New Brunswick explore options for the idled mill",
+    "featuredResource": {
+      "date": "2026-11-21",
+      "source": "daily-sheet",
+      "item": {
+        "title": "The Forester’s Fieldbook",
+        "kind": "app",
+        "description": "The Forester’s Fieldbook is a mobile-oriented reference app for classic forestry tables and calculations. It brings tree scale, log scale, prism cruising and stocking-guide references together for field use.",
+        "source_url": "https://burl.lumbermen.org/",
+        "url": "https://burl.lumbermen.org/"
+      },
+      "cached": false
+    },
+    "strikingSkip": false,
+    "strikingSource": "weekend_feature",
+    "weekendFeature": {
+      "kind": "profile",
+      "topic_id": "angie-frank-bonner-2026-11-21",
+      "title": "Angie and Frank Bonner built a business—and a place to learn",
+      "summary": "Frank Bonner got his start as a logging-business owner when Robert Bennett of Bennett Timber saw someone who could make the operation work. Angie handled bookkeeping, payroll and repair parts while holding another job, later joining the business full time. The couple, based in Evans, are Louisiana’s 2026 Outstanding Logger honorees. Jeff Zeringue’s November 3 Louisiana Forestry Association profile follows their work beyond the award. Angie learned to operate a skidder and helped organize regular Logging Council meetings so loggers could obtain continuing-education hours. Their daughter Jade learned equipment operation and now learns stand decisions from Frank: basal area, thinning rows and protection of streamside management zones. Frank hopes she will eventually take over the business. Their account connects succession with teaching the work in the woods, alongside the financial and organizational work that keeps an operation going.",
+      "sources": [
+        {
+          "label": "Jeff Zeringue: the Bonners’ business and family profile",
+          "url": "https://www.laforestry.com/single-post/bonners-selected-2026-outstanding-la-logger"
+        }
+      ],
+      "striking_text": "Succession at Frank and Angie Bonner’s Louisiana logging business includes lessons in basal area, thinning rows and streamside protection. Their daughter Jade is learning stand decisions as well as equipment operation."
+    },
+    "weekendFeatureStatus": "approved",
+    "displayDate": "November 21, 2026",
+    "url": "/2026/11/21/"
+  },
+  {
     "date": "2026-11-20",
     "summary": "A House bill targets markets for underused wood. Also: Canada’s carbon-removal purchasing route, corrected lumber subsidy rates, Calgary winter-burning guidance and an Ontario mill’s five-log yield study.",
     "socialText": "A new House bill would connect forest research with markets for underused wood. Also: Canadian carbon-removal purchasing, winter burning and mill recovery.",
