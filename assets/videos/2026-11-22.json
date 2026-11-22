@@ -1,0 +1,46 @@
+{
+  "date": "2026-11-22",
+  "format": "approved-v4",
+  "dimensions": [
+    1080,
+    1920
+  ],
+  "fps": 30,
+  "frames": 1125,
+  "duration_seconds": 37.5,
+  "segment_frames": [
+    75,
+    210,
+    210,
+    210,
+    300,
+    120
+  ],
+  "stories": [
+    {
+      "headline": "Researchers aim to read forest conditions through fungal signals",
+      "body": "A US$7.5 million grant will support research into the chemical signals produced by fungi associated with tree roots. The University of California, Santa Barbara reported November 18 that Holly Moeller is leading the work with colleagues at\u2026",
+      "region": "U.S. \u2014 FOREST RESEARCH / NOVEMBER 18 REPORT",
+      "image": null
+    },
+    {
+      "headline": "Ontario habitat grants support land protection and conservation work",
+      "body": "The Ontario Land Trust Alliance is accepting 2026\u201327 Strengthening Species Conservation in Ontario applications through December 13 at 11:59 p.m. Its current call supports land acquisition, conservation easements and on-the-ground work\u2026",
+      "region": "CANADA \u2014 ONTARIO / APPLICATIONS DUE DECEMBER 13",
+      "image": null
+    },
+    {
+      "headline": "Why the Forest Service Doubted the \u2018Bigfoot\u2019 Tracks",
+      "body": "The investigators found reasons for skepticism in the mud. Some prints measured about 15 inches, yet the stride stayed roughly four feet even on steeper ground, and the crew\u2019s own boots sank deeper. Wildlife biologist Rodney Johnson\u2026",
+      "region": "WASHINGTON \u2014 HISTORICAL FIELD INVESTIGATION / 1982 RECORDS",
+      "image": null
+    }
+  ],
+  "featuredResource": {
+    "title": "CARBINE \u2014 Forest Carbon Scenario Explorer Powered by FVS",
+    "description": "CARBINE is a forest-carbon scenario app built around the USDA Forest Service\u2019s Forest Vegetation Simulator. It helps readers explore stand conditions and management alternatives alongside carbon estimates when considering different forest-management scenarios.",
+    "url": "https://carbine.forestenterprise.org/",
+    "kind": "app"
+  },
+  "publication_attempted": false
+}

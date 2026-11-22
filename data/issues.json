@@ -1,5 +1,51 @@
 [
   {
+    "date": "2026-11-22",
+    "summary": "Research aims to detect forest conditions through fungal chemicals. Also: Camp Howard’s salvaged timber, Ontario habitat grants and the field evidence behind a skeptical 1982 tracks investigation.",
+    "socialText": "A new research project aims to detect fungal chemical signals in forests. Also in today’s Woods Run: Camp Howard’s sawmill, Ontario habitat grants and a skeptical historical field investigation.",
+    "strikingText": "At Oregon’s Camp Howard, the sisters’ sawmill connects woodland care with camp life: logs become building material, tops become firewood, and sawdust becomes animal bedding. The youth center includes timber salvaged from fallen trees.",
+    "cardTeaser": "Listening beneath the forest floor",
+    "cardSubhead": "Researchers aim to detect environmental cues in fungal chemicals",
+    "featuredResource": {
+      "date": "2026-11-22",
+      "source": "daily-sheet",
+      "item": {
+        "title": "CARBINE — Forest Carbon Scenario Explorer Powered by FVS",
+        "kind": "app",
+        "description": "CARBINE is a forest-carbon scenario app built around the USDA Forest Service’s Forest Vegetation Simulator. It helps readers explore stand conditions and management alternatives alongside carbon estimates when considering different forest-management scenarios.",
+        "source_url": "https://carbine.forestenterprise.org/",
+        "url": "https://carbine.forestenterprise.org/"
+      },
+      "cached": false
+    },
+    "strikingSkip": false,
+    "strikingSource": "weekend_feature",
+    "weekendFeature": {
+      "kind": "human_interest",
+      "topic_id": "camp-howard-sisters-2026-11-22",
+      "title": "Two sisters, a sawmill and the rebuilding of Camp Howard",
+      "summary": "Sister Krista von Borstel began restoring Camp Howard in Oregon by repairing cabins and replacing roofs. As the camp outgrew its buildings, she and her sister Karen raised support for a dining hall, welcome center and youth center. Seeing the beams and posts going into those projects prompted another idea: mill the camp’s own logs. In Wood-Mizer’s July 31 account, Karen describes operating the sawmill to make roof purlins, panels, sheds and replacement bunk beds. Usable logs become lumber, tops become firewood, and sawdust supplies bedding for the camp’s animals. The camp’s own account says the youth center incorporates timber salvaged from fallen trees on the property. Its dedication took place in September 2024. This is an account of an established rebuilding effort, in which the sisters connected care of the camp’s woods with the places children gather and learn.",
+      "sources": [
+        {
+          "label": "Wood-Mizer: Krista and Karen’s sawmilling account",
+          "url": "https://woodmizer.com/us/articles/two-sisters-build-a-legacy-at-camp-howard"
+        },
+        {
+          "label": "Camp Howard: salvaged timber in the youth center",
+          "url": "https://www.cyocamphoward.org/content/34228/St-Michael-Youth-Center"
+        },
+        {
+          "label": "Catholic Charities of Oregon: September 2024 dedication",
+          "url": "https://www.catholiccharitiesoregon.org/blog/new-youth-center-dedicated-at-camp-howard/"
+        }
+      ],
+      "striking_text": "At Oregon’s Camp Howard, the sisters’ sawmill connects woodland care with camp life: logs become building material, tops become firewood, and sawdust becomes animal bedding. The youth center includes timber salvaged from fallen trees."
+    },
+    "weekendFeatureStatus": "approved",
+    "displayDate": "November 22, 2026",
+    "url": "/2026/11/22/"
+  },
+  {
     "date": "2026-11-21",
     "summary": "Arbec and New Brunswick explore opportunities for the idled Nackawic mill. Also: Angie and Frank Bonner’s Louisiana logging business, a student woodworking competition and the gap between tree-planting interest and know-how.",
     "socialText": "Arbec talks open another route for Nackawic’s future. Also: the Bonners’ Louisiana logging profile, student woodworking and tree-planting know-how.",
