@@ -77,6 +77,9 @@ def load_request():
     # Steve's explicit November 16 Rumford selection, with no URL or image.
     if (date == '2026-11-16' and r.get('owner_approval') == 'phone-c24fc492-eefc-4d00-aa33-53c80c630526'):
         issue = dict(issue, strikingText=r['text_only_override'])
+    if (date == '2026-11-23' and r.get('owner_approval') == 'woods-to-wheels-2026-11-23' and
+            r.get('text_only_override') == "Six logging crews in a 2015 Auburn study averaged 0.51 gallons of diesel per ton of wood before it ever got on a truck. At $6 a gallon, that’s about $3 a ton in harvesting fuel alone. Source: Woods to Wheels, The Forest Business School."):
+        issue = dict(issue, strikingText=r['text_only_override'])
     text = issue['strikingText'].strip()
     require(0 < len(text) <= 280, f'Authored strikingText length {len(text)} exceeds Buffer X maximum of 280 characters')
     return r, issue, text, due
