@@ -80,6 +80,9 @@ def load_request():
     if (date == '2026-11-23' and r.get('owner_approval') == 'woods-to-wheels-2026-11-23' and
             r.get('text_only_override') == "Six logging crews in a 2015 Auburn study averaged 0.51 gallons of diesel per ton of wood before it ever got on a truck. At $6 a gallon, that’s about $3 a ton in harvesting fuel alone. Source: Woods to Wheels, The Forest Business School."):
         issue = dict(issue, strikingText=r['text_only_override'])
+    if (date == '2026-11-23' and r.get('owner_approval') == 'woods-to-wheels-northern-2026-11-23' and
+            r.get('text_only_override') == "One New Brunswick hardwood producer used about a U.S. gallon of diesel per green short ton just to get logs to the roadside, before the haul to the mill. That’s about $6 per ton at US$6 a gallon. Source: Woods to Wheels, The Forest Business School."):
+        issue = dict(issue, strikingText=r['text_only_override'])
     text = issue['strikingText'].strip()
     require(0 < len(text) <= 280, f'Authored strikingText length {len(text)} exceeds Buffer X maximum of 280 characters')
     return r, issue, text, due
@@ -97,10 +100,45 @@ def history(text):
     return posts, found[0] if found else None
 
 
+def edit_northern_once(path, record, text, due):
+    require(record and record.get('date') == '2026-11-23' and
+            record.get('channel_id') == CHANNEL_ID and record.get('post_id') == '6b045ac9fb49201520eac5ad' and
+            record.get('due_at') == buffer.iso(due) and record.get('schedule_verified') and
+            not record.get('visual'), 'Cannot prove the exact approved scheduled post')
+    old = "Six logging crews in a 2015 Auburn study averaged 0.51 gallons of diesel per ton of wood before it ever got on a truck. At $6 a gallon, that’s about $3 a ton in harvesting fuel alone. Source: Woods to Wheels, The Forest Business School."
+    require(record.get('text') in (old, text), 'Unexpected existing caption; do not edit')
+    posts, found = history(text)
+    if not found:
+        require(record.get('text') == old and not record.get('northern_edit_attempt'), 'Prior edit uncertain; do not retry')
+        require(due > buffer.now() + timedelta(seconds=90), 'Too close to publication to edit')
+        found = next((p for p in posts if p.get('id') == record['post_id']), None)
+        require(found and found.get('text') == old and found.get('status') in ('scheduled', 'buffer') and
+                found.get('dueAt') and abs((buffer.parse_time(found['dueAt']) - due).total_seconds()) <= 2,
+                'Original post no longer confirmed queued; do not edit')
+        record['northern_edit_attempt'] = buffer.iso(buffer.now())
+        persist(path, record)
+        query = ('mutation EditApproved($input: EditPostInput!) { editPost(input: $input) { '
+                 '... on PostActionSuccess { post { ' + buffer.POST_FIELDS + ' } } '
+                 '... on MutationError { message } } }')
+        result = buffer.gql(query, {'input': {'id': record['post_id'], 'text': text}}).get('editPost', {})
+        require(not result.get('message'), 'Buffer rejected the approved edit: ' + str(result.get('message')))
+        found = result.get('post')
+    require(found and found.get('id') == record['post_id'] and found.get('text') == text and
+            found.get('status') in ('scheduled', 'buffer', 'sent') and found.get('dueAt') and
+            abs((buffer.parse_time(found['dueAt']) - due).total_seconds()) <= 2,
+            'Edited post not verified; do not retry')
+    record.update(text=text, provider_status=found['status'], provider_due_at=found['dueAt'],
+                  external_url=found.get('externalLink'), northern_edit_verified=buffer.iso(buffer.now()))
+    persist(path, record)
+    print('STRIKING_EDIT_VERIFIED ' + json.dumps(record, ensure_ascii=False), flush=True)
+
+
 def schedule():
     request, issue, text, due = load_request()
     path = receipt_path(request['date'])
     record = json.loads(path.read_text()) if path.exists() else None
+    if request.get('owner_approval') == 'woods-to-wheels-northern-2026-11-23' and text == "One New Brunswick hardwood producer used about a U.S. gallon of diesel per green short ton just to get logs to the roadside, before the haul to the mill. That’s about $6 per ton at US$6 a gallon. Source: Woods to Wheels, The Forest Business School.":
+        return edit_northern_once(path, record, text, due)
     if record:
         require(record.get('text') == text and record.get('due_at') == buffer.iso(due),
                 'An earlier striking attempt targets different content or time')
