@@ -1,6 +1,8 @@
 {
   "action": "schedule_striking",
-  "date": "2026-11-22",
-  "due_at": "2026-11-22T17:00:00Z",
-  "reason": "native Buffer scheduled daily striking observation"
+  "date": "2026-11-23",
+  "due_at": "2026-11-23T17:00:00Z",
+  "reason": "native Buffer scheduled daily striking observation",
+  "owner_approval": "woods-to-wheels-2026-11-23",
+  "text_only_override": "Six logging crews in a 2015 Auburn study averaged 0.51 gallons of diesel per ton of wood before it ever got on a truck. At $6 a gallon, that’s about $3 a ton in harvesting fuel alone. Source: Woods to Wheels, The Forest Business School."
 }
