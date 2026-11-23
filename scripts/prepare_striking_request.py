@@ -20,6 +20,12 @@ def prepare(root, now):
             approved.get('owner_approval') == 'phone-c24fc492-eefc-4d00-aa33-53c80c630526' and
             approved.get('text_only_override') == "After more than two years idle, ND Paper’s R12 machine in Rumford, Maine, produced a trial roll on November 5. A trial is not a restart: the company had not announced a return to regular production."):
         return True
+    if (date == '2026-11-23' and approved.get('date') == date and
+            approved.get('action') == 'schedule_striking' and
+            approved.get('due_at') == '2026-11-23T17:00:00Z' and
+            approved.get('owner_approval') == 'woods-to-wheels-2026-11-23' and
+            approved.get('text_only_override') == "Six logging crews in a 2015 Auburn study averaged 0.51 gallons of diesel per ton of wood before it ever got on a truck. At $6 a gallon, that’s about $3 a ton in harvesting fuel alone. Source: Woods to Wheels, The Forest Business School."):
+        return True
     issues = json.loads((root / 'data/issues.json').read_text())
     issue = next((i for i in issues if i.get('date') == date), None)
     weekend_feature_day = date >= '2026-11-03' and local.weekday() >= 5
