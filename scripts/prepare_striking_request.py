@@ -26,6 +26,12 @@ def prepare(root, now):
             approved.get('owner_approval') == 'woods-to-wheels-2026-11-23' and
             approved.get('text_only_override') == "Six logging crews in a 2015 Auburn study averaged 0.51 gallons of diesel per ton of wood before it ever got on a truck. At $6 a gallon, that’s about $3 a ton in harvesting fuel alone. Source: Woods to Wheels, The Forest Business School."):
         return True
+    if (date == '2026-11-23' and approved.get('date') == date and
+            approved.get('action') == 'schedule_striking' and
+            approved.get('due_at') == '2026-11-23T17:00:00Z' and
+            approved.get('owner_approval') == 'woods-to-wheels-northern-2026-11-23' and
+            approved.get('text_only_override') == "One New Brunswick hardwood producer used about a U.S. gallon of diesel per green short ton just to get logs to the roadside, before the haul to the mill. That’s about $6 per ton at US$6 a gallon. Source: Woods to Wheels, The Forest Business School."):
+        return True
     issues = json.loads((root / 'data/issues.json').read_text())
     issue = next((i for i in issues if i.get('date') == date), None)
     weekend_feature_day = date >= '2026-11-03' and local.weekday() >= 5
