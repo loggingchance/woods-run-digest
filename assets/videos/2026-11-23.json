@@ -1,0 +1,60 @@
+{
+  "date": "2026-11-23",
+  "format": "approved-v4",
+  "dimensions": [
+    1080,
+    1920
+  ],
+  "fps": 30,
+  "frames": 1545,
+  "duration_seconds": 51.5,
+  "segment_frames": [
+    75,
+    210,
+    210,
+    210,
+    210,
+    210,
+    300,
+    120
+  ],
+  "stories": [
+    {
+      "headline": "From simulator to the woods: how two colleges train equipment operators",
+      "body": "Nova Scotia Community College and New Brunswick Community College combine theory, simulator practice and field experience in their Mechanized Forest Equipment Operator program. NSCC\u2019s account describes WestFor Management\u2019s role in shaping\u2026",
+      "region": "CANADA \u2014 NOVA SCOTIA / ESTABLISHED TRAINING EXAMPLE",
+      "image": null
+    },
+    {
+      "headline": "Woods to Wheels puts forestry fuel costs in focus",
+      "body": "The Forest Business School\u2019s Woods to Wheels: Every Gallon Counts brings together U.S. and Canadian research on timber-harvesting and log-trucking fuel use, with linked studies and practical calculators. Its workbench separates in-woods fuel\u2026",
+      "region": "WOODS RUN",
+      "image": null
+    },
+    {
+      "headline": "Natco internship combines cruising, marking and mapping",
+      "body": "Natco Forestry Services\u2019 Field Technician internship is listed in Calvin University\u2019s career portal through December 17. Posted November 16, the employer-authored notice identifies the Belpre/Parkersburg service area and work in point-sample\u2026",
+      "region": "U.S. \u2014 OHIO / WEST VIRGINIA AREA / LISTED THROUGH DECEMBER 17",
+      "image": null
+    },
+    {
+      "headline": "A paired tree-measurement exercise makes discrepancies visible",
+      "body": "Penn State\u2019s Forest Measurements lesson puts students in pairs to compare diameter-tape readings with Biltmore-stick estimates. Activity 3 records tree species, diameter, merchantable logs and estimated board feet on a printable tally sheet,\u2026",
+      "region": "U.S. \u2014 CLASSROOM AND FIELD / AVAILABLE TEACHING RESOURCE",
+      "image": null
+    },
+    {
+      "headline": "Two Overdrive bids finish $84,011.76 apart",
+      "body": "Oregon\u2019s Department of Forestry lists Stimson Lumber first for the November 20 Overdrive sale at US$5,096,168.22, followed by Hampton Tree Farms at US$5,012,156.46. The difference is US$84,011.76. The schedule identifies the Tillamook County\u2026",
+      "region": "U.S. \u2014 OREGON / NOVEMBER 20 BID RESULTS",
+      "image": null
+    }
+  ],
+  "featuredResource": {
+    "title": "Continuous Improvement in Logging",
+    "description": "This book applies the Theory of Constraints to finding and managing bottlenecks in logging operations. It combines a five-step improvement process, throughput accounting and productivity references to help operators focus changes where they affect overall output.",
+    "url": "https://cinl.loggingchance.com/",
+    "kind": "book"
+  },
+  "publication_attempted": false
+}

@@ -1,5 +1,139 @@
 [
   {
+    "date": "2026-11-23",
+    "summary": "A college partnership combines simulator practice with forestry fieldwork. Also: Woods to Wheels fuel calculators, a Natco field internship, Penn State’s measurement lesson and Oregon timber-sale bids.",
+    "socialText": "From simulator practice to real forest terrain: a college training example leads today’s Woods Run. Also: fuel calculators, a field internship, measurement lessons and timber-sale bids.",
+    "strikingText": "Penn State’s forest-measurement lesson puts students in pairs to compare taped diameters with Biltmore-stick estimates. Differences in technique become visible before the measurements are used to estimate timber volume.",
+    "cardTeaser": "From simulator to the woods",
+    "cardSubhead": "Two colleges connect equipment practice with decisions on real terrain",
+    "marketObservations": {
+      "diesel": {
+        "status": "verified",
+        "latest": "US$5.937/gal",
+        "observed": "Week of November 16, 2026; released November 17",
+        "change": [
+          "−US$0.190/gal",
+          "−3.10%"
+        ],
+        "comparison": "Versus November 9: US$6.127/gal",
+        "detail": "EIA U.S. on-highway diesel; taxes included",
+        "sources": [
+          {
+            "label": "EIA U.S. on-highway diesel; taxes included",
+            "url": "https://www.eia.gov/dnav/pet/hist/LeafHandler.ashx?f=W&n=PET&s=EMD_EPD2D_PTE_NUS_DPG"
+          }
+        ]
+      },
+      "lumber_futures": {
+        "status": "verified",
+        "latest": "US$537.00/MBF",
+        "observed": "November 20, 2026 settlement",
+        "change": [
+          "Unavailable"
+        ],
+        "comparison": "November 13 January settlement not independently verified; checked November 23",
+        "detail": "January 2027 lumber futures (CME LBRF27)",
+        "sources": [
+          {
+            "label": "Investing.com January contract settlement",
+            "url": "https://www.investing.com/commodities/lumber-contracts"
+          },
+          {
+            "label": "CME delivery calendar",
+            "url": "https://www.cmegroup.com/markets/agriculture/lumber-and-softs/lumber/calendar"
+          }
+        ]
+      },
+      "madisons": {
+        "status": "verified",
+        "latest": "US$440.00/MBF",
+        "observed": "Week ending November 20, 2026",
+        "change": [
+          "−US$4.00/MBF",
+          "−0.90% (calculated)"
+        ],
+        "comparison": "Versus week ending November 13: US$444.00/MBF",
+        "detail": "Madison’s weekly lumber index",
+        "sources": [
+          {
+            "label": "Madison’s November 20 index",
+            "url": "https://madisonsreport.com/madisons-lumber-prices-index-nov-20-2026-us440-mfbm/"
+          }
+        ]
+      },
+      "hardwood_ppi": {
+        "status": "verified",
+        "latest": "284.331 index points",
+        "observed": "October 2026; released November 13",
+        "change": [
+          "−1.251 points",
+          "−0.438%"
+        ],
+        "comparison": "Versus September 2026: 285.582",
+        "detail": "BLS WPU0812; 1982=100; not seasonally adjusted",
+        "sources": [
+          {
+            "label": "BLS hardwood lumber PPI via FRED",
+            "url": "https://fred.stlouisfed.org/data/WPU0812"
+          }
+        ]
+      },
+      "housing_starts": {
+        "status": "verified",
+        "latest": "864,000 units (SAAR)",
+        "observed": "October 2026; released November 18",
+        "change": [
+          "+33,000 units (SAAR)",
+          "+4.0%"
+        ],
+        "comparison": "Versus revised September 2026: 831,000",
+        "detail": "Census U.S. single-family starts; annualized estimate",
+        "sources": [
+          {
+            "label": "Census U.S. single-family starts; annualized estimate",
+            "url": "https://www.census.gov/construction/nrc/pdf/newresconst.pdf"
+          }
+        ]
+      },
+      "cad_usd": {
+        "status": "verified",
+        "latest": "C$1.4325 per US$1",
+        "observed": "Daily average, November 20, 2026",
+        "change": [
+          "+C$0.0008 per US$1",
+          "+0.0559%"
+        ],
+        "comparison": "Versus November 19: C$1.4317 per US$1",
+        "detail": "Bank of Canada; Canadian dollars per U.S. dollar",
+        "sources": [
+          {
+            "label": "Bank of Canada daily averages",
+            "url": "https://www.bankofcanada.ca/valet/observations/FXUSDCAD/json?start_date=2026-11-19&end_date=2026-11-20"
+          }
+        ]
+      }
+    },
+    "marketCaveats": [
+      "The October single-family starts monthly change has a published ±9.0-percentage-point 90% confidence interval and is not statistically significant.",
+      "The January settlement comes from the named-contract table. Its November 13 same-contract comparison could not be independently confirmed on November 23; the continuous historical series is not substituted. The latest EIA diesel observation is November 16, with the next release scheduled November 24.",
+      "Display rounding follows the approved format. Changes are calculated from unrounded observations, so rounded currency levels may look unchanged even when a small movement occurred."
+    ],
+    "featuredResource": {
+      "date": "2026-11-23",
+      "source": "daily-sheet",
+      "item": {
+        "title": "Continuous Improvement in Logging",
+        "kind": "book",
+        "description": "This book applies the Theory of Constraints to finding and managing bottlenecks in logging operations. It combines a five-step improvement process, throughput accounting and productivity references to help operators focus changes where they affect overall output.",
+        "source_url": "https://cinl.loggingchance.com/",
+        "url": "https://cinl.loggingchance.com/"
+      },
+      "cached": false
+    },
+    "displayDate": "November 23, 2026",
+    "url": "/2026/11/23/"
+  },
+  {
     "date": "2026-11-22",
     "summary": "Research aims to detect forest conditions through fungal chemicals. Also: Camp Howard’s salvaged timber, Ontario habitat grants and the field evidence behind a skeptical 1982 tracks investigation.",
     "socialText": "A new research project aims to detect fungal chemical signals in forests. Also in today’s Woods Run: Camp Howard’s sawmill, Ontario habitat grants and a skeptical historical field investigation.",
