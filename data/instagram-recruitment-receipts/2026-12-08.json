@@ -11,5 +11,21 @@
     "posts_checked": 340
   },
   "checked_at": "2026-11-24T16:07:21.784785+00:00",
-  "attempt_started_at": "2026-11-24T16:07:21.899960+00:00"
+  "attempt_started_at": "2026-11-24T16:07:21.899960+00:00",
+  "post_id": "6b05b63b4181e8048fa70e6b",
+  "provider_post": {
+    "id": "6b05b63b4181e8048fa70e6b",
+    "text": "Drying lumber well starts before the kiln door closes.\n\nThe Woods Run Digest brings you forestry and wood-products news. Subscribe free using the link in bio, then confirm your email.\n\n#Forestry #WoodProducts #WoodsRunDigest",
+    "status": "scheduled",
+    "createdAt": "2026-11-24T16:07:23.361Z",
+    "dueAt": "2026-12-08T15:00:00.000Z",
+    "channelId": "6844cc71d6d25b49a1de682e",
+    "externalLink": null,
+    "assets": [
+      {
+        "source": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/instagram-recruitment/2026-12-08-kiln-mill.jpg",
+        "mimeType": "image/jpeg"
+      }
+    ]
+  }
 }
