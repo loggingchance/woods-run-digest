@@ -11,5 +11,21 @@
     "posts_checked": 341
   },
   "checked_at": "2026-11-24T16:07:26.793588+00:00",
-  "attempt_started_at": "2026-11-24T16:07:26.916942+00:00"
+  "attempt_started_at": "2026-11-24T16:07:26.916942+00:00",
+  "post_id": "6b05b640ca966bd75f5fb109",
+  "provider_post": {
+    "id": "6b05b640ca966bd75f5fb109",
+    "text": "A woods road is only as useful as its crossings.\n\nThe Woods Run Digest brings you forestry and wood-products news. Subscribe free using the link in bio, then confirm your email.\n\n#Forestry #WoodProducts #WoodsRunDigest",
+    "status": "scheduled",
+    "createdAt": "2026-11-24T16:07:28.331Z",
+    "dueAt": "2026-12-10T15:00:00.000Z",
+    "channelId": "6844cc71d6d25b49a1de682e",
+    "externalLink": null,
+    "assets": [
+      {
+        "source": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/instagram-recruitment/2026-12-10-snow-bridge.jpg",
+        "mimeType": "image/jpeg"
+      }
+    ]
+  }
 }
