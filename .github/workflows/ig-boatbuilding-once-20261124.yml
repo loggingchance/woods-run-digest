@@ -1,0 +1,69 @@
+name: Publish existing Instagram boatbuilding card once
+on:
+  push:
+    branches: [ops/wrd-ig-boatbuilding-20261124]
+    paths: ['.github/workflows/ig-boatbuilding-once-20261124.yml']
+permissions:
+  contents: read
+concurrency:
+  group: wr-instagram-recruitment
+  cancel-in-progress: false
+jobs:
+  publish-existing:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v4
+      - name: Publish existing approved card now and verify
+        env:
+          BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
+        run: |
+          python3 - <<'PY'
+          import json, os, sys, time
+          from pathlib import Path
+          from datetime import datetime, timezone
+          sys.path.insert(0,'scripts')
+          import buffer_queue as b
+          assert datetime.now(timezone.utc).date().isoformat() == '2026-11-24'
+          assert os.environ['GITHUB_RUN_ATTEMPT'] == '1'
+          channel='6844cc71d6d25b49a1de682e'
+          target='6af5f2a551cc3cd5827213cf'
+          prior='6af5f29f225faf55250b3665'
+          org,channels=b.get_channels()
+          ch=[c for c in channels if c['id']==channel]
+          assert len(ch)==1 and ch[0]['service']=='instagram' and ch[0]['name']=='northeastforests'
+          assert not any(ch[0][f] for f in ('isDisconnected','isLocked','isQueuePaused'))
+          receipt=json.loads(Path('data/instagram-recruitment-receipts/2026-11-26.json').read_text())
+          assert receipt['post_id']==target
+          item=receipt['request']
+          assert item['asset']=='assets/instagram-recruitment/2026-11-26-boatbuilding.jpg'
+          asset='https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/'+item['asset']
+          def read():
+              posts=b.recent(org,channel)
+              rows=[p for p in posts if p.get('id')==target or p.get('text')==item['caption'] or any(a.get('source')==asset for a in p.get('assets',[]))]
+              assert len(rows)==1 and rows[0]['id']==target
+              p=rows[0]
+              assert p['channelId']==channel and p['text']==item['caption']
+              assert p['assets']==[{'source':asset,'mimeType':'image/jpeg'}]
+              return p, posts
+          p,posts=read()
+          if p['status']=='scheduled':
+              assert str(p['dueAt']).startswith('2026-11-26T15:00:00')
+              assert any(r['id']==prior and r['status']=='sent' and r.get('externalLink')=='https://www.instagram.com/p/DgIPWTVlrXu/' for r in posts)
+              print('EXACT_EXISTING_POST '+json.dumps(p),flush=True)
+              q='mutation Repair($input: PublishPostNowInput!) { publishPostNow(input:$input) { __typename ... on PostActionSuccess { post { id status } } } }'
+              m=b.gql(q,{'input':{'id':target}})['publishPostNow']
+              assert m.get('__typename')=='PostActionSuccess' and m['post']['id']==target, m
+              print('PUBLISH_EXISTING_ACCEPTED '+json.dumps(m),flush=True)
+          else:
+              assert p['status'] in ('sent','sending'), p['status']
+          for i in range(30):
+              p,_=read()
+              if p['status']=='sent' and p.get('externalLink','').startswith('https://www.instagram.com/'):
+                  print('EXISTING_POST_SENT '+json.dumps(p),flush=True)
+                  break
+              assert p['status'] not in ('failed','error'),p
+              time.sleep(6)
+          else:
+              raise RuntimeError('Publication not verified; inspect without retrying.')
+          PY
