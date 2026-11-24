@@ -1,8 +1,6 @@
 {
   "action": "schedule_striking",
-  "date": "2026-11-23",
-  "due_at": "2026-11-23T17:00:00Z",
-  "reason": "native Buffer scheduled daily striking observation",
-  "owner_approval": "woods-to-wheels-northern-2026-11-23",
-  "text_only_override": "One New Brunswick hardwood producer used about a U.S. gallon of diesel per green short ton just to get logs to the roadside, before the haul to the mill. That’s about $6 per ton at US$6 a gallon. Source: Woods to Wheels, The Forest Business School."
+  "date": "2026-11-24",
+  "due_at": "2026-11-24T17:00:00Z",
+  "reason": "native Buffer scheduled daily striking observation"
 }
