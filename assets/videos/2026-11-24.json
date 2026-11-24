@@ -1,0 +1,53 @@
+{
+  "date": "2026-11-24",
+  "format": "approved-v4",
+  "dimensions": [
+    1080,
+    1920
+  ],
+  "fps": 30,
+  "frames": 1335,
+  "duration_seconds": 44.5,
+  "segment_frames": [
+    75,
+    210,
+    210,
+    210,
+    210,
+    300,
+    120
+  ],
+  "stories": [
+    {
+      "headline": "Before You Cut, Know Who Will Take the Wood",
+      "body": "Two changes in the SNB Forest Products Marketing Board\u2019s November 20 bulletin show why an outlet needs checking before a harvest starts. Woodland Pulp in Maine resumed hardwood pulpwood buying after a softwood run. Separately, the board\u2019s\u2026",
+      "region": "NEW BRUNSWICK / MAINE \u2014 NOVEMBER 20 BUYER BULLETIN",
+      "image": null
+    },
+    {
+      "headline": "Michigan\u2019s wood supply depends on the crews that can deliver it",
+      "body": "Michigan State University forest economist Shivan Gc told Capital News Service that losing local logging capacity could make mills seek wood farther away, increasing transportation costs even when manufacturing continues. The November 23\u2026",
+      "region": "GREAT LAKES \u2014 LOGGING CAPACITY / NOVEMBER 23 REPORT",
+      "image": null
+    },
+    {
+      "headline": "TPEP remains outside USDA\u2019s separate B&I submission pause",
+      "body": "USDA\u2019s November 20 lender FAQ explicitly excludes the Timber Production Expansion Guaranteed Loan Program (TPEP) from the separate Business & Industry submission pause. Approved lenders can use TPEP for qualifying projects that establish,\u2026",
+      "region": "U.S. \u2014 RESTORATION-WOOD PROCESSING / EXISTING LOAN PROGRAM",
+      "image": null
+    },
+    {
+      "headline": "Ontario Northland\u2019s tie purchase comes with four addenda",
+      "body": "Ontario Northland\u2019s RFQ 2026 082 for supply and delivery of railway ties closes November 30 at 2 p.m., according to its current listing. Four addenda accompany the October 29 solicitation, including one dated November 23.",
+      "region": "CANADA \u2014 ONTARIO / OPEN RAILWAY-TIE PROCUREMENT",
+      "image": null
+    }
+  ],
+  "featuredResource": {
+    "title": "14-day VT Forestry Climate Adaptation Challenge",
+    "description": "This free 14-day email course delivers daily units with podcast links about Vermont forestry climate adaptation. The sequence offers a structured way to work through the subject over two weeks.",
+    "url": "https://fbs44.gumroad.com/l/VTForestry-Climate",
+    "kind": "email course"
+  },
+  "publication_attempted": false
+}
