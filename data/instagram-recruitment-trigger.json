@@ -1,23 +1,29 @@
 {
-  "action": "audit",
+  "action": "publish",
   "items": [
     {
-      "slot": "2026-11-24",
-      "asset": "assets/instagram-recruitment/2026-11-24-winter-log-yard.jpg",
-      "sha256": "8f7d926c0a84b0a8edf5b34d90677a9c4e979224990ba97054e54351931623b5",
-      "caption": "Keep up with the industry beyond your own log yard.\n\nThe Woods Run Digest brings you Forestry & Wood Products news. Subscribe free using the link in bio, then confirm your email.\n\n#Forestry #WoodProducts #WoodsRunDigest"
+      "slot": "2026-12-03",
+      "asset": "assets/instagram-recruitment/2026-12-03-hardwood-marking.jpg",
+      "sha256": "78c44c360436303fd2b47eaa4fd9abcf70f10d7b3726aa731da75e5c6ed86e7e",
+      "caption": "A paint mark is the end of one decision and the start of another.\n\nThe Woods Run Digest brings you forestry and wood-products news. Subscribe free using the link in bio, then confirm your email.\n\n#Forestry #WoodProducts #WoodsRunDigest"
     },
     {
-      "slot": "2026-11-26",
-      "asset": "assets/instagram-recruitment/2026-11-26-boatbuilding.jpg",
-      "sha256": "52bfd8982d59b7fb5796eb7e48b70e98a1aefd570db292cf401b04c1a53a09b4",
-      "caption": "From forests to the things we build with wood, there is always more to learn.\n\nThe Woods Run Digest brings you Forestry & Wood Products news. Subscribe free using the link in bio, then confirm your email.\n\n#Forestry #WoodProducts #WoodsRunDigest"
+      "slot": "2026-12-08",
+      "asset": "assets/instagram-recruitment/2026-12-08-kiln-mill.jpg",
+      "sha256": "d07a7f5b218c7539dadbc2ef062a320b6df877828ff2bd7caea08ef75f497a4b",
+      "caption": "Drying lumber well starts before the kiln door closes.\n\nThe Woods Run Digest brings you forestry and wood-products news. Subscribe free using the link in bio, then confirm your email.\n\n#Forestry #WoodProducts #WoodsRunDigest"
     },
     {
-      "slot": "2026-12-01",
-      "asset": "assets/instagram-recruitment/2026-12-01-nursery.jpg",
-      "sha256": "4679fa1c510f2b4e5a3848900ad3a82e386887020f6d5ef2301308b444a882ac",
-      "caption": "Follow forestry from the next generation of trees onward.\n\nThe Woods Run Digest brings you Forestry & Wood Products news. Subscribe free using the link in bio, then confirm your email.\n\n#Forestry #WoodProducts #WoodsRunDigest"
+      "slot": "2026-12-10",
+      "asset": "assets/instagram-recruitment/2026-12-10-snow-bridge.jpg",
+      "sha256": "3f2ef8e66fa3bb98fb6223a3ad9b6fb5c8ef256ea612af8ae00df585b909d543",
+      "caption": "A woods road is only as useful as its crossings.\n\nThe Woods Run Digest brings you forestry and wood-products news. Subscribe free using the link in bio, then confirm your email.\n\n#Forestry #WoodProducts #WoodsRunDigest"
+    },
+    {
+      "slot": "2026-12-15",
+      "asset": "assets/instagram-recruitment/2026-12-15-veneer-wood.jpg",
+      "sha256": "6034ffd7fe2d955a19e9e68a6bf070ae7216f780b007836f406d06055303bc86",
+      "caption": "Follow the grain from the woods to the mill.\n\nThe Woods Run Digest brings you forestry and wood-products news. Subscribe free using the link in bio, then confirm your email.\n\n#Forestry #WoodProducts #WoodsRunDigest"
     }
   ]
 }
