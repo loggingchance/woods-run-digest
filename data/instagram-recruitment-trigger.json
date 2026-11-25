@@ -2,28 +2,14 @@
   "action": "publish",
   "items": [
     {
-      "slot": "2026-12-03",
-      "asset": "assets/instagram-recruitment/2026-12-03-hardwood-marking.jpg",
-      "sha256": "78c44c360436303fd2b47eaa4fd9abcf70f10d7b3726aa731da75e5c6ed86e7e",
-      "caption": "A paint mark is the end of one decision and the start of another.\n\nThe Woods Run Digest brings you forestry and wood-products news. Subscribe free using the link in bio, then confirm your email.\n\n#Forestry #WoodProducts #WoodsRunDigest"
-    },
-    {
-      "slot": "2026-12-08",
-      "asset": "assets/instagram-recruitment/2026-12-08-kiln-mill.jpg",
-      "sha256": "d07a7f5b218c7539dadbc2ef062a320b6df877828ff2bd7caea08ef75f497a4b",
-      "caption": "Drying lumber well starts before the kiln door closes.\n\nThe Woods Run Digest brings you forestry and wood-products news. Subscribe free using the link in bio, then confirm your email.\n\n#Forestry #WoodProducts #WoodsRunDigest"
-    },
-    {
-      "slot": "2026-12-10",
-      "asset": "assets/instagram-recruitment/2026-12-10-snow-bridge.jpg",
-      "sha256": "3f2ef8e66fa3bb98fb6223a3ad9b6fb5c8ef256ea612af8ae00df585b909d543",
-      "caption": "A woods road is only as useful as its crossings.\n\nThe Woods Run Digest brings you forestry and wood-products news. Subscribe free using the link in bio, then confirm your email.\n\n#Forestry #WoodProducts #WoodsRunDigest"
-    },
-    {
-      "slot": "2026-12-15",
-      "asset": "assets/instagram-recruitment/2026-12-15-veneer-wood.jpg",
-      "sha256": "6034ffd7fe2d955a19e9e68a6bf070ae7216f780b007836f406d06055303bc86",
-      "caption": "Follow the grain from the woods to the mill.\n\nThe Woods Run Digest brings you forestry and wood-products news. Subscribe free using the link in bio, then confirm your email.\n\n#Forestry #WoodProducts #WoodsRunDigest"
+      "slot": "2026-11-25",
+      "campaign": "facts",
+      "asset": "assets/instagram-recruitment/2026-11-25-measuring-trees.jpg",
+      "sha256": "4b6d40546299e4b55e46829656fdc4b4e721b3145fc198345a6292843dbdee13",
+      "caption": "The Woods Run Digest. Penn State’s forestry lesson has students compare a diameter tape and a Biltmore stick on the same trees.\n\nWoods Run Digest subscribers already knew that.\n\nSubscribe free • Link in bio.\n\n#Forestry #WoodsRunDigest",
+      "fact": "Penn State’s forestry lesson has students compare a diameter tape and a Biltmore stick on the same trees.",
+      "source_issue": "https://woodsrun.forestenterprise.org/2026/11/23/",
+      "source_url": "https://ecosystems.psu.edu/outreach/youth/sftrc/lesson-plans/forestry/9-12/measurements"
     }
   ]
 }
