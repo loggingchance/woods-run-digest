@@ -1,5 +1,6 @@
 {
   "action": "schedule_striking",
+  "request_key": "slashscan-nov25-x",
   "date": "2026-11-25",
   "due_at": "2026-11-25T17:00:00Z",
   "reason": "Owner selected the SlashScan fact and original research URL for X only",
