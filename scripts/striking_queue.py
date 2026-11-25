@@ -52,6 +52,12 @@ def persist(path, record):
         subprocess.run(['git', 'push', 'origin', 'HEAD:main'], cwd=ROOT, check=True)
 
 
+def is_slashscan_selection(request, text):
+    return (request.get('date') == '2026-11-25' and
+            request.get('owner_approval') == 'slashscan-2026-11-25' and
+            text == "In a 14-pile field study, a lidar-equipped iPhone running SlashScan estimated logging slash volume in about 30 seconds per pile, with an average difference of about 7% from drone lidar estimates.\nhttps://research.fs.usda.gov/treesearch/80524")
+
+
 def load_request():
     r = json.loads((ROOT/'data/striking-trigger.json').read_text(encoding='utf-8'))
     date = datetime.now(DENVER).date().isoformat()
@@ -83,6 +89,8 @@ def load_request():
     if (date == '2026-11-23' and r.get('owner_approval') == 'woods-to-wheels-northern-2026-11-23' and
             r.get('text_only_override') == "One New Brunswick hardwood producer used about a U.S. gallon of diesel per green short ton just to get logs to the roadside, before the haul to the mill. That’s about $6 per ton at US$6 a gallon. Source: Woods to Wheels, The Forest Business School."):
         issue = dict(issue, strikingText=r['text_only_override'])
+    if date == '2026-11-25' and is_slashscan_selection(r, r.get('source_quote_override')):
+        issue = dict(issue, strikingText=r['source_quote_override'])
     text = issue['strikingText'].strip()
     require(0 < len(text) <= 280, f'Authored strikingText length {len(text)} exceeds Buffer X maximum of 280 characters')
     return r, issue, text, due
@@ -165,7 +173,9 @@ def schedule():
     # URL-bearing captions still fail closed without a verified no-preview path.
     text_only = (request['date'] >= '2026-11-15' and
                  not any(marker in text.lower() for marker in ('http://', 'https://', 'www.')))
-    if request['date'] >= '2026-11-15' and not text_only:
+    # Steve explicitly selected the primary study URL, not the morning Digest card.
+    approved_primary_source = is_slashscan_selection(request, text)
+    if request['date'] >= '2026-11-15' and not (text_only or approved_primary_source):
         raise ValueError('STRIKING_NO_IMAGE_HOLD: native images disabled; canonical link can '
                          'generate an X image preview. No safe no-preview link verified. '
                          'Caption and link preserved; no provider mutation.')
@@ -173,7 +183,7 @@ def schedule():
     require(adapter.fetch_public(adapter.SITE_ROOT + issue['url'])[0] == 200,
             'Canonical dated issue not publicly reachable')
     visual = None
-    if request['date'] >= striking_visual.POLICY_START and not text_only:
+    if request['date'] >= striking_visual.POLICY_START and not (text_only or approved_primary_source):
         visual = striking_visual.describe(issue, ROOT)
         status, body, _ = adapter.fetch_public(visual['url'])
         require(status == 200 and hashlib.sha256(body).hexdigest() == visual['sha256'],

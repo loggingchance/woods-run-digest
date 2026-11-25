@@ -32,6 +32,13 @@ def prepare(root, now):
             approved.get('owner_approval') == 'woods-to-wheels-northern-2026-11-23' and
             approved.get('text_only_override') == "One New Brunswick hardwood producer used about a U.S. gallon of diesel per green short ton just to get logs to the roadside, before the haul to the mill. That’s about $6 per ton at US$6 a gallon. Source: Woods to Wheels, The Forest Business School."):
         return True
+    # One separately approved striking fact with the original research link.
+    if (date == '2026-11-25' and approved.get('date') == date and
+            approved.get('action') == 'schedule_striking' and
+            approved.get('due_at') == '2026-11-25T17:00:00Z' and
+            approved.get('owner_approval') == 'slashscan-2026-11-25' and
+            approved.get('source_quote_override') == "In a 14-pile field study, a lidar-equipped iPhone running SlashScan estimated logging slash volume in about 30 seconds per pile, with an average difference of about 7% from drone lidar estimates.\nhttps://research.fs.usda.gov/treesearch/80524"):
+        return True
     issues = json.loads((root / 'data/issues.json').read_text())
     issue = next((i for i in issues if i.get('date') == date), None)
     weekend_feature_day = date >= '2026-11-03' and local.weekday() >= 5
