@@ -1,5 +1,149 @@
 [
   {
+    "date": "2026-11-25",
+    "summary": "SlashScan estimates slash-pile volumes in the field. Also: Canada’s plywood determination, Alaska logging-road comments, Flatwoods’ experimental forest design, a black-cherry podcast and six dated market indicators.",
+    "socialText": "SlashScan puts slash-pile volume estimates and locations on a lidar-equipped iPhone or iPad. Wednesday’s Woods Run Digest explains the research, device limits and practical uses.",
+    "strikingText": "Canada ended subsidy investigations for nine Chinese plywood exporters, but the dumping case continues. A supplier’s subsidy result does not settle a Canadian buyer’s landed cost—or the still-pending injury decision.",
+    "cardTeaser": "Slash-pile estimates, in the field",
+    "cardSubhead": "SlashScan uses lidar-equipped iPhones and iPads; a 14-pile study tests its volume estimates.",
+    "marketObservations": {
+      "diesel": {
+        "status": "verified",
+        "latest": "US$5.695/gal",
+        "observed": "Week of November 23, 2026; released November 24",
+        "change": [
+          "−US$0.242/gal",
+          "−4.08%"
+        ],
+        "comparison": "Versus November 16: US$5.937/gal",
+        "detail": "EIA U.S. on-highway diesel; taxes included",
+        "sources": [
+          {
+            "label": "EIA U.S. on-highway diesel; taxes included",
+            "url": "https://www.eia.gov/dnav/pet/hist/LeafHandler.ashx?f=W&n=PET&s=EMD_EPD2D_PTE_NUS_DPG"
+          }
+        ]
+      },
+      "lumber_futures": {
+        "status": "verified",
+        "latest": "US$547.00/MBF",
+        "observed": "November 24, 2026 settlement",
+        "change": [
+          "+US$19.50/MBF",
+          "+3.70%"
+        ],
+        "comparison": "Versus November 17 January settlement: US$527.50/MBF",
+        "detail": "January 2027 lumber futures (CME LBRF27)",
+        "sources": [
+          {
+            "label": "Investing.com named-contract table",
+            "url": "https://www.investing.com/commodities/lumber-contracts"
+          },
+          {
+            "label": "Investing.com historical observations",
+            "url": "https://www.investing.com/commodities/lumber-historical-data"
+          }
+        ]
+      },
+      "madisons": {
+        "status": "verified",
+        "latest": "US$440.00/MBF",
+        "observed": "Week ending November 20, 2026",
+        "change": [
+          "−US$4.00/MBF",
+          "−0.90% (calculated)"
+        ],
+        "comparison": "Versus week ending November 13: US$444.00/MBF",
+        "detail": "Madison’s weekly lumber index",
+        "sources": [
+          {
+            "label": "Madison’s November 20 index",
+            "url": "https://madisonsreport.com/madisons-lumber-prices-index-nov-20-2026-us440-mfbm/"
+          }
+        ]
+      },
+      "hardwood_ppi": {
+        "status": "verified",
+        "latest": "284.331 index points",
+        "observed": "October 2026; released November 13",
+        "change": [
+          "−1.251 points",
+          "−0.438%"
+        ],
+        "comparison": "Versus September 2026: 285.582",
+        "detail": "BLS WPU0812; 1982=100; not seasonally adjusted",
+        "sources": [
+          {
+            "label": "BLS hardwood lumber PPI via FRED",
+            "url": "https://fred.stlouisfed.org/data/WPU0812"
+          }
+        ]
+      },
+      "housing_starts": {
+        "status": "verified",
+        "latest": "864,000 units (SAAR)",
+        "observed": "October 2026; released November 18",
+        "change": [
+          "+33,000 units (SAAR)",
+          "+4.0%"
+        ],
+        "comparison": "Versus revised September 2026: 831,000",
+        "detail": "Census U.S. single-family starts; annualized estimate",
+        "sources": [
+          {
+            "label": "Census U.S. single-family starts; annualized estimate",
+            "url": "https://www.census.gov/construction/nrc/pdf/newresconst.pdf"
+          }
+        ]
+      },
+      "cad_usd": {
+        "status": "verified",
+        "latest": "C$1.4296 per US$1",
+        "observed": "Daily average, November 24, 2026",
+        "change": [
+          "−C$0.0073 per US$1",
+          "−0.5080%"
+        ],
+        "comparison": "Versus November 23: C$1.4369 per US$1; Canadian dollar strengthened",
+        "detail": "Bank of Canada; Canadian dollars per U.S. dollar",
+        "sources": [
+          {
+            "label": "Bank of Canada daily averages",
+            "url": "https://www.bankofcanada.ca/valet/observations/FXUSDCAD/json?start_date=2026-11-23&end_date=2026-11-24"
+          }
+        ]
+      }
+    },
+    "marketCaveats": [
+      "The October single-family starts monthly change has a published ±9.0-percentage-point 90% confidence interval and is not statistically significant.",
+      "The January 2027 futures comparison uses the same contract. The November 17 US$527.50 settlement was verified in the November 18 edition and is corroborated by the current historical table; November 24 is verified in the named-contract table.",
+      "Display rounding follows the approved format. Changes are calculated from unrounded observations, so rounded currency levels may look unchanged even when a small movement occurred."
+    ],
+    "featuredResource": {
+      "date": "2026-11-25",
+      "source": "daily-sheet",
+      "item": {
+        "title": "Forest Carbon Online (FCO)",
+        "kind": "app",
+        "description": "Forest Carbon Online is an independent web app for exploring and comparing state- and county-level forest-carbon estimates from USDA Forest Service inventory data. It presents sources and uncertainty information for broad-area comparisons, not parcel- or stand-level carbon accounting.",
+        "source_url": "https://fco.forestenterprise.org/",
+        "url": "https://fco.forestenterprise.org/"
+      },
+      "cached": false
+    },
+    "podcastFeature": {
+      "show": "SilviCast",
+      "title": "The Rise and Fall of Black Cherry",
+      "summary": "This November 1 episode brings research ecologist Alex Royo and University of Kentucky forest-management researcher Lance Vickers into a discussion of declining black-cherry regeneration, growth and survival in the Allegheny hardwood region. The Wisconsin Forestry Center’s SilviCast examines the ecological and social influences behind those changes and what they mean for silvicultural decisions. A useful, dated discussion for foresters managing future hardwood stands; it is not a current timber-price report.",
+      "url": "https://www.buzzsprout.com/1135730/episodes/20034503-s-7-ep-11-the-rise-and-fall-of-black-cherry",
+      "source_url": "https://www.uwsp.edu/wisconsin-forestry-center/homepage/silvicast-overview/black-cherry/",
+      "verified_on": "2026-11-25"
+    },
+    "podcastFeatureStatus": "verified",
+    "displayDate": "November 25, 2026",
+    "url": "/2026/11/25/"
+  },
+  {
     "date": "2026-11-24",
     "summary": "A New Brunswick buyer bulletin puts wood specifications, delivery commitments and haul terms in focus. Also: Michigan logging capacity, TPEP eligibility, Canadian lumber review proceedings and railway-tie procurement.",
     "socialText": "Before cutting, confirm the buyer and the terms. Today’s Woods Run also covers logging capacity, TPEP’s loan guarantee, lumber review proceedings and railway-tie procurement.",

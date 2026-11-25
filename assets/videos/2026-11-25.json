@@ -1,0 +1,53 @@
+{
+  "date": "2026-11-25",
+  "format": "approved-v4",
+  "dimensions": [
+    1080,
+    1920
+  ],
+  "fps": 30,
+  "frames": 1335,
+  "duration_seconds": 44.5,
+  "segment_frames": [
+    75,
+    210,
+    210,
+    210,
+    210,
+    300,
+    120
+  ],
+  "stories": [
+    {
+      "headline": "SlashScan brings slash-pile measurement into the field",
+      "body": "Forest Service and Oregon State University researchers describe an iPhone and iPad app that estimates slash-pile volume and records pile locations while the operator walks around the material. The agency\u2019s November 24 brief says SlashScan\u2026",
+      "region": "U.S. \u2014 FOREST OPERATIONS / NOVEMBER 24 RESEARCH BRIEF",
+      "image": null
+    },
+    {
+      "headline": "Canada\u2019s plywood decision leaves the injury inquiry open",
+      "body": "Canada Border Services Agency made a final dumping determination on Chinese decorative and other non-structural plywood November 23. It ended the subsidy investigation for nine named exporters whose subsidies were insignificant, while making\u2026",
+      "region": "CANADA \u2014 PANEL SUPPLY / NOVEMBER 23 DECISION",
+      "image": null
+    },
+    {
+      "headline": "Alaska extends comments on an existing logging-road easement",
+      "body": "Alaska\u2019s November 23 amended notice extends written comments on proposed public-access easement ADL 234961 to January 15, 2027. The Division of Forestry & Fire Protection seeks an indefinite easement for an existing gravel logging-road\u2026",
+      "region": "ALASKA \u2014 ROAD ACCESS / COMMENTS THROUGH JANUARY 15",
+      "image": null
+    },
+    {
+      "headline": "Flatwoods sets up a long-term test of thinning and fire",
+      "body": "A new Journal of Forestry paper describes how northern California\u2019s Flatwoods Research Forest is allocating mature stands among fire and non-fire fuel treatments, different canopy patterns and stocking levels. Randomized, replicated\u2026",
+      "region": "CALIFORNIA \u2014 WORKING-FOREST RESEARCH / NOVEMBER 24 PAPER",
+      "image": null
+    }
+  ],
+  "featuredResource": {
+    "title": "Forest Carbon Online (FCO)",
+    "description": "Forest Carbon Online is an independent web app for exploring and comparing state- and county-level forest-carbon estimates from USDA Forest Service inventory data. It presents sources and uncertainty information for broad-area comparisons, not parcel- or stand-level carbon accounting.",
+    "url": "https://fco.forestenterprise.org/",
+    "kind": "app"
+  },
+  "publication_attempted": false
+}
