@@ -1,0 +1,19 @@
+{
+  "slot": "2026-11-25",
+  "request": {
+    "slot": "2026-11-25",
+    "campaign": "facts",
+    "asset": "assets/instagram-recruitment/2026-11-25-measuring-trees.jpg",
+    "sha256": "4b6d40546299e4b55e46829656fdc4b4e721b3145fc198345a6292843dbdee13",
+    "caption": "The Woods Run Digest. Penn State’s forestry lesson has students compare a diameter tape and a Biltmore stick on the same trees.\n\nWoods Run Digest subscribers already knew that.\n\nSubscribe free • Link in bio.\n\n#Forestry #WoodsRunDigest",
+    "fact": "Penn State’s forestry lesson has students compare a diameter tape and a Biltmore stick on the same trees.",
+    "source_issue": "https://woodsrun.forestenterprise.org/2026/11/23/",
+    "source_url": "https://ecosystems.psu.edu/outreach/youth/sftrc/lesson-plans/forestry/9-12/measurements"
+  },
+  "duplicate_search": {
+    "complete": true,
+    "posts_checked": 343
+  },
+  "checked_at": "2026-11-25T02:59:39.853675+00:00",
+  "attempt_started_at": "2026-11-25T02:59:40.102266+00:00"
+}
