@@ -15,5 +15,21 @@
     "posts_checked": 343
   },
   "checked_at": "2026-11-25T02:59:39.853675+00:00",
-  "attempt_started_at": "2026-11-25T02:59:40.102266+00:00"
+  "attempt_started_at": "2026-11-25T02:59:40.102266+00:00",
+  "post_id": "6b064f1e608549ccf257af79",
+  "provider_post": {
+    "id": "6b064f1e608549ccf257af79",
+    "text": "The Woods Run Digest. Penn State’s forestry lesson has students compare a diameter tape and a Biltmore stick on the same trees.\n\nWoods Run Digest subscribers already knew that.\n\nSubscribe free • Link in bio.\n\n#Forestry #WoodsRunDigest",
+    "status": "scheduled",
+    "createdAt": "2026-11-25T02:59:42.079Z",
+    "dueAt": "2026-11-25T15:00:00.000Z",
+    "channelId": "6844cc71d6d25b49a1de682e",
+    "externalLink": null,
+    "assets": [
+      {
+        "source": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/instagram-recruitment/2026-11-25-measuring-trees.jpg",
+        "mimeType": "image/jpeg"
+      }
+    ]
+  }
 }
