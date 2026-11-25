@@ -1,0 +1,13 @@
+{
+  "date": "2026-11-25",
+  "text": "In a 14-pile field study, a lidar-equipped iPhone running SlashScan estimated logging slash volume in about 30 seconds per pile, with an average difference of about 7% from drone lidar estimates.\nhttps://research.fs.usda.gov/treesearch/80524",
+  "due_at": "2026-11-25T17:00:00Z",
+  "channel_id": "6843193ed6d25b49a145ff6e",
+  "state": "attempt_started",
+  "attempt_started_at": "2026-11-25T14:39:46.411481Z",
+  "post_id": null,
+  "history_checked": 420,
+  "source": "native-daily-striking",
+  "email_attempted": false,
+  "visual": null
+}
