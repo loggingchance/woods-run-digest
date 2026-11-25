@@ -55,7 +55,7 @@ def persist(path, record):
 def is_slashscan_selection(request, text):
     return (request.get('date') == '2026-11-25' and
             request.get('owner_approval') == 'slashscan-2026-11-25' and
-            text == "In a 14-pile field study, a lidar-equipped iPhone running SlashScan estimated logging slash volume in about 30 seconds per pile, with an average difference of about 7% from drone lidar estimates.\nhttps://research.fs.usda.gov/treesearch/80524")
+            text == "In a 14-pile Oregon field study, SlashScan on an iPad Pro calculated logging slash volume in about 30 seconds after each scan; estimates differed from drone lidar by about 7% on average.\nhttps://research.fs.usda.gov/treesearch/80524")
 
 
 def load_request():
@@ -141,10 +141,45 @@ def edit_northern_once(path, record, text, due):
     print('STRIKING_EDIT_VERIFIED ' + json.dumps(record, ensure_ascii=False), flush=True)
 
 
+def edit_slashscan_once(path, record, text, due):
+    require(record and record.get('date') == '2026-11-25' and
+            record.get('channel_id') == CHANNEL_ID and record.get('post_id') == '6b06f33406de2127fc1e900b' and
+            record.get('due_at') == buffer.iso(due) and record.get('schedule_verified') and
+            not record.get('visual'), 'Cannot prove the exact approved scheduled post')
+    old = "In a 14-pile field study, a lidar-equipped iPhone running SlashScan estimated logging slash volume in about 30 seconds per pile, with an average difference of about 7% from drone lidar estimates.\nhttps://research.fs.usda.gov/treesearch/80524"
+    require(record.get('text') in (old, text), 'Unexpected existing caption; do not edit')
+    posts, found = history(text)
+    if not found:
+        require(record.get('text') == old and not record.get('slashscan_edit_attempt'), 'Prior edit uncertain; do not retry')
+        require(due > buffer.now() + timedelta(seconds=90), 'Too close to publication to edit')
+        found = next((p for p in posts if p.get('id') == record['post_id']), None)
+        require(found and found.get('text') == old and found.get('status') in ('scheduled', 'buffer') and
+                found.get('dueAt') and abs((buffer.parse_time(found['dueAt']) - due).total_seconds()) <= 2,
+                'Original post no longer confirmed queued; do not edit')
+        record['slashscan_edit_attempt'] = buffer.iso(buffer.now())
+        persist(path, record)
+        query = ('mutation EditApproved($input: EditPostInput!) { editPost(input: $input) { '
+                 '... on PostActionSuccess { post { ' + buffer.POST_FIELDS + ' } } '
+                 '... on MutationError { message } } }')
+        result = buffer.gql(query, {'input': {'id': record['post_id'], 'text': text}}).get('editPost', {})
+        require(not result.get('message'), 'Buffer rejected the approved edit: ' + str(result.get('message')))
+        found = result.get('post')
+    require(found and found.get('id') == record['post_id'] and found.get('text') == text and
+            found.get('status') in ('scheduled', 'buffer', 'sent') and found.get('dueAt') and
+            abs((buffer.parse_time(found['dueAt']) - due).total_seconds()) <= 2,
+            'Edited post not verified; do not retry')
+    record.update(text=text, provider_status=found['status'], provider_due_at=found['dueAt'],
+                  external_url=found.get('externalLink'), slashscan_edit_verified=buffer.iso(buffer.now()))
+    persist(path, record)
+    print('STRIKING_EDIT_VERIFIED ' + json.dumps(record, ensure_ascii=False), flush=True)
+
+
 def schedule():
     request, issue, text, due = load_request()
     path = receipt_path(request['date'])
     record = json.loads(path.read_text()) if path.exists() else None
+    if is_slashscan_selection(request, text):
+        return edit_slashscan_once(path, record, text, due)
     if request.get('owner_approval') == 'woods-to-wheels-northern-2026-11-23' and text == "One New Brunswick hardwood producer used about a U.S. gallon of diesel per green short ton just to get logs to the roadside, before the haul to the mill. That’s about $6 per ton at US$6 a gallon. Source: Woods to Wheels, The Forest Business School.":
         return edit_northern_once(path, record, text, due)
     if record:

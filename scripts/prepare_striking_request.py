@@ -37,7 +37,7 @@ def prepare(root, now):
             approved.get('action') == 'schedule_striking' and
             approved.get('due_at') == '2026-11-25T17:00:00Z' and
             approved.get('owner_approval') == 'slashscan-2026-11-25' and
-            approved.get('source_quote_override') == "In a 14-pile field study, a lidar-equipped iPhone running SlashScan estimated logging slash volume in about 30 seconds per pile, with an average difference of about 7% from drone lidar estimates.\nhttps://research.fs.usda.gov/treesearch/80524"):
+            approved.get('source_quote_override') == "In a 14-pile Oregon field study, SlashScan on an iPad Pro calculated logging slash volume in about 30 seconds after each scan; estimates differed from drone lidar by about 7% on average.\nhttps://research.fs.usda.gov/treesearch/80524"):
         return True
     issues = json.loads((root / 'data/issues.json').read_text())
     issue = next((i for i in issues if i.get('date') == date), None)
