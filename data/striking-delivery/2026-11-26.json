@@ -3,11 +3,16 @@
   "text": "Deere’s combined Construction & Forestry sales rose 12%, yet its 2027 global forestry-equipment outlook is roughly flat. Growth in a mixed equipment division does not establish that logging-machine demand is growing.",
   "due_at": "2026-11-26T17:00:00Z",
   "channel_id": "6843193ed6d25b49a145ff6e",
-  "state": "attempt_started",
+  "state": "accepted",
   "attempt_started_at": "2026-11-26T16:41:03.890286Z",
-  "post_id": null,
+  "post_id": "6b0861218f7637ef7dc51b55",
   "history_checked": 422,
   "source": "native-daily-striking",
   "email_attempted": false,
-  "visual": null
+  "visual": null,
+  "provider_status": "scheduled",
+  "provider_due_at": "2026-11-26T17:00:00.000Z",
+  "external_url": null,
+  "accepted_at": "2026-11-26T16:41:05.888373Z",
+  "schedule_verified": true
 }
