@@ -1,5 +1,154 @@
 [
   {
+    "date": "2026-11-26",
+    "summary": "C-Wood plans a Tennessee kiln and planer expansion. Also: Deere’s forestry-equipment outlook, Arauco’s New Brunswick air-quality review, the adopted Haines forest plan and a Newfoundland sawmill recovery update.",
+    "socialText": "C-Wood plans a US$21.5 million Tennessee drying and planing expansion. Thursday’s Woods Run separates its capacity targets from completed results and follows equipment, mill and forest-management developments.",
+    "strikingText": "Deere’s combined Construction & Forestry sales rose 12%, yet its 2027 global forestry-equipment outlook is roughly flat. Growth in a mixed equipment division does not establish that logging-machine demand is growing.",
+    "cardTeaser": "C-Wood targets faster lumber drying",
+    "cardSubhead": "A US$21.5 million Tennessee kiln and planer expansion aims to lift monthly capacity.",
+    "marketObservations": {
+      "diesel": {
+        "status": "verified",
+        "latest": "US$5.695/gal",
+        "observed": "Week of November 23, 2026; released November 24",
+        "change": [
+          "−US$0.242/gal",
+          "−4.08%"
+        ],
+        "comparison": "Versus November 16: US$5.937/gal",
+        "detail": "EIA U.S. on-highway diesel; taxes included",
+        "sources": [
+          {
+            "label": "EIA U.S. on-highway diesel; taxes included",
+            "url": "https://www.eia.gov/dnav/pet/hist/LeafHandler.ashx?f=W&n=PET&s=EMD_EPD2D_PTE_NUS_DPG"
+          }
+        ]
+      },
+      "lumber_futures": {
+        "status": "verified",
+        "latest": "US$550.00/MBF",
+        "observed": "November 25, 2026 settlement",
+        "change": [
+          "Unavailable"
+        ],
+        "comparison": "November 18 same-contract settlement not independently verified; checked November 26",
+        "detail": "January 2027 lumber futures (CME LBRF27)",
+        "sources": [
+          {
+            "label": "Investing.com named-contract table",
+            "url": "https://www.investing.com/commodities/lumber-contracts"
+          }
+        ]
+      },
+      "madisons": {
+        "status": "verified",
+        "latest": "US$440.00/MBF",
+        "observed": "Week ending November 20, 2026",
+        "change": [
+          "−US$4.00/MBF",
+          "−0.90% (calculated)"
+        ],
+        "comparison": "Versus week ending November 13: US$444.00/MBF",
+        "detail": "Madison’s weekly lumber index",
+        "sources": [
+          {
+            "label": "Madison’s November 20 index",
+            "url": "https://madisonsreport.com/madisons-lumber-prices-index-nov-20-2026-us440-mfbm/"
+          }
+        ]
+      },
+      "hardwood_ppi": {
+        "status": "verified",
+        "latest": "284.331 index points",
+        "observed": "October 2026; released November 13",
+        "change": [
+          "−1.251 points",
+          "−0.438%"
+        ],
+        "comparison": "Versus September 2026: 285.582",
+        "detail": "BLS WPU0812; 1982=100; not seasonally adjusted",
+        "sources": [
+          {
+            "label": "BLS hardwood lumber PPI via FRED",
+            "url": "https://fred.stlouisfed.org/data/WPU0812"
+          }
+        ]
+      },
+      "housing_starts": {
+        "status": "verified",
+        "latest": "864,000 units (SAAR)",
+        "observed": "October 2026; released November 18",
+        "change": [
+          "+33,000 units (SAAR)",
+          "+4.0%"
+        ],
+        "comparison": "Versus revised September 2026: 831,000",
+        "detail": "Census U.S. single-family starts; annualized estimate",
+        "sources": [
+          {
+            "label": "Census U.S. single-family starts; annualized estimate",
+            "url": "https://www.census.gov/construction/nrc/pdf/newresconst.pdf"
+          }
+        ]
+      },
+      "cad_usd": {
+        "status": "verified",
+        "latest": "C$1.4219 per US$1",
+        "observed": "Daily average, November 25, 2026",
+        "change": [
+          "−C$0.0077 per US$1",
+          "-0.5386%"
+        ],
+        "comparison": "Versus November 24: C$1.4296 per US$1; Canadian dollar strengthened",
+        "detail": "Bank of Canada; Canadian dollars per U.S. dollar",
+        "sources": [
+          {
+            "label": "Bank of Canada daily averages",
+            "url": "https://www.bankofcanada.ca/valet/observations/FXUSDCAD/json?start_date=2026-11-24&end_date=2026-11-25"
+          }
+        ]
+      }
+    },
+    "marketCaveats": [
+      "The October single-family starts monthly change has a published ±9.0-percentage-point 90% confidence interval and is not statistically significant.",
+      "The named January 2027 contract table verifies US$550.00 for November 25. The continuous historical series shows a different price and is not substituted; the November 18 named-contract settlement was not independently confirmed.",
+      "Display rounding follows the approved format. Changes are calculated from unrounded observations, so rounded currency levels may look unchanged even when a small movement occurred."
+    ],
+    "featuredResource": {
+      "date": "2026-11-26",
+      "source": "daily-sheet",
+      "item": {
+        "title": "Forest Enterprises of the Adirondacks",
+        "kind": "book",
+        "description": "This illustrated book profiles the loggers and small businesses working in New York’s Adirondack forests. Its photographs and firsthand accounts show varied approaches to equipment, markets, family businesses and making a living in the woods.",
+        "source_url": "https://fea.forestenterprise.org/",
+        "url": "https://fea.forestenterprise.org/"
+      },
+      "cached": false
+    },
+    "editorialWatch": {
+      "kind": "curtailment",
+      "items": [
+        {
+          "text": "Sexton Lumber’s Bloomfield, Newfoundland, operation is bringing crews back after its October fire. In CBC’s November 24 interview, reproduced by Tree Frog Forestry News, owner Kevin Sexton said woods crews were harvesting again and about half the mill crew had returned. He hoped to have a full crew back the following Monday. This is a reported ramp-up, not confirmation of full production or a new log-buying commitment.",
+          "sources": [
+            {
+              "label": "CBC: owner interview on the return to work",
+              "url": "https://www.cbc.ca/news/canada/newfoundland-labrador/sexton-lumber-back-to-work-9.7433958"
+            },
+            {
+              "label": "Tree Frog: attributed November 24 interview excerpt",
+              "url": "https://treefrogcreative.ca/article_region/canada/"
+            }
+          ],
+          "verified_on": "2026-11-26"
+        }
+      ]
+    },
+    "displayDate": "November 26, 2026",
+    "url": "/2026/11/26/"
+  },
+  {
     "date": "2026-11-25",
     "summary": "SlashScan estimates slash-pile volumes in the field. Also: Canada’s plywood determination, Alaska logging-road comments, Flatwoods’ experimental forest design, a black-cherry podcast and six dated market indicators.",
     "socialText": "SlashScan puts slash-pile volume estimates and locations on a lidar-equipped iPhone or iPad. Wednesday’s Woods Run Digest explains the research, device limits and practical uses.",

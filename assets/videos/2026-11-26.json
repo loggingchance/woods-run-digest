@@ -1,0 +1,53 @@
+{
+  "date": "2026-11-26",
+  "format": "approved-v4",
+  "dimensions": [
+    1080,
+    1920
+  ],
+  "fps": 30,
+  "frames": 1335,
+  "duration_seconds": 44.5,
+  "segment_frames": [
+    75,
+    210,
+    210,
+    210,
+    210,
+    300,
+    120
+  ],
+  "stories": [
+    {
+      "headline": "C-Wood targets faster drying and a larger finished-lumber business",
+      "body": "C-Wood Lumber plans to invest US$21.5 million in a kiln and dried-lumber planer facility at its existing Collinwood, Tennessee, location. The state\u2019s November 24 announcement projects 25 new jobs, doubling the workforce, and monthly capacity\u2026",
+      "region": "TENNESSEE \u2014 DRYING AND PLANING / NOVEMBER 24 ANNOUNCEMENT",
+      "image": null
+    },
+    {
+      "headline": "Deere sees a flat global forestry-equipment market in 2027",
+      "body": "Deere\u2019s November 25 earnings presentation forecasts roughly flat global forestry-equipment industry demand, measured in units, for fiscal 2027. Its outlook for U.S. and Canadian construction equipment is different: flat to five percent growth.",
+      "region": "U.S. / CANADA \u2014 EQUIPMENT / NOVEMBER 25 OUTLOOK",
+      "image": null
+    },
+    {
+      "headline": "Arauco\u2019s St. Stephen air-quality renewal goes to public review",
+      "body": "New Brunswick began a 180-day public participation process November 25 for renewal of Arauco Canada\u2019s Class 1 air-quality approval in St. Stephen. The mill makes medium-density fibreboard and particleboard from hardwood chips, softwood\u2026",
+      "region": "CANADA \u2014 NEW BRUNSWICK / PUBLIC PARTICIPATION",
+      "image": null
+    },
+    {
+      "headline": "Haines gets an adopted forest plan and new land classifications",
+      "body": "Alaska adopted the Haines State Forest Resource Management Area Management Plan and Land Classification Order SE-24-001 on November 24. The plan and order affect approximately 280,000 acres of state-owned, state-selected and top-filed lands;\u2026",
+      "region": "ALASKA \u2014 FOREST MANAGEMENT / NOVEMBER 24 ADOPTION",
+      "image": null
+    }
+  ],
+  "featuredResource": {
+    "title": "Forest Enterprises of the Adirondacks",
+    "description": "This illustrated book profiles the loggers and small businesses working in New York\u2019s Adirondack forests. Its photographs and firsthand accounts show varied approaches to equipment, markets, family businesses and making a living in the woods.",
+    "url": "https://fea.forestenterprise.org/",
+    "kind": "book"
+  },
+  "publication_attempted": false
+}
