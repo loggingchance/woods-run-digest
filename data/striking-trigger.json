@@ -1,9 +1,6 @@
 {
   "action": "schedule_striking",
-  "request_key": "slashscan-nov25-x-precision",
-  "date": "2026-11-25",
-  "due_at": "2026-11-25T17:00:00Z",
-  "reason": "Owner selected the SlashScan fact and original research URL for X only",
-  "owner_approval": "slashscan-2026-11-25",
-  "source_quote_override": "In a 14-pile Oregon field study, SlashScan on an iPad Pro calculated logging slash volume in about 30 seconds after each scan; estimates differed from drone lidar by about 7% on average.\nhttps://research.fs.usda.gov/treesearch/80524"
+  "date": "2026-11-26",
+  "due_at": "2026-11-26T17:00:00Z",
+  "reason": "native Buffer scheduled daily striking observation"
 }
