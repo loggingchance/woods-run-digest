@@ -2,14 +2,14 @@
   "action": "publish",
   "items": [
     {
-      "slot": "2026-11-25",
+      "slot": "2026-11-27",
       "campaign": "facts",
-      "asset": "assets/instagram-recruitment/2026-11-25-measuring-trees.jpg",
-      "sha256": "4b6d40546299e4b55e46829656fdc4b4e721b3145fc198345a6292843dbdee13",
-      "caption": "The Woods Run Digest. Penn State’s forestry lesson has students compare a diameter tape and a Biltmore stick on the same trees.\n\nWoods Run Digest subscribers already knew that.\n\nSubscribe free • Link in bio.\n\n#Forestry #WoodsRunDigest",
-      "fact": "Penn State’s forestry lesson has students compare a diameter tape and a Biltmore stick on the same trees.",
-      "source_issue": "https://woodsrun.forestenterprise.org/2026/11/23/",
-      "source_url": "https://ecosystems.psu.edu/outreach/youth/sftrc/lesson-plans/forestry/9-12/measurements"
+      "asset": "assets/instagram-recruitment/2026-11-27-cwood-kiln.jpg",
+      "sha256": "66c235d126c605711fe0f738ba5c11cae8142b707bd7aeb507a059d7b9e9f298",
+      "caption": "The Woods Run Digest. C-Wood’s planned Tennessee kiln is expected to cut drying time from 7–9 days to 24 hours or less.\n\nWoods Run Digest subscribers already knew that.\n\nSubscribe free • Link in bio.\n\n#Forestry #WoodProducts #WoodsRunDigest",
+      "fact": "C-Wood’s planned Tennessee kiln is expected to cut drying time from 7–9 days to 24 hours or less.",
+      "source_issue": "https://woodsrun.forestenterprise.org/2026/11/26/",
+      "source_url": "https://tnecd.com/news/c-wood-lumber-to-expand-wood-drying-presence-in-wayne-county/"
     }
   ]
 }
