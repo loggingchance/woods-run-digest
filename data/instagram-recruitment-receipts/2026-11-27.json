@@ -15,5 +15,21 @@
     "posts_checked": 346
   },
   "checked_at": "2026-11-27T02:58:42.568450+00:00",
-  "attempt_started_at": "2026-11-27T02:58:42.875159+00:00"
+  "attempt_started_at": "2026-11-27T02:58:42.875159+00:00",
+  "post_id": "6b08f1e5062ed764a8d9dac5",
+  "provider_post": {
+    "id": "6b08f1e5062ed764a8d9dac5",
+    "text": "The Woods Run Digest. C-Wood’s planned Tennessee kiln is expected to cut drying time from 7–9 days to 24 hours or less.\n\nWoods Run Digest subscribers already knew that.\n\nSubscribe free • Link in bio.\n\n#Forestry #WoodProducts #WoodsRunDigest",
+    "status": "scheduled",
+    "createdAt": "2026-11-27T02:58:45.183Z",
+    "dueAt": "2026-11-27T15:00:00.000Z",
+    "channelId": "6844cc71d6d25b49a1de682e",
+    "externalLink": null,
+    "assets": [
+      {
+        "source": "https://raw.githubusercontent.com/loggingchance/woods-run-digest/main/assets/instagram-recruitment/2026-11-27-cwood-kiln.jpg",
+        "mimeType": "image/jpeg"
+      }
+    ]
+  }
 }
