@@ -1,0 +1,53 @@
+{
+  "date": "2026-11-27",
+  "format": "approved-v4",
+  "dimensions": [
+    1080,
+    1920
+  ],
+  "fps": 30,
+  "frames": 1335,
+  "duration_seconds": 44.5,
+  "segment_frames": [
+    75,
+    210,
+    210,
+    210,
+    210,
+    300,
+    120
+  ],
+  "stories": [
+    {
+      "headline": "New Forests buys Oregon timberland with a carbon project planned",
+      "body": "New Forests has completed the purchase of 9,300 acres in Josephine County, Oregon. Its November 25 announcement says the property includes Douglas-fir forest and habitat for northern spotted owls and Pacific martens.",
+      "region": "OREGON \u2014 TIMBERLAND / NOVEMBER 25 ACQUISITION",
+      "image": null
+    },
+    {
+      "headline": "T\u00e9miscaming proposal connects a mill restart with propellant production",
+      "body": "Temiscaming Precision Industries has proposed restarting the T\u00e9miscaming mill\u2019s paperboard and high-purity cellulose lines, Peter Saunders reported November 26 in Pulp & Paper Canada. The company wants to convert cellulose into\u2026",
+      "region": "QUEBEC \u2014 PROPOSED MILL RESTART / NOVEMBER 26 REPORT",
+      "image": null
+    },
+    {
+      "headline": "Workshop follows wood from harvest plots to export documents",
+      "body": "BC Wood is accepting registrations for a December 8 online workshop on forest geolocation and supply-chain traceability, from 11:30 a.m. to 12:30 p.m. Pacific. The listed cost is C$22 per person.",
+      "region": "CANADA \u2014 EXPORT TRACEABILITY / DECEMBER 8 ONLINE",
+      "image": null
+    },
+    {
+      "headline": "Colorado\u2019s forest-health roadmap includes wood markets",
+      "body": "Colorado\u2019s Department of Natural Resources released its 2055 Vision for Forest Health report November 24. The state\u2019s announcement, reproduced by Coyote Gulch, identifies 22 goals and 71 actions, including consistent funding and\u2026",
+      "region": "COLORADO \u2014 FOREST HEALTH / NOVEMBER 24 REPORT RELEASE",
+      "image": null
+    }
+  ],
+  "featuredResource": {
+    "title": "Harvesting Woody Biomass: A Small Business Guide",
+    "description": "This free book helps logging businesses evaluate whether biomass production fits their operations and markets. It covers harvesting systems, financial calculations and business planning, including an example expansion plan.",
+    "url": "https://hwb.loggingchance.com/",
+    "kind": "book"
+  },
+  "publication_attempted": false
+}

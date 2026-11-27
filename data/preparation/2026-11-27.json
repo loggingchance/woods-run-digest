@@ -1,0 +1,30 @@
+{
+  "date": "2026-11-27",
+  "checked_at": "2026-11-27T09:59:03.470172+00:00",
+  "source_sha256": "e3c73b2d921a900329470fb4ca498d6059b2f0fb1adcaedaa5cb759128160ffe",
+  "renderer_sha256": "9770a115975040e10d444920dd5d6e5dcfa0a689325cd8710cfa33b343d08f59",
+  "page_path": "2026/11/27/index.html",
+  "ready": true,
+  "generated_this_run": [
+    "card",
+    "video"
+  ],
+  "card": {
+    "path": "assets/cards/2026-11-27.png",
+    "dimensions": [
+      1200,
+      630
+    ],
+    "sha256": "5639e4b9bca4a35a645875320fbd61e931dbe2e1ee8f2fd3c6309f2a7771282e"
+  },
+  "video": {
+    "path": "assets/videos/2026-11-27.mp4",
+    "dimensions": [
+      1080,
+      1920
+    ],
+    "sha256": "68c28b69411f638921a839f38249bfcb683f21af5e1e78f44bf286de52488e67"
+  },
+  "publication_attempted": false,
+  "email_attempted": false
+}

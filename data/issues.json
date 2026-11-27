@@ -1,5 +1,150 @@
 [
   {
+    "date": "2026-11-27",
+    "summary": "New Forests buys Oregon timberland with a carbon project planned. Also: a proposed Témiscaming mill restart, new U.S. tariff proposals, a Canadian traceability workshop and Colorado’s forest-health roadmap.",
+    "socialText": "New Forests has bought 9,300 acres in Oregon and plans a carbon project. Read today’s forestry and wood-products briefing.",
+    "cardTeaser": "Oregon timberland changes hands",
+    "cardSubhead": "New Forests buys 9,300 acres and plans a carbon project.",
+    "strikingText": "Témiscaming’s proposed restart would pair paperboard with high-purity cellulose for a new propellant plant. That is a product strategy—but it is still a proposal, without a confirmed restart date or new wood-buying commitment.",
+    "marketObservations": {
+      "diesel": {
+        "status": "verified",
+        "latest": "US$5.695/gal",
+        "observed": "Week of November 23, 2026; released November 24",
+        "change": [
+          "−US$0.242/gal",
+          "−4.08%"
+        ],
+        "comparison": "Versus November 16: US$5.937/gal",
+        "detail": "EIA U.S. on-highway diesel; taxes included",
+        "sources": [
+          {
+            "label": "EIA U.S. on-highway diesel; taxes included",
+            "url": "https://www.eia.gov/dnav/pet/hist/LeafHandler.ashx?f=W&n=PET&s=EMD_EPD2D_PTE_NUS_DPG"
+          }
+        ]
+      },
+      "lumber_futures": {
+        "status": "verified",
+        "latest": "US$550.00/MBF",
+        "observed": "November 25, 2026 settlement",
+        "change": [
+          "Unavailable"
+        ],
+        "comparison": "November 18 same-contract settlement not independently verified; checked November 27",
+        "detail": "January 2027 lumber futures (CME LBRF27)",
+        "sources": [
+          {
+            "label": "Investing.com named-contract table",
+            "url": "https://www.investing.com/commodities/lumber-contracts"
+          }
+        ]
+      },
+      "madisons": {
+        "status": "verified",
+        "latest": "US$440.00/MBF",
+        "observed": "Week ending November 20, 2026",
+        "change": [
+          "−US$4.00/MBF",
+          "−0.90% (calculated)"
+        ],
+        "comparison": "Versus week ending November 13: US$444.00/MBF",
+        "detail": "Madison’s weekly lumber index",
+        "sources": [
+          {
+            "label": "Madison’s November 20 index",
+            "url": "https://madisonsreport.com/madisons-lumber-prices-index-nov-20-2026-us440-mfbm/"
+          }
+        ]
+      },
+      "hardwood_ppi": {
+        "status": "verified",
+        "latest": "284.331 index points",
+        "observed": "October 2026; released November 13",
+        "change": [
+          "−1.251 points",
+          "−0.438%"
+        ],
+        "comparison": "Versus September 2026: 285.582",
+        "detail": "BLS WPU0812; 1982=100; not seasonally adjusted",
+        "sources": [
+          {
+            "label": "BLS hardwood lumber PPI via FRED",
+            "url": "https://fred.stlouisfed.org/data/WPU0812"
+          }
+        ]
+      },
+      "housing_starts": {
+        "status": "verified",
+        "latest": "864,000 units (SAAR)",
+        "observed": "October 2026; released November 18",
+        "change": [
+          "+33,000 units (SAAR)",
+          "+4.0%"
+        ],
+        "comparison": "Versus revised September 2026: 831,000",
+        "detail": "Census U.S. single-family starts; annualized estimate",
+        "sources": [
+          {
+            "label": "Census U.S. single-family starts; annualized estimate",
+            "url": "https://www.census.gov/construction/nrc/pdf/newresconst.pdf"
+          }
+        ]
+      },
+      "cad_usd": {
+        "status": "verified",
+        "latest": "C$1.4243 per US$1",
+        "observed": "Daily average, November 26, 2026",
+        "change": [
+          "+C$0.0024 per US$1",
+          "+0.1687882410858710176524368802%"
+        ],
+        "comparison": "Versus November 25: C$1.4219 per US$1; Canadian dollar weakened",
+        "detail": "Bank of Canada; Canadian dollars per U.S. dollar",
+        "sources": [
+          {
+            "label": "Bank of Canada daily averages",
+            "url": "https://www.bankofcanada.ca/valet/observations/FXUSDCAD/json?start_date=2026-11-25&end_date=2026-11-26"
+          }
+        ]
+      }
+    },
+    "marketCaveats": [
+      "The October single-family starts monthly change has a published ±9.0-percentage-point 90% confidence interval and is not statistically significant.",
+      "The named January 2027 contract table verifies US$550.00 for November 25. Continuous historical prices alone do not verify the November 18 close for that same contract; that comparison remains unavailable after the November 27 check.",
+      "Display rounding follows the approved format. Changes are calculated from unrounded observations, so rounded currency levels may look unchanged even when a small movement occurred."
+    ],
+    "editorialWatch": {
+      "kind": "trade_policy",
+      "items": [
+        {
+          "text": "The U.S. Trade Representative proposed additional Section 301 tariffs November 25 following manufacturing-capacity investigations involving 14 economies, including China, Vietnam and the European Union. Canada is not among those 14. These are proposals for public comment, with economy-specific exclusions and treatment of existing duties; they do not establish a new final tariff on Canadian lumber. Wood-product importers need the applicable product annexes and eventual final action before treating a proposed headline rate as a landed-cost change.",
+          "sources": [
+            {
+              "label": "USTR: November 25 determinations and proposed actions",
+              "url": "https://ustr.gov/about/policy-offices/press-office/press-releases/2026/november/ustr-makes-determinations-and-proposes-actions-14-section-301-investigations-relating-structural"
+            }
+          ],
+          "verified_on": "2026-11-27"
+        }
+      ]
+    },
+    "featuredResource": {
+      "date": "2026-11-27",
+      "source": "daily-sheet",
+      "item": {
+        "title": "Harvesting Woody Biomass: A Small Business Guide",
+        "kind": "book",
+        "description": "This free book helps logging businesses evaluate whether biomass production fits their operations and markets. It covers harvesting systems, financial calculations and business planning, including an example expansion plan.",
+        "source_url": "https://hwb.loggingchance.com/",
+        "url": "https://hwb.loggingchance.com/"
+      },
+      "cached": false
+    },
+    "displayDate": "November 27, 2026",
+    "url": "/2026/11/27/"
+  },
+  {
     "date": "2026-11-26",
     "summary": "C-Wood plans a Tennessee kiln and planer expansion. Also: Deere’s forestry-equipment outlook, Arauco’s New Brunswick air-quality review, the adopted Haines forest plan and a Newfoundland sawmill recovery update.",
     "socialText": "C-Wood plans a US$21.5 million Tennessee drying and planing expansion. Thursday’s Woods Run separates its capacity targets from completed results and follows equipment, mill and forest-management developments.",
