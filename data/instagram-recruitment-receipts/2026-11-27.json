@@ -1,0 +1,19 @@
+{
+  "slot": "2026-11-27",
+  "request": {
+    "slot": "2026-11-27",
+    "campaign": "facts",
+    "asset": "assets/instagram-recruitment/2026-11-27-cwood-kiln.jpg",
+    "sha256": "66c235d126c605711fe0f738ba5c11cae8142b707bd7aeb507a059d7b9e9f298",
+    "caption": "The Woods Run Digest. C-Wood’s planned Tennessee kiln is expected to cut drying time from 7–9 days to 24 hours or less.\n\nWoods Run Digest subscribers already knew that.\n\nSubscribe free • Link in bio.\n\n#Forestry #WoodProducts #WoodsRunDigest",
+    "fact": "C-Wood’s planned Tennessee kiln is expected to cut drying time from 7–9 days to 24 hours or less.",
+    "source_issue": "https://woodsrun.forestenterprise.org/2026/11/26/",
+    "source_url": "https://tnecd.com/news/c-wood-lumber-to-expand-wood-drying-presence-in-wayne-county/"
+  },
+  "duplicate_search": {
+    "complete": true,
+    "posts_checked": 346
+  },
+  "checked_at": "2026-11-27T02:58:42.568450+00:00",
+  "attempt_started_at": "2026-11-27T02:58:42.875159+00:00"
+}
