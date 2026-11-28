@@ -1,5 +1,43 @@
 [
   {
+    "date": "2026-11-28",
+    "summary": "Canada opens a community-diversification route for forestry regions. Also: Bill Hull’s sawmill pivot, a Manchester pine-thinning bid and new research on western tree distributions.",
+    "socialText": "Canada’s new FRED initiative supports economic diversification in forestry-dependent communities. Today’s Woods Run Digest also profiles Bill Hull and checks a Monday timber-sale deadline.",
+    "cardTeaser": "A new route for forestry communities",
+    "cardSubhead": "Canada launches a C$100 million diversification initiative.",
+    "strikingText": "When two employees left one spring, Bill Hull shifted from white oak barrel staves to graded hardwood lumber. His April interview recalls a product change forced by the crew available to do the work. https://woodsrun.forestenterprise.org/2026/11/28/",
+    "strikingSkip": false,
+    "strikingSource": "weekend_feature",
+    "weekendFeature": {
+      "kind": "profile",
+      "topic_id": "bill-hull-2026-11-28",
+      "title": "Bill Hull’s path from barrel staves to hardwood lumber",
+      "summary": "Bill Hull’s father ran a backyard sawmill using trees blown down in the 1938 hurricane. In his April 13 Northern Woodlands interview, Hull follows that early connection to wood through logging, forestry school and a business of his own. He took over his father’s mill and cut white oak barrel staves for J.H. Hamlen & Son. After moving the operation to Pomfret, Connecticut, in 1970, he stocked white oak during fall and winter to saw during mud season. Then two employees left for other jobs one spring. Hull shifted the mill to graded hardwood lumber and needed a separate logging crew while he stayed at the sawmill. His account shows how available labor helped change both the product and the organization of the work—decisions made decades ago, recalled in this year’s interview.",
+      "sources": [
+        {
+          "label": "Northern Woodlands: Bill Hull’s April 13 first-person interview",
+          "url": "https://northernwoodlands.org/blog/article/tending-trees-with-bill-hull"
+        }
+      ],
+      "striking_text": "When two employees left one spring, Bill Hull shifted from white oak barrel staves to graded hardwood lumber. His April interview recalls a product change forced by the crew available to do the work. https://woodsrun.forestenterprise.org/2026/11/28/"
+    },
+    "weekendFeatureStatus": "approved",
+    "featuredResource": {
+      "date": "2026-11-28",
+      "source": "daily-sheet",
+      "item": {
+        "title": "EROI of Woody Biomass Heating Fuels in New York State",
+        "kind": "infographic",
+        "description": "This one-page PDF infographic compares energy returned from wood heating with energy used to produce and deliver the fuel. It shows how feedstock, processing, transport distance and boiler efficiency influence wood-chip and pellet heating energy returns.",
+        "source_url": "https://img1.wsimg.com/blobby/go/b0235e40-160d-409a-a1fd-75965dacd99f/EROI%20of%20Woody%20Biomass%20Heating%20Fuels%20in%20NYS.pdf",
+        "url": "https://img1.wsimg.com/blobby/go/b0235e40-160d-409a-a1fd-75965dacd99f/EROI%20of%20Woody%20Biomass%20Heating%20Fuels%20in%20NYS.pdf"
+      },
+      "cached": false
+    },
+    "displayDate": "November 28, 2026",
+    "url": "/2026/11/28/"
+  },
+  {
     "date": "2026-11-27",
     "summary": "New Forests buys Oregon timberland with a carbon project planned. Also: a proposed Témiscaming mill restart, new U.S. tariff proposals, a Canadian traceability workshop and Colorado’s forest-health roadmap.",
     "socialText": "New Forests has bought 9,300 acres in Oregon and plans a carbon project. Read today’s forestry and wood-products briefing.",
